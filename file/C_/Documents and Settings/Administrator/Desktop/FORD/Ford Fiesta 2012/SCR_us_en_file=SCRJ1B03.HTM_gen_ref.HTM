@@ -1,0 +1,2037 @@
+<html>
+<!-- Mirrored from file:///C:/Documents and Settings/Administrator/Desktop/FORD/Ford Fiesta 2012/SCR~us~en~file=SCRJ1B03.HTM~gen~ref.HTM by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 04 Mar 2025 14:52:51 GMT -->
+<head><META http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>2012 Fiesta Workshop Manual
+
+</title><LINK rel="stylesheet" type="text/css" href="SCR_us_en_file%3dSCRSTYLE.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       ><meta name="tps_translationdatetime" content="06/09/2012 16:28:18"><meta name="tps_type" content="workshop"><meta name="tps_bookcode" content="SCR"><meta name="tps_market" content="US"><meta name="tps_language" content="EN"><meta name="tps_year" content="2012"><meta name="tps_modelname" content="Fiesta"><meta name="tps_system" content="4"><meta name="tps_group" content="19"><meta name="tps_section" content="01B"><meta name="tps_section_title" content="Anti-Theft — Passive Anti-Theft System (PATS)"><meta name="tps_ss_title" content="DIAGNOSIS AND TESTING"><meta name="tps_procid" content="s4p4596q705907"><meta name="tps_procsgmlid" content="n1237236"><meta name="tps_packetinfo" content="690963"><meta name="tps_effectivity" content="2011,FIESTA,19-01B"><meta name="tps_effectivity" content="2012,FIESTA,19-01B"><meta name="tps_effectivity" content="2013,FIESTA,19-01B"></head><body><TABLE width="95%"><TR><TD><div class="bookinfo">SECTION 419-01B:  Anti-Theft — Passive Anti-Theft System (PATS)
+</DIV></TD><TD align="RIGHT"><div class="bookinfo">2012 Fiesta Workshop Manual
+</DIV></TD></TR><TR><TD><div class="bookinfo">DIAGNOSIS AND TESTING
+</div></TD><TD align="RIGHT"><div class="bookinfosmall">Procedure revision date:  07/15/2011
+</div></TD></TR></TABLE><hr><h4>Anti-Theft — With Intelligent Access (IA)
+</h4><meta name="tps_proctitle" content="Anti-Theft — With Intelligent Access (IA)">
+
+<br><table border="1" cellpadding="3" cellspacing="0" width="50%"><caption>Special Tool(s)
+</caption><tr valign="top"><td><IMG src="SCR_us_en_file%3dST3093A.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="99" width="99" border="0"></td><td>Fluke 77-IV Digital Multimeter
+<br>FLU77-4 or equivalent
+</td></tr><tr valign="top"><td><IMG src="SCR_us_en_file%3dST2834A.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="99" width="99" border="0"></td><td>Vehicle Communication Module (VCM) and Integrated Diagnostic System (IDS) software with appropriate hardware, or equivalent
+ scan tool
+<br></td></tr><tr valign="top"><td><IMG src="SCR_us_en_file%3dST2574A.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="99" width="99" border="0"></td><td>Flex Probe Kit
+<br>NUD105-R025D or equivalent
+</td></tr></table><div><a name="extract_568">&nbsp;
+</a></div>
+
+<p><b>Principles of Operation
+</b></p><p><b>Push Button Start Components
+</b></p><h5>Passive Start Antennas 
+</h5><p>There are three passive start antennas. The passive start antennas are hardwired to the Remote Function Actuator (RFA) module and, when activated by the
+
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module, they transmit a low frequency signal that activates an Intelligent Access (IA) key.
+</p><h5>Passive Anti-Theft System (PATS)/Backup Transceiver 
+</h5><p>The 
+<span title="Passive Anti-Theft System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PATS
+</span>/backup transceiver is used as a backup device. If the vehicle fails to start conventionally, an
+
+<span title="Intelligent Access" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IA
+</span> key can be held in close proximity to the transceiver to allow the vehicle to start. The transceiver is wired to the
+
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module and when activated it sends out a signal to activate an 
+<span title="Intelligent Access" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IA
+</span> key. Once the key is
+activated, it sends a signal back to the transceiver which is then sent to the 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module.
+</p><h5>Remote Functions Receiver (RFR) Module 
+</h5><p>The Remote Functions Receiver (RFR) module is hardwired to the 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module and is a receiving antenna that receives
+the high frequency signals from an 
+<span title="Intelligent Access" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IA
+</span> key. It also receives the signals from an Remote Keyless Entry (RKE) command.
+</p><h5><span title="Intelligent Access" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IA
+</span> Key 
+</h5><p>The 
+<span title="Intelligent Access" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IA
+</span> receives the low frequency signals from the passive start antennas. When the 
+<span title="Intelligent Access" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IA
+</span> key is
+activated by one of the low frequency signals, it sends out a high frequency signal that is received by the 
+<span title="Remote Functions Receiver" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFR
+</span> module. The
+
+<span title="Intelligent Access" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IA
+</span> key also contains a key blade that is used to enter the vehicle as a backup.
+</p><h5>Start/Stop Switch 
+</h5><p>The start/stop switch is a momentary contact switch that is hardwired to the 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module. When the switch is pressed, it signals the
+
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module that there is a request to either switch the ignition on or start the engine.
+</p><p><b>Push Button Start Operation
+</b></p><IMG src="SCR_us_en_file%3dN0117493.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="425" width="650" border="1"><p>The Passive Anti-Theft System (PATS) function is controlled by the 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module and PCM.
+</p><p>When the start/stop switch is pressed, the 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module initiates the key initialization sequence by activating the 3
+interior 
+<span title="Intelligent Access" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IA
+</span> passive start antennas. Each passive start antenna transmits a low frequency signal approximately 1 m (3 ft) radius of each antenna. If
+an 
+<span title="Intelligent Access" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IA
+</span> key is within range of 1 of the 3 interior passive start antennas, the 
+<span title="Intelligent Access" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IA
+</span> key is activated. Once
+the 
+<span title="Intelligent Access" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IA
+</span> key is activated, it sends the 
+<span title="Passive Anti-Theft System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PATS
+</span> identification code to the
+Remote Functions Receiver (RFR) module via a high frequency signal. The 
+<span title="Remote Functions Receiver" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFR
+</span> module interprets the high frequency signal
+from the 
+<span title="Intelligent Access" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IA
+</span> key and sends the information to the 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module over a dedicated network. If the
+
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module determines that a programmed 
+<span title="Intelligent Access" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IA
+</span> key is inside the vehicle, it allows the ignition to be
+transitioned out of off. When the ignition is turned on and the PCM initializes, the 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module and the PCM exchange their IDs over the
+High Speed Controller Area Network (HS-CAN). If the 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module receives a valid key code and the correct ID from the
+PCM, 
+<span title="Passive Anti-Theft System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PATS
+</span> is enabled and allows the engine to start. If 
+<span title="Passive Anti-Theft System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PATS
+</span> disables the engine from
+starting, the anti-theft indicator in the 
+<span title="Instrument Panel Cluster" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IPC
+</span> flashes rapidly.
+</p><p><span title="Passive Anti-Theft System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PATS
+</span> and the 
+<span title="Remote Keyless Entry" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RKE
+</span> system share the operation of several components including
+the 
+<span title="Intelligent Access" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IA
+</span> key and the 
+<span title="Remote Functions Receiver" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFR
+</span> module. If there is a concern with either of these components,
+both 
+<span title="Passive Anti-Theft System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PATS
+</span> and the 
+<span title="Remote Keyless Entry" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RKE
+</span> system are affected. Refer
+to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRS1E0L.HTM%26rightside%3dSCRS1E0R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 501-14
+</a> for information on the 
+<span title="Remote Keyless Entry" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RKE
+</span>and 
+<span title="Intelligent Access" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IA
+</span> features.
+</p><p>The 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module also controls the ignition modes and in conjunction with the PCM controls the starting system. If there is a concern with starting system or the
+ignition modes, and 
+<span title="Passive Anti-Theft System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PATS
+</span> has been eliminated as the cause, refer to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRS360L.HTM%26rightside%3dSCRS360R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 303-06
+</a> for a starting
+system concern or 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSB50L.HTM%26rightside%3dSCRSB50R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 211-05
+</a> for the ignition modes.
+</p><p><b>Backup Starting
+</b></p><p>The vehicle can experience a 
+<span title="Passive Anti-Theft System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PATS
+</span> no start ff there is a failure of any passive start antenna, the battery in the
+
+<span title="Intelligent Access" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IA
+</span> key, or the 
+<span title="Remote Functions Receiver" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFR
+</span> module. However, in the event of one of these failures, the
+
+<span title="Intelligent Access" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IA
+</span> key can be placed next to the 
+<span title="Passive Anti-Theft System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PATS
+</span>/backup transceiver (located in the steering column) to allow
+the vehicle to start. If a programmed 
+<span title="Intelligent Access" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IA
+</span> key is near the steering column shroud when the
+
+<span title="Passive Anti-Theft System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PATS
+</span>/backup transceiver is activated, it activates the 
+<span title="Intelligent Access" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IA
+</span> key and the identification code is sent
+back to the 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module.
+</p><p><b>Interior Passive Start Antenna Ranges
+</b></p><p><b>NOTE: 
+</b> Some brands/types of mobile phone or laptop computer chargers may cause interference that could lead to a 
+<span title="Passive Anti-Theft System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PATS
+</span> no-start if
+the 
+<span title="Intelligent Access" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IA
+</span> key is within a few inches of the charger. If a concern is observed, move the 
+<span title="Intelligent Access" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IA
+</span> key away from the
+charger and attempt to start the vehicle.
+</p><p>There are 3 passive start antennas that are used solely for the purpose of starting the vehicle. They are located in the front of the floor console, in the rear of the floor console, and behind the rear lower seat cushion. When activated, each
+antenna sends out a low frequency signal with an approximate range of 1 m (3 ft). A programmed 
+<span title="Intelligent Access" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IA
+</span> key must be in range of 1 of the 3 antennas for
+
+<span title="Passive Anti-Theft System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PATS
+</span> to operate.
+</p><p>If an 
+<span title="Intelligent Access" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IA
+</span> key is placed in the far outside edges of the interior, like above a sun visor or in a door map pocket, the vehicle might experience a no-start. If the
+
+<span title="Intelligent Access" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IA
+</span> key is located in one of these areas and there is a no-start condition, move the 
+<span title="Intelligent Access" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IA
+</span> key out of the
+area and attempt to start the vehicle. If the key is outside the range of a passive start antenna, KEY NOT DETECTED is displayed in the Front Control/Display Interface Module (FCDIM).
+</p><p><b>Key Outside Vehicle Message
+</b></p><p>The KEY OUTSIDE VEHICLE message is displayed in the 
+<span title="Front Control/Display Interface Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">FCDIM
+</span> when the engine has been started or the ignition is in the RUN mode and an
+
+<span title="Intelligent Access" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IA
+</span> key is no longer detected inside the vehicle. The 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module activates all passive start
+antennas to search the inside of the vehicle for an 
+<span title="Intelligent Access" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IA
+</span> key anytime a door or luggage compartment lid/liftgate is opened and then closed. This strategy prevents the
+
+<span title="Intelligent Access" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IA
+</span> key from being separated from an already running vehicle. If an 
+<span title="Intelligent Access" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IA
+</span> key is no longer in the vehicle,
+the ignition remains in RUN and the engine continues to run. If the start/stop switch is pressed to turn the ignition off, the engine can be re-started without an 
+<span title="Intelligent Access" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IA
+</span> key present
+inside the vehicle for approximately 10 seconds. After 10 seconds an 
+<span title="Intelligent Access" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IA
+</span> key has to be present to start the engine or transition the ignition out of off. If the driver door is
+opened during the 10-second countdown, the fast restart feature is disabled, and an 
+<span title="Intelligent Access" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IA
+</span> key is needed to start the engine again.
+</p><p><b>Passive Anti-Theft System (PATS) PIDs
+</b></p><p>The Passive Anti-Theft System (PATS) PIDS are a useful tool when diagnosing a 
+<span title="Passive Anti-Theft System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PATS
+</span> concerns.
+</p><br><br><TABLE cellspacing="0" cellpadding="3" border="1"><TR><TH valign="bottom" align="center"><span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module 
+<span title="Passive Anti-Theft System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PATS
+</span> PID
+</TH><TH valign="bottom" align="center">PID Description
+</TH><TH valign="bottom" align="center">PID reading required for 
+<span title="Passive Anti-Theft System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PATS
+</span> to be enabled
+</TH></TR><TR><TD valign="top" align="center">MASTERKEY
+</TD><TD valign="top" align="center">Determines if the key inside the vehicle is a programmed key.
+</TD><TD valign="top" align="center">Present
+</TD></TR><TR><TD valign="top" align="center">MIN_KEYS
+</TD><TD valign="top" align="center">Minimum number of programmed keys required. This PID always reads 2.
+</TD><TD valign="top" align="center">—
+</TD></TR><TR><TD valign="top" align="center">PATSENABL
+</TD><TD valign="top" align="center">Indicates if 
+<span title="Passive Anti-Theft System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PATS
+</span> will allow the engine to start.
+</TD><TD valign="top" align="center">Enabled
+</TD></TR><TR><TD valign="top" align="center">PCM_ID
+</TD><TD valign="top" align="center">Indicates if there is a PCM ID currently stored into the Remote Function Actuator (RFA) module.
+</TD><TD valign="top" align="center">Stored
+</TD></TR><TR><TD valign="top" align="center">PCM_VFY
+</TD><TD valign="top" align="center">Indicates if the PCM ID received by the 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module matches the PCM ID stored in the 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span>module memory.
+</TD><TD valign="top" align="center">Yes
+</TD></TR></TABLE><br><div><a name="extract_569">&nbsp;
+</a></div>
+
+<p><b>Inspection and Verification
+</b></p><ol start="1"><li>Verify the customer concern.
+</li></ol><ol start="2"><li>Visually inspect for obvious signs of mechanical or electrical damage.
+</li></ol><br><br><P class="SINGLESPACE"><B>&nbsp; 
+
+Visual Inspection Chart 
+</B></P><TABLE cellspacing="0" cellpadding="3" border="1"><TR><TH valign="bottom" align="center">Mechanical
+</TH><TH valign="bottom" align="center">Electrical
+</TH></TR><TR><TD valign="top" align="left"><ul type="disc"><li>Intelligent Access (IA) key
+</li><li>Large metallic objects or electronic devices on the key ring that can be used to purchase gasoline or similar items
+</li><li>Start/stop switch
+</li></ul></TD><TD valign="top" align="left"><ul type="disc"><li>Central Junction Box (CJB) fuse 7 (7.5A)
+</li><li>Wiring, terminals or connectors
+</li><li>Mobile phone or laptop computer chargers
+</li></ul></TD></TR></TABLE><br><ol start="3"><li>If an obvious cause for an observed or reported concern is found, correct the cause (if possible) before proceeding to the next step.
+</li></ol><ol start="4"><li><p><b>NOTE: 
+</b> Make sure to use the latest scan tool software release.
+</p>If the cause is not visually evident, connect the scan tool to the Data Link Connector (DLC).
+</li></ol><ol start="5"><li><p><b>NOTE: 
+</b> The Vehicle Communication Module (VCM) LED prove-out confirms power and ground from the 
+<span title="Data Link Connector" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">DLC
+</span> are provided to
+the 
+<span title="Vehicle Communication Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">VCM
+</span>.
+</p>If the scan tool does not communicate with the 
+<span title="Vehicle Communication Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">VCM
+</span>:
+
+<ul type="disc"><li>check the 
+<span title="Vehicle Communication Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">VCM
+</span> connection to the vehicle.
+</li></ul><ul type="disc"><li>check the scan tool connection to the 
+<span title="Vehicle Communication Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">VCM
+</span>.
+</li></ul><ul type="disc"><li>refer to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSI00L.HTM%26rightside%3dSCRSI00R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 418-00
+</a>, No Power To The Scan Tool, to diagnose no power to the scan tool.
+</li></ul></li></ol><ol start="6"><li>If the scan tool does not communicate with the vehicle:
+
+<ul type="disc"><li>verify the ignition is in the ON mode.
+
+<ul type="square"> 
+<li>the air bag warning indicator prove-out (other indicators may NOT prove ignition is ON) confirms ignition ON. If ignition does not turn ON, refer to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSB50L.HTM%26rightside%3dSCRSB50R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 211-05
+</a> to diagnose
+no power in RUN.
+</li></ul></li></ul><ul type="disc"><li>verify the scan tool operation with a known good vehicle.
+</li></ul><ul type="disc"><li>refer to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSI00L.HTM%26rightside%3dSCRSI00R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 418-00
+</a>, to diagnose no response from the PCM.
+</li></ul></li></ol><ol start="7"><li>Carry out the network test.
+
+<ul type="disc"><li>If the scan tool responds with no communication for one or more modules, refer to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSI00L.HTM%26rightside%3dSCRSI00R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 418-00
+</a>.
+</li></ul><ul type="disc"><li>If the network test passes, proceed with module self-test diagnostics.
+</li></ul></li></ol><ol start="8"><li>Carry out the self-test diagnostics for the 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module and the PCM.
+</li></ol><ol start="9"><li>If the DTCs retrieved are related to the concern, go to DTC Charts. For all other DTCs, refer to the Diagnostic Trouble Code (DTC) Chart in 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSJA0L.HTM%26rightside%3dSCRSJA0R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 419-10
+</a>.
+</li></ol><ol start="10"><li>If no DTCs related to the concern are retrieved, GO to 
+<a href="SCR_us_en_file%3dSCRJ1B02.HTM_gen_ref.HTM#SC1"                                                                                                                                                                                                                                                       >Symptom Chart
+</a>.
+</li></ol><div><a name="extract_570">&nbsp;
+</a></div>
+
+<p><b>DTC Charts
+</b></p><p><b>NOTE: 
+</b> Refer to Description and Operation, Intelligent Access (IA) with Push Button Start in this section to review the procedures for achieving the various ignition states.
+</p><div><a name="table_extract_20">&nbsp;
+</a></div>
+
+<br><br><P class="SINGLESPACE"><B>&nbsp;Remote Function Actuator (RFA) Module DTC Chart 
+</B></P><TABLE cellspacing="0" cellpadding="3" border="1"><TR><TH valign="bottom" align="center">DTC
+</TH><TH valign="bottom" align="center">Description
+</TH><TH valign="bottom" align="center">Action
+</TH></TR><TR><TD valign="top" align="center">B102B:05
+</TD><TD valign="top" align="left">Passive Key: System Programming Failure
+</TD><TD valign="top" align="left">Less than 2 keys are programmed into the Remote Function Actuator (RFA) module. If other 
+<span title="Passive Anti-Theft System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PATS
+</span> DTCs are present,
+address them first. If DTC B102B:05 is the only DTC present, PROGRAM a minimum of 2 keys. REFER to 
+<a href="SCR_us_en_file%3dSCRJ1B05.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       >Key Programming Using Diagnostic Equipment
+</a> in this section. CLEAR the DTCs. REPEAT the self-test.
+</TD></TR><TR><TD valign="top" align="center">B10C7:1F
+</TD><TD valign="top" align="left">Interior Trunk Antenna: Circuit Intermittent
+</TD><TD valign="top" align="left"><a href="SCR_us_en_file%3dSCRJ1B03.HTM_gen_ref.HTM#PS2-K"                                                                                                                                                                                                                                                       >GO to Pinpoint Test K
+</a>.
+</TD></TR><TR><TD valign="top" align="center">B10C8:1F
+</TD><TD valign="top" align="left">Interior Centre Antenna: Circuit Intermittent
+</TD><TD valign="top" align="left"><a href="SCR_us_en_file%3dSCRJ1B03.HTM_gen_ref.HTM#PS2-K"                                                                                                                                                                                                                                                       >GO to Pinpoint Test K
+</a>.
+</TD></TR><TR><TD valign="top" align="center">B10C9:1F
+</TD><TD valign="top" align="left">Interior Front Antenna: Circuit Intermittent
+</TD><TD valign="top" align="left"><a href="SCR_us_en_file%3dSCRJ1B03.HTM_gen_ref.HTM#PS2-K"                                                                                                                                                                                                                                                       >GO to Pinpoint Test K
+</a>.
+</TD></TR><TR><TD valign="top" align="center">B10D5:13
+</TD><TD valign="top" align="left"><span title="Passive Anti-Theft System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PATS
+</span> Antenna: Circuit Open
+</TD><TD valign="top" align="left">The 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module received an incomplete or corrupt response from the transceiver. INSTALL a new transceiver, REFER to
+
+<a href="SCR_us_en_file%3dSCRJ1B07.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       >Passive Anti-Theft System (PATS) Transceiver
+</a> in this section.
+</TD></TR><TR><TD valign="top" align="center">B10D6:62
+</TD><TD valign="top" align="left"><span title="Passive Anti-Theft System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PATS
+</span> Enable Status: Signal Compare Failure
+</TD><TD valign="top" align="left"><a href="SCR_us_en_file%3dSCRJ1B03.HTM_gen_ref.HTM#PS2-I"                                                                                                                                                                                                                                                       >GO to Pinpoint Test I
+</a>.
+</TD></TR><TR><TD valign="top" align="center">B10D7:05
+</TD><TD valign="top" align="left"><span title="Passive Anti-Theft System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PATS
+</span> Key: System Programming Failure
+</TD><TD valign="top" align="left"><a href="SCR_us_en_file%3dSCRJ1B03.HTM_gen_ref.HTM#PS2-F"                                                                                                                                                                                                                                                       >GO to Pinpoint Test F
+</a>.
+</TD></TR><TR><TD valign="top" align="center">B10D7:51
+</TD><TD valign="top" align="left"><span title="Passive Anti-Theft System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PATS
+</span> Key: Not Programmed
+</TD><TD valign="top" align="left">There is an unprogrammed 
+<span title="Passive Anti-Theft System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PATS
+</span> key. PROGRAM the 
+<span title="Passive Anti-Theft System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PATS
+</span> key. REFER to
+
+<a href="SCR_us_en_file%3dSCRJ1B05.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       >Key Programming Using Diagnostic Equipment
+</a> in this section.
+</TD></TR><TR><TD valign="top" align="center">B10D7:81
+</TD><TD valign="top" align="left"><span title="Passive Anti-Theft System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PATS
+</span> Key: Invalid Serial Data Received
+</TD><TD valign="top" align="left"><a href="SCR_us_en_file%3dSCRJ1B03.HTM_gen_ref.HTM#PS2-G"                                                                                                                                                                                                                                                       >GO to Pinpoint Test G
+</a>.
+</TD></TR><TR><TD valign="top" align="center">B10D8:00
+</TD><TD valign="top" align="left">Passive Anti-Theft System (PATS) Key Less Than Minimum Programmed: No Sub Type Information
+</TD><TD valign="top" align="left">Less than 2 keys are programmed into the 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module. If other 
+<span title="Passive Anti-Theft System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PATS
+</span> DTCs are present,
+address them first. If DTC B10D8:00 is the only DTC present, PROGRAM a minimum of 2 keys. REFER to 
+<a href="SCR_us_en_file%3dSCRJ1B05.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       >Key Programming Using Diagnostic Equipment
+</a> in this section. CLEAR the DTCs. REPEAT the self-test.
+</TD></TR><TR><TD valign="top" align="center">B10D9:87
+</TD><TD valign="top" align="left"><span title="Passive Anti-Theft System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PATS
+</span> Transponder: Missing Message
+</TD><TD valign="top" align="left"><a href="SCR_us_en_file%3dSCRJ1B03.HTM_gen_ref.HTM#PS2-H"                                                                                                                                                                                                                                                       >GO to Pinpoint Test H
+</a>.
+</TD></TR><TR><TD valign="top" align="center">B10DA:51
+</TD><TD valign="top" align="left"><span title="Passive Anti-Theft System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PATS
+</span> Target Identifier: Not Programmed
+</TD><TD valign="top" align="left">There is no PCM ID stored in the 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module. CARRY OUT a parameter reset of the 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span>module and the PCM, then CYCLE the ignition and make an attempt to start the vehicle. REFER to 
+<a href="SCR_us_en_file%3dSCRJ1B04.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       >Passive Anti-Theft System (PATS) Parameter Reset
+</a> in this section. CLEAR the DTCs. REPEAT the self-test.
+</TD></TR><TR><TD valign="top" align="center">B10DA:62
+</TD><TD valign="top" align="left"><span title="Passive Anti-Theft System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PATS
+</span> Target Identifier: Signal Compare Failure
+</TD><TD valign="top" align="left">There is an incorrect PCM ID stored in the 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module. CARRY OUT a parameter reset of
+the 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module and the PCM, then CYCLE the ignition and make an attempt to start the vehicle. REFER
+to 
+<a href="SCR_us_en_file%3dSCRJ1B04.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       >Passive Anti-Theft System (PATS) Parameter Reset
+</a> in this section. CLEAR the DTCs. REPEAT the self-test.
+</TD></TR><TR><TD valign="top" align="center">B10E6:11
+</TD><TD valign="top" align="left"><span title="Passive Anti-Theft System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PATS
+</span> Power Supply: Circuit Short To Ground
+</TD><TD valign="top" align="left"><a href="SCR_us_en_file%3dSCRJ1B03.HTM_gen_ref.HTM#PS2-H"                                                                                                                                                                                                                                                       >GO to Pinpoint Test H
+</a>.
+</TD></TR><TR><TD valign="top" align="center">B10E6:12
+</TD><TD valign="top" align="left"><span title="Passive Anti-Theft System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PATS
+</span> Power Supply: Circuit Short To Battery
+</TD><TD valign="top" align="left"><a href="SCR_us_en_file%3dSCRJ1B03.HTM_gen_ref.HTM#PS2-H"                                                                                                                                                                                                                                                       >GO to Pinpoint Test H
+</a>.
+</TD></TR><TR><TD valign="top" align="center">U0100:87
+</TD><TD valign="top" align="left">Lost Communication With ECM/PCM "A": Missing Message
+</TD><TD valign="top" align="left"><a href="SCR_us_en_file%3dSCRJ1B03.HTM_gen_ref.HTM#PS2-I"                                                                                                                                                                                                                                                       >GO to Pinpoint Test I
+</a>.
+</TD></TR><TR><TD valign="top" align="center">U201F:00
+</TD><TD valign="top" align="left">External Receiver: No Sub Type Information
+</TD><TD valign="top" align="left"><a href="SCR_us_en_file%3dSCRJ1B03.HTM_gen_ref.HTM#PS2-J"                                                                                                                                                                                                                                                       >GO to Pinpoint Test J
+</a>.
+</TD></TR><TR><TD valign="top" align="center">U201F:13
+</TD><TD valign="top" align="left">External Receiver: Circuit Open
+</TD><TD valign="top" align="left"><a href="SCR_us_en_file%3dSCRJ1B03.HTM_gen_ref.HTM#PS2-J"                                                                                                                                                                                                                                                       >GO to Pinpoint Test J
+</a>.
+</TD></TR><TR><TD valign="top" align="center">All other DTCs
+</TD><TD valign="top" align="left">—
+</TD><TD valign="top" align="left">REFER to the Diagnostic Trouble Code (DTC) Chart in 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSJA0L.HTM%26rightside%3dSCRSJA0R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 419-10
+</a>.
+</TD></TR></TABLE><br><div><a name="table_extract_21">&nbsp;
+</a></div>
+
+<br><br><P class="SINGLESPACE"><B>&nbsp;PCM DTC Chart 
+</B></P><TABLE cellspacing="0" cellpadding="3" border="1"><TR><TH valign="bottom" align="center">DTC
+</TH><TH valign="bottom" align="center">Description
+</TH><TH valign="bottom" align="center">Action
+</TH></TR><TR><TD valign="top" align="center">U0167:00
+</TD><TD valign="top" align="left">Lost Communication With Vehicle Immobilizer Control Module: No Sub Type Information
+</TD><TD valign="top" align="left"><a href="SCR_us_en_file%3dSCRJ1B03.HTM_gen_ref.HTM#PS2-N"                                                                                                                                                                                                                                                       >GO to Pinpoint Test N
+</a>.
+</TD></TR><TR><TD valign="top" align="center">U0426:00
+</TD><TD valign="top" align="left">Invalid Data Received From Vehicle Immobilizer Control Module: No Sub Type Information
+</TD><TD valign="top" align="left"><a href="SCR_us_en_file%3dSCRJ1B03.HTM_gen_ref.HTM#PS2-N"                                                                                                                                                                                                                                                       >GO to Pinpoint Test N
+</a>.
+</TD></TR><TR><TD valign="top" align="center">All other DTCs
+</TD><TD valign="top" align="left">—
+</TD><TD valign="top" align="left">REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRS3E0L.HTM%26rightside%3dSCRS3E0R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 303-14
+</a>.
+</TD></TR></TABLE><br><div><a name="extract_571">&nbsp;
+</a></div>
+
+<p><b>Symptom Chart
+</b></p><p><b>NOTE: 
+</b> Refer to Description and Operation, Intelligent Access (IA) with Push Button Start in this section to review the procedures for achieving the various ignition states.
+</p><a name="SC2">&nbsp;
+</a><table width="90%" cellpadding="3" cellspacing="0" rules="groups" border="1">
+
+<caption> 
+</caption><colgroup><colgroup><colgroup><tr><th>Condition
+</th><th>Possible Sources
+</th><th>Action
+</th></tr><tbody></tbody>
+
+<tr valign="top"><td><ul type="disc"><li>The anti-theft indicator is always/never on
+</li></ul></td><td><ul type="disc"><li>Instrument Panel Cluster (IPC)
+</li></ul></td><td><ul type="disc"><li>REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSD10L.HTM%26rightside%3dSCRSD10R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 413-01
+</a>.
+</li></ul></td></tr><tbody></tbody>
+
+<tr valign="top"><td><ul type="disc"><li>The vehicle does not start with the Intelligent Access (IA) key in certain areas within the vehicle
+</li></ul></td><td><ul type="disc"><li>Wiring, terminals or connectors
+</li><li>Environmental interference
+</li><li>Front passive start antenna
+</li><li>Center passive start antenna
+</li><li>Rear passive start antenna
+</li><li>Remote Function Actuator (RFA) module
+</li></ul></td><td><ul type="disc"><li><a href="SCR_us_en_file%3dSCRJ1B03.HTM_gen_ref.HTM#PS2-K"                                                                                                                                                                                                                                                       >GO to Pinpoint Test K
+</a>.
+</li></ul></td></tr><tbody></tbody>
+
+<tr valign="top"><td><ul type="disc"><li>The vehicle does not start/unable to transition the ignition out of OFF
+</li></ul></td><td><ul type="disc"><li>Starting system concern
+</li><li>Driveability concern
+</li><li>Passive Anti-Theft System (PATS) concern
+</li></ul></td><td><ul type="disc"><li><a href="SCR_us_en_file%3dSCRJ1B03.HTM_gen_ref.HTM#PS2-L"                                                                                                                                                                                                                                                       >GO to Pinpoint Test L
+</a>.
+</li></ul></td></tr><tbody></tbody>
+
+<tr valign="top"><td><ul type="disc"><li>KEY NOT DETECTED is displayed
+</li></ul></td><td><ul type="disc"><li>Environmental interference
+</li><li><span title="Intelligent Access" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IA
+</span> key
+</li><li><span title="Intelligent Access" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IA
+</span> key battery
+</li><li><span title="Intelligent Access" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IA
+</span> key not programmed
+</li></ul></td><td><ul type="disc"><li><a href="SCR_us_en_file%3dSCRJ1B03.HTM_gen_ref.HTM#PS2-M"                                                                                                                                                                                                                                                       >GO to Pinpoint Test M
+</a>.
+</li></ul></td></tr></table><div><a name="extract_572">&nbsp;
+</a></div>
+
+<p><b>Pinpoint Tests
+</b></p><a name="PS2-F">&nbsp;
+</a><p><b>Pinpoint Test F: DTC B10D7:05
+</b></p><h5>Normal Operation 
+</h5><p>When the Remote Function Actuator (RFA) module enters a key programming state, it activates the Passive Anti-Theft System (PATS) transceiver
+to read the key placed next to it. The key is programmed into the 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module memory if a valid Intelligent Access (IA)
+key is used and there are no concerns with the 
+<span title="Passive Anti-Theft System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PATS
+</span>.
+</p><ul type="disc"><li>DTC B10D7:05 (
+<span title="Passive Anti-Theft System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PATS
+</span> Key: System Programming Failure) — sets when a 
+<span title="Intelligent Access" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IA
+</span> key is
+unsuccessfully programmed into the 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module.
+</li></ul><p><b>This pinpoint test is intended to diagnose the following:
+</b></p><ul type="disc"><li><span title="Intelligent Access" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IA
+</span> key
+</li><li><span title="Passive Anti-Theft System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PATS
+</span> transceiver
+</li></ul><a name="F">&nbsp;
+</a><h5>PINPOINT TEST F: DTC B10D7:05 
+</h5>
+
+<p><b>NOTE: 
+</b> At least 2 
+<span title="Intelligent Access" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IA
+</span> keys must be present prior to carrying out this pinpoint test.
+</p><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="F1">&nbsp;
+</a><b>F1 CHECK THE 
+<span title="REMOTE FUNCTION ACTUATOR" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> MODULE DTCs FROM THE SELF-TEST 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Check the recorded results from the 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module self-test.
+</li><li><b>Are any 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module DTCs retrieved?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REFER to the 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> DTC Chart in this section. 
+
+<br><br><b>No
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRJ1B03.HTM_gen_ref.HTM#F2"                                                                                                                                                                                                                                                       >F2
+</a>. 
+</td></tr><tr><td><a name="F2">&nbsp;
+</a><b>F2 CHECK THE 
+<span title="INTELLIGENT ACCESS" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IA
+</span> KEYS 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Verify the correct 
+<span title="Intelligent Access" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IA
+</span> keys are used with the vehicle. Compare the 
+<span title="Intelligent Access" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IA
+</span> keys with the one shown in
+
+<a href="SCR_us_en_file%3dSCRJ1B01.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       >Anti-Theft
+</a> in the Description and Operation portion of this section.
+</li><li><b>Are the correct keys being used?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>ATTEMPT to program the key again, REFER to 
+<a href="SCR_us_en_file%3dSCRJ1B05.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       >Key Programming Using Diagnostic Equipment
+</a> in this section. CLEAR the DTCs. REPEAT the self-test. 
+
+<br><br>If key programming fails, GO to 
+<a href="SCR_us_en_file%3dSCRJ1B03.HTM_gen_ref.HTM#F3"                                                                                                                                                                                                                                                       >F3
+</a>. 
+
+<br><br><b>No
+</b><br>OBTAIN the correct key(s) for the vehicle. PROGRAM the new key(s). REFER to 
+<a href="SCR_us_en_file%3dSCRJ1B05.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       >Key Programming Using Diagnostic Equipment
+</a> in this section. CLEAR the DTCs. REPEAT the self-test. 
+</td></tr><tr><td><a name="F3">&nbsp;
+</a><b>F3 CHECK BOTH 
+<span title="INTELLIGENT ACCESS" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IA
+</span> KEYS 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Program both of the 
+<span title="Intelligent Access" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IA
+</span> keys. Refer to 
+<a href="SCR_us_en_file%3dSCRJ1B05.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       >Key Programming Using Diagnostic Equipment
+</a> in this section.
+</li><li>Press the START/STOP switch with each 
+<span title="Intelligent Access" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IA
+</span> key in the vehicle at a time.
+</li><li><b>Does the ignition turn on with only one key?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>If only one key operates, REPLACE the key that did not program. PROGRAM the new key. REFER to 
+<a href="SCR_us_en_file%3dSCRJ1B05.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       >Key Programming Using Diagnostic Equipment
+</a> in this section. CLEAR the DTCs. REPEAT the self-test. 
+
+<br><br><b>No
+</b><br>If both keys do not program, INSTALL a new 
+<span title="Passive Anti-Theft System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PATS
+</span> transceiver. REFER to 
+<a href="SCR_us_en_file%3dSCRJ1B07.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       >Passive Anti-Theft System (PATS) Transceiver
+</a> in this
+ section. PROGRAM the keys. REFER to 
+<a href="SCR_us_en_file%3dSCRJ1B05.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       >Key Programming Using Diagnostic Equipment
+</a> in this section. CLEAR the DTCs. REPEAT the self-test. 
+</td></tr></table><a name="PS2-G">&nbsp;
+</a><p><b>Pinpoint Test G: DTC B10D7:81
+</b></p><p><p>Refer to Wiring Diagrams Cell 
+<a target="_parent" href="SCR_us_en_book%3dECR%26cell%3d117%26page%3d%26year%3d%26vehicle%3d2012%20Fiesta%26market%3dUS%26lang%3dEN%26RTYPE%3dDIAGRAM%26lega"                                                                                                                                                                                                                                                               >117
+</a>, Remote Keyless Entry and Alarm for schematic and connector information.
+</p></p><h5>Normal Operation 
+</h5><p>When the START/STOP switch is pressed, the Remote Function Actuator (RFA) activates all 3 passive start antennas, which send out a low frequency signal. Each passive start antenna has an
+approximate range of 1 m (3 ft) and are placed in different locations to provide full coverage inside the vehicle. If an Intelligent Access (IA) key is within range of a passive start antenna, the
+low frequency signal activates the 
+<span title="Intelligent Access" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IA
+</span> key. When the 
+<span title="Intelligent Access" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IA
+</span> key is activated it sends a high frequency signal
+to the Remote Functions Receiver (RFR) module. The 
+<span title="Remote Functions Receiver" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFR
+</span> module communicates with
+the 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module. If the 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module determines that a
+programmed 
+<span title="Intelligent Access" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IA
+</span> key is in the vehicle, it allows the ignition to transition out of off or let the engine start.
+</p><p></p><p><b>NOTE: 
+</b> Some brands/types of mobile phone or laptop computer chargers may cause interference that could lead to a Passive Anti-Theft System (PATS) no-start if
+the 
+<span title="Intelligent Access" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IA
+</span> key is within a few inches of the charger. If a concern is observed, move the 
+<span title="Intelligent Access" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IA
+</span> key away from
+the charger and attempt to start the vehicle.
+</p><ul type="disc"><li>DTC B10D7:81 (
+<span title="Passive Anti-Theft System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PATS
+</span> Key: Invalid Serial Data Received) — sets when the 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module
+receives a partial or corrupt 
+<span title="Intelligent Access" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IA
+</span> key code.
+</li></ul><p><b>This pinpoint test is intended to diagnose the following:
+</b></p><ul type="disc"><li>Environmental interference
+</li><li><span title="Intelligent Access" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IA
+</span> key
+</li></ul><a name="G">&nbsp;
+</a><h5>PINPOINT TEST G: DTC B10D7:81 
+</h5>
+
+<p><b><i>NOTICE: 
+</i> Use the correct probe adapter(s) when making measurements. Failure to use the correct probe adapter(s) may damage the connector.
+</b></p><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="G1">&nbsp;
+</a><b>G1 CHECK THE 
+<span title="INTELLIGENT ACCESS" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IA
+</span> KEYS 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Verify the correct 
+<span title="Intelligent Access" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IA
+</span> keys are used with the vehicle. Compare the keys with the one shown in 
+<a href="SCR_us_en_file%3dSCRJ1B01.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       >Anti-Theft
+</a> in the Description and
+Operation portion of this section.
+</li><li><b>Are the correct keys being used?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRJ1B03.HTM_gen_ref.HTM#G2"                                                                                                                                                                                                                                                       >G2
+</a>. 
+
+<br><br><b>No
+</b><br>OBTAIN the correct key(s) for the vehicle. PROGRAM the new key(s). REFER to 
+<a href="SCR_us_en_file%3dSCRJ1B05.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       >Key Programming Using Diagnostic Equipment
+</a> in this section. CLEAR the DTCs. REPEAT the self-test. 
+</td></tr><tr><td><a name="G2">&nbsp;
+</a><b>G2 CHECK FOR ENVIRONMENTAL INTERFERENCE 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Check for the use of any charger or other wireless device that can cause interference with the 
+<span title="Intelligent Access" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IA
+</span> key. If any device is found, remove the device and attempt to start the
+engine.
+</li><li><b>Does the engine start?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INFORM the customer of the cause of the concern and the normal operation of the vehicle. 
+
+<br><br><b>No
+</b><br>DISCARD the key in question and PROGRAM a new key. REFER to 
+<a href="SCR_us_en_file%3dSCRJ1B05.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       >Key Programming Using Diagnostic Equipment
+</a> in this section. CLEAR the DTCs. REPEAT the self-test. 
+</td></tr></table><a name="PS2-H">&nbsp;
+</a><p><b>Pinpoint Test H: DTC B10D9:87, B10E6:11, or B10E6:12
+</b></p><p><p>Refer to Wiring Diagrams Cell 
+<a target="_parent" href="SCR_us_en_book%3dECR%26cell%3d112%26page%3d%26year%3d%26vehicle%3d2012%20Fiesta%26market%3dUS%26lang%3dEN%26RTYPE%3dDIAGRAM%26lega"                                                                                                                                                                                                                                                               >112
+</a>, Passive Anti-Theft System for schematic and connector information.
+</p></p><h5>Normal Operation 
+</h5><p>The Remote Function Actuator (RFA) module supplies voltage to the Passive Anti-Theft System (PATS) transceiver. If the
+
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module does not passively detect an Intelligent Access (IA) key, it activates the
+
+<span title="Passive Anti-Theft System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PATS
+</span> transceiver as a backup to try and detect a key. The 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module also activates the
+
+<span title="Passive Anti-Theft System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PATS
+</span> transceiver for key programming procedures. The 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module starts the key interrogation
+sequence by supplying voltage to the transceiver. Once the transceiver is powered up, the 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module generates a signal and sends that signal to the transceiver on the
+transmit (TX) circuit. When the transceiver receives the signal from the 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module, it reads the
+
+<span title="Passive Anti-Theft System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PATS
+</span> key and generates a challenge response to the 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module signal and sends this response
+on the receive (RX) circuit.
+</p><ul type="disc"><li>DTC B10D9:87 (
+<span title="Passive Anti-Theft System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PATS
+</span> Transponder: Missing Message) — sets when the 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module does
+not receive a response from the 
+<span title="Passive Anti-Theft System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PATS
+</span> transceiver.
+</li><li>DTC B10E6:11 (
+<span title="Passive Anti-Theft System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PATS
+</span> Power Supply: Circuit Short To Ground) — sets when the 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span>module detects a short to ground on the 
+<span title="Passive Anti-Theft System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PATS
+</span> transceiver voltage supply circuit.
+</li><li>DTC B10E6:12 (
+<span title="Passive Anti-Theft System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PATS
+</span> Power Supply: Circuit Short To Battery) — sets when the 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span>module detects a short to voltage on the 
+<span title="Passive Anti-Theft System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PATS
+</span> transceiver voltage supply circuit.
+</li></ul><p><b>This pinpoint test is intended to diagnose the following:
+</b></p><ul type="disc"><li>Wiring, terminals or connectors
+</li><li><span title="Passive Anti-Theft System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PATS
+</span> transceiver
+</li><li><span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module
+</li></ul><a name="H">&nbsp;
+</a><h5>PINPOINT TEST H: DTC B10D9:87, B10E6:11, OR B10E6:12 
+</h5>
+
+<p><b><i>NOTICE: 
+</i> Use the correct probe adapter(s) when making measurements. Failure to use the correct probe adapter(s) may damage the connector.
+</b></p><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="H1">&nbsp;
+</a><b>H1 RETRIEVE THE RECORDED 
+<span title="REMOTE FUNCTION ACTUATOR" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> MODULE DTCs 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><p class="singlespace"><b>NOTE: 
+</b> If DTC B10E6:11 or B10E6:12 is present with B10D9:87, diagnose B10E6:11 or B10E6:12 first.
+</p><li>Check the recorded results from the 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module self-test.
+</li><li><b>Is DTC B10E6:11 or B10E6:12 present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>For DTC B10E6:11, GO to 
+<a href="SCR_us_en_file%3dSCRJ1B03.HTM_gen_ref.HTM#H2"                                                                                                                                                                                                                                                       >H2
+</a>. 
+
+<br><br>For DTC B10E6:12, GO to 
+<a href="SCR_us_en_file%3dSCRJ1B03.HTM_gen_ref.HTM#H4"                                                                                                                                                                                                                                                       >H4
+</a>. 
+
+<br><br><b>No
+</b><br>For DTC B10D9:87, GO to 
+<a href="SCR_us_en_file%3dSCRJ1B03.HTM_gen_ref.HTM#H5"                                                                                                                                                                                                                                                       >H5
+</a>. 
+</td></tr><tr><td><a name="H2">&nbsp;
+</a><b>H2 CHECK THE 
+<span title="PASSIVE ANTI-THEFT SYSTEM" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PATS
+</span> TRANSCEIVER FOR A SHORT TO GROUND 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect:   
+<span title="Passive Anti-Theft System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PATS
+</span> Transceiver C252.
+</li><li>Enter the following diagnostic mode on the scan tool:   Clear 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> Module DTCs.
+</li><li>Enter the following diagnostic mode on the scan tool:   
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> Module Self-Test.
+</li><li><b>Is DTC B10E6:11 present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRJ1B03.HTM_gen_ref.HTM#H3"                                                                                                                                                                                                                                                       >H3
+</a>. 
+
+<br><br><b>No
+</b><br>INSTALL a new 
+<span title="Passive Anti-Theft System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PATS
+</span> transceiver. REFER to 
+<a href="SCR_us_en_file%3dSCRJ1B07.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       >Passive Anti-Theft System (PATS) Transceiver
+</a> in this section. TEST the system for
+ normal operation. 
+</td></tr><tr><td><a name="H3">&nbsp;
+</a><b>H3 CHECK THE 
+<span title="PASSIVE ANTI-THEFT SYSTEM" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PATS
+</span> TRANSCEIVER VOLTAGE SUPPLY CIRCUIT FOR A SHORT TO GROUND 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Ignition OFF.
+</li><li>Disconnect:   
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> Module C3503A.
+</li><li>Measure the resistance between the 
+<span title="Passive Anti-Theft System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PATS
+</span> transceiver C252-1, circuit CBP13 (GY/BN), harness side and ground.
+</li><br><br><IMG src="SCR_us_en_file%3dN0116887.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="211" width="325" border="0"><li><b>Is the resistance greater than 10,000 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRJ1B03.HTM_gen_ref.HTM#H11"                                                                                                                                                                                                                                                       >H11
+</a>. 
+
+<br><br><b>No
+</b><br>REPAIR circuit CBP13 (GY/BN) for a short to ground. CLEAR the DTCs. REPEAT the self-test. 
+</td></tr><tr><td><a name="H4">&nbsp;
+</a><b>H4 CHECK THE 
+<span title="PASSIVE ANTI-THEFT SYSTEM" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PATS
+</span> TRANSCEIVER VOLTAGE SUPPLY CIRCUIT FOR A SHORT TO VOLTAGE 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Ignition OFF.
+</li><li>Disconnect:   
+<span title="Passive Anti-Theft System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PATS
+</span> Transceiver C252.
+</li><li>Disconnect:   
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> Module C3503A.
+</li><li>Disconnect:   Smart Keyless Entry Ignition Relay.
+</li><li>Connect a fused jumper wire between the smart keyless entry ignition relay pin 3, circuit SBP01 (RD), Central Junction Box (CJB) face side and the smart keyless entry ignition relay pin 5,
+circuit CDC32 (BN/YE), 
+<span title="Central Junction Box" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">CJB
+</span> face side.
+</li><br><br><IMG src="SCR_us_en_file%3dN0116586.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="446" width="325" border="0"><li>Measure the voltage between the 
+<span title="Passive Anti-Theft System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PATS
+</span> transceiver C252-1, circuit CBP13 (GY/BN), harness side and ground.
+</li><br><br><IMG src="SCR_us_en_file%3dN0002393.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="205" width="325" border="0"><li><b>Is any voltage present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REPAIR circuit CBP13 (GY/BN) for a short to voltage. CLEAR the DTCs. REPEAT the self-test. 
+
+<br><br><b>No
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRJ1B03.HTM_gen_ref.HTM#H11"                                                                                                                                                                                                                                                       >H11
+</a>. 
+</td></tr><tr><td><a name="H5">&nbsp;
+</a><b>H5 CHECK FOR VOLTAGE TO THE 
+<span title="PASSIVE ANTI-THEFT SYSTEM" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PATS
+</span> TRANSCEIVER 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><p class="singlespace"><b>NOTE: 
+</b> The 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module only supplies voltage to the 
+<span title="Passive Anti-Theft System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PATS
+</span> transceiver momentarily. It is
+important to monitor the meter while pressing the START/STOP switch.
+</p><p class="singlespace"><b>NOTE: 
+</b> Remove all 
+<span title="Intelligent Access" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IA
+</span> keys from inside the vehicle. If the 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module detects a key, it does not
+activate the 
+<span title="Passive Anti-Theft System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PATS
+</span> transceiver.
+</p><li>Disconnect:   
+<span title="Passive Anti-Theft System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PATS
+</span> Transceiver C252.
+</li><li>While pressing the START/STOP switch, measure the voltage between the 
+<span title="Passive Anti-Theft System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PATS
+</span> transceiver C252-1, circuit CBP13 (GY/BN), harness side and
+the 
+<span title="Passive Anti-Theft System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PATS
+</span> transceiver C252-2, circuit GD115 (BK/GY).
+</li><br><br><IMG src="SCR_us_en_file%3dN0113061.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="211" width="325" border="0"><li><b>Is the voltage momentarily greater than 10 volts?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRJ1B03.HTM_gen_ref.HTM#H8"                                                                                                                                                                                                                                                       >H8
+</a>. 
+
+<br><br><b>No
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRJ1B03.HTM_gen_ref.HTM#H6"                                                                                                                                                                                                                                                       >H6
+</a>. 
+</td></tr><tr><td><a name="H6">&nbsp;
+</a><b>H6 CHECK THE 
+<span title="PASSIVE ANTI-THEFT SYSTEM" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PATS
+</span> TRANSCEIVER VOLTAGE SUPPLY CIRCUIT 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><p class="singlespace"><b>NOTE: 
+</b> The 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module only supplies voltage to the 
+<span title="Passive Anti-Theft System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PATS
+</span> transceiver momentarily. It is
+important to monitor the meter while pressing the START/STOP switch.
+</p><p class="singlespace"><b>NOTE: 
+</b> Remove all 
+<span title="Intelligent Access" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IA
+</span> keys from inside the vehicle. If the 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module detects a key, it does not
+activate the 
+<span title="Passive Anti-Theft System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PATS
+</span> transceiver.
+</p><li>While pressing the START/STOP switch, measure the voltage between the 
+<span title="Passive Anti-Theft System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PATS
+</span> transceiver C252-1, circuit CBP13 (GY/BN), harness side and
+ground.
+</li><br><br><IMG src="SCR_us_en_file%3dN0002393.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="205" width="325" border="0"><li><b>Is the voltage momentarily greater than 10 volts?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REPAIR circuit GD115 (BK/GY) for an open. CLEAR the DTCs. REPEAT the self-test. 
+
+<br><br><b>No
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRJ1B03.HTM_gen_ref.HTM#H7"                                                                                                                                                                                                                                                       >H7
+</a>. 
+</td></tr><tr><td><a name="H7">&nbsp;
+</a><b>H7 CHECK THE 
+<span title="PASSIVE ANTI-THEFT SYSTEM" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PATS
+</span> TRANSCEIVER VOLTAGE SUPPLY CIRCUIT FOR AN OPEN 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect:   
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> Module C3503A.
+</li><li>Measure the resistance between the 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module C3503A-10, circuit CBP13 (GY/BN), harness side and the
+
+<span title="Passive Anti-Theft System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PATS
+</span> transceiver C252-1, circuit CBP13 (GY/BN), harness side
+</li><br><br><IMG src="SCR_us_en_file%3dN0117084.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="211" width="325" border="0"><li><b>Is the resistance less than 5 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRJ1B03.HTM_gen_ref.HTM#H11"                                                                                                                                                                                                                                                       >H11
+</a>. 
+
+<br><br><b>No
+</b><br>REPAIR circuit CBP13 (GY/BN) for an open. CLEAR the DTCs. REPEAT the self-test. 
+</td></tr><tr><td><a name="H8">&nbsp;
+</a><b>H8 CHECK THE 
+<span title="PASSIVE ANTI-THEFT SYSTEM" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PATS
+</span> TRANSCEIVER CIRCUITS FOR A SHORT TO VOLTAGE 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Ignition OFF.
+</li><li>Disconnect:   Smart Keyless Entry Ignition Relay.
+</li><li>Disconnect:   
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> Module C3503A.
+</li><li>Connect a fused jumper wire between the smart keyless entry ignition relay pin 3, circuit SBP01 (RD), Central Junction Box (CJB) face side and the smart keyless entry ignition relay pin 5,
+circuit CDC32 (BN/YE), 
+<span title="Central Junction Box" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">CJB
+</span> face side.
+</li><br><br><IMG src="SCR_us_en_file%3dN0116586.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="446" width="325" border="0"><li>Measure the voltage between the 
+<span title="Passive Anti-Theft System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PATS
+</span> transceiver C252-3, circuit VRT24 (YE/OG), harness side and ground; and between the
+
+<span title="Passive Anti-Theft System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PATS
+</span> transceiver C252-4, circuit VRT23 (VT/GY), harness side and ground.
+</li><br><br><IMG src="SCR_us_en_file%3dN0113062.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="211" width="325" border="0"><li><b>Is any voltage present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REMOVE the jumper wire. INSTALL the smart keyless entry ignition relay. REPAIR the circuit in question for a short to voltage. CLEAR the DTCs. REPEAT the self-test. 
+
+<br><br><b>No
+</b><br>REMOVE the jumper wire. INSTALL the smart keyless entry ignition relay. GO to 
+<a href="SCR_us_en_file%3dSCRJ1B03.HTM_gen_ref.HTM#H9"                                                                                                                                                                                                                                                       >H9
+</a>. 
+</td></tr><tr><td><a name="H9">&nbsp;
+</a><b>H9 CHECK THE 
+<span title="PASSIVE ANTI-THEFT SYSTEM" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PATS
+</span> TRANSCEIVER CIRCUITS FOR A SHORT TO GROUND 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Measure the resistance between the 
+<span title="Passive Anti-Theft System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PATS
+</span> transceiver C252-3, circuit VRT24 (YE/OG), harness side and ground; and between the
+
+<span title="Passive Anti-Theft System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PATS
+</span> transceiver C252-4, circuit VRT23 (VT/GY), harness side and ground.
+</li><br><br><IMG src="SCR_us_en_file%3dN0113063.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="211" width="325" border="0"><li><b>Are the resistances greater than 10,000 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRJ1B03.HTM_gen_ref.HTM#H10"                                                                                                                                                                                                                                                       >H10
+</a>. 
+
+<br><br><b>No
+</b><br>REPAIR the circuit in question for a short to ground. CLEAR the DTCs. REPEAT the self-test. 
+</td></tr><tr><td><a name="H10">&nbsp;
+</a><b>H10 CHECK THE 
+<span title="PASSIVE ANTI-THEFT SYSTEM" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PATS
+</span> TRANSCEIVER CIRCUITS FOR AN OPEN 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Measure the resistance between the 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module, harness side and the 
+<span title="Passive Anti-Theft System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PATS
+</span> transceiver,
+harness side as follows:
+</li><br><br><TABLE cellspacing="0" cellpadding="3" border="1"><TR><TH valign="bottom" align="center"><span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> Module Connector-Pin
+</TH><TH valign="bottom" align="center">Circuit
+</TH><TH valign="bottom" align="center"><span title="Passive Anti-Theft System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PATS
+</span> Transceiver Connector-Pin
+</TH></TR><TR><TD valign="top" align="center">C3503A-11
+</TD><TD valign="top" align="center">VRT24 (YE/OG)
+</TD><TD valign="top" align="center">C252-3
+</TD></TR><TR><TD valign="top" align="center">C3503A-12
+</TD><TD valign="top" align="center">VRT23 (VT/GY)
+</TD><TD valign="top" align="center">C252-4
+</TD></TR></TABLE><br>
+
+<br><br><IMG src="SCR_us_en_file%3dN0117085.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="211" width="325" border="0"><li><b>Are the resistances less than 5 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new 
+<span title="Passive Anti-Theft System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PATS
+</span> transceiver. REFER to 
+<a href="SCR_us_en_file%3dSCRJ1B07.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       >Passive Anti-Theft System (PATS) Transceiver
+</a> in this section. CLEAR the DTCs.
+ REPEAT the self-test. 
+If DTC B10D9:87 is retrieved again, GO to 
+<a href="SCR_us_en_file%3dSCRJ1B03.HTM_gen_ref.HTM#H11"                                                                                                                                                                                                                                                       >H11
+</a>. 
+
+<br><br><b>No
+</b><br>REPAIR the circuit in question for an open. CLEAR the DTCs. REPEAT the self-test. 
+</td></tr><tr><td><a name="H11">&nbsp;
+</a><b>H11 CHECK FOR CORRECT 
+<span title="REMOTE FUNCTION ACTUATOR" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> MODULE OPERATION 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect all the 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module connectors.
+</li><li>Check for:
+</li><ul type="square"><li>corrosion
+</li></ul><ul type="square"><li>damaged pins
+</li></ul><ul type="square"><li>pushed-out pins
+</li></ul><li>Connect all the 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module connectors and make sure they seat correctly.
+</li><li>Operate the system and verify the concern is still present.
+</li><li><b>Is the concern still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module. REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSJA0L.HTM%26rightside%3dSCRSJA0R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 419-10
+</a>. TEST the system for normal operation. 
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector. 
+</td></tr></table><a name="PS2-I">&nbsp;
+</a><p><b>Pinpoint Test I: DTC B10D6:62 or U0100:87
+</b></p><h5>Normal Operation 
+</h5><p>When the ignition is transitioned out of off, the Remote Function Actuator (RFA) module checks the PCM ID and compares It with the PCM ID that is stored in the
+
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module memory. If the 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module does not receive the PCM ID or the ID is invalid,
+Passive Anti-Theft System (PATS) is disabled and does not allow the engine to start.
+</p><ul type="disc"><li>DTC B10D6:62 (
+<span title="Passive Anti-Theft System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PATS
+</span> Enable Status: Signal Compare Failure) — sets when the 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span>module does not receive the expected target ID from the PCM over the High Speed Controller Area Network (HS-CAN). The target ID is only sent one time per ignition cycle and is sent within
+milliseconds of the ignition being transitioned out of off.
+</li><li>DTC U0100:87 (Lost Communication With ECM/PCM "A": Missing Message) — sets when the 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module does not receive the target ID from the PCM over the
+
+<span title="High Speed Controller Area Network" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">HS-CAN
+</span>. The target ID is only sent one time per ignition cycle and is sent within milliseconds of the ignition being transitioned out of off.
+</li></ul><p><b>This pinpoint test is intended to diagnose the following:
+</b></p><ul type="disc"><li><span title="High Speed Controller Area Network" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">HS-CAN
+</span> concern
+</li><li>Low battery state of charge
+</li><li>PCM
+</li></ul><a name="I">&nbsp;
+</a><h5>PINPOINT TEST I: DTC B10D6:62 OR U0100:87 
+</h5><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="I1">&nbsp;
+</a><b>I1 CHECK THE BATTERY STATE OF CHARGE 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><p class="singlespace"><b>NOTE: 
+</b> It might be necessary to check battery voltage while cranking the engine to make sure battery voltage is not dropping and causing the concern.
+</p><li>Carry out the Battery Condition Test in 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSE10L.HTM%26rightside%3dSCRSE10R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 414-01
+</a>.
+</li><li><b>Did the battery pass the Battery Condition Test?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRJ1B03.HTM_gen_ref.HTM#I2"                                                                                                                                                                                                                                                       >I2
+</a>. 
+
+<br><br><b>No
+</b><br>RECHARGE or REPLACE the battery REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSE10L.HTM%26rightside%3dSCRSE10R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 414-01
+</a>. 
+</td></tr><tr><td><a name="I2">&nbsp;
+</a><b>I2 RETRIEVE THE 
+<span title="REMOTE FUNCTION ACTUATOR" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> MODULE DTCs FROM THE SELF-TEST 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Check the recorded results from the 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module self-test.
+</li><li><b>Is DTC U0100:00 recorded?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REFER to the 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module DTC Chart in 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSJA0L.HTM%26rightside%3dSCRSJA0R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 419-10
+</a>. 
+
+<br><br><b>No
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRJ1B03.HTM_gen_ref.HTM#I3"                                                                                                                                                                                                                                                       >I3
+</a>. 
+</td></tr><tr><td><a name="I3">&nbsp;
+</a><b>I3 RECHECK THE 
+<span title="REMOTE FUNCTION ACTUATOR" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> MODULE DTCs FROM THE SELF-TEST 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Enter the following diagnostic mode on the scan tool:   Clear 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> Module Continuous DTCs.
+</li><li>Cycle the ignition from RUN to OFF and then back to RUN.
+</li><li>Enter the following diagnostic mode on the scan tool:   
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> Module Self-Test.
+</li><li><b>Is DTC B10D6:62 or U0100:87 retrieved?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRJ1B03.HTM_gen_ref.HTM#I4"                                                                                                                                                                                                                                                       >I4
+</a>. 
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. The DTC may have been set due to high network traffic or an intermittent fault condition. 
+</td></tr><tr><td><a name="I4">&nbsp;
+</a><b>I4 CHECK FOR CORRECT PCM OPERATION 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect all the PCM connectors.
+</li><li>Check for:
+</li><ul type="square"><li>corrosion
+</li></ul><ul type="square"><li>damaged pins
+</li></ul><ul type="square"><li>pushed-out pins
+</li></ul><li>Connect all the PCM connectors and make sure they seat correctly.
+</li><li>Operate the system and verify the concern is still present.
+</li><li><b>Is the concern still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new PCM. REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRS3E0L.HTM%26rightside%3dSCRS3E0R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 303-14
+</a> . TEST the system for normal operation. 
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector. 
+</td></tr></table><a name="PS2-J">&nbsp;
+</a><p><b>Pinpoint Test J: DTC U201F:00 or U201F:13
+</b></p><p><p>Refer to Wiring Diagrams Cell 
+<a target="_parent" href="SCR_us_en_book%3dECR%26cell%3d117%26page%3d%26year%3d%26vehicle%3d2012%20Fiesta%26market%3dUS%26lang%3dEN%26RTYPE%3dDIAGRAM%26lega"                                                                                                                                                                                                                                                               >117
+</a>, Remote Keyless Entry and Alarm for schematic and connector information.
+</p></p><h5>Normal Operation 
+</h5><p>When the Intelligent Access (IA) key is activated by one of the low frequency passive start antennas, the transmitter in
+the 
+<span title="Intelligent Access" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IA
+</span> key sends a radio signal to the Remote Functions Receiver (RFR) module. The
+
+<span title="Remote Functions Receiver" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFR
+</span> module then communicates the command to the Remote Function Actuator (RFA) module, and the
+
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module either switches the ignition to the requested mode or starts the engine.
+</p><p>The 
+<span title="Remote Functions Receiver" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFR
+</span> module receives voltage from Central Junction Box (CJB) fuse 7 (7.5A) and has a dedicated ground circuit.
+The 
+<span title="Remote Functions Receiver" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFR
+</span> module sends all Remote Keyless Entry (RKE) and
+
+<span title="Intelligent Access" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IA
+</span> key information and requests to the 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module through a dedicated single circuit network.
+</p><p>In the event of a failure with the 
+<span title="Remote Functions Receiver" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFR
+</span> module, the vehicle experiences a no-start unless the
+
+<span title="Intelligent Access" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IA
+</span> key is placed near the Passive Anti-Theft System (PATS) transceiver.
+</p><ul type="disc"><li>DTC U201F:00 (External Receiver: No Sub Type Information) — sets when the 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module has lost communication with
+the 
+<span title="Remote Functions Receiver" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFR
+</span> module.
+</li><li>DTC U201F:13 (External Receiver: Circuit Open) — sets when the 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module has lost communication with
+the 
+<span title="Remote Functions Receiver" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFR
+</span> module with an open communication circuit.
+</li></ul><p><b>This pinpoint test is intended to diagnose the following:
+</b></p><ul type="disc"><li>Fuse
+</li><li>Wiring, terminals or connectors
+</li><li><span title="Remote Functions Receiver" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFR
+</span> module
+</li><li><span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module
+</li></ul><a name="J">&nbsp;
+</a><h5>PINPOINT TEST J: DTC U201F:00 OR U201F:13 
+</h5><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="J1">&nbsp;
+</a><b>J1 CHECK FOR VOLTAGE TO THE 
+<span title="REMOTE FUNCTIONS RECEIVER" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFR
+</span> MODULE 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect:   
+<span title="Remote Functions Receiver" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFR
+</span> Module C9026.
+</li><li>Measure the voltage between the 
+<span title="Remote Functions Receiver" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFR
+</span> module C9026-3, circuit SBP07 (WH/RD), harness side and the
+
+<span title="Remote Functions Receiver" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFR
+</span> module C9026-2, circuit GD143 (BK/VT).
+</li><br><br><IMG src="SCR_us_en_file%3dN0116873.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="211" width="325" border="0"><li><b>Is the voltage greater than 10 volts?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRJ1B03.HTM_gen_ref.HTM#J3"                                                                                                                                                                                                                                                       >J3
+</a>. 
+
+<br><br><b>No
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRJ1B03.HTM_gen_ref.HTM#J2"                                                                                                                                                                                                                                                       >J2
+</a>. 
+</td></tr><tr><td><a name="J2">&nbsp;
+</a><b>J2 CHECK THE 
+<span title="REMOTE FUNCTIONS RECEIVER" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFR
+</span> MODULE VOLTAGE SUPPLY CIRCUIT 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Measure the voltage between the 
+<span title="Remote Functions Receiver" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFR
+</span> module C9026-3, circuit SBP07 (WH/RD), harness side and ground.
+</li><br><br><IMG src="SCR_us_en_file%3dN0116874.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="211" width="325" border="0"><li><b>Is the voltage greater than 10 volts?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REPAIR circuit GD143 (BK/VT) for an open. CLEAR the DTCs. REPEAT the self-test. 
+
+<br><br><b>No
+</b><br>VERIFY 
+<span title="Central Junction Box" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">CJB
+</span> fuse 7 (7.5A) is OK. If OK, REPAIR circuit SBP07 (WH/RD) for an open. If not OK, REFER to the Wiring Diagrams manual to identify the possible causes of the
+ circuit short. CLEAR the DTCs. REPEAT the self-test. 
+</td></tr><tr><td><a name="J3">&nbsp;
+</a><b>J3 CHECK THE 
+<span title="REMOTE FUNCTIONS RECEIVER" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFR
+</span> MODULE COMMUNICATION CIRCUIT FOR A SHORT TO VOLTAGE 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Ignition OFF.
+</li><li>Disconnect:   
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> Module C3503B.
+</li><li>Disconnect:   Smart Keyless Entry Ignition Relay.
+</li><li>Connect a fused jumper wire between the smart keyless entry ignition relay pin 3, circuit SBP01 (RD), Central Junction Box (CJB) face side and the smart keyless entry ignition relay pin 5,
+circuit CDC32 (BN/YE), 
+<span title="Central Junction Box" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">CJB
+</span> face side.
+</li><br><br><IMG src="SCR_us_en_file%3dN0116586.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="446" width="325" border="0"><li>Measure the voltage between the 
+<span title="Remote Functions Receiver" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFR
+</span> module C9026-1, circuit VDB10 (GY), harness side and ground.
+</li><br><br><IMG src="SCR_us_en_file%3dN0116875.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="211" width="325" border="0"><li><b>Is any voltage present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REMOVE the jumper wire. INSTALL the smart keyless entry ignition relay. REPAIR circuit VDB10 (GY) for a short to voltage. CLEAR the DTCs. REPEAT the self-test. 
+
+<br><br><b>No
+</b><br>REMOVE the jumper wire. INSTALL the smart keyless entry ignition relay. GO to 
+<a href="SCR_us_en_file%3dSCRJ1B03.HTM_gen_ref.HTM#J4"                                                                                                                                                                                                                                                       >J4
+</a>. 
+</td></tr><tr><td><a name="J4">&nbsp;
+</a><b>J4 CHECK THE 
+<span title="REMOTE FUNCTIONS RECEIVER" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFR
+</span> MODULE COMMUNICATION CIRCUIT FOR AN OPEN OR SHORT TO GROUND 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Measure the resistance between the 
+<span title="Remote Functions Receiver" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFR
+</span> module C9026-1, circuit VDB10 (GY), harness side and
+the 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module C3503B-3, circuit VDB10 (GY), harness side; and between
+the 
+<span title="Remote Functions Receiver" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFR
+</span> module C9026-1, circuit VDB10 (GY), harness side and ground.
+</li><br><br><IMG src="SCR_us_en_file%3dN0116876.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="211" width="325" border="0"><li><b>Is the resistance less than 5 ohms between the 
+<span title="Remote Functions Receiver" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFR
+</span> module and the 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module; and
+greater than 10,000 ohms between the 
+<span title="Remote Functions Receiver" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFR
+</span> module and ground?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new 
+<span title="Remote Functions Receiver" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFR
+</span> module. REFER to 
+<a href="SCR_us_en_file%3dSCRJ1B08.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       >Remote Functions Receiver (RFR) Module
+</a> in this section. CLEAR the DTCs. REPEAT the
+ self-test. If the concern is still present, GO to 
+<a href="SCR_us_en_file%3dSCRJ1B03.HTM_gen_ref.HTM#J5"                                                                                                                                                                                                                                                       >J5
+</a>. 
+
+<br><br><b>No
+</b><br>REPAIR circuit VDB10 (GY) for an open or short to ground. CLEAR the DTCs. REPEAT the self-test. 
+</td></tr><tr><td><a name="J5">&nbsp;
+</a><b>J5 CHECK FOR CORRECT 
+<span title="REMOTE FUNCTION ACTUATOR" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> MODULE OPERATION 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect all the 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module connectors.
+</li><li>Check for:
+</li><ul type="square"><li>corrosion
+</li></ul><ul type="square"><li>damaged pins
+</li></ul><ul type="square"><li>pushed-out pins
+</li></ul><li>Connect all the 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module connectors and make sure they seat correctly.
+</li><li>Operate the system and verify the concern is still present.
+</li><li><b>Is the concern still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module. REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSJA0L.HTM%26rightside%3dSCRSJA0R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 419-10
+</a>. TEST the system for normal operation. 
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector. 
+</td></tr></table><a name="PS2-K">&nbsp;
+</a><p><b>Pinpoint Test K: The Vehicle Does Not Start With The Intelligent Access (IA) Key In Certain Areas Within The Vehicle
+</b></p><p><p>Refer to Wiring Diagrams Cell 
+<a target="_parent" href="SCR_us_en_book%3dECR%26cell%3d112%26page%3d%26year%3d%26vehicle%3d2012%20Fiesta%26market%3dUS%26lang%3dEN%26RTYPE%3dDIAGRAM%26lega"                                                                                                                                                                                                                                                               >112
+</a>, Passive Anti-Theft System for schematic and connector information.
+</p></p><h5>Normal Operation 
+</h5><p>During each vehicle start sequence, when the START/STOP switch is pressed, the Remote Function Actuator (RFA) activates all 3 passive start antennas, which send out a low frequency signal.
+Each passive start antenna has an approximate range of 1 m (3 ft) and are placed in different locations to provide full coverage inside the vehicle. If an Intelligent Access (IA) key is within range
+of a passive start antenna, the low frequency signal activates the 
+<span title="Intelligent Access" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IA
+</span> key. When the 
+<span title="Intelligent Access" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IA
+</span> key is activated
+it sends a high frequency signal to the Remote Functions Receiver (RFR) module. The 
+<span title="Remote Functions Receiver" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFR
+</span> module communicates with
+the 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module. If the 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module determines that a
+programmed 
+<span title="Intelligent Access" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IA
+</span> key is in the vehicle, it allows the ignition to transition out of off or let the engine start.
+</p><p>There are certain areas inside the vehicle where the 
+<span title="Intelligent Access" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IA
+</span> key may not be detected and the message center displays KEY NOT DETECTED. If
+the 
+<span title="Intelligent Access" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IA
+</span> key is in the far outside edges of the interior (like in a door map pocket or above a sun visor) it might not be detected. Move the
+
+<span title="Intelligent Access" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IA
+</span> key to a different location and try to start the vehicle again.
+</p><p><b>NOTE: 
+</b> Some brands/types of mobile phone or laptop computer chargers may cause interference that could lead to a Passive Anti-Theft System (PATS) no-start if
+the 
+<span title="Intelligent Access" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IA
+</span> key is within a few inches of the charger. If a concern is observed, move the 
+<span title="Intelligent Access" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IA
+</span> key away from
+the charger and attempt to start the vehicle.
+</p><ul type="disc"><li>DTC B10C7:1F (Interior Trunk Antenna: Circuit Intermittent) — a DTC that sets when an open or short is detected on one of the circuits to the rear passive start antenna.
+</li><li>DTC B10C8:1F (Interior Centre Antenna: Circuit Intermittent) — a DTC that sets when an open or short is detected on one of the circuits to the center passive start antenna.
+</li><li>DTC B10C9:1F (Interior Front Antenna: Circuit Intermittent) — a DTC that sets when an open or short is detected on one of the circuits to the front passive start antenna.
+</li></ul><p><b>This pinpoint test is intended to diagnose the following:
+</b></p><ul type="disc"><li>Wiring, terminals or connectors
+</li><li>Environmental interference
+</li><li>Front passive start antenna
+</li><li>Center passive start antenna
+</li><li>Rear passive start antenna
+</li><li><span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module
+</li></ul><a name="K">&nbsp;
+</a><h5>PINPOINT TEST K: THE VEHICLE DOES NOT START WITH THE 
+<span title="INTELLIGENT ACCESS" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IA
+</span> KEY IN CERTAIN AREAS WITHIN THE VEHICLE 
+</h5><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="K1">&nbsp;
+</a><b>K1 CHECK THE 
+<span title="INTELLIGENT ACCESS" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IA
+</span> KEY LOCATION 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Check the location of the 
+<span title="Intelligent Access" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IA
+</span> key and if it is placed in the far corners of the interior of the vehicle, move the
+
+<span title="Intelligent Access" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IA
+</span> key out of these areas and attempt to start the vehicle.
+</li><li><b>Does the vehicle start?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>The system is OK. INFORM the customer of the normal vehicle operation. 
+
+<br><br><b>No
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRJ1B03.HTM_gen_ref.HTM#K2"                                                                                                                                                                                                                                                       >K2
+</a>. 
+</td></tr><tr><td><a name="K2">&nbsp;
+</a><b>K2 CHECK FOR ENVIRONMENTAL INTERFERENCE 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Check for the use of any charger or other wireless device that can cause interference with the 
+<span title="Intelligent Access" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IA
+</span> key. If any device is found, remove the device and attempt to start the
+engine.
+</li><li><b>Does the engine start?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INFORM the customer of the cause of the concern and the normal operation of the vehicle. 
+
+<br><br><b>No
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRJ1B03.HTM_gen_ref.HTM#K3"                                                                                                                                                                                                                                                       >K3
+</a>. 
+</td></tr><tr><td><a name="K3">&nbsp;
+</a><b>K3 CHECK THE PASSIVE START ANTENNA CIRCUITS FOR A SHORT TO VOLTAGE 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Ignition OFF.
+</li><li>Disconnect:   
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> Module C3503E.
+</li><li>Disconnect:   Suspect Passive Start Antenna.
+</li><li>Place an 
+<span title="Intelligent Access" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IA
+</span> key next to the 
+<span title="Passive Anti-Theft System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PATS
+</span>/backup transceiver and press the START/STOP switch to switch
+the ignition to RUN.
+</li><li>Measure the voltage between the suspect passive start antenna, harness side and ground as follows:
+</li><br><br><TABLE cellspacing="0" cellpadding="3" border="1"><TR><TH valign="bottom" align="center">Suspect Passive Start Antenna Connector-Pin
+</TH><TH valign="bottom" align="center">Circuit
+</TH></TR><TR><TD valign="top" align="center">Front C325-1
+</TD><TD valign="top" align="center">VPK05 (BN/GN)
+</TD></TR><TR><TD valign="top" align="center">Front C325-2
+</TD><TD valign="top" align="center">RPK05 (YE/OG)
+</TD></TR><TR><TD valign="top" align="center">Center C326-1
+</TD><TD valign="top" align="center">VPK06 (GY/VT)
+</TD></TR><TR><TD valign="top" align="center">Center C326-2
+</TD><TD valign="top" align="center">RPK06 (BU/WH)
+</TD></TR><TR><TD valign="top" align="center">Rear C317-1
+</TD><TD valign="top" align="center">VPK08 (WH/OG)
+</TD></TR><TR><TD valign="top" align="center">Rear C317-2
+</TD><TD valign="top" align="center">RPK08 (BN/VT)
+</TD></TR></TABLE><br>
+
+<br><br><IMG src="SCR_us_en_file%3dN0117086.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="211" width="325" border="0"><li><b>Is any voltage present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REPAIR the circuit in question for a short to voltage. CLEAR the DTCs. REPEAT the self-test. 
+
+<br><br><b>No
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRJ1B03.HTM_gen_ref.HTM#K4"                                                                                                                                                                                                                                                       >K4
+</a>. 
+</td></tr><tr><td><a name="K4">&nbsp;
+</a><b>K4 CHECK THE PASSIVE START ANTENNA CIRCUITS FOR A SHORT TO GROUND 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Ignition OFF.
+</li><li>Measure the resistance between the suspect passive start antenna, harness side and ground as follows:
+</li><br><br><TABLE cellspacing="0" cellpadding="3" border="1"><TR><TH valign="bottom" align="center">Suspect Passive Start Antenna Connector-Pin
+</TH><TH valign="bottom" align="center">Circuit
+</TH></TR><TR><TD valign="top" align="center">Front C325-1
+</TD><TD valign="top" align="center">VPK05 (BN/GN)
+</TD></TR><TR><TD valign="top" align="center">Front C325-2
+</TD><TD valign="top" align="center">RPK05 (YE/OG)
+</TD></TR><TR><TD valign="top" align="center">Center C326-1
+</TD><TD valign="top" align="center">VPK06 (GY/VT)
+</TD></TR><TR><TD valign="top" align="center">Center C326-2
+</TD><TD valign="top" align="center">RPK06 (BU/WH)
+</TD></TR><TR><TD valign="top" align="center">Rear C317-1
+</TD><TD valign="top" align="center">VPK08 (WH/OG)
+</TD></TR><TR><TD valign="top" align="center">Rear C317-2
+</TD><TD valign="top" align="center">RPK08 (BN/VT)
+</TD></TR></TABLE><br>
+
+<br><br><IMG src="SCR_us_en_file%3dN0117087.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="211" width="325" border="0"><li><b>Are the resistance greater than 10,000 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRJ1B03.HTM_gen_ref.HTM#K5"                                                                                                                                                                                                                                                       >K5
+</a>. 
+
+<br><br><b>No
+</b><br>REPAIR the circuit in question for a short to ground. CLEAR the DTCs. REPEAT the self-test. 
+</td></tr><tr><td><a name="K5">&nbsp;
+</a><b>K5 CHECK THE ANTENNA CIRCUITS FOR AN OPEN 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Measure the resistance between the 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module C3503E, harness side and the suspect passive start antenna connector, harness side as follows:
+</li><br><br><TABLE cellspacing="0" cellpadding="3" border="1"><TR><TH valign="bottom" align="center"><span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> Module Connector-Pin
+</TH><TH valign="bottom" align="center">Suspect Passive Start Antenna Connector-Pin
+</TH><TH valign="bottom" align="center">Circuit
+</TH></TR><TR><TD valign="top" align="center">C3503E-9
+</TD><TD valign="top" align="center">Front C325-1
+</TD><TD valign="top" align="center">VPK05 (BN/GN)
+</TD></TR><TR><TD valign="top" align="center">C3503E-2
+</TD><TD valign="top" align="center">Front C325-2
+</TD><TD valign="top" align="center">RPK05 (YE/OG)
+</TD></TR><TR><TD valign="top" align="center">C3503E-17
+</TD><TD valign="top" align="center">Center C326-1
+</TD><TD valign="top" align="center">VPK06 (GY/VT)
+</TD></TR><TR><TD valign="top" align="center">C3503E-5
+</TD><TD valign="top" align="center">Center C326-2
+</TD><TD valign="top" align="center">RPK06 (BU/WH)
+</TD></TR><TR><TD valign="top" align="center">C3503E-11
+</TD><TD valign="top" align="center">Rear C317-1
+</TD><TD valign="top" align="center">VPK08 (WH/OG)
+</TD></TR><TR><TD valign="top" align="center">C3503E-4
+</TD><TD valign="top" align="center">Rear C317-2
+</TD><TD valign="top" align="center">RPK08 (BN/VT)
+</TD></TR></TABLE><br>
+
+<br><br><IMG src="SCR_us_en_file%3dN0117088.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="211" width="325" border="0"><li><b>Are the resistances less than 5 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new passive start antenna. REFER to 
+<a href="SCR_us_en_file%3dSCRJ1B09.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       >Passive Start Antenna — Front
+</a>, 
+<a href="SCR_us_en_file%3dSCRJ1B10.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       >Passive Start Antenna — Center
+</a> or 
+<a href="SCR_us_en_file%3dSCRJ1B11.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       >Passive Start Antenna — Rear
+</a> in this section. CLEAR the DTCs. REPEAT the self-test. 
+
+<br><br>If the concern is still present, GO to 
+<a href="SCR_us_en_file%3dSCRJ1B03.HTM_gen_ref.HTM#K6"                                                                                                                                                                                                                                                       >K6
+</a>. 
+
+<br><br><b>No
+</b><br>REPAIR the circuit in question for an open. CLEAR the DTCs. REPEAT the self-test. 
+</td></tr><tr><td><a name="K6">&nbsp;
+</a><b>K6 CHECK FOR CORRECT 
+<span title="REMOTE FUNCTION ACTUATOR" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> MODULE OPERATION 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect all the 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module connectors.
+</li><li>Check for:
+</li><ul type="square"><li>corrosion
+</li></ul><ul type="square"><li>damaged pins
+</li></ul><ul type="square"><li>pushed-out pins
+</li></ul><li>Connect all the 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module connectors and make sure they seat correctly.
+</li><li>Operate the system and verify the concern is still present.
+</li><li><b>Is the concern still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module. REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSJA0L.HTM%26rightside%3dSCRSJA0R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 419-10
+</a>. TEST the system for normal operation 
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector. 
+</td></tr></table><a name="PS2-L">&nbsp;
+</a><p><b>Pinpoint Test L: The Vehicle Does Not Start/Unable To Transition The Ignition Out Of OFF
+</b></p><h5>Normal Operation 
+</h5><p>During each vehicle start sequence, when the START/STOP switch is pressed, the Remote Function Actuator (RFA) activates all 3 passive start antennas, which send out a low frequency signal. If
+an Intelligent Access (IA) key is within range of a passive start antenna, the low frequency signal activates the 
+<span title="Intelligent Access" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IA
+</span> key. When
+the 
+<span title="Intelligent Access" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IA
+</span> key is activated it sends a high frequency signal to theRemote Functions Receiver (RFR) module.
+The 
+<span title="Remote Functions Receiver" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFR
+</span> module communicates with the 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module. If
+the 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module determines that a programmed 
+<span title="Intelligent Access" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IA
+</span> key is in the vehicle, it allows the ignition to
+transition out of off or let the engine start.
+</p><p>The vehicle experiences a 
+<span title="Passive Anti-Theft System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PATS
+</span> no-start in the event there is a failure of any passive start antenna, the battery in the
+
+<span title="Intelligent Access" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IA
+</span> key, or the 
+<span title="Remote Functions Receiver" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFR
+</span> module. However, in the event of one of these failures, the
+
+<span title="Intelligent Access" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IA
+</span> key can be placed next to the 
+<span title="Passive Anti-Theft System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PATS
+</span> transceiver (located in the steering column) to allow the
+vehicle to start. The 
+<span title="Passive Anti-Theft System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PATS
+</span> transceiver activates an 
+<span title="Intelligent Access" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IA
+</span> key if it is placed in close proximity. The
+
+<span title="Passive Anti-Theft System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PATS
+</span> transceiver is hardwired to the 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module.
+</p><p>Once the 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module determines that a programmed 
+<span title="Intelligent Access" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IA
+</span> key is inside the vehicle and receives
+a request to start the engine, it communicates with the PCM over the High Speed Controller Area Network (HS-CAN). Once the
+
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module and the PCM communicate, the 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module checks the ID of the PCM and compares it
+with the module ID stored in its own memory. If the 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module and PCM IDs match then the
+
+<span title="Passive Anti-Theft System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PATS
+</span> enables the starter relay and fuel injectors and allows the engine to start.
+</p><p>The 
+<span title="Intelligent Access" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IA
+</span> key disable feature prevents the engine from starting or the ignition from transitioning out of off if
+the 
+<span title="Intelligent Access" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IA
+</span> key has been disabled. For more information on the 
+<span title="Intelligent Access" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IA
+</span> key disable feature, refer
+to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSJ1AL.HTM%26rightside%3dSCRSJ1AR.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 419-01A
+</a>.
+</p><p><b>This pinpoint test is intended to diagnose the following:
+</b></p><ul type="disc"><li>Starting system concern
+</li><li>Driveability concern
+</li><li><span title="Passive Anti-Theft System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PATS
+</span> concern
+</li></ul><a name="L">&nbsp;
+</a><h5>PINPOINT TEST L: THE VEHICLE DOES NOT START/UNABLE TO TRANSITION THE IGNITION OUT OF OFF 
+</h5><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="L1">&nbsp;
+</a><b>L1 CHECK FOR KEY NOT DETECTED 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><p class="singlespace"><b>NOTE: 
+</b> Prior to performing any diagnostics press the unlock button on an 
+<span title="Intelligent Access" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IA
+</span> key to make sure the 
+<span title="Intelligent Access" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IA
+</span>key disable feature was causing the concern.
+</p><li>Check the Front Control/Display Interface Module (FCDIM) while pressing the START/STOP switch.
+</li><li><b>Is KEY NOT DETECTED displayed?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br><a href="SCR_us_en_file%3dSCRJ1B03.HTM_gen_ref.HTM#PS2-M"                                                                                                                                                                                                                                                       >GO to Pinpoint Test M
+</a>. 
+
+<br><br><b>No
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRJ1B03.HTM_gen_ref.HTM#L2"                                                                                                                                                                                                                                                       >L2
+</a>. 
+</td></tr><tr><td><a name="L2">&nbsp;
+</a><b>L2 CHECK THE 
+<span title="INSTRUMENT PANEL CLUSTER" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IPC
+</span> OPERATION 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Observe the Instrument Panel Cluster (IPC) operation while pressing the START/STOP switch.
+</li><li><b>Do some of the indicators in the 
+<span title="Instrument Panel Cluster" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IPC
+</span> illuminate?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRJ1B03.HTM_gen_ref.HTM#L3"                                                                                                                                                                                                                                                       >L3
+</a>. 
+
+<br><br><b>No
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRJ1B03.HTM_gen_ref.HTM#L4"                                                                                                                                                                                                                                                       >L4
+</a>. 
+</td></tr><tr><td><a name="L3">&nbsp;
+</a><b>L3 CHECK FOR 
+<span title="REMOTE FUNCTION ACTUATOR" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> MODULE DTCs 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Retrieve the 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module continuous DTCs.
+</li><li><b>Are any 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module DTCs present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REFER to DTC Charts in this section. 
+
+<br><br><b>No
+</b><br>The no-start condition is not 
+<span title="Passive Anti-Theft System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PATS
+</span>-related. REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRS360L.HTM%26rightside%3dSCRS360R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 303-06
+</a> to diagnose the cause of the
+ no-start condition. 
+</td></tr><tr><td><a name="L4">&nbsp;
+</a><b>L4 CHECK FOR COMMUNICATION WITH THE SCAN TOOL 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Refer to Inspection and Verification in 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSI00L.HTM%26rightside%3dSCRSI00R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 418-00
+</a>, and follow the procedure to establish a session with the vehicle.
+</li><li><b>Does the scan tool establish communication with the vehicle?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSB50L.HTM%26rightside%3dSCRSB50R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 211-05
+</a> to diagnose no power in RUN. 
+
+<br><br><b>No
+</b><br>REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSI00L.HTM%26rightside%3dSCRSI00R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 418-00
+</a> to diagnose no communication with the 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module or the PCM. 
+</td></tr></table><a name="PS2-M">&nbsp;
+</a><p><b>Pinpoint Test M: KEY NOT DETECTED Is Displayed
+</b></p><h5>Normal Operation 
+</h5><p>During each vehicle start sequence, if the Remote Function Actuator (RFA) module does not detect an Intelligent Access (IA) key inside the
+vehicle or the Passive Anti-Theft System (PATS)/backup transceiver does not receive an 
+<span title="Intelligent Access" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IA
+</span> key identification code, the
+Front Control/Display Interface Module (FCDIM) displays the message KEY NOT DETECTED.
+</p><p><b>NOTE: 
+</b> Some brands/types of mobile phone or laptop computer chargers may cause interference that could lead to a Passive Anti-Theft System (PATS) no-start if
+the 
+<span title="Intelligent Access" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IA
+</span> key is within a few inches of the charger. If a concern is observed, move the 
+<span title="Intelligent Access" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IA
+</span> key away from
+the charger and attempt to start the vehicle.
+</p><p><b>This pinpoint test is intended to diagnose the following:
+</b></p><ul type="disc"><li>Environmental interference
+</li><li><span title="Intelligent Access" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IA
+</span> key
+</li><li><span title="Intelligent Access" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IA
+</span> key battery
+</li><li><span title="Intelligent Access" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IA
+</span> key not programmed
+</li></ul><a name="M">&nbsp;
+</a><h5>PINPOINT TEST M: KEY NOT DETECTED IS DISPLAYED 
+</h5><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="M1">&nbsp;
+</a><b>M1 CHECK THE 
+<span title="INTELLIGENT ACCESS" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IA
+</span> KEY LOCATION 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Place the 
+<span title="Intelligent Access" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IA
+</span> key in several locations within the vehicle and attempt to start the vehicle
+</li><li><b>Does the vehicle start with the 
+<span title="Intelligent Access" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IA
+</span> in certain areas only?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br><a href="SCR_us_en_file%3dSCRJ1B03.HTM_gen_ref.HTM#PS2-K"                                                                                                                                                                                                                                                       >GO to Pinpoint Test K
+</a>. 
+
+<br><br><b>No
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRJ1B03.HTM_gen_ref.HTM#M2"                                                                                                                                                                                                                                                       >M2
+</a>. 
+</td></tr><tr><td><a name="M2">&nbsp;
+</a><b>M2 CHECK FOR ENVIRONMENTAL INTERFERENCE 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Check for the use of any charger or other wireless device that can cause interference with the 
+<span title="Intelligent Access" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IA
+</span> key. If any device is found, remove the device and attempt to start the
+engine.
+</li><li><b>Does the engine start?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INFORM the customer of the cause of the concern and the normal operation of the vehicle. 
+
+<br><br><b>No
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRJ1B03.HTM_gen_ref.HTM#M3"                                                                                                                                                                                                                                                       >M3
+</a>. 
+</td></tr><tr><td><a name="M3">&nbsp;
+</a><b>M3 CHECK THE 
+<span title="INTELLIGENT ACCESS" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IA
+</span> KEY 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Place the 
+<span title="Intelligent Access" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IA
+</span> key next to the 
+<span title="Passive Anti-Theft System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PATS
+</span> transceiver and press the START/STOP switch.
+</li><li><b>Is KEY NOT DETECTED displayed?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRJ1B03.HTM_gen_ref.HTM#M4"                                                                                                                                                                                                                                                       >M4
+</a>. 
+
+<br><br><b>No
+</b><br>INSTALL a new 
+<span title="Intelligent Access" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IA
+</span> key battery. DO NOT reprogram the 
+<span title="Intelligent Access" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IA
+</span> key (damaged or dead batteries do not erase
+ 
+<span title="Intelligent Access" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IA
+</span> keys from memory). TEST the system for normal operation. 
+</td></tr><tr><td><a name="M4">&nbsp;
+</a><b>M4 CHECK THE 
+<span title="INTELLIGENT ACCESS" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IA
+</span> KEY PROGRAMMING 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Program the 
+<span title="Intelligent Access" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IA
+</span> keys. REFER to 
+<a href="SCR_us_en_file%3dSCRJ1B05.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       >Key Programming Using Diagnostic Equipment
+</a> in this section.
+</li><li><b>Does the 
+<span title="Intelligent Access" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IA
+</span> key successfully program?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>The concern was caused by an unprogrammed 
+<span title="Intelligent Access" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IA
+</span> key. 
+
+<br><br><b>No
+</b><br>DISCARD the key in question and PROGRAM a new key. REFER to 
+<a href="SCR_us_en_file%3dSCRJ1B05.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       >Key Programming Using Diagnostic Equipment
+</a> in this section. TEST the system for normal operation 
+</td></tr></table><a name="PS2-N">&nbsp;
+</a><p><b>Pinpoint Test N: DTC U0167:00 or U0426:00
+</b></p><h5>Normal Operation 
+</h5><p>When the ignition is turned to the RUN or START mode, the Remote Function Actuator (RFA) module and the PCM send each other their ID over the
+High Speed Controller Area Network (HS-CAN). Each module then checks the ID it receives and compares with the ID stored in memory. If the IDs are missing or the IDs are invalid,
+Passive Anti-Theft System (PATS) is disabled and does not allow the engine to start.
+</p><ul type="disc"><li>DTC U0167:00 (Lost Communication With Vehicle Immobilizer Control Module: No Sub Type Information) — a continuous DTC that sets when the PCM does not receive any
+
+<span title="Passive Anti-Theft System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PATS
+</span> data from the 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module over the
+
+<span title="High Speed Controller Area Network" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">HS-CAN
+</span>. The target ID is only sent once per key cycle and within milliseconds of the ignition being turned to the RUN or START mode.
+</li><li>DTC U0426:00 (Invalid Data Received From Vehicle Immobilizer Control Module: No Sub Type Information) — a continuous DTC that sets when the PCM does not receive the expected target ID from the
+
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module over the 
+<span title="High Speed Controller Area Network" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">HS-CAN
+</span>. The target ID is only sent once per key cycle and
+within milliseconds of the ignition being turned to the RUN or START mode. This DTC also sets if a new PCM has been installed and the 
+<span title="Passive Anti-Theft System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PATS
+</span> Parameter Reset procedure has
+not been carried out.
+</li></ul><p><b>This pinpoint test is intended to diagnose the following:
+</b></p><ul type="disc"><li><span title="High Speed Controller Area Network" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">HS-CAN
+</span> concern
+</li><li>Low battery state of charge
+</li><li><span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module
+</li></ul><a name="N">&nbsp;
+</a><h5>PINPOINT TEST N: DTC U0167:00 OR U0426:00 
+</h5><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="N1">&nbsp;
+</a><b>N1 CHECK THE 
+<span title="REMOTE FUNCTION ACTUATOR" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> MODULE DTCs FROM THE SELF-TEST 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Check the recorded results from the 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module self-test.
+</li><li><b>Are any 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module DTCs retrieved?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REFER to the 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module DTC Chart in this section. 
+
+<br><br><b>No
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRJ1B03.HTM_gen_ref.HTM#N2"                                                                                                                                                                                                                                                       >N2
+</a>. 
+</td></tr><tr><td><a name="N2">&nbsp;
+</a><b>N2 CHECK THE BATTERY STATE OF CHARGE 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><p class="singlespace"><b>NOTE: 
+</b> It might be necessary to check battery voltage while cranking the engine to make sure battery voltage is not dropping and causing the concern.
+</p><li>Carry out the Battery Condition Test In 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSE10L.HTM%26rightside%3dSCRSE10R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 414-01
+</a>.
+</li><li><b>Did the battery pass the Battery Condition Test?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRJ1B03.HTM_gen_ref.HTM#N3"                                                                                                                                                                                                                                                       >N3
+</a>. 
+
+<br><br><b>No
+</b><br>RECHARGE or REPLACE the battery. REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSE10L.HTM%26rightside%3dSCRSE10R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 414-01
+</a>. 
+</td></tr><tr><td><a name="N3">&nbsp;
+</a><b>N3 CHECK FOR COMMUNICATION WITH THE 
+<span title="REMOTE FUNCTION ACTUATOR" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> MODULE 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Enter the following diagnostic mode on the scan tool:   Network Test.
+</li><li><b>Does the 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module respond to the scan tool?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRJ1B03.HTM_gen_ref.HTM#N4"                                                                                                                                                                                                                                                       >N4
+</a>. 
+
+<br><br><b>No
+</b><br>REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSI00L.HTM%26rightside%3dSCRSI00R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 418-00
+</a>. 
+</td></tr><tr><td><a name="N4">&nbsp;
+</a><b>N4 RECHECK THE PCM DTCs FROM THE SELF-TEST 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Enter the following diagnostic mode on the scan tool:   Clear PCM Continuous DTCs.
+</li><li>Cycle the ignition from RUN to OFF and then back to RUN.
+</li><li>Enter the following diagnostic mode on the scan tool:   PCM Self-Test.
+</li><li><b>Is DTC U0167:87 or U0426:81 retrieved?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRJ1B03.HTM_gen_ref.HTM#N5"                                                                                                                                                                                                                                                       >N5
+</a>. 
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. The DTC may have been set due to high network traffic or an intermittent fault condition. 
+</td></tr><tr><td><a name="N5">&nbsp;
+</a><b>N5 CHECK FOR CORRECT 
+<span title="REMOTE FUNCTION ACTUATOR" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> MODULE OPERATION 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect all the 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module connectors.
+</li><li>Check for:
+</li><ul type="square"><li>corrosion
+</li></ul><ul type="square"><li>damaged pins
+</li></ul><ul type="square"><li>pushed-out pins
+</li></ul><li>Connect all the 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module connectors and make sure they seat correctly.
+</li><li>Operate the system and verify the concern is still present.
+</li><li><b>Is the concern still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module. REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSJA0L.HTM%26rightside%3dSCRSJA0R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 419-10
+</a>. TEST the system for normal operation 
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector. 
+</td></tr></table><br><hr><P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+
+</body>
+<!-- Mirrored from file:///C:/Documents and Settings/Administrator/Desktop/FORD/Ford Fiesta 2012/SCR~us~en~file=SCRJ1B03.HTM~gen~ref.HTM by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 04 Mar 2025 14:52:51 GMT -->
+</html>

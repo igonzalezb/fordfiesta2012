@@ -1,0 +1,891 @@
+<html>
+<!-- Mirrored from file:///C:/Documents and Settings/Administrator/Desktop/FORD/Ford Fiesta 2012/SCR~us~en~file=SCRD0002.HTM~gen~ref.HTM by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 04 Mar 2025 14:53:36 GMT -->
+<head><META http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>2012 Fiesta Workshop Manual
+
+</title><LINK rel="stylesheet" type="text/css" href="SCR_us_en_file%3dSCRSTYLE.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       ><meta name="tps_translationdatetime" content="06/09/2012 16:28:18"><meta name="tps_type" content="workshop"><meta name="tps_bookcode" content="SCR"><meta name="tps_market" content="US"><meta name="tps_language" content="EN"><meta name="tps_year" content="2012"><meta name="tps_modelname" content="Fiesta"><meta name="tps_system" content="4"><meta name="tps_group" content="13"><meta name="tps_section" content="00"><meta name="tps_section_title" content="Instrument Cluster and Panel Illumination"><meta name="tps_ss_title" content="DIAGNOSIS AND TESTING"><meta name="tps_procid" content="s4p1940q0"><meta name="tps_procsgmlid" content="n1235193"><meta name="tps_packetinfo" content="690963"><meta name="tps_effectivity" content="2011,FIESTA,13-000"><meta name="tps_effectivity" content="2012,FIESTA,13-000"><meta name="tps_effectivity" content="2013,FIESTA,13-000"></head><body><TABLE width="95%"><TR><TD><div class="bookinfo">SECTION 413-00:  Instrument Cluster and Panel Illumination
+</DIV></TD><TD align="RIGHT"><div class="bookinfo">2012 Fiesta Workshop Manual
+</DIV></TD></TR><TR><TD><div class="bookinfo">DIAGNOSIS AND TESTING
+</div></TD><TD align="RIGHT"><div class="bookinfosmall">Procedure revision date:  07/15/2011
+</div></TD></TR></TABLE><hr><h4>Instrument Cluster and Panel Illumination
+</h4><meta name="tps_proctitle" content="Instrument Cluster and Panel Illumination">
+
+<br><table border="1" cellpadding="3" cellspacing="0" width="50%"><caption>Special Tool(s)
+</caption><tr valign="top"><td><IMG src="SCR_us_en_file%3dST2834A.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="99" width="99" border="0"></td><td>Vehicle Communication Module (VCM) and Integrated Diagnostic System (IDS) software with appropriate hardware, or equivalent
+ scan tool
+<br></td></tr><tr valign="top"><td><IMG src="SCR_us_en_file%3dST3093A.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="99" width="99" border="0"></td><td>Fluke 77-IV Digital Multimeter
+<br>FLU77-4 or equivalent
+</td></tr><tr valign="top"><td><IMG src="SCR_us_en_file%3dST2574A.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="99" width="99" border="0"></td><td>Flex Probe Kit
+<br>NUD105-R025D or equivalent
+</td></tr></table><div><a name="extract_487">&nbsp;
+</a></div>
+
+<p><b>Principles of Operation
+</b></p><p><b>Dimmable Backlighting
+</b></p><p>When the parking lamps are on, the Body Control Module (BCM) monitors the input from the instrument panel dimmer switch.
+The 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> sends voltage to the dimmable components based on input received from the instrument panel dimmer switch.
+</p><p>If a fault is detected by the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> on the dimmable illumination output circuit, the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> sets a
+DTC and disables the circuit function until the fault is cleared and an ignition cycle takes place.
+</p><p>The 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> also sends a message over the network to the Front Control/Display Interface Module (FCDIM) and the
+Instrument Panel Cluster (IPC) to control the backlighting intensity level.
+</p><p>If the receiving module does not receive the backlighting status message from the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span>, or if the data received is deemed invalid for more than 5 seconds, the receiving
+module sets a missing message related DTC in continuous memory and defaults the backlighting to full nighttime intensity.
+</p><p><b>Non-Dimmable Backlighting
+</b></p><p>When the ignition relay (located in the Central Junction Box (CJB)) is energized, switched voltage is supplied to the window control switches.
+</p><p><b>Field-Effect Transistor (FET) Protection
+</b></p><p>Field-Effect Transistor (FET) is a type of transistor that when used with module software, monitors and controls current flow on module outputs.
+The 
+<span title="Field-Effect Transistor" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">FET
+</span> protection strategy prevents module damage in the event of excessive current flow.
+</p><p>The 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> utilizes an 
+<span title="Field-Effect Transistor" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">FET
+</span> protective circuit strategy for many of its outputs, for example a
+backlighting illumination output circuit. Output loads (current level) are monitored for excessive current (typically short circuits) and are shut down when a fault event is detected. A short circuit DTC sets when the fault occurs.
+</p><p>The 
+<span title="Field-Effect Transistor" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">FET
+</span> protection continues to shut off the circuit so long as the fault exists. When the fault is corrected and the ignition state is cycled off and then back on,
+the module resets the 
+<span title="Field-Effect Transistor" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">FET
+</span> protection and allows the circuit to function.
+</p><p>The 
+<span title="Field-Effect Transistor" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">FET
+</span> protected circuit for the dimmable backlighting system is the dimmable backlighting illumination circuit.
+</p><div><a name="extract_488">&nbsp;
+</a></div>
+
+<p><b>Inspection and Verification
+</b></p><ol start="1"><li>Verify the customer concern.
+</li></ol><ol start="2"><li>Visually inspect for obvious signs of mechanical or electrical damage.
+</li></ol><br><br><P class="SINGLESPACE"><B>&nbsp; 
+
+Visual Inspection Chart 
+</B></P><TABLE cellspacing="0" cellpadding="3" border="1"><TR><TH valign="bottom" align="center">Mechanical
+</TH><TH valign="bottom" align="center">Electrical
+</TH></TR><TR><TD valign="top" align="left"><ul type="disc"><li>Headlamp switch
+</li><li>Instrument panel dimmer switch
+</li></ul></TD><TD valign="top" align="left"><ul type="disc"><li>Illuminated components
+</li></ul></TD></TR></TABLE><br><ol start="3"><li>If an obvious cause for an observed or reported concern is found, correct the cause (if possible) before proceeding to the next step.
+</li></ol><ol start="4"><li><p><b>NOTE: 
+</b> Make sure to use the latest scan tool release software.
+</p>If the cause is not visually evident, connect the scan tool to the Data Link Connector (DLC).
+</li></ol><ol start="5"><li><p><b>NOTE: 
+</b> The Vehicle Communication Module (VCM) prove-out confirms power and ground from the 
+<span title="Data Link Connector" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">DLC
+</span> are provided to
+the 
+<span title="Vehicle Communication Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">VCM
+</span>.
+</p>If the scan tool does not communicate with the 
+<span title="Vehicle Communication Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">VCM
+</span>:
+
+<ul type="disc"><li>Check the 
+<span title="Vehicle Communication Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">VCM
+</span> connection to the vehicle.
+</li></ul><ul type="disc"><li>Check the scan tool connection to the 
+<span title="Vehicle Communication Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">VCM
+</span>.
+</li></ul><ul type="disc"><li>Refer to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSI00L.HTM%26rightside%3dSCRSI00R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 418-00
+</a>, No Power To The Scan Tool, to diagnose no power to the scan tool.
+</li></ul></li></ol><ol start="6"><li>If the scan tool does not communicate with the vehicle:
+
+<ul type="disc"><li>Verify the ignition key is in the ON position.
+</li></ul><ul type="disc"><li>Verify the scan tool operation with a known good vehicle.
+</li></ul><ul type="disc"><li>Refer to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSI00L.HTM%26rightside%3dSCRSI00R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 418-00
+</a> to diagnose no response from the PCM.
+</li></ul></li></ol><ol start="7"><li>Carry out the network test.
+
+<ul type="disc"><li>If the scan tool responds with no communication with one or more modules, refer to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSI00L.HTM%26rightside%3dSCRSI00R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 418-00
+</a>.
+</li></ul><ul type="disc"><li>If the network test passes, retrieve and record the continuous memory DTCs.
+</li></ul></li></ol><ol start="8"><li>Clear the continuous DTCs and carry out the self-test diagnostics for the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span>.
+</li></ol><ol start="9"><li>If the DTCs retrieved are related to the concern, go to DTC Charts. For all other DTCs, refer to the Diagnostic Trouble Code (DTC) Chart in 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSJA0L.HTM%26rightside%3dSCRSJA0R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 419-10
+</a>.
+
+<br>If no DTCs related to the concern are retrieved, GO to 
+<a href="SCR_us_en_file%3dSCRD0002.HTM_gen_ref.HTM#SC1"                                                                                                                                                                                                                                                       >Symptom Chart
+</a>.
+</li></ol><div><a name="extract_489">&nbsp;
+</a></div>
+
+<p><b>DTC Charts
+</b></p><P class="SINGLESPACE"><B>&nbsp;Body Control Module (BCM) DTC Chart 
+</B></P><TABLE cellspacing="0" cellpadding="3" border="1"><TR><TH valign="bottom" align="center">DTC
+</TH><TH valign="bottom" align="center">Description
+</TH><TH valign="bottom" align="center">Action
+</TH></TR><TR><TD valign="top" align="center">B134E:23
+</TD><TD valign="top" align="left">Switch Illumination Adjustment Control: Signal Stuck low
+</TD><TD valign="top" align="left"><a href="SCR_us_en_file%3dSCRD0002.HTM_gen_ref.HTM#PS2-A"                                                                                                                                                                                                                                                       >GO to Pinpoint Test A
+</a>.
+</TD></TR><TR><TD valign="top" align="center">U2010:11
+</TD><TD valign="top" align="left">Switch Illumination: Circuit Short To Ground
+</TD><TD valign="top" align="left"><a href="SCR_us_en_file%3dSCRD0002.HTM_gen_ref.HTM#PS2-B"                                                                                                                                                                                                                                                       >GO to Pinpoint Test B
+</a>.
+</TD></TR><TR><TD valign="top" align="center">All other DTCs
+</TD><TD valign="top" align="left">—
+</TD><TD valign="top" align="left">REFER to the Diagnostic Trouble Code (DTC) Chart in 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSJA0L.HTM%26rightside%3dSCRSJA0R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 419-10
+</a>.
+</TD></TR></TABLE><br><div><a name="extract_490">&nbsp;
+</a></div>
+
+<p><b>Symptom Chart
+</b></p><a name="SC1">&nbsp;
+</a><table width="90%" cellpadding="3" cellspacing="0" rules="groups" border="1">
+
+<caption>Symptom Chart 
+</caption><colgroup><colgroup><colgroup><tr><th>Condition
+</th><th>Possible Sources
+</th><th>Action
+</th></tr><tbody></tbody>
+
+<tr valign="top"><td><ul type="disc"><li>All dimmable illumination does not increase/decrease brightness
+</li></ul></td><td><ul type="disc"><li>Wiring, terminals or connectors
+</li><li>Instrument panel dimmer switch
+</li><li>Body Control Module (BCM)
+</li></ul></td><td><ul type="disc"><li><a href="SCR_us_en_file%3dSCRD0002.HTM_gen_ref.HTM#PS2-A"                                                                                                                                                                                                                                                       >GO to Pinpoint Test A
+</a>.
+</li></ul></td></tr><tbody></tbody>
+
+<tr valign="top"><td><ul type="disc"><li>All dimmable non-networked illumination is inoperative
+</li></ul></td><td><ul type="disc"><li>Wiring, terminals or connectors
+</li><li><span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span></li></ul></td><td><ul type="disc"><li><a href="SCR_us_en_file%3dSCRD0002.HTM_gen_ref.HTM#PS2-B"                                                                                                                                                                                                                                                       >GO to Pinpoint Test B
+</a>.
+</li></ul></td></tr><tbody></tbody>
+
+<tr valign="top"><td><ul type="disc"><li>All dimmable non-networked illumination is always on
+</li></ul></td><td><ul type="disc"><li>Wiring, terminals or connectors
+</li><li><span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span></li></ul></td><td><ul type="disc"><li><a href="SCR_us_en_file%3dSCRD0002.HTM_gen_ref.HTM#PS2-C"                                                                                                                                                                                                                                                       >GO to Pinpoint Test C
+</a>.
+</li></ul></td></tr><tbody></tbody>
+
+<tr valign="top"><td><ul type="disc"><li>The steering wheel switch illumination is inoperative
+</li></ul></td><td><ul type="disc"><li>Wiring, terminals or connectors
+</li><li>Steering wheel switch(es)
+</li><li>Steering wheel harness
+</li><li>Clockspring
+</li></ul></td><td><ul type="disc"><li><a href="SCR_us_en_file%3dSCRD0002.HTM_gen_ref.HTM#PS2-D"                                                                                                                                                                                                                                                       >GO to Pinpoint Test D
+</a>.
+</li></ul></td></tr><tbody></tbody>
+
+<tr valign="top"><td><ul type="disc"><li>One or more switch illumination is inoperative
+</li></ul></td><td><ul type="disc"><li>Wiring, terminals or connectors
+</li><li>Illuminated switch
+</li></ul></td><td><ul type="disc"><li><a href="SCR_us_en_file%3dSCRD0002.HTM_gen_ref.HTM#PS2-E"                                                                                                                                                                                                                                                       >GO to Pinpoint Test E
+</a>.
+</li></ul></td></tr><tbody></tbody>
+
+<tr valign="top"><td><ul type="disc"><li>The window control switch illumination is inoperative
+</li></ul></td><td><ul type="disc"><li>Window control switch
+</li></ul></td><td><ul type="disc"><li>CHECK the operation of the power windows.
+</li><ul type="square" class="singlespace"><li>If the power windows operate correctly, INSTALL a new window control switch. REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRS1B0L.HTM%26rightside%3dSCRS1B0R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 501-11
+</a>. TEST the system for normal operation.
+</li></ul><ul type="square" class="singlespace"><li>If the power windows do not operate correctly, REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRS1B0L.HTM%26rightside%3dSCRS1B0R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 501-11
+</a>.
+</li></ul></ul></td></tr><tbody></tbody>
+
+<tr valign="top"><td><ul type="disc"><li>All network controlled illumination does not dim
+</li></ul></td><td><ul type="disc"><li>Medium Speed Controller Area Network (MS-CAN)
+</li><li><span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span></li></ul></td><td><ul type="disc"><li>CARRY OUT the network test.
+</li><ul type="square" class="singlespace"><li>If the scan tool responds with no communication to any module on the 
+<span title="Medium Speed Controller Area Network" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">MS-CAN
+</span>, REFER
+to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSI00L.HTM%26rightside%3dSCRSI00R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 418-00
+</a>.
+</li></ul><ul type="square" class="singlespace"><li>If the scan tool communicates with the modules on the 
+<span title="Medium Speed Controller Area Network" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">MS-CAN
+</span>, INSTALL a new
+
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span>. REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSJA0L.HTM%26rightside%3dSCRSJA0R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 419-10
+</a>. TEST the system for normal operation.
+</li></ul></ul></td></tr><tbody></tbody>
+
+<tr valign="top"><td><ul type="disc"><li>The Instrument Panel Cluster (IPC) illumination is inoperative
+</li></ul></td><td><ul type="disc"><li><span title="Medium Speed Controller Area Network" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">MS-CAN
+</span></li><li><span title="Instrument Panel Cluster" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IPC
+</span></li></ul></td><td><ul type="disc"><li>CARRY OUT the network test.
+</li><ul type="square" class="singlespace"><li>If the scan tool responds with no communication with the 
+<span title="Instrument Panel Cluster" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IPC
+</span>, REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSI00L.HTM%26rightside%3dSCRSI00R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 418-00
+</a>.
+</li></ul><ul type="square" class="singlespace"><li>If the scan tool communicates with the 
+<span title="Instrument Panel Cluster" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IPC
+</span>, INSTALL a new 
+<span title="Instrument Panel Cluster" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IPC
+</span>. REFER
+to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSD10L.HTM%26rightside%3dSCRSD10R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 413-01
+</a>. TEST the system for normal operation.
+</li></ul></ul></td></tr><tbody></tbody>
+
+<tr valign="top"><td><ul type="disc"><li>The Front Control/Display Interface Module (FCDIM) illumination operate correctly
+</li></ul></td><td><ul type="disc"><li><span title="Medium Speed Controller Area Network" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">MS-CAN
+</span></li><li><span title="Front Control/Display Interface Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">FCDIM
+</span></li></ul></td><td><ul type="disc"><li>REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSF00L.HTM%26rightside%3dSCRSF00R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 415-00
+</a>.
+</li></ul></td></tr></table><div><a name="extract_491">&nbsp;
+</a></div>
+
+<p><b>Pinpoint Tests
+</b></p><a name="PS2-A">&nbsp;
+</a><p><b>Pinpoint Test A: All Dimmable Illumination Does Not Increase/Decrease Brightness
+</b></p><p><p>Refer to Wiring Diagrams Cell 
+<a target="_parent" href="SCR_us_en_book%3dECR%26cell%3d071%26page%3d%26year%3d%26vehicle%3d2012%20Fiesta%26market%3dUS%26lang%3dEN%26RTYPE%3dDIAGRAM%26lega"                                                                                                                                                                                                                                                               >71
+</a>, Cluster and Panel Illumination for schematic and connector information.
+</p></p><h5>Normal Operation 
+</h5><p>The instrument panel dimmer switch is a rocker style switch with 2 inputs to the Body Control Module (BCM) to increase or decrease the backlighting illumination. When the instrument panel
+dimmer switch is pressed up or down, a ground signal is routed to the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span>.
+</p><p>Based on the ground signal input from the instrument panel dimmer switch, the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> sends a message over the network to the modules with backlighting output indicating the
+backlighting intensity level, and provides voltage to the hard-wired dimmable illumination sources.
+</p><ul type="disc"><li>DTC B134E:23 (Switch Illumination Adjustment Control: Signal Stuck low) — a continuous and on-demand DTC that sets when the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> detects the instrument panel dimmer
+switch is stuck or held low for more than 2 minutes or the increase or decrease control circuits are shorted to ground. If the instrument panel dimmer switch is stuck low the
+
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> defaults the backlighting illumination to full backlighting intensity.
+</li></ul><p><b>This pinpoint test is intended to diagnose the following:
+</b></p><ul type="disc"><li>Wiring, terminals or connectors
+</li><li>Instrument panel dimmer switch
+</li><li><span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span></li></ul><a name="A">&nbsp;
+</a><h5>PINPOINT TEST A: ALL DIMMABLE ILLUMINATION DOES NOT INCREASE/DECREASE BRIGHTNESS
+</h5>
+
+<p><b><i>NOTICE: 
+</i> Use the correct probe adapter(s) when making measurements. Failure to use the correct probe adapter(s) may damage the connector.
+</b></p><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="A1">&nbsp;
+</a><b>A1 CHECK THE RECORDED RESULTS FROM THE 
+<span title="BODY CONTROL MODULE" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> ON-DEMAND SELF-TEST 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Ignition OFF.
+</li><li>Review the recorded results from the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> on-demand self-test.
+</li><li><b>Is DTC B134E:23 present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRD0002.HTM_gen_ref.HTM#A2"                                                                                                                                                                                                                                                       >A2
+</a>. 
+
+<br><br><b>No
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRD0002.HTM_gen_ref.HTM#A4"                                                                                                                                                                                                                                                       >A4
+</a>. 
+</td></tr><tr><td><a name="A2">&nbsp;
+</a><b>A2 CHECK THE INSTRUMENT PANEL DIMMER SWITCH FOR A SHORT TO GROUND
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect:   Instrument Panel Dimmer Switch C2298.
+</li><li>Ignition ON.
+</li><li>Enter the following diagnostic mode on the scan tool:   
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> Self-Test.
+</li><li>Clear the DTCs and repeat the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> self-test.
+</li><li><b>Is on-demand DTC B134E:23 still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRD0002.HTM_gen_ref.HTM#A3"                                                                                                                                                                                                                                                       >A3
+</a>. 
+
+<br><br><b>No
+</b><br>INSTALL a new instrument panel dimmer switch. REFER to 
+<a href="SCR_us_en_file%3dSCRD0003.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       >Instrument Panel Dimmer Switch
+</a> in this section. TEST the system for normal operation.
+</td></tr><tr><td><a name="A3">&nbsp;
+</a><b>A3 CHECK THE INSTRUMENT PANEL DIMMER SWITCH INPUT CIRCUITS FOR A SHORT TO GROUND 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Ignition OFF.
+</li><li>Disconnect:   
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> C2280E.
+</li><li>Measure the resistance between the instrument panel dimmer switch C2298-3, circuit CLN56 (BN/VT), harness side and ground; and between the instrument panel dimmer switch C2298-7,
+circuit CLN55 (YE/VT), harness side and ground.
+</li><br><br><IMG src="SCR_us_en_file%3dN0115751.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="211" width="325" border="0"><li><b>Are the resistances greater than 10,000 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRD0002.HTM_gen_ref.HTM#A7"                                                                                                                                                                                                                                                       >A7
+</a>. 
+
+<br><br><b>No
+</b><br>REPAIR the circuit in question for a short to ground. CLEAR the DTCs. REPEAT the self-test. 
+</td></tr><tr><td><a name="A4">&nbsp;
+</a><b>A4 CHECK THE INSTRUMENT PANEL DIMMER SWITCH 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect:   Instrument Panel Dimmer Switch C2298.
+</li><li><b>NOTE: 
+</b> For this step, the PID should indicate "DIMMER" each time the fused jumper wire is connected.
+</li><li>For the illumination decrease function, while monitoring the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> PID IP_DIMMER_SW, connect and disconnect a fused jumper wire between the instrument panel
+dimmer switch C2298-3, circuit CLN56 (BN/VT), harness side and the instrument panel dimmer switch C2298-4, circuit GD115 (BK/GY), harness side.
+</li><br><br><IMG src="SCR_us_en_file%3dN0115795.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="211" width="325" border="0"><li><b>NOTE: 
+</b> For this step, the PID should indicate "BRIGHTER" each time the fused jumper wire is connected.
+</li><li>For the illumination increase function, while monitoring the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> PID IP_DIMMER_SW, connect and disconnect a fused jumper wire between the instrument panel
+dimmer switch C2298-7, circuit CLN55 (YE/VT), harness side and the instrument panel dimmer switch C2298-4, circuit GD115 (BK/GY), harness side.
+</li><br><br><IMG src="SCR_us_en_file%3dN0115752.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="211" width="325" border="0"><li><b>Does the PID indication agree with the fused jumper wire position?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new instrument panel dimmer switch. REFER to 
+<a href="SCR_us_en_file%3dSCRD0003.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       >Instrument Panel Dimmer Switch
+</a> in this section. TEST the system for normal operation. 
+
+<br><br><b>No
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRD0002.HTM_gen_ref.HTM#A5"                                                                                                                                                                                                                                                       >A5
+</a>. 
+</td></tr><tr><td><a name="A5">&nbsp;
+</a><b>A5 CHECK THE INSTRUMENT PANEL DIMMER SWITCH GROUND CIRCUIT
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li><b>NOTE: 
+</b> For this step, the PID should indicate "DIMMER" each time the fused jumper wire is connected to C2298-3, and "BRIGHTER" each time the fused jumper wire is connected to C2298-7.
+</li><li>While monitoring the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> PID IP_DIMMER_SW, connect and disconnect a fused jumper wire between the instrument panel dimmer switch
+C2298-3, circuit CLN56 (BN/VT), harness side and ground; and between the instrument panel dimmer switch C2298-7, circuit CLN55 (YE/VT), harness side and ground.
+</li><br><br><IMG src="SCR_us_en_file%3dN0115753.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="211" width="325" border="0"><li><b>Does the PID indication agree with the fused jumper wire position?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REPAIR circuit GD115 (BK/GY) for an open. TEST the system for normal operation. 
+
+<br><br><b>No
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRD0002.HTM_gen_ref.HTM#A6"                                                                                                                                                                                                                                                       >A6
+</a>. 
+</td></tr><tr><td><a name="A6">&nbsp;
+</a><b>A6 CHECK THE INSTRUMENT PANEL DIMMER SWITCH DIM UP AND DIM DOWN CIRCUITS FOR AN OPEN 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Ignition OFF.
+</li><li>Disconnect:   
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> C2280E.
+</li><li>Measure the resistance between the instrument panel dimmer switch C2298-3, circuit CLN56 (BN/VT), harness side and the
+
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> C2280E-11, circuit CLN56 (BN/VT), harness side.
+</li><br><br><IMG src="SCR_us_en_file%3dN0115754.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="211" width="325" border="0"><li>Measure the resistance between the instrument panel dimmer switch C2298-7, circuit CLN55 (YE/VT), harness side and the
+
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> C2280E-12, circuit CLN55 (YE/VT), harness side.
+</li><br><br><IMG src="SCR_us_en_file%3dN0115755.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="211" width="325" border="0"><li><b>Are the resistances less than 5 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRD0002.HTM_gen_ref.HTM#A7"                                                                                                                                                                                                                                                       >A7
+</a>. 
+
+<br><br><b>No
+</b><br>REPAIR the circuit in question for an open. TEST the system for normal operation. 
+</td></tr><tr><td><a name="A7">&nbsp;
+</a><b>A7 CHECK FOR CORRECT 
+<span title="BODY CONTROL MODULE" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> OPERATION 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Connect all disconnected connectors.
+</li><li>Disconnect all the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> connectors.
+</li><li>Check for:
+</li><ul type="square"><li>corrosion
+</li></ul><ul type="square"><li>damaged pins
+</li></ul><ul type="square"><li>pushed-out pins
+</li></ul><li>Connect all the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> connectors and make sure they seat correctly.
+</li><li>Operate the system and verify the concern is still present.
+</li><li><b>Is the concern still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span>. REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSJA0L.HTM%26rightside%3dSCRSJA0R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 419-10
+</a>. TEST the system for normal operation. 
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector. 
+</td></tr></table><a name="PS2-B">&nbsp;
+</a><p><b>Pinpoint Test B: All Dimmable Non-Networked Illumination Is Inoperative
+</b></p><p><p>Refer to Wiring Diagrams Cell 
+<a target="_parent" href="SCR_us_en_book%3dECR%26cell%3d071%26page%3d%26year%3d%26vehicle%3d2012%20Fiesta%26market%3dUS%26lang%3dEN%26RTYPE%3dDIAGRAM%26lega"                                                                                                                                                                                                                                                               >71
+</a>, Cluster and Panel Illumination for schematic and connector information.
+</p></p><h5>Normal Operation
+</h5><p>When the parking lamps are on, the Body Control Module (BCM) provides voltage to the hard-wired dimmable illumination sources based on the hard-wired inputs from the instrument panel dimmer
+switch to the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span>.
+</p><ul type="disc"><li>DTC U2010:11 (Switch Illumination: Circuit Short To Ground) — A continuous and on-demand DTC that sets when the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> has temporarily shut down the output driver. The
+module has temporarily disabled the backlighting output because an excessive current draw exists (such as a short to ground). The 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> cannot enable the backlighting output
+until the cause of the short is corrected, the DTCs have been cleared and an ignition cycle takes place.
+</li></ul><p><b>This pinpoint test is intended to diagnose the following:
+</b></p><ul type="disc"><li>Wiring, terminals or connectors
+</li><li><span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span></li></ul><a name="B">&nbsp;
+</a><h5>PINPOINT TEST B: ALL DIMMABLE NON-NETWORKED ILLUMINATION IS INOPERATIVE 
+</h5>
+
+<p><b><i>NOTICE: 
+</i> Use the correct probe adapter(s) when making measurements. Failure to use the correct probe adapter(s) may damage the connector.
+</b></p><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="B1">&nbsp;
+</a><b>B1 CHECK THE INSTRUMENT PANEL DIMMER SWITCH
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>While observing the Instrument Panel Cluster (IPC), press the instrument panel dimmer switch up and down.
+</li><li><b>Does the backlighting in the 
+<span title="Instrument Panel Cluster" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IPC
+</span> increase and decrease intensity?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRD0002.HTM_gen_ref.HTM#B2"                                                                                                                                                                                                                                                       >B2
+</a>.
+
+<br><br><b>No
+</b><br><a href="SCR_us_en_file%3dSCRD0002.HTM_gen_ref.HTM#A"                                                                                                                                                                                                                                                       >GO to Pinpoint Test A
+</a>.
+</td></tr><tr><td><a name="B2">&nbsp;
+</a><b>B2 BYPASS THE 
+<span title="BODY CONTROL MODULE" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Ignition OFF.
+</li><li>Disconnect:   
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> C2280E .
+</li><li><b>NOTE: 
+</b> If the jumper wire fails, refer to the Wiring Diagrams manual to identify the possible causes of the circuit short. After the repair:
+
+<p>If no DTCs are present, test the system for normal operation.
+</p><p>If DTCs are present, clear the DTCs and repeat the self-test. Test the system for normal operation.
+</p></li><li>Connect a fused jumper wire between the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> C2280E-20, circuit CLN04 (BU/BN) and battery positive.
+</li><br><br><IMG src="SCR_us_en_file%3dN0115756.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="211" width="325" border="0"><li><b>Do the backlighting components illuminate?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REMOVE the jumper wire. GO to 
+<a href="SCR_us_en_file%3dSCRD0002.HTM_gen_ref.HTM#B3"                                                                                                                                                                                                                                                       >B3
+</a>. 
+
+<br><br><b>No
+</b><br>REMOVE the jumper wire. REPAIR circuit CLN04 (BU/BN) for an open. TEST the system for normal operation. 
+</td></tr><tr><td><a name="B3">&nbsp;
+</a><b>B3 CHECK FOR CORRECT 
+<span title="BODY CONTROL MODULE" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> OPERATION 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect all the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> connectors.
+</li><li>Check for:
+</li><ul type="square"><li>corrosion
+</li></ul><ul type="square"><li>damaged pins
+</li></ul><ul type="square"><li>pushed-out pins
+</li></ul><li>Connect all the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> connectors and make sure they seat correctly.
+</li><li>Operate the system and verify the concern is still present.
+</li><li><b>Is the concern still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span>. REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSJA0L.HTM%26rightside%3dSCRSJA0R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 419-10
+</a>. TEST the system for normal operation. 
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector. 
+</td></tr></table><a name="PS2-C">&nbsp;
+</a><p><b>Pinpoint Test C: All Dimmable Non-Networked Illumination Is Always On
+</b></p><p><p>Refer to Wiring Diagrams Cell 
+<a target="_parent" href="SCR_us_en_book%3dECR%26cell%3d071%26page%3d%26year%3d%26vehicle%3d2012%20Fiesta%26market%3dUS%26lang%3dEN%26RTYPE%3dDIAGRAM%26lega"                                                                                                                                                                                                                                                               >71
+</a>, Cluster and Panel Illumination for schematic and connector information.
+</p></p><h5>Normal Operation 
+</h5><p>When the parking lamps are on, the Body Control Module (BCM) provides voltage to the hard-wired dimmable illumination sources based on the hard-wired inputs from the instrument panel dimmer
+switch to the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span>.
+</p><p><b>This pinpoint test is intended to diagnose the following:
+</b></p><ul type="disc"><li>Wiring, terminals or connectors
+</li><li><span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span></li></ul><a name="C">&nbsp;
+</a><h5>PINPOINT TEST C: ALL DIMMABLE NON-NETWORKED ILLUMINATION IS ALWAYS ON 
+</h5>
+
+<p><b><i>NOTICE: 
+</i> Use the correct probe adapter(s) when making measurements. Failure to use the correct probe adapter(s) may damage the connector.
+</b></p><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="C1">&nbsp;
+</a><b>C1 CHECK THE EXTERIOR LIGHTING 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Place the headlamp switch in the OFF position.
+</li><li>Observe the parking lights.
+</li><li><b>Are the parking lights illuminated?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSH10L.HTM%26rightside%3dSCRSH10R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 417-01
+</a>. 
+
+<br><br><b>No
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRD0002.HTM_gen_ref.HTM#C2"                                                                                                                                                                                                                                                       >C2
+</a>. 
+</td></tr><tr><td><a name="C2">&nbsp;
+</a><b>C2 CHECK THE 
+<span title="BODY CONTROL MODULE" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> BACKLIGHTING OUTPUT CIRCUIT FOR A SHORT TO VOLTAGE 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Ignition OFF.
+</li><li>Disconnect:   
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> C2280E.
+</li><li>Ignition ON.
+</li><li><b>Do the dimmable backlighted components continue to illuminate?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REPAIR circuit CLN04 (BU/BN) for a short to voltage. TEST the system for normal operation. 
+
+<br><br><b>No
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRD0002.HTM_gen_ref.HTM#C3"                                                                                                                                                                                                                                                       >C3
+</a>. 
+</td></tr><tr><td><a name="C3">&nbsp;
+</a><b>C3 CHECK FOR CORRECT 
+<span title="BODY CONTROL MODULE" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> OPERATION 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Ignition OFF.
+</li><li>Disconnect all the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> connectors.
+</li><li>Check for:
+</li><ul type="square"><li>corrosion
+</li></ul><ul type="square"><li>damaged pins
+</li></ul><ul type="square"><li>pushed-out pins
+</li></ul><li>Connect all the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> connectors and make sure they seat correctly.
+</li><li>Operate the system and verify the concern is still present.
+</li><li><b>Is the concern still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span>. REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSJA0L.HTM%26rightside%3dSCRSJA0R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 419-10
+</a>. TEST the system for normal operation. 
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector. 
+</td></tr></table><a name="PS2-D">&nbsp;
+</a><p><b>Pinpoint Test D: The Steering Wheel Switch Illumination Is Inoperative
+</b></p><p><p>Refer to Wiring Diagrams Cell 
+<a target="_parent" href="SCR_us_en_book%3dECR%26cell%3d071%26page%3d%26year%3d%26vehicle%3d2012%20Fiesta%26market%3dUS%26lang%3dEN%26RTYPE%3dDIAGRAM%26lega"                                                                                                                                                                                                                                                               >71
+</a>, Cluster and Panel Illumination for schematic and connector information.
+</p></p><h5>Normal Operation
+</h5><p>The Body Control Module (BCM) sends voltage to the steering wheel switches. The voltage passes through the clockspring to the steering wheel harness and on to the steering wheel switches.
+</p><p><b>This pinpoint test is intended to diagnose the following:
+</b></p><ul type="disc"><li>Wiring, terminals or connectors
+</li><li>Steering wheel switch(es)
+</li><li>Steering wheel harness
+</li><li>Clockspring
+</li></ul><a name="D">&nbsp;
+</a><h5>PINPOINT TEST D: THE STEERING WHEEL SWITCH ILLUMINATION IS INOPERATIVE 
+</h5>
+
+<p><b><i>NOTICE: 
+</i> Use the correct probe adapter(s) when making measurements. Failure to use the correct probe adapter(s) may damage the connector.
+</b></p><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="D1">&nbsp;
+</a><b>D1 CHECK THE OTHER DIMMABLE LIGHTING SWITCHES 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Ignition OFF.
+</li><li>Place the headlamp switch in the PARKING LAMPS ON position.
+</li><li>Press and hold the instrument panel dimmer switch up to the full illumination position and observe other dimmable switches.
+</li><li><b>Are all the dimmable switches inoperative?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br><a href="SCR_us_en_file%3dSCRD0002.HTM_gen_ref.HTM#PS2-B"                                                                                                                                                                                                                                                       >GO to Pinpoint Test B
+</a>. 
+
+<br><br><b>No
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRD0002.HTM_gen_ref.HTM#D2"                                                                                                                                                                                                                                                       >D2
+</a>. 
+</td></tr><tr><td><a name="D2">&nbsp;
+</a><b>D2 CHECK THE HORN OPERATION
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Press the driver air bag module against the steering wheel.
+</li><li><b>Does the horn sound?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRD0002.HTM_gen_ref.HTM#D3"                                                                                                                                                                                                                                                       >D3
+</a>. 
+
+<br><br><b>No
+</b><br>REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSD60L.HTM%26rightside%3dSCRSD60R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 413-06
+</a> to diagnose the horn is inoperative.
+</td></tr><tr><td><a name="D3">&nbsp;
+</a><b>D3 CHECK FOR VOLTAGE TO THE CLOCKSPRING 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Place the headlamp switch in the OFF position.
+</li><li>Disconnect:   Clockspring C218B.
+</li><li>Place the headlamp switch in the PARKING LAMPS ON position.
+</li><li>Press and hold the instrument panel dimmer switch up to the full illumination position.
+</li><li>Measure the voltage between the clockspring C218B-13, circuit CLN04 (BU/BN), harness side and ground.
+</li><br><br><IMG src="SCR_us_en_file%3dN0115757.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="211" width="325" border="0"><li><b>Is the voltage greater than 10 volts?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRD0002.HTM_gen_ref.HTM#D4"                                                                                                                                                                                                                                                       >D4
+</a>. 
+
+<br><br><b>No
+</b><br>REPAIR circuit CLN04 (BU/BN) for an open. TEST the system for normal operation. 
+</td></tr><tr><td><a name="D4">&nbsp;
+</a><b>D4 CHECK THE GROUND CIRCUIT TO THE CLOCKSPRING FOR CONTINUITY
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Measure the voltage between the clockspring C218B-13, circuit CLN04 (BU/BN), harness side and the clockspring C218B-15, circuit GD115 (BK/GY), harness side.
+</li><br><br><IMG src="SCR_us_en_file%3dN0115758.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="211" width="325" border="0"><li><b>Is the voltage greater than 10 volts?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRD0002.HTM_gen_ref.HTM#D5"                                                                                                                                                                                                                                                       >D5
+</a>. 
+
+<br><br><b>No
+</b><br>REPAIR circuit GD115 (BK/GY) for an open. TEST the system for normal operation. 
+</td></tr><tr><td><a name="D5">&nbsp;
+</a><b>D5 CHECK FOR VOLTAGE TO THE STEERING WHEEL SWITCH
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Connect:   Clockspring C218B.
+</li><li>Place the headlamp switch in the OFF position.
+</li><li>Remove the driver air bag module. Refer to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRS1KBL.HTM%26rightside%3dSCRS1KBR.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 501-20B
+</a>.
+</li><li>Disconnect:   Inoperative Steering Wheel Switch.
+</li><li>Place the headlamp switch in the PARKING LAMPS ON position.
+</li><li>For the cruise control switch, measure the voltage between the cruise control switch C2999-3, harness side and the cruise control switch C2999-1, harness side.
+</li><li>For the steering wheel controls switch, measure the voltage between the steering wheel controls switch C2998-3, harness side and the steering wheel controls switch C2998-1, harness
+side.
+</li><br><br><IMG src="SCR_us_en_file%3dN0115850.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="211" width="325" border="0"><li><b>Is the voltage greater than 10 volts?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REPLACE the inoperative steering wheel switch.
+
+<br><br>For the cruise control switch, REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSJ30L.HTM%26rightside%3dSCRSJ30R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 419-03
+</a>.
+
+<br><br>For the steering wheel controls switch, REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSF00L.HTM%26rightside%3dSCRSF00R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 415-00
+</a><br><br>TEST the system for normal operation.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRD0002.HTM_gen_ref.HTM#D6"                                                                                                                                                                                                                                                       >D6
+</a>. 
+</td></tr><tr><td><a name="D6">&nbsp;
+</a><b>D6 CHECK FOR VOLTAGE TO THE UPPER CLOCKSPRING
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect:   Clockspring C218C .
+</li><li>Measure the voltage between the clockspring C218C-6, component side and the clockspring C218C-8, component side.
+</li><br><br><IMG src="SCR_us_en_file%3dN0115760.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="211" width="325" border="0"><li><b>Is the voltage greater than 10 volts?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new steering wheel. REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSB40L.HTM%26rightside%3dSCRSB40R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 211-04
+</a>. TEST the system for normal operation. 
+
+<br><br><b>No
+</b><br>INSTALL a new clockspring. REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRS1KBL.HTM%26rightside%3dSCRS1KBR.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 501-20B
+</a>. TEST the system for normal operation. 
+</td></tr></table><a name="PS2-E">&nbsp;
+</a><p><b>Pinpoint Test E: One Or More Switch Illumination is Inoperative
+</b></p><p><p>Refer to Wiring Diagrams Cell 
+<a target="_parent" href="SCR_us_en_book%3dECR%26cell%3d071%26page%3d%26year%3d%26vehicle%3d2012%20Fiesta%26market%3dUS%26lang%3dEN%26RTYPE%3dDIAGRAM%26lega"                                                                                                                                                                                                                                                               >71
+</a>, Cluster and Panel Illumination for schematic and connector information.
+</p></p><h5>Normal Operation 
+</h5><p>The Body Control Module (BCM) sends voltage to the dimmable components.
+</p><p><b>This pinpoint test is intended to diagnose the following:
+</b></p><ul type="disc"><li>Wiring, terminals or connectors
+</li><li>Illuminated switch
+</li></ul><a name="E">&nbsp;
+</a><h5>PINPOINT TEST E: ONE OR MORE SWITCH ILLUMINATION IS INOPERATIVE 
+</h5>
+
+<p><b><i>NOTICE: 
+</i> Use the correct probe adapter(s) when making measurements. Failure to use the correct probe adapter(s) may damage the connector.
+</b></p><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="E1">&nbsp;
+</a><b>E1 CHECK THE VOLTAGE TO THE SINGLE ILLUMINATION 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><p class="singlespace"><b>NOTE: 
+</b> If the instrument panel dimmer switch illumination is the inoperative source, increase the backlighting brightness to the highest setting before disconnect the instrument panel dimmer switch connector.
+</p><li>Ignition OFF.
+</li><li>Disconnect:   Inoperative Illumination Source.
+</li><li>Ignition ON.
+</li><li><b>NOTE: 
+</b> If the headlamp switch illumination is the inoperative source, unplugging the headlamp switch connector causes the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> to turn the exterior lights on by default, so there
+is no need to turn the parking lamps on.
+</li><li>Place the headlamp switch to the PARKING LAMPS ON position.
+</li><li>Increase the backlighting brightness to the highest setting.
+</li><li>Measure the voltage between the inoperative illumination source, harness side and ground as follows:
+</li><br><br><TABLE cellspacing="0" cellpadding="3" border="1"><TR><TH valign="bottom" align="center">Component
+</TH><TH valign="bottom" align="center">Connector-Pin
+</TH><TH valign="bottom" align="center">Circuit
+</TH></TR><TR><TD valign="top" align="center">Instrument panel dimmer switch
+</TD><TD valign="top" align="center">C2298-2
+</TD><TD valign="top" align="center">CLN04 (BU/BN)
+</TD></TR><TR><TD valign="top" align="center">Headlamp switch
+</TD><TD valign="top" align="center">C205-1
+</TD><TD valign="top" align="center">CLN04 (BU/BN)
+</TD></TR><TR><TD valign="top" align="center">Front Controls Interface Module (FCIM)
+</TD><TD valign="top" align="center">C2402-3
+</TD><TD valign="top" align="center">CLN04 (BU/BN)
+</TD></TR><TR><TD valign="top" align="center">HVAC module
+</TD><TD valign="top" align="center">C228A-6
+</TD><TD valign="top" align="center">CLN04 (BU/BN)
+</TD></TR><TR><TD valign="top" align="center">Floor shifter
+</TD><TD valign="top" align="center">C3245-4
+</TD><TD valign="top" align="center">CLN04 (BU/BN)
+</TD></TR><TR><TD valign="top" align="center">Driver heated seat switch
+</TD><TD valign="top" align="center">C2400-5
+</TD><TD valign="top" align="center">CLN04 (BU/BN)
+</TD></TR><TR><TD valign="top" align="center">Passenger heated seat/ambient lighting switch
+</TD><TD valign="top" align="center">C2401-5
+</TD><TD valign="top" align="center">CLN04 (BU/BN)
+</TD></TR><TR><TD valign="top" align="center">Start/stop switch
+</TD><TD valign="top" align="center">C2195-6
+</TD><TD valign="top" align="center">CLN04 (BU/BN)
+</TD></TR></TABLE><br>
+
+<li><b>Is the voltage greater than 10 volts?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRD0002.HTM_gen_ref.HTM#E2"                                                                                                                                                                                                                                                       >E2
+</a>. 
+
+<br><br><b>No
+</b><br>REPAIR circuit CLN04 (BU/BN) for an open. TEST the system for normal operation. 
+</td></tr><tr><td><a name="E2">&nbsp;
+</a><b>E2 CHECK THE GROUND CIRCUIT TO THE ILLUMINATION SOURCE FOR CONTINUITY
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Measure the voltage between the inoperative illumination source pins, harness side as follows:
+</li><br><br><TABLE cellspacing="0" cellpadding="3" border="1"><TR><TH valign="bottom" align="center">Component
+</TH><TH valign="bottom" align="center">Connector-Pin/ Circuit
+</TH><TH valign="bottom" align="center">Connector-Pin/ Circuit
+</TH></TR><TR><TD valign="top" align="center">Instrument panel dimmer switch
+</TD><TD valign="top" align="center">C2298-2
+
+<br><br>CLN04 (BU/BN)
+</TD><TD valign="top" align="center">C2298-1
+
+<br><br>GD115 (BK/GY)
+</TD></TR><TR><TD valign="top" align="center">Headlamp switch
+</TD><TD valign="top" align="center">C205-1
+
+<br><br>CLN04 (BU/BN)
+</TD><TD valign="top" align="center">C205-8
+
+<br><br>GD115 (BK/GY)
+</TD></TR><TR><TD valign="top" align="center">Front Controls Interface Module (FCIM)
+</TD><TD valign="top" align="center">C2402-3
+
+<br><br>CLN04 (BU/BN)
+</TD><TD valign="top" align="center">C2402-5
+
+<br><br>GD115 (BK/GY)
+</TD></TR><TR><TD valign="top" align="center">HVAC module
+</TD><TD valign="top" align="center">C228A-6
+
+<br><br>CLN04 (BU/BN)
+</TD><TD valign="top" align="center">C228A-13
+
+<br><br>GD115 (BK/GY)
+</TD></TR><TR><TD valign="top" align="center">Floor shifter
+</TD><TD valign="top" align="center">C3245-4
+
+<br><br>CLN04 (BU/BN)
+</TD><TD valign="top" align="center">C3245-5
+
+<br><br>GD115 (BK/GY)
+</TD></TR><TR><TD valign="top" align="center">Driver heated seat switch
+</TD><TD valign="top" align="center">C2400-5
+
+<br><br>CLN04 (BU/BN)
+</TD><TD valign="top" align="center">C2400-4
+
+<br><br>GD115 (BK/GY)
+</TD></TR><TR><TD valign="top" align="center">Passenger heated seat/ambient lighting switch
+</TD><TD valign="top" align="center">C2401-5
+
+<br><br>CLN04 (BU/BN)
+</TD><TD valign="top" align="center">C2401-4
+
+<br><br>GD115 (BK/GY)
+</TD></TR><TR><TD valign="top" align="center">Start/stop switch
+</TD><TD valign="top" align="center">C2195-6
+
+<br><br>CLN04 (BU/BN)
+</TD><TD valign="top" align="center">C2195-1
+
+<br><br>GD115 (BK/GY)
+</TD></TR></TABLE><br>
+
+<li><b>Is the voltage greater than 10 volts?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new component in question. TEST the system for normal operation. 
+
+<br><br><b>No
+</b><br>REPAIR the ground circuit in question for an open. TEST the system for normal operation. 
+</td></tr></table><br><hr><P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+
+</body>
+<!-- Mirrored from file:///C:/Documents and Settings/Administrator/Desktop/FORD/Ford Fiesta 2012/SCR~us~en~file=SCRD0002.HTM~gen~ref.HTM by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 04 Mar 2025 14:53:36 GMT -->
+</html>

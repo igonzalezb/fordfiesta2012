@@ -1,0 +1,3106 @@
+<html>
+
+<!-- Mirrored from file:///C:/Documents and Settings/Administrator/Desktop/FORD/Ford Fiesta 2012/SCR~us~en~book=ECR&cell=014&page=&year=&vehicle=2012 Fiesta&market=US&lang=EN&RTYPE=DIAGRAM&legacy=N~gen~emain.htm by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 04 Mar 2025 14:54:21 GMT -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<style>
+P.HEADLINE {fontfamily: Verdana,Arial,Helv,Helvetica,sans-serif;fontsize:medium}
+P.HEADLINE {FONT-FAMILY: Verdana,Arial,Helv,Helvetica,sans-serif;FONT-SIZE: medium}
+P.HEADLINE {FONT-WEIGHT: bold}
+P.NORMAL {fontfamily: Verdana,Arial,Helv,Helvetica,sans-serif;fontsize: x-small}
+P.NORMAL {FONT-FAMILY: Verdana,Arial,Helv,Helvetica,sans-serif;FONT-SIZE: x-small}
+P.NORMAL {FONT-WEIGHT: normal}
+</style>
+<title></title>
+<script language="jscript">
+   var iPopupDialogWidth = 300
+   var iPopupDialogHeight = 200
+
+   var strLastFile = "";
+   
+   // these determine everything
+   // get the year and book from the parameters,
+   // infer the model from the entrypoint data for that year
+   // get the market and language from the browser variables
+   
+   var strYear = "";
+   var strBook = "ECR";
+   var strMarket = "US";
+   var strLanguage = "EN";
+   var strVehicle = "2012 Fiesta";
+   var strCell = "014";
+   var strPage = "";
+   var strRType = "DIAGRAM";
+   var strLegacy = "N";
+   var strFilename = "";
+   var strGlobalTitle = "";
+   var strSubtitle = "";
+   var strType = "";
+   var iNumConnectors = 0;
+   var strTOCFlavor = "NUM";
+   var strFromCell = ""
+   var strFromPage = ""
+   var CurrCellNumFiles = 0
+   var CurrCellFiles = ""
+   var strConnFlavor = "NUM"
+   var strLocFlavor = ""
+   
+   // these lines get the current user setting from the browser
+
+   var b_object = new ActiveXObject("Tsobrowser.PreferenceState.1");
+
+   // this is client side pointing to multiple data sets,
+   // so we have to set the physical locations for the COM objects
+   var strLRoot = b_object.GetPreference("gbl_browserappdir");
+   var strRoot = b_object.GetPreference("appdir");
+   var strCRoot = b_object.GetPreference("contentdir");
+
+   // transient user preferences, which can be switched on the fly
+
+   var strCMarket = b_object.GetPreference("evtm_contentmarket");
+   var strCLanguage = b_object.GetPreference("evtm_contentlanguage");
+   var strULanguage = b_object.GetPreference("uilanguage");
+   
+   // localize the strings for this file here...
+   // call the object with the current ui language and load them up
+   // now, let's do the localization thing
+   
+   var l_object = new ActiveXObject("TPSLocalization.TPSLocalization.1");
+   l_object.SetRootDir(strLRoot);
+   l_object.SetLanguage(strULanguage);
+   l_object.SetApplication("EVTM");
+   
+   var localContents = l_object.GetStringByName_var("localContents")  //"Contents"
+   var localTOC = l_object.GetStringByName_var("localTOC")  //"Table of Contents"
+   var localSortAlpha = l_object.GetStringByName_var("localSortAlpha")  //"Sort by Title"   
+   var localSortNum = l_object.GetStringByName_var("localSortNum")  //"Sort by Cell" 
+   var localSortConnNumber = l_object.GetStringByName_var("localSortConnNumber")  //"Sort by Connector Number"  
+   var localCellHeading = l_object.GetStringByName_var("localCellHeading")  //"Cell"
+   var localTitleHeading = l_object.GetStringByName_var("localTitleHeading")  //"Title"
+   var localGotoTOC = l_object.GetStringByName_var("localGotoTOC")  //"Go to the Table of Contents..."
+   var localZoomOut = l_object.GetStringByName_var("localZoomOut")  //"zoom out"
+   var localSetZoom = l_object.GetStringByName_var("localSetZoom")  //"Set a specific zoom level"
+   var localZoomIn = l_object.GetStringByName_var("localZoomIn")  //"zoom in"
+   var localPrevPage = l_object.GetStringByName_var("localPrevPage")  //"Go to the previous page in this cell"
+   var localDirectPage = l_object.GetStringByName_var("localDirectPage")  //"Go directly to a page in this cell"
+   var localNextPage = l_object.GetStringByName_var("localNextPage")  //"Go to the next page in this cell"
+   var localPage = l_object.GetStringByName_var("localPage")  //"Page"
+   var localPrint = l_object.GetStringByName_var("localPrint")  //"print..."
+   var localConnList = l_object.GetStringByName_var("localConnList")  //"Connector List"
+   var localLoading = l_object.GetStringByName_var("localLoading")  //"Loading, please wait..."
+
+   var iLocalPageCount = 0
+      
+   document.title = strVehicle;
+</script>
+</head>
+<body topMargin="4" bottomMargin="4" leftMargin="4" rightMargin="2">
+<div align="center" id="CONTENTBODY"></div>
+<script language="JScript">
+   // jscript to take advantage of the sort function
+   
+   var conn_array = new Array();
+   var conn_array_count = 0;
+   
+   function conn_entry(strConn, strName, strFile, strFile_m, strFile_f, strQual)
+      {
+      this.conn = strConn;
+      this.name = strName;
+      this.file = strFile
+      this.file_m = strFile_m
+      this.file_f = strFile_f
+      this.qual = strQual
+      }
+      
+   function addToConnArray(strConn, strName, strFile, strFile_m, strFile_f, strQual)
+      {
+      var pEntry = new conn_entry(strConn, strName, strFile, strFile_m, strFile_f, strQual);
+      conn_array[conn_array_count++] = pEntry;
+      }
+
+
+   function loc_entry(strItem, strDesc, strPage, strZone, strQual, strConnectedTo)
+      {
+      this.type = "LOC";
+      this.conn = strItem;
+      this.desc = strDesc;
+      this.page = strPage;
+      this.zone = strZone;
+      this.qual = strQual
+      this.connectedto = strConnectedTo;
+      }
+      
+   function addToLocArray(strItem, strDesc, strPage, strZone, strQual, strConnectedTo)
+      {
+      var pEntry = new loc_entry(strItem, strDesc, strPage, strZone, strQual, strConnectedTo);
+      conn_array[conn_array_count++] = pEntry;
+      }
+      
+/*      
+   function SortConnAlpha(p1, p2)
+      {
+      strFirst1 = "";
+      strLast1 = "";
+      
+      strFirst2 = "";
+      strLast2 = "";
+
+      strValue1 = p1.conn;
+      strValue2 = p2.conn;
+      
+      for (iiit=1; iiit < strValue1.length; iiit++)
+         {
+         strChr = strValue1.substr(iiit, 1);
+         
+         if (strChr >= '0' && strChr <= '9')
+            strFirst1 = (strFirst1 * 10) + parseInt(strChr, 10);
+         else
+            strLast1 += strChr;
+         }
+      
+      for (iiit=1; iiit < strValue2.length; iiit++)
+         {
+         strChr = strValue2.substr(iiit, 1);
+         
+         if (strChr >= '0' && strChr <= '9')
+            strFirst2 = (strFirst2 * 10) + parseInt(strChr, 10);
+         else
+            strLast2 += strChr;
+         }
+      
+      if (strFirst1 == strFirst2)
+         {
+         if (strLast1 == strLast2)
+            return 0;
+         else if (strLast1 > strLast2)
+            return 1;
+         else
+            return -1;
+         }
+      else if (strFirst1 > strFirst2)
+         return 1;
+      else
+         return -1;
+      }
+
+   function SortConnName(p1, p2)
+      {
+      if (p1.name == p2.name)
+         return 0;
+      else if (p1.name > p2.name)
+         return 1;
+      else
+         return -1;
+      }
+   
+   function SortConnArray(strFlavor)
+      {
+      if (strFlavor == "NUM")
+      	conn_array.sort(SortConnAlpha);
+      else
+      	conn_array.sort(SortConnName);
+      }
+
+*/
+
+      
+   function xx_trim(v1)
+      {
+      // return v1;
+      
+      ii_index = v1.indexOf("(");
+      
+      if (ii_index >= 0)
+			return v1.substr(0, ii_index)
+	  else
+			return v1;
+      }
+   
+   function SortConnAlpha(p1, p2)
+      {
+      strFirst1 = "";
+      strLast1 = "";
+      
+      strFirst2 = "";
+      strLast2 = "";
+
+      strValue1 = xx_trim(p1.conn);
+      strValue2 = xx_trim(p2.conn);
+      
+      for (iii=1; iii < strValue1.length; iii++)
+         {
+         strChr = strValue1.substr(iii, 1);
+         
+         if (strChr >= '0' && strChr <= '9')
+            strFirst1 = (strFirst1 * 10) + parseInt(strChr, 10);
+         else
+            strLast1 += strChr;
+         }
+      
+      for (iii=1; iii < strValue2.length; iii++)
+         {
+         strChr = strValue2.substr(iii, 1);
+         
+         if (strChr >= '0' && strChr <= '9')
+            strFirst2 = (strFirst2 * 10) + parseInt(strChr, 10);
+         else
+            strLast2 += strChr;
+         }
+      
+      if (strFirst1 == strFirst2)
+         {
+         if (strLast1 == strLast2)
+            {
+            if (p1.qual == p2.qual)
+               return 0;
+            else if (p1.qual > p2.qual)
+               return 1;
+            else 
+               return -1;
+            }
+         else if (strLast1 > strLast2)
+            return 1;
+         else
+            return -1;
+         }
+      else if (strFirst1 > strFirst2)
+         return 1;
+      else
+         return -1;
+      }
+
+   function SortConnName(p1, p2)
+      {
+      lp1 = xx_trim(p1.name);
+      lp2 = xx_trim(p2.name);
+      
+      if (lp1 == lp2)
+         return 0;
+      else if (lp1 > lp2)
+         return 1;
+      else
+         return -1;
+      }
+
+   function SortConnAlphaNormal(p1, p2)
+      {
+      lp1 = p1.conn;
+      lp2 = p2.conn;
+      
+      if (lp1 == lp2)
+         return 0;
+      else if (lp1 > lp2)
+         return 1;
+      else
+         return -1;
+      }   
+   function SortConnArray(strFlavor)
+      {
+      if (strFlavor == "NUM")
+      	conn_array.sort(SortConnAlpha);
+      else if (strFlavor == "NORMAL_ALPHA")
+        conn_array.sort(SortConnAlphaNormal);
+      else
+      	conn_array.sort(SortConnName);
+      }
+
+   function getItemName(index)
+      {
+      if (index >= 0 && index < conn_array_count)
+         return conn_array[index].conn;
+         
+      return "";
+      }      
+
+
+   function getConnectedTo(index)
+      {
+      if (index >= 0 && index < conn_array_count)
+         return conn_array[index].connectedto;
+         
+      return "";
+      }      
+
+
+   function getEntryPage(index)
+      {
+      if (index >= 0 && index < conn_array_count)
+         return conn_array[index].page;
+         
+      return "";
+      }      
+
+   function getEntryZone(index)
+      {
+      if (index >= 0 && index < conn_array_count)
+         return conn_array[index].zone;
+         
+      return "";
+      }      
+
+   function getDescName(index)
+      {
+      if (index >= 0 && index < conn_array_count)
+         return conn_array[index].desc;
+         
+      return "";
+      }      
+
+      
+   function getEntryConn(index)
+      {
+      if (index >= 0 && index < conn_array_count)
+         return conn_array[index].conn;
+         
+      return "";
+      }      
+
+   function getEntryName(index)
+      {
+      if (index >= 0 && index < conn_array_count)
+         return conn_array[index].name;
+         
+      return "";
+      }      
+
+   function getEntryQual(index)
+      {
+      if (index >= 0 && index < conn_array_count)
+         return conn_array[index].qual;
+         
+      return "";
+      }      
+
+   function getEntryFile(index)
+      {
+      if (index >= 0 && index < conn_array_count)
+         return conn_array[index].file;
+         
+      return "";
+      }      
+
+   function getEntryFile_m(index)
+      {
+      if (index >= 0 && index < conn_array_count)
+         return conn_array[index].file_m;
+         
+      return "";
+      }      
+
+   function getEntryFile_f(index)
+      {
+      if (index >= 0 && index < conn_array_count)
+         return conn_array[index].file_f;
+         
+      return "";
+      }      
+
+   function resetConnList()
+      {
+      conn_array.length = 0;
+      conn_array_count = 0;
+      }
+      
+   function getConnCount()
+      {
+      return conn_array_count;
+      }
+</script>
+<script language="jscript">
+   // utility functions
+
+	function importNode(oDestDoc, oSourceNode, deep)
+	{
+		function parseNode(oDoc, node, deep, parent){
+			var ret
+			if(node.nodeType==1){
+				ret = oDoc.createElement(node.tagName)
+				if(node.tagName.toLowerCase() == "script" || node.tagName.toLowerCase() == "style"){
+					var isScript = true
+					var sScript = node.nodeValue
+					if(sScript==null){
+						for(var i = 0; i<node.childNodes.length; i++){
+							if(node.childNodes.item(i).nodeType==4){
+								sScript = node.childNodes.item(i).nodeValue
+								oScriptCDATA = oDoc.createCDATASection(sScript);   // for server-side injection
+								ret.appendChild(oScriptCDATA);
+							}
+						}
+					}
+				}
+				else{
+					for(var i = 0; i<node.attributes.length; i++){
+						var att = node.attributes.item(i)
+						ret.setAttribute(att.nodeName, att.nodeValue)
+					}
+				}
+			}
+			else if(node.nodeType==3){
+				ret = oDoc.createTextNode(node.nodeValue)
+			}
+			
+			if(deep && !isScript){
+				for(var i = 0; i<node.childNodes.length; i++){
+					ret.appendChild(parseNode(oDoc, node.childNodes.item(i), true, ret))
+				}
+			}
+			return ret
+		}
+		
+		return parseNode(oDestDoc, oSourceNode, deep)
+	}
+
+    function loadDone()
+    {
+    // SVG calls over when the load is finished
+    
+    if (document.all["LOADING"])
+       document.all["LOADING"].innerText = "";
+    }
+
+     bInZoom = false;
+     
+     function doZoomInternal(bIn)
+        {
+	      var sw = document.embeds[0].getSVGDocument();
+	      
+	      if (sw)
+	         {
+	         inc = .25;
+	         
+	         if (bIn)
+	            sw.documentElement.currentScale += inc;
+	         else
+	            sw.documentElement.currentScale -= inc;
+	         }
+        }
+
+     function setTranslate(x, y)
+        {
+	      var sw = document.embeds[0].getSVGDocument();
+	      
+	      if (sw)
+	         {
+            sw.documentElement.currentTranslate.x = x;
+            sw.documentElement.currentTranslate.y = y;
+	         }
+        }
+        
+     function doZoomOut()
+        {
+        doZoomInternal(false);
+        }
+        
+     function doDirectZoom()
+        {
+	     var sw = document.embeds[0].getSVGDocument();
+	     
+	     if (!sw)
+	       return;
+        
+        bInZoom = true;
+        
+        iScale = parseFloat(document.all["ZOOMLEVEL"].options[document.all["ZOOMLEVEL"].options.selectedIndex].value) / 100;
+
+        if (iScale == 1)
+           setTranslate(0,0);  // probably need the following code for legacy book support
+
+          //{
+          // legacy documents get an artificial zoom to hide headers/footers (very low tech)
+          //setTranslate(-100,-50);
+          //sw.documentElement.currentScale = 1.2;
+          //bInZoom = false;
+          
+          //return;
+          //}
+        
+        sw.documentElement.currentTranslate.x -= sw.documentElement.currentTranslate.x / iScale;
+        sw.documentElement.currentTranslate.y -= sw.documentElement.currentTranslate.y / iScale;
+
+        sw.documentElement.currentScale = iScale;
+        
+        bInZoom = false;
+        }
+        
+     function doZoomIn()
+        {
+        doZoomInternal(true);
+        }
+
+     aStandardZoomLevels = new Array();
+     aStandardZoomLevels[0] = 100;
+     aStandardZoomLevels[1] = 200;
+     aStandardZoomLevels[2] = 400;
+     aStandardZoomLevels[3] = 800;
+     aStandardZoomLevels[4] = 1000;
+
+     function addZoom(oSel, strValue, iSelected)
+        {
+        iIndex = oSel.options.length++;
+        
+        oSel.options[iIndex].value = strValue;
+        oSel.options[iIndex].text = strValue + "%";
+        
+        if (iSelected)
+           oSel.options[iIndex].selected = iSelected;
+        }
+        
+     function zoomCallback(iScale)
+        {
+		  if (!bInZoom)
+		     {
+	        iPercent = Math.round(parseFloat(iScale) * 100, 10);
+	        
+	        oSelect = document.all["ZOOMLEVEL"];
+	        if (!oSelect)
+	           return
+	        
+	        oSelect.options.length = 0;
+
+           // first, add the standard list
+           
+           for (iz=0; iz<aStandardZoomLevels.length; iz++)
+              {
+				  if (parseInt(iPercent) == parseInt(aStandardZoomLevels[iz]))
+			        addZoom(oSelect, aStandardZoomLevels[iz], 1);
+			     else
+			        addZoom(oSelect, aStandardZoomLevels[iz], 0);
+			     }
+
+           // find the location in the list to insert the current zoom into
+           // note, it might already be in the list
+           
+           iInsertPoint = -1;
+
+           if (parseInt(iPercent) < parseInt(aStandardZoomLevels[0]))
+              iInsertPoint = 0;
+           else if (parseInt(iPercent) > parseInt(aStandardZoomLevels[aStandardZoomLevels.length-1]))
+              {
+              iInsertPoint = aStandardZoomLevels.length;
+              }
+           else
+              {
+	           for (iz=1; iz<aStandardZoomLevels.length; iz++)
+	              {
+					  if (parseInt(iPercent) == parseInt(aStandardZoomLevels[iz]))
+					     {
+				        iInsertPoint = -1;
+				        break;
+				        }
+				     else if (parseInt(iPercent) < parseInt(aStandardZoomLevels[iz]))
+				        {
+				        iInsertPoint = iz;
+				        break;
+				        }
+				     }
+			     }
+
+            // now insert the element and move everything up one
+
+				if (iInsertPoint >= 0)
+				   {
+				   oSelect.options.length++;
+				   
+				   for (iz=oSelect.options.length-1; iz>iInsertPoint; iz--)
+				      {
+				      oSelect.options[iz].value = oSelect.options[iz-1].value;
+				      oSelect.options[iz].text = oSelect.options[iz-1].text;
+				      }
+				      
+			      oSelect.options[iInsertPoint].value = iPercent;
+			      oSelect.options[iInsertPoint].text = iPercent + "%";
+			      oSelect.options[iInsertPoint].selected = 1;
+				   }
+				}
+        }
+
+     function doPrint()
+        {
+        window.print();
+        }
+
+    function show_location_viewer(strRRPage)
+       {
+	   strURL = strASPDir + "ep_location.htm";
+
+		width = screen.width;
+		height = screen.height;
+	   
+	   // show the web dialog here
+	   strFeatures = "dialogLeft:50px;dialogTop:50px;dialogWidth:" + (width - 150) + "px;dialogHeight:" + (height - 150) + "px;status:no;help:no;border:thin;resizable:yes"
+	   
+	   result = window.showModelessDialog(strURL, strRRPage, strFeatures);
+       }
+
+    function show_face_viewer(strRRPage)
+       {
+		width = screen.width;
+		height = screen.height;
+	   
+       if (strLegacy == "N")
+			{
+			strURL = strASPDir + "ep_face.htm";
+		    strFeatures = "dialogLeft:100px;dialogTop:100px;dialogWidth:" + (width - 150) + "px;dialogHeight:" + (height - 150) + "px;status:no;help:no;border:thin;resizable:yes"
+			}
+	   else
+			{
+			strURL = strASPDir + "ep_legacy_face.htm";
+		    strFeatures = "dialogLeft:100px;dialogTop:100px;dialogWidth:" + (width - 150) + "px;dialogHeight:" + (height - 150) + "px;scrollbar:no;status:no;help:no;border:thin;resizable:yes"
+			}
+
+	   // show the web dialog here
+	   
+	   result = window.showModelessDialog(strURL, strRRPage, strFeatures);
+       }
+       
+	function donavpopup(x, y, strLabel, strLocationLink, strFaceLink, strZone, strLocDesc, strColor)
+	{
+	var result = 0;
+	   
+	if (strLocationLink != "")
+		strLoc = "Y";
+	else
+		strLoc = "N";
+
+	if (strFaceLink != "")
+		strFace = "Y";
+	else
+		strFace = "N";
+
+	width = screen.width;
+	height = screen.height;
+
+	x += window.screenLeft;
+	y += window.screenTop;
+
+	if (x > (width - 300))
+		x = width - 260 - 40;
+	      
+	if (y > (height - 210))
+		y = height - 170 - 40;
+
+    // pass enough parameters to allow the popup to offer the correct options
+    
+    strAllParams = "<params><face>" + strFace + "</face><loc>" + strLoc + "</loc><label>" + strLabel + "</label><zone>" + strZone + "</zone><desc>" + strLocDesc + "</desc><color>" + strColor + "</color></params>";
+	strURL = strASPDir + "ep_details.htm";
+
+
+   if (x > (width - (iPopupDialogWidth + 40)))
+      x = width - iPopupDialogWidth - 40;
+      
+   if (y > (height - (iPopupDialogHeight + 40)))
+      y = height - iPopupDialogHeight - 40;
+	   
+	// show the web dialog here
+	strFeatures = "dialogLeft:" + x + "px;dialogTop:" + y + "px;dialogWidth:" + iPopupDialogWidth + "px;dialogHeight:" + iPopupDialogHeight + "px;status:no;help:no;border:thin"
+	   
+	result = window.showModalDialog(strURL, strAllParams, strFeatures);
+	   
+	// check return flag for links to assert
+	// we'll open up modless dialog windows for the location and face viewer
+	   
+	if (result & 1)
+	   show_location_viewer(strLocationLink);
+	 	   
+	if (result & 2)
+	   show_face_viewer(strFaceLink);
+	}
+      
+   var ui_object = new ActiveXObject("Tsobrowser.UIDialogInterface.1");
+   var b_object = new ActiveXObject("Tsobrowser.PreferenceState.1");
+
+   function ExtractFile(strFilename)
+      {
+      strDFile = "tpsreposit/" + strMarket + strLanguage + "I4/" + strFilename;
+      return ui_object.Load(strDFile)
+      }
+
+   function MakeSVGFileReference(strC, strP)
+      {
+      // this should turn into a generation, calling the svg asp
+      
+      strDDest = strBook + StripAndPadCellNum(strC) + strP + ".SVG"
+      return ExtractFile(strDDest)
+      }
+      
+   function CleanFile(strFilename)
+      {
+      // the cache logic will handle cleaning the file out, 
+      // this is here for compatibility with the web implementation which has to manually clean extracted files
+      
+      ui_object.RemoveCachedFile(strFilename);
+      }
+
+   function GetVariable(strName)
+      {
+      return b_object.GetPreference(strName)
+      }
+
+   strImagesDir = GetVariable("gbl_browserdir") + "\\asp\\images\\";
+   strSVGDir = GetVariable("gbl_browserdir") + "\\asp\\svg\\";
+   strASPDir = GetVariable("gbl_browserdir") + "\\asp\\";
+      
+</script>
+<script language=jscript>
+    function doPreviousPage()
+    {
+    iIndex = document.all["PAGE_NUM"].selectedIndex;
+    
+    if (iIndex > 0)
+       {
+       strLPage = document.all["PAGE_NUM"].options[iIndex-1].value;
+       displayPage(strCell, strLPage);
+       }
+    }        
+    
+    function doDirectPageNav()
+    {
+    iIndex = document.all["PAGE_NUM"].selectedIndex;
+    strLPage = document.all["PAGE_NUM"].options[iIndex].value;
+    
+    displayPage(strCell, strLPage);
+    }
+    
+    function doNextPage()
+    {
+    iIndex = document.all["PAGE_NUM"].selectedIndex;
+    
+    if (iIndex < document.all["PAGE_NUM"].options.length - 1)
+       {
+       strLPage = document.all["PAGE_NUM"].options[iIndex+1].value;
+       displayPage(strCell, strLPage);
+       }
+    }
+</script>
+
+<script language="vbscript">
+   function renderDiagramToolbar(oFL)  
+      iLocalPageCount = 0
+      
+	  strPrevPageImage = "left_arrow.jpg"
+	  strNextPageImage = "right_arrow.jpg"
+      
+      iPV = oFL.getPrevious(strPage)
+      if  iPV <= 0 then 
+        strPrevPageImage = "left_arrow_dis.jpg"
+      end if
+
+      iPN = oFL.getNext(strPage)
+      if  iPN <= 0 then 
+        strNextPageImage = "right_arrow_dis.jpg"
+      end if
+                       
+      strToolHTML = "<table width='100%' bgColor='#CCCCCC'><tr>"
+      strToolHTML = strToolHTML & "<TD valign=""middle""><INPUT onClick=""doTOC()"""
+      strToolHTML = strToolHTML & " id=CONTENTS style=""FONT-SIZE: 8pt; FONT-FAMILY: Verdana"" type=button value=""" & localContents & """ name=button1 title=""" & localGotoTOC & """></TD>" & vbCrLf
+
+      strToolHTML = strToolHTML & "<TD  nowrap valign=""middle""><IMG src=""" & strImagesDir & "sep.gif"">&nbsp;<INPUT  onClick=""doZoomOut();"" id=ZOOM_OUT style=""FONT-SIZE: 8pt; FONT-FAMILY: Verdana"" type=image name=ZOOM_OUT src=""" & strImagesDir & "minus.jpg"" alt=""" & localZoomOut & """>"
+      strToolHTML = strToolHTML & "  <SELECT style=""FONT-SIZE: 8pt; FONT-FAMILY: Verdana"" id=ZOOMLEVEL "
+      strToolHTML = strToolHTML & "  name=ZOOMLEVEL onChange=""doDirectZoom();""  title=""" + localSetZoom + """>"
+      strToolHTML = strToolHTML & "  <OPTION value=""100"" selected>100%</OPTION>"
+      strToolHTML = strToolHTML & "  <OPTION value=""150"">150%</OPTION>"
+      strToolHTML = strToolHTML & "  <OPTION value=""200"">200%</OPTION>"
+      strToolHTML = strToolHTML & "  <OPTION value=""400"">400%</OPTION>"
+      strToolHTML = strToolHTML & "  <OPTION value=""800"">800%</OPTION>"
+      strToolHTML = strToolHTML & "  <OPTION value=""1000"">1000%</OPTION>"
+      strToolHTML = strToolHTML & "  </SELECT>"
+      strToolHTML = strToolHTML & "<INPUT onClick=""doZoomIn();"" id=ZOOM_IN style=""FONT-SIZE: 8pt; FONT-FAMILY: Verdana"" type=image name=ZOOM_IN src=""" & strImagesDir & "plus.jpg"" alt=""" & localZoomIn & """></TD>"
+   
+      strToolHTML = strToolHTML & "<TD nowrap valign=""middle""><IMG src=""" & strImagesDir & "sep.gif"">&nbsp;<INPUT  onClick=""doPreviousPage();"" id=PREV_PAGE style=""FONT-SIZE: 8pt; FONT-FAMILY: Verdana"" type=image name=PREV_PAGE "
+      strToolHTML = strToolHTML & "src=""" & strImagesDir & strPrevPageImage & """ alt=""" & localPrevPage & """>" & vbCrLf
+      strToolHTML = strToolHTML & "<SELECT style=""FONT-SIZE: 8pt; FONT-FAMILY: Verdana"" id=PAGE_NUM "
+      strToolHTML = strToolHTML & "name=PAGE_NUM onChange=""doDirectPageNav();"" title=""" & localDirectPage & """> " & vbCrLf
+
+      for iPL = 0 to oFL.getCount()
+         strLocPageNum = oFL.getPageNum(iPL)
+         if strLocPageNum <> "" then 
+            iLocalPageCount = iLocalPageCount + 1
+            strSel = ""
+            if strPage = strLocPageNum then
+               strSel = " selected "
+            end if
+            
+            strToolHTML = strToolHTML & "<OPTION value='" & strLocPageNum & "' " & strSel & ">" & localPage & " " & CInt(strLocPageNum) & "</OPTION>"
+            
+         end if
+      next
+      
+      strToolHTML = strToolHTML & "</SELECT>"
+      strToolHTML = strToolHTML & "<INPUT  onClick=""doNextPage();"" id=NEXT_PAGE style=""FONT-SIZE: 8pt; FONT-FAMILY: Verdana"" type=image name=NEXT_PAGE src=""" & strImagesDir & strNextPageImage & """ alt=""" & localNextPage & """></TD>"
+
+      strToolHTML = strToolHTML & "<TD  align=""left"" valign=""top""><IMG src=""" & strImagesDir & "sep.gif""></TD>" & vbCrLf
+      strToolHTML = strToolHTML & "<TD  align=""center"" valign=""top"" width=""100%""><div id=""LOADING"" name=""LOADING""><font face=""Verdana"" size=""2""><b>" & localLoading & "</b></font></div></TD>" & vbCrLf
+      strToolHTML = strToolHTML & "<TD  valign='middle'><IMG src='" & strImagesDir & "sep.gif'>&nbsp;<INPUT onClick='doSearch();' id=SEARCH style='FONT-SIZE: 8pt; FONT-FAMILY: Verdana' type='image' name='SEARCH' src='" & strImagesDir & "search_" & strULanguage & ".jpg' alt='" & l_object.GetStringByName_var("searchTip") & "'></TD>"
+      strToolHTML = strToolHTML & "<TD  valign=""middle""><IMG src=""" & strImagesDir & "sep.gif"">&nbsp;<INPUT id=PRINT style=""FONT-SIZE: 8pt; FONT-FAMILY: Verdana"" type=image name=PRINT src=""" & strImagesDir & "print.jpg"" alt=""" & localPrint & """ onClick=""doPrintDialog();""></TD>"
+      
+      strToolHTML = strToolHTML & "</tr></table>"
+      
+      renderDiagramToolbar = strToolHTML
+   end function
+
+   function renderTOCToolbar()      
+      strToolHTML = "<table width='100%'><tr bgColor='#CCCCCC'>"
+      strToolHTML = strToolHTML & "<TD valign=""middle""><INPUT 'disabled' id=CONTENTS style=""FONT-SIZE: 8pt; FONT-FAMILY: Verdana"" type=button value=""" & localContents & """ name=button1 title=""" & localGotoTOC & """></TD>"
+      strToolHTML = strToolHTML & "<td width='100%'><font face='Verdana' size='2'>&nbsp;</font></td>"
+      strToolHTML = strToolHTML & "<TD  valign='middle'><IMG src='" & strImagesDir & "sep.gif'>&nbsp;<INPUT onClick='doSearch();' id=SEARCH style='FONT-SIZE: 8pt; FONT-FAMILY: Verdana' type='image' name='SEARCH' src='" & strImagesDir & "search_" & strULanguage & ".jpg' alt='" & l_object.GetStringByName_var("searchTip") & "'></TD>"
+      strToolHTML = strToolHTML & "<TD  valign=""middle""><IMG src=""" & strImagesDir & "sep.gif"">&nbsp;<INPUT id=PRINT style=""FONT-SIZE: 8pt; FONT-FAMILY: Verdana"" type=image name=PRINT src=""" & strImagesDir & "print.jpg"" alt=""" & localPrint & """ onClick=""doPrint();""></TD>"
+      strToolHTML = strToolHTML & "</tr></table>"
+      
+      renderTOCToolbar = strToolHTML
+   end function
+
+   function renderConnToolbar()      
+      strToolHTML = "<table width='100%'><tr bgColor='#CCCCCC'>"
+      strToolHTML = strToolHTML & "<TD valign=""middle""><INPUT onClick=""doTOC()"""
+      strToolHTML = strToolHTML & " id=CONTENTS style=""FONT-SIZE: 8pt; FONT-FAMILY: Verdana"" type=button value=""" & localContents & """ name=button1 title=""Go to the table of contents...""></TD>" & vbCrLf
+      strToolHTML = strToolHTML & "<td width='100%'><font face='Verdana' size='2'>&nbsp;</font></td>"
+      strToolHTML = strToolHTML & "<TD  valign='middle'><IMG src='" & strImagesDir & "sep.gif'>&nbsp;<INPUT onClick='doSearch();' id=SEARCH style='FONT-SIZE: 8pt; FONT-FAMILY: Verdana' type='image' name='SEARCH' src='" & strImagesDir & "search_" & strULanguage & ".jpg' alt='" & l_object.GetStringByName_var("searchTip") & "'></TD>"
+      strToolHTML = strToolHTML & "<TD  valign=""middle""><IMG src=""" & strImagesDir & "sep.gif"">&nbsp;<INPUT id=PRINT style=""FONT-SIZE: 8pt; FONT-FAMILY: Verdana"" type=image name=PRINT src=""" & strImagesDir & "print.jpg"" alt=""" & localPrint & """ onClick=""doPrint();""></TD>"   
+      strToolHTML = strToolHTML & "</tr></table>"
+      
+      renderConnToolbar = strToolHTML
+   end function
+</script>
+<script language="jscript">
+   var cell_title_array = new Array();
+   var cell_array_count = 0;
+   
+   function title_entry(strCell, strTitle, strSub)
+      {
+      this.cell = strCell;
+      this.title = strTitle;
+      this.sub = strSub
+      }
+      
+   function addToTitleArray(strCell, strTitle, strSub)
+      {
+      var pEntry = new title_entry(strCell, strTitle, strSub);
+      cell_title_array[cell_array_count++] = pEntry;
+      }
+      
+   function SortAlpha(p1, p2)
+      {
+      if (p1.title == p2.title)
+         return 0;
+      else if (p1.title > p2.title)
+         return 1;
+      else
+         return -1;
+      }
+   
+   function SortNum(p1, p2)
+      {
+      i1 = p1.cell;
+      i2 = p2.cell;
+      
+      if (i1 == i2)
+         return 0;
+      else if (i1 > i2)
+         return 1;
+      else
+         return -1;
+      }
+      
+   function SortArray(bAlpha)
+      {
+      if (bAlpha)
+        cell_title_array.sort(SortAlpha);
+      else
+        cell_title_array.sort(SortNum);
+      }
+
+   function getEntryCell(index)
+      {
+      if (index < cell_array_count)
+         return cell_title_array[index].cell;
+         
+      return "";
+      }      
+
+   function getEntryTitle(index)
+      {
+      if (index < cell_array_count)
+         return cell_title_array[index].title;
+         
+      return "";
+      }      
+      
+   function getEntrySub(index)
+      {
+      if (index < cell_array_count)
+         return cell_title_array[index].sub;
+         
+      return "";
+      }
+
+   function resetArray()
+      {
+      cell_title_array.length = 0;
+      cell_array_count = 0;
+      }
+      
+   function myFloor(num)
+      {
+      return Math.floor(num);
+      }
+
+   function doSort(bAlpha)
+      {
+      if (bAlpha)
+         strTOCFlavor = "ALPHA"
+      else
+         strTOCFlavor = "NUM"
+
+      document.all["CONTENTBODY"].innerHTML = renderTOC();
+      }
+</script>
+<script language="vbscript">
+   ' abstraction class for the TOC
+   ' production todo:  take in workunit, market, language
+
+   class WDTocData
+      private oXML               ' XML document
+      private oTempNodeList      ' selected TOC nodes
+      private pCount             ' count of number of TOC entries
+      private strTocVersion      ' C3P or legacy, because there are differences in how various cells are rendered
+      
+      ' various special-meaning cells
+      
+      private strConCell
+      private strLocCell
+      private strLocIndex
+      private strIndex
+      
+      private strTocFile
+      
+      public Sub Class_initialize()
+         resetArray
+   
+         set oXML = nothing
+         set oTempNodeList = nothing
+         pCount = 0
+         strTocVersion = "UNKNOWN"         
+		 strConCell = "UNKNOWN"
+		 strLocCell = "UNKNOWN"
+		 strLocIndex = "UNKNOWN"
+		 strIndex = "UNKNOWN"
+      end Sub
+
+      public Sub Sort(strFlavor)
+         strTocFile = strBook & "celttl.xml"
+         
+         ' open the XML file
+
+         strFile = ExtractFile(strTocFile)
+         
+         if strFile <> "" then 
+            set oXML = CreateObject("Microsoft.XMLDOM")
+            oXML.Load(strFile)
+            
+            Set oTempNodeList = oXML.selectNodes("search/values/cell")
+            
+            if not IsNull(oTempNodeList) then
+               strTOCVersion = GetSingleValue(oXML, "search/version")
+               strConCell = GetSingleValue(oXML, "search/concell")
+               strLocCell = GetSingleValue(oXML, "search/loccell")
+               
+               if strTOCVersion = "C3P" then
+				   strLocIndex = GetSingleValue(oXML, "search/locindex")
+				   strIndex = GetSingleValue(oXML, "search/index")
+               else
+                   strLocIndex = "152"
+                   strIndex = "002"
+               end if
+
+               if strLocIndex = "" then
+			      strLocIndex = "152"
+               end if 
+
+               if strIndex = "" then
+			      strIndex = "002"
+               end if 
+                              
+               pCount = oTempNodeList.length
+               
+               ' load them into an array via JScript, so we 
+               ' can use the sort function
+               
+               for iTempC = 0 to pCount - 1
+                  set oNode = oTempNodeList.item(iTempC)
+                  
+                  if not IsNull(oNode) then
+	                 strLTitle = GetSingleValue(oNode, "title")
+	                 strLCell = GetSingleValue(oNode, "number")
+	                 strLSub = GetSingleValue(oNode, "subt")
+                     
+                     addToTitleArray strLCell, strLTitle, strLSub
+                     
+                     set oNode = nothing
+                  end if 
+               next
+            end if
+
+	     If strFlavor = "NUM" then
+	        SortArray(false)
+	     Elseif strFlavor = "ALPHA" then
+	        SortArray(true)
+	     end if         
+            
+         set oTempNodeList = nothing
+         set oXML = nothing
+
+         CleanFile strFile
+            
+         end if         
+         
+      end Sub
+
+      public Sub Class_terminate()
+      end Sub
+      
+      public function getCount()
+         GetCount = pCount
+      end function
+      
+      public sub getTOCEntry(index, strLCell, strLTitle, strLSub)
+         strCell = ""
+         strTitle = ""
+         strSub = ""
+         
+         if index < pCount then
+            strLCell = getEntryCell(index)
+            strLTitle = getEntryTitle(index)
+            strLSub = getEntrySub(index)
+         end if
+            
+      end sub
+
+      public function FindTitleForCell(strRRCell)
+         strTText = ""
+         
+         for iTSS = 0 to pCount
+            if getEntryCell(iTSS) = strRRCell then
+               strTText = getEntryTitle(iTSS)
+               strTSub = getEntrySub(iTSS)
+               
+               if strTSub <> "" then
+                  strTText = strTText & ", " & strTSub
+               end if
+
+               exit for 
+            end if
+         next
+         
+         FindTitleForCell = strTText
+      end function
+
+      public function GetTocVersion()
+         GetTocVersion = strTOCVersion
+      end function
+
+      public function IsTocLegacy()
+         if strTOCVersion = "C3P" then
+            IsTOCLegacy = false
+         else
+            IsTOCLegacy = true
+         end if
+      end function
+
+      public function GetConCell()
+         GetConCell = strConCell
+      end function
+      
+      public function GetLocCell()
+          GetLocCell = strLocCell
+      end function
+      
+      public function GetLocIndex()
+         GetLocIndex = strLocIndex
+      end function
+      
+      public function GetIndex()
+         GetIndex = strIndex
+      end function 
+      
+   end class
+</script>
+<script language="vbscript">
+
+   function IsChecked(strF)
+      if strTOCFlavor = strF then
+         IsChecked = " checked "
+      else
+         IsChecked = ""
+      End If
+   end function
+
+   function IsConnChecked(strF)
+      if strConnFlavor = strF then
+         IsConnChecked = " checked "
+      else
+         IsConnChecked = ""
+      End If
+   end function
+
+   function IsLocChecked(strF)
+      if strLocFlavor = strF then
+         IsLocChecked = " checked "
+      else
+         IsLocChecked = ""
+      End If
+   end function
+
+   function StripAndPadCellNum(strC)
+      strTCell = strC
+      
+      if strTCell <> "" then
+         oSplit = Split(strTCell, "-")
+         if UBound(oSplit) = 1 then
+            strTCell = oSplit(0)
+         end if
+      Else
+         StripAndPadCellNum = ""
+         exit function
+      end if
+      
+      iLen = Len(strTCell)
+      
+      if iLen = 2 then
+         StripAndPadCellNum = "0" & strTCell
+      Elseif iLen = 1 then
+         StripAndPadCellNum = "00" & strTCell
+      else
+         StripAndPadCellNum = strTCell   
+      end if
+   end function
+
+
+   function PadNum(strC)
+      strTCell = strC
+      
+      iLen = Len(strTCell)
+      
+      if iLen = 2 then
+         PadNum = "0" & strTCell
+      Elseif iLen = 1 then
+         PadNum = "00" & strTCell
+      else
+         PadNum = strTCell   
+      end if
+   end function
+
+   function IsSelected(strF, strThis)
+      if strThis = strF then
+         IsSelected = " selected "
+      else
+         IsSelected = ""
+      End If
+   end function
+
+   
+   private function GetSingleValue(oXML, strPath)
+      ' get a single decendent from the top of a node
+      
+      GetSingleValue = ""
+         
+      if not IsNull(oXML) then
+         Set oTNodeList = oXML.selectNodes(strPath)
+            
+         if oTNodeList.Length > 0 then
+            GetSingleValue = oTNodeList.item(0).text
+         End If
+            
+         set oTNodeList = nothing
+      end if
+   end function    
+
+   function GetNodeText(oNode)
+	strRet = ""
+
+	for jkj = 0  to oNode.childNodes.length - 1
+		set oElement = oNode.childNodes(j)
+
+		if oElement.nodeType = 3 or oElement.nodeType = 4 then
+			strRet = oElement.text
+			GetNodetext = strRet
+			exit function
+		end if 
+	next
+	
+    GetNodetext = strRet
+   end function
+         
+   Function GetChildText(oParent, strTag)
+	For j=0 To (oParent.childNodes.length -1)
+		Set Element = oParent.childNodes(j)
+
+		If Element.nodeName = strTag Then
+			GetChildText = Element.text
+			Exit Function
+		End If
+		next
+	    
+		GetChildText = ""
+   End Function
+
+   function renderTOC()
+      strHTML = renderTOCToolbar()
+   
+	  strHTML = strHTML & "<br><TABLE cellSpacing=3 cellPadding=2 width='100%' border=0>"
+	  strHTML = strHTML & "<TR>"
+	  strHTML = strHTML & "<TD width='100%' bgColor=silver><FONT face='verdana' size='4'><b>" & strVehicle & " " & localTOC & "</b></font></TD>"
+	  strHTML = strHTML & "<div class='TOOLBAR'>"
+	  
+	  strHTML = strHTML & "<TD nowrap bgColor=silver><FONT face='verdana' size='2' align='right'><input type='RADIO' name='ALPHANUM' onClick='doSort(true);' " & isChecked("ALPHA") & ">" & localSortAlpha
+	  strHTML = strHTML & "&nbsp;&nbsp;&nbsp;<input type='RADIO' name='ALPHANUM' onClick='doSort(false);'  " & isChecked("NUM") & "> " & localSortNum 
+	  strHTML = strHTML & "&nbsp;&nbsp;</font></TD></div></TR></TABLE><br>"
+   
+      strHTML = strHTML & "<TABLE cellSpacing=0 cellPadding=1 border=0 width='100%'><tr>" & vbCrLf
+      
+      iCols = 2
+      iRowHeight = 10
+      
+      for jCols = 0 to iCols - 1
+	    if strTOCFlavor <> "NUM" then
+	       strHTML = strHTML & "<TD  height=" & iRowHeight & " bgcolor='silver' width='25%'><FONT face='verdana' size='2'><b>" & localTitleHeading & "</b></font></td>" & vbCrLf
+           strHTML = strHTML & "<td  height=" & iRowHeight & " bgcolor='silver' nowrap  align='right'><FONT face='verdana' size='2'><b>" & localCellHeading & "</b></font></TD>" & vbCrLf
+	    else
+           strHTML = strHTML & "<td  height=" & iRowHeight & "  bgcolor='silver' align='left'><FONT face='verdana' size='2'><b>" & localCellHeading & "</b></font></TD>" & vbCrLf
+           strHTML = strHTML & "<TD  height=" & iRowHeight & "  bgcolor='silver' align='left' ><FONT face='verdana' size='2'><b>" & localTitleHeading & "</b></font></td>" & vbCrLf
+	    end if
+	    
+	    if jCols = iCols - 1 then
+           strHTML = strHTML & "<TD  height=" & iRowHeight & " width='1' ><font size='2'>&nbsp;</font></TD>" & vbCrLf
+	    else
+           strHTML = strHTML & "<TD  height=" & iRowHeight & " width='1' bgcolor='white'><font size='2'>&nbsp;&nbsp;</font></TD>" & vbCrLf
+           strHTML = strHTML & "<TD  height=" & iRowHeight & " width='1' bgcolor='black'><font size='2'>&nbsp;&nbsp;&nbsp;</font></TD>" & vbCrLf
+           strHTML = strHTML & "<TD  height=" & iRowHeight & " width='1' bgcolor='white'><font size='2'>&nbsp;&nbsp;</font></TD>" & vbCrLf
+	    end if
+      next 
+      
+      strHTML = strHTML & "</tr>"
+
+      set oTOC = new WDTocData
+      oTOC.Sort strTOCFlavor
+   
+      iCount = oTOC.getCount()
+      iRowCount = myFloor(iCount / iCols, 0)
+   
+      if not (iCount mod 2 = 0) then
+         iRowCount = iRowCount + 1
+      end if 
+
+      for iRows = 0 to iRowCount - 1
+
+        strHTML = strHTML & "<TR>"
+
+        for jCols = 0 to iCols - 1
+           strCellTitle = ""
+           strCellNum = ""
+           strCellSub = ""
+      
+           iIndex = (iRows + (jCols * iRowCount))
+         
+           if iIndex < iCount then
+              oTOC.getTOCEntry iIndex, strCellNum, strCellTitle, strCellSub
+           end if
+    
+           if strCellSub <> "" then
+              strCellSub = ", " & strCellSub
+           end if
+         
+           strCellTitle = strCellTitle & strCellSub
+         
+           strHighlight = "white"
+           
+           if iRows mod 2 = 0 then
+              strHighlight = "#EEEEEE"
+           end if
+         
+           if strCellNum <> "" and strCellTitle <> "" then
+             if strTOCFlavor <> "NUM" then 
+               if strCellNum = oTOC.GetConCell() then
+                 strHTML = strHTML & "<TD  height=" & iRowHeight & " bgcolor=" & strHighlight & " width='25%'><a href='#' onClick='displayConnList(""NUM"")'><FONT face='verdana' size='1'>" & strCellTitle & "</font></a></td>" & vbCrLf
+                 strHTML = strHTML & "<td  height=" & iRowHeight & " nowrap bgcolor=" & strHighlight & " align='right'><a href='#' onClick='displayConnList(""NUM"")'><FONT face='verdana' size='1'>" & CInt(strCellNum) & "-1</font></a></TD>" & vbCrLf
+               elseif strCellNum = oTOC.GetLocIndex() then
+                 strHTML = strHTML & "<TD  height=" & iRowHeight & " bgcolor=" & strHighlight & " width='25%'><a href='#' onClick='displayLocIndex("""")'><FONT face='verdana' size='1'>" & strCellTitle & "</font></a></td>" & vbCrLf
+                 strHTML = strHTML & "<td  height=" & iRowHeight & " nowrap bgcolor=" & strHighlight & " align='right'><a href='#' onClick='displayLocIndex("""")'><FONT face='verdana' size='1'>" & CInt(strCellNum) & "-1</font></a></TD>" & vbCrLf
+               elseif strCellNum = oTOC.GetIndex() then
+                 strHTML = strHTML & "<TD  height=" & iRowHeight & " bgcolor=" & strHighlight & " width='25%'><a href='#' onClick='displayIndex()'><FONT face='verdana' size='1'>" & strCellTitle & "</font></a></td>" & vbCrLf
+                 strHTML = strHTML & "<td  height=" & iRowHeight & " nowrap bgcolor=" & strHighlight & " align='right'><a href='#' onClick='displayIndex()'><FONT face='verdana' size='1'>" & CInt(strCellNum) & "-1</font></a></TD>" & vbCrLf
+               else 
+                 strHTML = strHTML & "<TD  height=" & iRowHeight & " bgcolor=" & strHighlight & " width='25%'><a href='#' onClick='displayPage(""" & strCellNum & """, """")'><FONT face='verdana' size='1'>" & strCellTitle & "</font></a></td>" & vbCrLf
+                 strHTML = strHTML & "<td  height=" & iRowHeight & " nowrap bgcolor=" & strHighlight & " align='right'><a href='#' onClick='displayPage(""" & strCellNum & """, """")'><FONT face='verdana' size='1'>" & CInt(strCellNum) & "-1</font></a></TD>" & vbCrLf
+               end if
+            else 
+               if strCellNum = oTOC.GetConCell() then
+                  strHTML = strHTML & "<td  height=" & iRowHeight & " nowrap bgcolor=" & strHighlight & " align='left'><a href='#' onClick='displayConnList(""NUM"")'><FONT face='verdana' size='1'>" & CInt(strCellNum) & "-1</font></a></TD>" & vbCrLf
+                  strHTML = strHTML & "<TD  height=" & iRowHeight & " bgcolor=" & strHighlight & " align='left' ><a href='#' onClick='displayConnList(""NUM"")'><FONT face='verdana' size='1'>" & strCellTitle & "</font></a></td>" & vbCrLf
+               elseif strCellNum = oTOC.GetLocIndex() then
+                  strHTML = strHTML & "<td  height=" & iRowHeight & " nowrap bgcolor=" & strHighlight & " align='left'><a href='#' onClick='displayLocIndex("""")'><FONT face='verdana' size='1'>" & CInt(strCellNum) & "-1</font></a></TD>" & vbCrLf
+                  strHTML = strHTML & "<TD  height=" & iRowHeight & " bgcolor=" & strHighlight & " align='left' ><a href='#' onClick='displayLocIndex("""")'><FONT face='verdana' size='1'>" & strCellTitle & "</font></a></td>" & vbCrLf
+               elseif strCellNum = oTOC.GetIndex() then
+                  strHTML = strHTML & "<td  height=" & iRowHeight & " nowrap bgcolor=" & strHighlight & " align='left'><a href='#' onClick='displayIndex(""NUM"")'><FONT face='verdana' size='1'>" & CInt(strCellNum) & "-1</font></a></TD>" & vbCrLf
+                  strHTML = strHTML & "<TD  height=" & iRowHeight & " bgcolor=" & strHighlight & " align='left' ><a href='#' onClick='displayIndex(""NUM"")'><FONT face='verdana' size='1'>" & strCellTitle & "</font></a></td>" & vbCrLf
+               else
+                  strHTML = strHTML & "<td  height=" & iRowHeight & " nowrap bgcolor=" & strHighlight & " align='left'><a href='#' onClick='displayPage(""" & strCellNum & """, """")'><FONT face='verdana' size='1'>" & CInt(strCellNum) & "-1</font></a></TD>" & vbCrLf
+                  strHTML = strHTML & "<TD  height=" & iRowHeight & " bgcolor=" & strHighlight & " align='left' ><a href='#' onClick='displayPage(""" & strCellNum & """, """")'><FONT face='verdana' size='1'>" & strCellTitle & "</font></a></td>" & vbCrLf
+               end if
+            end if
+    
+           if jCols = iCols - 1 then 
+              strHTML = strHTML & "<TD  height=" & iRowHeight & " width=1 ><font size=2>&nbsp;</font></TD>" & vbCrLf
+           else
+              strHTML = strHTML & "<TD  height=" & iRowHeight & " width=1 bgcolor=white><font size=2>&nbsp;&nbsp;</font></TD>" & vbCrLf
+              strHTML = strHTML & "<TD  height=" & iRowHeight & " width=1 bgcolor=black><font size=2>&nbsp;&nbsp;&nbsp;</font></TD>" & vbCrLf
+              strHTML = strHTML & "<TD  height=" & iRowHeight & " width=1 bgcolor=white><font size=2>&nbsp;&nbsp;</font></TD>" & vbCrLf
+           end if
+       Else
+          strHTML = strHTML & "<TD height=" & iRowHeight & " ><font size=1>&nbsp;</font></TD>" & vbCrLf
+          strHTML = strHTML & "<TD height=" & iRowHeight & " ><font size=1>&nbsp;</font></TD>" & vbCrLf
+          
+          if iIndex + 1 < iCount then 
+             strHTML = strHTML & "<TD  height=" & iRowHeight & " width=1 bgcolor=white><font size=2>&nbsp;&nbsp;</font></TD>" & vbCrLf
+             strHTML = strHTML & "<TD  height=" & iRowHeight & " width=1 bgcolor=black><font size=2>&nbsp;&nbsp;&nbsp;</font></TD>" & vbCrLf
+             strHTML = strHTML & "<TD  height=" & iRowHeight & " width=1 bgcolor=white><font size=2>&nbsp;&nbsp;</font></TD>" & vbCrLf
+          end if
+       End if
+       
+       next
+    next
+    
+  strHTML = strHTML & "</TR></TABLE>"
+  
+  set oTOC = nothing
+  
+  document.title = strVehicle & " " & localTOC
+  
+  renderTOC = strHTML
+  
+  end function       
+</script>
+<script language="vbscript">
+   Function FindFilesinXML(strCell)
+      Dim fso, f, f1, fc, s
+      FileFilesinXML = 0
+
+      strTempCell = StripAndPadCellNum(strCell)
+
+      if strTempCell = "" then
+         exit function
+      end if 
+            
+      strXMLFile = ExtractFile(strBook & "cel_" & strTempCell & ".xml")
+      
+      set oVXML = CreateObject("Microsoft.XMLDOM")
+      oVXML.Load(strXMLFile)
+      
+      strCLast = ""
+      
+      Set oFNodeList = oVXML.selectNodes("search/pages/page")
+      
+      if not IsNull(oFNodeList) then
+         iPCount = 0 
+         for ipp = 0 to oFNodeList.length - 1
+            if oFNodeList.item(ipp).NodeName = "page" then
+               strThatPageNum =  GetChildText(oFNodeList.item(ipp), "num")
+               
+               if strThatPageNum <> strCLast then
+                  iPCount = iPCount + 1
+                  strCLast = strThatPageNum
+               end if
+            end if
+         next
+         
+			FindFilesinXML = iPCount
+      end if 
+
+      set oVXML = nothing
+      set oFNodeList = nothing
+      
+      CleanFile strXMLFile
+   End function
+
+Dim FileList(255)
+class SVGFileListLegacy
+
+   private fileCount
+   
+   public Sub Class_initialize()
+      fileCount = 0
+   End Sub
+
+   Function FindFiles(strCell)
+      fileCount = FindFilesinXML(strCell)
+      FindFiles = fileCount
+   end function
+   
+   Function ExactMatch(strRequestedCell, strRequestedPage)
+      ExactMatch = true
+   end function
+   
+   function getCount()
+      getCount = fileCount
+   end function
+   
+   function getPageNum(iIndex)
+      strReturn = ""
+      
+      if iIndex < fileCount then
+         if iIndex + 1 >= 100 then 
+            strReturn = CStr(iIndex + 1)
+         Elseif iIndex + 1 >= 10 then 
+            strReturn = "0" & iIndex + 1 
+         else
+            strReturn = "00" & iIndex + 1 
+         end if
+      end if
+      
+      getPageNum = strReturn
+   end function
+   
+   Function getPrevious(strPN)
+      iNum = CInt(strPN)
+      iNum = iNum - 1
+      
+      getPrevious = iNum
+   end function
+   
+   function getNext(strPN)
+      iNum = CInt(strPN)
+      iNum = iNum + 1
+      
+      if iNum <= fileCount then
+         getNext = iNum
+      else
+         getNext = 0
+      end if
+   end function
+End Class
+
+function renderDiagram()
+   Set oFL = new SVGFileListLegacy
+    
+   CurrCellNumFiles = oFL.FindFiles(strCell)
+
+   if strPage = "" then   ' default to first page of a cell, if none is specified
+       strPage = "001"
+   end if
+
+   strHTML = "<table width=""100%"" height=""100%"" cellpadding=""0"" cellspacing=""0"">" & vbCrLf
+   strHTML = strHTML & "<tr><td colspan=""3"">" & renderDiagramToolbar(oFL) & "</td></tr>" & vbCrLf
+   strHTML = strHTML & "<tr><td align=""center"" colspan=""3"" bgcolor=""blue"" height=""8"" onmousedown=""doPan('up');"" style=""cursor:hand""><img src=""" & strImagesDir & "up.gif""><img src=""" & strImagesDir & "up.gif""><img src=""" & strImagesDir & "up.gif""></td></tr>" & vbCrLf
+   strHTML = strHTML & "<tr><td bgcolor=""blue"" width=""8"" onmousedown=""doPan('left');"" style=""cursor:hand""><img src=""" & strImagesDir & "left.gif""><img src=""" & strImagesDir & "left.gif""><img src=""" & strImagesDir & "left.gif""></td>" & vbCrLf
+   strHTML = strHTML & "<td width=""100%"" height=""100%"">"
+   
+	strFName = MakeSVGFileReference(strCell, strPage)
+
+    if strLegacy = "N" then
+	    buildDiagramC3P strFName  ' create interaciton elements in the SVG, overwrite cache file
+    else
+        buildDiagramLegacy strFName
+    end if
+
+	if strFName <> "" then
+	   strHTML = strHTML & "<embed name=SVGControl1 id=SVGControl1 style=""WIDTH: 100%; HEIGHT: 100%"" height=""100%"" width=""100%"" src=""" & strFName & """></embed>" & vbCrLf
+	   RecordLastSVG strFName
+  	Else
+	   strHTML = strHTML & "<embed name=SVGControl1 id=SVGControl1 style=""WIDTH: 100%; HEIGHT: 100%"" height=""100%"" width=""100%"" src=""ep_notfound.svg""></embed>" & vbCrLf
+    end if
+
+    strHTML = strHTML & "</td><td bgcolor=""blue"" width=""8""  onmousedown=""doPan('right');"" style=""cursor:hand""><img src=""" & strImagesDir & "right.gif""><img src=""" & strImagesDir & "right.gif""><img src=""" & strImagesDir & "right.gif""></td></tr>" & vbCrLf
+	strHTML = strHTML & "<tr><td align=""center"" colspan=""3"" bgcolor=""blue"" height=""8"" onmousedown=""doPan('down');"" style=""cursor:hand""><img src=""" & strImagesDir & "down.gif""><img src=""" & strImagesDir & "down.gif""><img src=""" & strImagesDir & "down.gif""></td></tr>" & vbCrLf
+	strHTML = strHTML & "</table>"
+
+    ' grab the title from the TOC file (makes me sick to do this)
+    
+    set oTOC = new WDTocData
+    oTOC.Sort "NUM"      
+
+    strTitleText = oTOC.FindTitleForCell(StripAndPadCellNum(strCell)) & " (" & CInt(StripAndPadCellNum(strCell)) & "-" & CInt(StripAndPadCellNum(strPage)) & ")"
+    strGlobalTitle = strVehicle & " - " & strTitleText
+    
+    document.title = strGlobalTitle
+    
+    set oToc = nothing
+
+    ' now, return the rendered guts
+    	
+	renderDiagram = strHTML
+   end function
+
+   class LocIndexDataInterface
+      public strItem
+      public Count
+      
+      private oEntryList
+      
+      private oEntry
+      private oDdoc
+
+      public Sub Load(oDocP)      
+         Set oDDoc = oDocP
+         Set oEntryList = oDDoc.selectNodes("index/entry")
+         
+         Count = oEntryList.length
+         
+         set oEntry = nothing
+      end sub
+      
+      public sub Class_initialize()
+         Count = 0
+      end sub
+      
+      public sub Class_terminate()
+         set oDDoc = nothing
+         set oEntryList = nothing
+         set oEntry = nothing
+      end sub
+      
+      public function getCount()
+         getCount = Count
+      end function
+      
+      public function FindEntry(strC)
+         if oEntryList.length > 0 then
+            For iCC = 0 to oEntryList.length - 1
+            	if oEntryList.item(iCC).getAttribute("name") = strC then
+            	   Set oEntry = oEntryList.item(iCC)
+            	   FindEntry = true
+            	   exit function
+            	end if
+            Next
+         end if 
+
+		FindEntry = false
+      end function
+
+      public function GetEntry(iIndex)
+         if CInt(iIndex) < CInt(Count) then
+     	   	Set oEntry = oEntryList.item(iIndex)
+     	   	GetEntry = true
+     	   	exit function
+         end if
+
+      	GetEntry = false
+         
+      end function
+
+      public function getItemName()
+         getItemName = GetChildText(oEntry, "item")
+      end function
+
+      public function getQual()
+         getQual = GetChildText(oEntry, "qual")
+      end function
+
+      public function getLocDesc()
+         getLocDesc = GetChildText(oEntry, "location_desc")
+      end function
+
+      public function getLocPage()
+         getLocPage = GetChildText(oEntry, "page")
+      end function
+
+      public function getLocZone()
+         getLocZone = GetChildText(oEntry, "gridref")
+      end function
+
+      public function getConnectedTo()
+         getConnectedTo = GetChildText(oEntry, "conn")
+      end function
+   end class   
+
+
+   class LegacyConnectorDataInterface
+      public strConnector
+      public Count
+      
+      private oConnList
+      
+      private oConn
+      private oDdoc
+
+      public Sub Load(oDocP)      
+         Set oDDoc = oDocP
+         Set oConnList = oDDoc.selectNodes("search/values/conn")
+         
+         Count = oConnList.length
+         
+         set oConn = nothing
+      end sub
+      
+      public sub Class_initialize()
+         Count = 0
+      end sub
+      
+      public sub Class_terminate()
+         set oDDoc = nothing
+         set oConnList = nothing
+      end sub
+      
+      public function getCount()
+         getCount = Count
+      end function
+      
+      public function FindConnector(strC)
+         if oConnList.length > 0 then
+            For iCC = 0 to oConnList.length - 1
+            	if oConnList.item(iCC).getAttribute("name") = strC then
+            	   Set oConn = oConnList.item(iCC)
+            	   FindConnector = true
+            	   exit function
+            	end if
+            Next
+         end if 
+
+		FindConnector = false
+      end function
+
+      public function GetConnector(iIndex)
+         if CInt(iIndex) < CInt(Count) then
+     	   	Set oConn = oConnList.item(iIndex)
+     	   	GetConnector = true
+     	   	exit function
+         end if
+
+      	GetConnector = false
+         
+      end function
+
+      public function getCNumber()
+         getCNumber = GetChildText(oConn, "name")
+      end function
+
+      public function getQual()
+         getQual = GetChildText(oConn, "qual")
+      end function
+
+      public function getFaceFile()
+         getFaceFile = GetChildText(oConn, "face_view")
+      end function
+
+      public function getLocFile()
+         getLocFile = GetChildText(oConn, "loc_view")
+      end function
+
+      public function getDesc()
+         getDesc = GetChildText(oConn, "desc")
+      end function
+   end class   
+   
+   function renderConnList()
+
+	' load up the connector XML data document, for listing the pins
+	      
+	strDataLocation = ExtractFile(strBook & "allcon.xml")
+	   
+	' load up the SVG file into the XMLDOM
+	   
+	Set oDoc = CreateObject("Microsoft.XMLDOM")
+	oDoc.async = false
+	oDoc.resolveExternals = False
+	oDoc.validateOnParse = False
+	   
+	oDoc.load(strDataLocation)
+	   
+	CleanFile strDataLocation
+
+	' send the XML doc into the data object to get the guts
+
+	set oDataInterface = new LegacyConnectorDataInterface  ' they now use the same data structures
+	oDataInterface.Load oDoc
+
+    strHTML = renderConnToolbar()
+
+    strHTML = strHTML & "<TABLE style=""WIDTH: 100%"" cellSpacing=1 cellPadding=1 width=""100%""  bgColor=silver border=0 ID=""Table1"">"
+	strHTML = strHTML & "<TR>"
+	strHTML = strHTML & "<TD width=""100%""><FONT face=""verdana"" size=""4""><b>" & strVehicle & " " & localConnList & "</b></font></TD>"
+	strHTML = strHTML & "<TD nowrap><FONT face=""verdana"" size=""2"" align=""right""><input type=""RADIO"" name=""ALPHANUM"" onClick='displayConnList(""ALPHA"");' " & isConnChecked("ALPHA") & " ID=""Radio1"" VALUE=""Radio1"">" & localSortAlpha & vbCrLf
+	strHTML = strHTML & "&nbsp;&nbsp;&nbsp;<input type=""RADIO"" name=""ALPHANUM"" onClick='displayConnList(""NUM"");' " & isConnChecked("NUM") & " ID=""Radio2"" VALUE=""Radio2"">" & localSortConnNumber & "&nbsp;&nbsp;</font></TD>" & vbCrLf
+	strHTML = strHTML & "</TR></TABLE><br>"
+
+    resetConnList
+    
+   strLast = ""
+   
+   for iiih = 0 to oDataInterface.Count - 1 
+ 		if oDataInterface.GetConnector(iiih) then
+ 			if strLegacy = "Y" then
+ 				if strLast <> (oDataInterface.getCNumber() & oDataInterface.getQual()) then
+	 				addToConnArray oDataInterface.getCNumber(), oDataInterface.getQual(), oDataInterface.getFaceFile(), "" , "", ""
+	 				strLast = (oDataInterface.getCNumber() & oDataInterface.getQual())
+	 			end if
+	 		else
+ 				if strLast <> (oDataInterface.getCNumber() & oDataInterface.getQual()) then
+		 			addToConnArray oDataInterface.getCNumber(), oDataInterface.getDesc(), "", "" , "", ""
+	 				strLast = (oDataInterface.getCNumber() & oDataInterface.getDesc())
+	 			end if
+	 		end if
+ 		end if
+   next 
+	   
+	SortConnArray(strConnFlavor)
+	   
+	strBack = ""
+	
+	strHTML = strHTML & "<table border=""0"" ID=""Table2""><tr>"
+
+	for iiid = 0 to getConnCount() - 1 
+		oDataInterface.GetConnector iiid
+	    
+		if iiid mod 6 = 0 then
+   			if strBack = "" then
+   				strBack = "bgcolor='#dddddd'"
+   			else
+   				strBack = ""
+   			end if
+
+			strHTML = strHTML & "</tr><tr " & strBack & ">"
+		end if
+
+		strHTML = strHTML & "<td valign=""top""><font face=""arial"" size=""2"">"
+		
+		strLLLDest = "<face_params><legacy>" & strLegacy & "</legacy><vehicle>" & strVehicle & "</vehicle><book>" & strBook & "</book><market>" & strMarket & "</market><lang>" & strLanguage & "</lang><conn>" & getEntryConn(iiid) & "</conn></face_params>"
+
+		if strConnFlavor = "NUM" then
+   			strHTML = strHTML & "<b><a href=""javascript:show_face_viewer('" & strLLLDest & "')"">" & getEntryConn(iiid) & "</a></b><br>" & getEntryName(iiid) & "</font>" & vbCrLf
+		else
+   			strHTML = strHTML & "<b>" & getEntryName(iiid) & "<br><a href=""javascript:show_face_viewer('" & strLLLDest & "')"">" & getEntryConn(iiid) & "</a></b></font>" & vbCrLf
+		end if
+		
+		strHTML = strHTML & "</td>"
+	next 
+	
+	strHTML = strHTML & "</tr></table>"
+    renderConnList = strHTML
+
+   document.title = strVehicle & " " & localConnList
+    	
+   end function
+
+   Sub C3PExtractWiringID(strText, strCell, strPage, strID, strLType)
+      strID = ""
+      strLType = ""
+      
+      strTempText = Replace(strText, " ", "")
+      
+      ' because they started encoding best views with a tilda-separated flag
+      
+      iTilda = InStr(1, strTempText, "~")
+      if iTilda > 0 then
+         strTempText = Left(strTempText, iTilda - 1)
+      end if
+      
+      aParts = Split(strTempText, "_")
+      
+      if UBound(aParts) >= 1 then
+	      'if Left(strText, 5) = "COMP_" then       ' component ids
+	      '   strID = aParts(1)
+	         
+	      '   for iii = 2 to UBound(aParts)
+	      '   	strID = strID & " " & aParts(iii)
+	      '   Next
+	         
+         '   strType = "COMPREF"
+         
+	      if Left(strText, 5) = "CONN_" then       ' connector ids
+	         strID = aParts(1)
+	         strLType = "CONNREF"
+	      elseif Left(strText, 7) = "SPLICE_" then   ' splice ids
+	         strID = aParts(1)
+            strLType = "SPLCREF"
+	      elseif Left(strText, 7) = "GROUND_" then   ' ground ids
+	         strID = aParts(1)
+            strLType = "GRNDREF"
+	      elseif Left(strText, 8) = "PAGEREF_" then   ' ground ids
+	         strID = aParts(1)
+	         strLType = "PAGEREF"
+	      end if
+      end if
+         
+   end sub
+
+   class LegacyPageDetails
+      private oPDDoc
+      private strXMLFile
+      private strCellType
+      private bLoaded
+      
+      public Sub Class_initialize()
+         set oPDDoc = nothing
+         bLoaded = false
+      end sub
+
+      public Sub Class_terminate()
+         set oPDDoc = nothing
+      end sub
+      
+      public Sub Init(strCell, strPage)
+         strCellType = ""
+         strTempCell = PadNum(strCell)
+         strTempPage = PadNum(strPage)
+      
+         strXMLFile = ExtractFile(strBook & strTempCell & strTempPage & ".xml")
+
+         set oPDDoc = CreateObject("Microsoft.XMLDOM")
+         if oPDDoc.Load(strXMLFile) then
+            bLoaded = true
+
+			set oTypeNode = oPDDoc.selectSingleNode("evtm/page/type")
+			if not isEmpty(oTypeNode) then
+				strCellType = GetNodeText(oTypeNode)
+			end if
+		 end if
+         
+         CleanFile strXMLFile
+      end sub
+      
+       public function isLoaded()
+          isLoaded = bLoaded
+       end function 
+       
+       public function isSchematic()
+          if strCellType = "SCH" then
+             isSchematic = true
+          else
+             isSchematic = false
+          end if
+       end function 
+       
+	   public Sub GetItemDetails (strText, strType, strLocLink, strFaceLink, strZone, strLocation, strColor)
+		   strUText = UCase(strText)
+		   
+		   strLocLink = ""
+		   strFaceLink = ""
+		   strZone = ""
+		   strLocation = ""
+		   strColor = ""
+	
+	      strPath = ""
+	      
+	      if not bLoaded then
+	         exit sub
+	      end if 
+	      
+	      if strType = "CONNREF" then
+	         strPath = "evtm/page/connector_collection/conn"
+	      elseif strType = "GRNDREF" then
+	         strPath = "evtm/page/ground_collection/ground"
+	      elseif strType = "SPLCREF" then
+	         strPath = "evtm/page/splice_collection/splice"
+	      end if
+	      
+	      if strPath <> "" then
+		      Set oGNodeList = oPDDoc.selectNodes(strPath)
+		      
+		      if not IsNull(oFNodeList) then
+		         for ipp = 0 to oGNodeList.length - 1
+		            set oCurNode = oGNodeList.item(ipp)
+
+						if UCase(GetSingleValue(oCurNode, "name")) = strUText then
+						   strFaceLink = GetSingleValue(oCurNode, "face_view")
+						   strLocLink = GetSingleValue(oCurNode, "loc_view")
+				         strLocation = GetSingleValue(oCurNode, "loc")
+					      strZone = GetSingleValue(oCurNode, "zone")
+					      strColor = GetSingleValue(oCurNode, "color")
+
+					      exit for
+				      end if
+		         next
+		      end if 
+	      end if
+	
+	      set oGNodeList = nothing
+	   end sub
+      
+   end class
+
+   Sub SetBlueFill(oNode)
+      iicount = oNode.childNodes.length
+      for iics = 0 to iicount - 1
+         oNode.childNodes(iics).setAttribute "fill", "blue"
+      next
+   end sub
+
+   function IsFromPage(strlText, strfCell, strfPage)
+      IsFromPage = false
+      
+      aPParts = Split(strlText, "-")
+      
+      if UBound(aPParts) = 1 then
+         if IsNumeric(aPParts(0)) and IsNumeric(aPParts(1)) then   ' omit this page, like in the title
+            if PadNum(strfCell) = PadNum(aPParts(0)) and PadNum(strfPage) = PadNum(aPParts(1)) then
+               IsFromPage = true
+            end if
+         end if
+      end if
+   end function
+
+   function MakeCellLinkEx(strlText, strCell, strPage)
+      MakeCellLinkEx = ""
+      aPParts = Split(strlText, "-")
+      
+      if UBound(aPParts) = 1 then
+         if IsNumeric(aPParts(0)) and IsNumeric(aPParts(1)) then   ' omit this page, like in the title
+            MakeCellLinkEx = "parent.displayPage('" & PadNum(aPParts(0)) & "', '" & PadNum(aPParts(1)) & "');"
+         end if
+      end if
+   end function
+
+   sub MakeC3PHotSpots(oDoc, oPageDetails, strCell, strPage)
+   
+	   ' find all tspan tags, if they "look" like something that should be linkable, 
+	   ' then see if we can find something to link it to
+
+		Set oNodes = oDoc.getElementsByTagName("g")
+		iPopupCount = 0
+
+      ' instatiate a pagedetails class for looking up the item details
+      ' once per page is much more effecient
+      
+		for i = 0 to oNodes.length-1
+		   Set oNode = oNodes.item(i)
+
+			strText = oNode.getAttribute("id")
+
+			if strText <> "" then
+			
+	         strID = ""
+	         strIType = ""
+	
+				C3PExtractWiringID strText, strCell, strPage, strID, strIType
+				
+				if strID <> "" then
+				   
+				   if strIType = "PAGEREF" then
+
+                  ' ignore 151 page references, they should not have done that
+                  
+					   ' add a link to the page as an anchor 
+					      
+					   set anchorNode = oDoc.createNode(1, "a", "")
+
+                  ' ***************  hack attack!!!! ******************************************
+                  ' hack because they insist on tagging the 151 references as pageref items
+                  ' ***************  hack attack!!!! ******************************************
+
+						if instr(1, strID, "151-") <= 0 then
+					      anchorNode.setAttribute "onclick", MakeCellLinkEx(strID, strCell, strPage)
+					   else
+							aParts = Split(strID, "-")
+							if UBound(aParts) = 1 then
+					         anchorNode.setAttribute "onclick", "parent.show_location_viewer('" & "<loc_params><legacy>" & strLegacy & "</legacy><vehicle>" & strVehicle & "</vehicle><book>" & strBook & "</book><market>" & strMarket & "</market><lang>" & strLanguage & "</lang><page>" & PadNum(aParts(1)) & "</page></loc_params>" & "');"
+					      else
+  					         anchorNode.setAttribute "onclick", "alert('malformed pageref ID:\n " & strID & "');"
+					      end if 
+					   end if
+	
+			         if IsFromPage(strID, strFromCell, strFromPage) then
+		   				anchorNode.setAttribute "stroke", "purple"
+				      else
+		   				anchorNode.setAttribute "stroke", "blue"
+				      end if
+
+						' make it a popup_linker, so that it gets a highlight too
+				      iPopupCount = iPopupCount + 1
+						strPopID = "POPUP_LINKER" & iPopupCount
+						
+				      anchorNode.setAttribute "id", strPopID
+				      
+				      ' replace the original node with this one
+				      oNode.parentNode.replaceChild anchorNode, oNode
+				      
+				      ' make the original one a child of the anchor
+				      anchorNode.appendChild(oNode)
+				      
+				      SetBlueFill oNode
+				      
+				   elseif strIType = "CONNREF" or strIType = "GRNDREF" or strIType = "SPLCREF" or strIType = "COMPREF" then
+				   
+				      ' add a link to the item popup as an anchor 
+				      set anchorNode = oDoc.createNode(1, "a", "")
+	
+	               ' grab the info from the XML file
+	
+	               strLocLink = ""
+	               strFaceLink = ""
+	               strZone = ""
+	               strLocation = ""
+	               strColor = ""
+	
+		           oPageDetails.GetItemDetails strID, strIType, strLocLink, strFaceLink, strZone, strLocation, strColor
+		               
+                   if not (strLocLink = "" and strFaceLink = "" and strLocation = "") then		               
+	
+						if strLocLink <> "" then
+							strLocLink = "<loc_params><legacy>" & strLegacy & "</legacy><vehicle>" & strVehicle & "</vehicle><book>" & strBook & "</book><market>" & strMarket & "</market><lang>" & strLanguage & "</lang><file>" & strLocLink & "</file><zone>" & strZone & "</zone><item>" & strID & "</item></loc_params>"
+						end if
+						
+						if strFaceLink <> "" then
+						   strFaceLink = "<face_params><legacy>" & strLegacy & "</legacy><vehicle>" & strVehicle & "</vehicle><book>" & strBook & "</book><market>" & strMarket & "</market><lang>" & strLanguage & "</lang><conn>" & strID & "</conn></face_params>"
+						end if
+	
+					   iPopupCount = iPopupCount + 1
+						strPopID = "POPUP_LINKER" & iPopupCount
+						
+				      anchorNode.setAttribute "id", strPopID
+
+				      if strIType = "COMPREF" then
+					      anchorNode.setAttribute "onclick", "alert('Not implemented yet\n\nLink based on component ID:\n " & strID & "');"
+				      Elseif strCell = "151" then
+					      anchorNode.setAttribute "onclick", "alert('Not implemented yet\n\nThis will be a link to all pages\non which " & strID & " is found.');"
+				      Else
+					      anchorNode.setAttribute "onclick", "show_popup(evt, '" & strID & "', '" & strLocLink & "', '" & strFaceLink & "', '" & strZone & "', '" & strLocation & "', '" & strColor & "');"
+				      end if
+				      
+				      ' replace the original node with this one
+				      oNode.parentNode.replaceChild anchorNode, oNode
+				      
+				      ' make the original one a child of the anchor
+				      anchorNode.appendChild(oNode)	
+				      
+				      SetBlueFill oNode
+				      end if 
+				   end if
+				   			   
+				end if 
+			end if
+		next
+   
+      set oPageDetails = nothing
+   
+   end sub
+
+   sub InjectContainer(oDoc)
+
+      set oNewNode = oDoc.createNode(1, "g", "")
+      oNewNode.setAttribute "id", "OUTER_CONTAINER"
+      oNewNode.setAttribute "width", oDoc.documentElement.getAttribute("width")
+      oNewNode.setAttribute "height", oDoc.documentElement.getAttribute("height")
+      oNewNode.setAttribute "xml:space", "preserve"
+      
+      iicount = oDoc.documentElement.childNodes.length
+      for iis = 0 to iicount - 1
+         set othisNode = oDoc.documentElement.removeChild(oDoc.documentElement.childNodes(0))
+         oNewNode.appendChild othisNode
+      next
+      
+      oDoc.documentElement.appendChild oNewNode
+   end sub
+
+   sub PatchImageReferences(oDoc)
+		Set oNodes = oDoc.getElementsByTagName("image")
+		
+		for iin = o to oNodes.length-1
+		   set odNode = oNodes.item(iin)
+		   
+		   strHText = odNode.getAttribute("xlink:href")
+		   if strHText <> "" then
+		      if not InStr(1, strHText, "data:") > 0 then
+		         'odNode.setAttribute "xlink:href", "/tpscontent/~W" & strBook & "/~M" & strMarket & "/~VI4/~L" & strLanguage & "/" & strHText
+		         
+		         ' I will burn in Hell for this
+		         ' dependent files (those without a direct workunit reference in their file name)
+		         ' are generally handled in the viewer, but we're doing it all here is script, so
+		         ' we have to pretend to do the right things.
+		         ' that means making a mangled name for the file reference, AND
+		         ' preloading the file into cache.  Sometimes, I hate myself.
+		         
+		         strExt = ""
+		         iEIndex = inStrRev(strHText, ".")
+		         if iEIndex > 0 then
+		            strExt = Right(strHText, (Len(strHText) - iEIndex) + 1)
+		         end if
+		         
+		         strFFValue = ""
+		         strFFValue = strBook & "~" & strMarket & "~" & strLanguage & "~file=" & strHText & "&purpose=diag~gen~ref" & strExt
+		         
+		         odNode.setAttribute "xlink:href", strFFValue
+                 ui_object.Load strFFValue 
+		      end if
+		   end if
+		next
+   end sub
+
+   sub AppendInclude(oDoc, strFile)
+		Set oIDoc = CreateObject("Microsoft.XMLDOM")
+		oIDoc.async = false
+		oIDoc.load(strSVGDir & strFile)
+
+      ' copy from the include doc into the SVG doc
+
+      Set oINode = importNode(oDoc, oIDoc.documentElement, true)
+      
+      oDoc.documentElement.appendChild oINode
+      
+      set oIDoc = nothing
+   end sub
+
+   Sub buildDiagramC3P(strFName)
+        ' load up the extracted SVG file, 
+        ' do the various manipulations to add the interaction elements
+        ' the re-save over the original
+        
+		if strFName <> "" then   
+			strLocation = strFName
+
+			' load up the SVG file into the XMLDOM
+			   
+			Set oBDoc = CreateObject("Microsoft.XMLDOM")
+			oBDoc.async = false
+			oBDoc.resolveExternals = False
+			oBDoc.validateOnParse = False
+			   
+			oBDoc.load(strLocation)
+
+			CleanFile strFName
+		       	   
+			Set myErr =  oBDoc.parseError
+			
+			If (myErr.errorCode <>  0) Then
+				alert(strFName & " build c3p error: " & myErr.Reason)
+			Else   
+				' process the file, cross-referncing xml for this page and SVg
+
+				PatchImageReferences oBDoc
+
+				set oPageDetails = new LegacyPageDetails
+				oPageDetails.Init strCell, strPage
+
+				if oPageDetails.isSchematic() then
+					MakeC3PHotSpots oBDoc, oPageDetails, strCell, strPage
+				    
+					AppendInclude oBDoc, "ep_c3p_diag_interaction_buttons_include.svg"
+			         
+					AppendInclude oBDoc, "ep_show_highlights.svg"
+				end if
+
+				AppendInclude oBDoc, "ep_load_done_include.svg"
+
+				AppendInclude oBDoc, "ep_zoom_notify.svg"
+
+				' use the browser object to overwrite the file in the cache
+
+		   strXML = "<?xml version=""1.0"" encoding=""iso-8859-1""?>" & vbCrLf
+		   strXML = strXML & "<!-- file=" & strFName & "-->" & vbCrLf
+
+		   strXML = strXML & oBDoc.documentElement.xml
+
+ 			ui_object.SaveCachedFile strFName, strXML
+ 			
+ 			strXML = ""
+			    
+		      
+				' poof, we're done
+			End If
+		end if
+   end sub
+
+   function LooksLikeID(stridText)
+      LooksLikeID = false
+      
+      iLen = Len(stridtext)
+      
+      if iLen > 1 then
+         if IsNumeric(Mid(stridtext, 2, 1)) then
+            LooksLikeID = true
+            exit function
+         end if
+      end if
+      
+   end function
+   
+   function IsPageRef(strpText, strCell, strPage)
+      IsPageRef = ""
+
+      if not (IsNumeric(strCell) and IsNumeric(strPage)) then
+         exit function
+      end if
+      
+      aPParts = Split(strPText, "-")
+      
+      if UBound(aPParts) = 1 then
+         if IsNumeric(aPParts(0)) and IsNumeric(aPParts(1)) then   ' omit this page, like in the title
+            if not (CInt(strCell) = CInt(aPParts(0)) and CInt(strPage) = CInt(aPParts(1))) then
+               IsPageRef = strpText
+            end if
+         end if
+      end if
+   end function
+
+   function IsAnyPageRef(strpText)
+      IsAnyPageRef = ""
+
+      if not (IsNumeric(strCell) and IsNumeric(strPage)) then
+         exit function
+      end if
+      
+      aPParts = Split(strPText, "-")
+      
+      if UBound(aPParts) = 1 then
+         if IsNumeric(aPParts(0)) and IsNumeric(aPParts(1)) then   ' omit this page, like in the title
+            IsAnyPageRef = strpText
+         end if
+      end if
+   end function
+
+   function isPageRefList(strpText)
+        ' walk through the string, checking if it is a valid set of comma-separated 
+        ' page references (references to the current cell/page are OK)
+		strRetVal = ""
+		
+		' for now, only try comma separated
+		
+        aPQParts = Split(strPText, ",")
+        iCount = UBound(aPQParts)
+        isValid = true
+        
+        for iooi = 0 to iCount
+            if aPQParts(iooi) <> "" then
+				strTPPID = isAnyPageRef(aPQParts(iooi))
+				if strTPPID <> "" then
+					iValidCount = iValidCount + 1
+					if strRetVal <> "" then
+						strRetVal = strRetVal & ","
+					end if
+					
+					strRetVal = strRetVal & strTPPID
+				else
+					isValid = false
+				end if
+			end if
+        next
+        
+        if isValid then
+           isPageRefList = strRetVal
+        else
+           isPageRefList = ""
+        end if
+   end function
+
+   function hasDash(strDText)
+      hasDash = false
+
+      for iiv = 1 to Len(strDText) 
+         if Mid(strDText, iiv, 1) = "-" then
+            hasDash = true
+            exit function
+         end if 
+      next
+
+   end function 
+   
+   Sub GetTypedID(strJText, strTmpID, strLeftPart)
+		strTmpID = ""
+		strLeftPart = ""
+		
+		iSpaceIndex = InStr(1, strJText, " ")
+		if iSpaceIndex > 0 then
+			strKText = Left(strJText, iSpaceIndex - 1)
+		else
+			strKText = strJText
+		end if
+
+		aIDParts = Split(strKText, "C")
+		if UBound(aIDParts) = 1 then 
+		   if aIDParts(1) <> ""  then
+				if (aIDParts(0) = "" or IsNumeric(aIDParts(0))) and IsNumeric(Mid(aIDParts(1), 1, Len(aIDParts(1)) - 1)) then
+					strTmpID = "C" & aIDParts(1)
+					if aIDParts(0) <> "" then
+						strLeftPart = aIDParts(0)
+					end if
+					exit sub
+				end if
+			end if
+		end if
+
+		aIDParts = Split(strKText, "G")
+		if UBound(aIDParts) = 1 then 
+		    if aIDParts(1) <> ""  then
+				if (aIDParts(0) = "" or IsNumeric(aIDParts(0))) and IsNumeric(aIDParts(1)) then
+					strTmpID = "G" & aIDParts(1)
+					exit sub
+				end if
+			end if
+		end if
+		
+		aIDParts = Split(strKText, "S")
+		if UBound(aIDParts) = 1 then 
+		   if aIDParts(1) <> ""  then
+				if (aIDParts(0) = "" or IsNumeric(aIDParts(0))) and IsNumeric(aIDParts(1)) then
+					strTmpID = "S" & aIDParts(1)
+					exit sub
+				end if
+			end if
+		end if
+		
+   end sub 
+
+   Sub ExtractWiringID(strIText, strCell, strPage, strID, strLType, strLeftPart)
+      strID = ""
+      strLType = ""
+      strTmpID = ""
+      stLeftPart = ""
+      
+	  GetTypedID strIText, strTmpID, strLeftPart
+	        
+      if Left(strTmpID, 1) = "C" then       ' connector ids
+         strID = strTmpID
+         strLType = "CONNREF"
+      elseif Left(strTmpID, 1) = "S" then   ' splice ids
+         strID = strTmpID
+         strLType = "SPLCREF"
+      elseif Left(strTmpID, 1) = "G" then   ' ground ids
+         strID = strTmpID
+         strLType = "GRNDREF"
+      elseif hasDash(strIText) then   ' page references
+         strTempText = Replace(strIText, " ", ",")
+         
+		 if InStr(1, strTempText, ",") > 0 then
+			strID = IsPageRefList(strTempText)
+         else
+			strID = IsPageRef(strTempText, strCell, strPage)
+         end if
+         
+         strLType = "PAGEREF"
+      end if
+         
+   end sub
+
+
+   Sub OrigExtractWiringID(strIText, strCell, strPage, strID, strLType)
+      strID = ""
+      strLType = ""
+      
+      if Left(strIText, 1) = "C" then       ' connector ids
+         strTempText = Replace(strIText, " ", "")
+         if LooksLikeID(strTempText) then
+            strID = strTempText
+            strLType = "CONNREF"
+         end if
+      elseif Left(strIText, 1) = "S" then   ' splice ids
+         strTempText = Replace(strIText, " ", "")
+         if LooksLikeID(strTempText) then
+            strID = strTempText
+            strLType = "SPLCREF"
+         end if
+      elseif Left(strIText, 1) = "G" then   ' ground ids
+         strTempText = Replace(strIText, " ", "")
+         if LooksLikeID(strTempText) then
+            strID = strTempText
+            strLType = "GRNDREF"
+         end if
+      elseif hasDash(strIText) then   ' page references
+         strTempText = Replace(strIText, " ", "")
+         strTempText = Replace(strTempText, ",", "")
+
+         strID = IsPageRef(strTempText, strCell, strPage)
+         strLType = "PAGEREF"
+      end if
+         
+   end sub
+
+   Sub doPageLink(CurCharCount, oDoc, oNode, strCell, strPage, strText, strID, iPopupCount)
+		aParts = Split(strID, "-")
+
+		' create a copy of the original node, all attributes, specifically
+		
+		set newNode = oDoc.createNode(1, "tspan", "")
+		
+		for iioo = 0 to oNode.attributes.length - 1
+			newNode.setAttribute oNode.attributes.item(iioo).name, oNode.attributes.item(iioo).value
+		next
+		
+		' the text
+		
+		set oTTNode = oDoc.createTextNode(strText)
+		newNode.appendChild oTTNode
+
+        if (CInt(strCell) = CInt(aParts(0)) and CInt(strPage) = CInt(aParts(1))) then
+			oNode.parentNode.appendChild newNode
+			exit sub
+        end if
+
+		'increment the x position, if not the first page reference
+		newNode.setAttribute "x", (CInt(newNode.getAttribute("x")) + (5 * curCharCount))
+
+		' now, set any remaining attributes in preparation for making it a hot link
+
+ 		newNode.removeAttribute "class"
+ 		newNode.removeAttribute "fill"
+		 	
+		newNode.setAttribute "stroke", "none"
+		newNode.setAttribute "fill", "blue"
+		newNode.setAttribute "font-size", "7"
+		newNode.setAttribute "font-weight", "bold"
+			
+		' add a link to the page as an anchor 
+		set anchorNode = oDoc.createNode(1, "a", "")
+		
+		' ***************  hack attack!!!! ******************************************
+		' hack because they insist on tagging the 151 references as pageref items
+		' ***************  hack attack!!!! ******************************************
+
+		if instr(1, strID, "151-") <= 0 then
+			anchorNode.setAttribute "onclick", MakeCellLinkEx(strID, strCell, strPage)
+		else
+			aParts = Split(strID, "-")
+			if UBound(aParts) = 1 then
+				anchorNode.setAttribute "onclick", "parent.show_location_viewer('" & "<loc_params><legacy>" & strLegacy & "</legacy><vehicle>" & strVehicle & "</vehicle><book>" & strBook & "</book><market>" & strMarket & "</market><lang>" & strLanguage & "</lang><page>" & PadNum(aParts(1)) & "</page></loc_params>" & "');"
+			else
+  				anchorNode.setAttribute "onclick", "alert('malformed pageref ID:\n " & strID & "');"
+			end if 
+		end if
+
+		if IsFromPage(strID, strFromCell, strFromPage) then
+		   	anchorNode.setAttribute "stroke", "purple"
+		else
+		   	anchorNode.setAttribute "stroke", "blue"
+		end if
+
+		iPopupCount = iPopupCount + 1
+		strPopID = "POPUP_LINKER" & iPopupCount
+
+ 		anchorNode.setAttribute "id", strPopID
+			
+		' add to the parent of the orginal node
+		oNode.parentNode.appendChild anchorNode
+		
+		' make the original one a child of the anchor
+		anchorNode.appendChild(newNode)
+   end sub
+
+   sub MakeHotSpots(oPageDetails, oDoc, strCell, strPage)
+   
+	   ' find all tspan tags, if they "look" like something that should be linkable, 
+	   ' then see if we can find something to link it to
+
+		Set oNodes = oDoc.getElementsByTagName("tspan")
+		iPopupCount = 0
+
+      ' instatiate a pagedetails class for looking up the item details
+      ' once per page is much more effecient
+
+		for i = 0 to oNodes.length-1
+		   Set oNode = oNodes.item(i)
+
+			strPPText = CStr(oNode.Text)
+
+			strPPText = Replace(strPPText, ChrW(8722), "-")  ' unicode mdash, I imagine
+			strPPText = Replace(strPPText, Chr(151), "-")
+			strPPText = Replace(strPPText, Chr(150), "-")
+			strPPText = Replace(strPPText, Chr(146), "'")
+
+         strID = ""
+         strIType = ""
+         strLeftPart = ""
+			
+			ExtractWiringID strPPText, strCell, strPage, strID, strIType, strLeftPart
+			
+			if strID <> "" then
+			   if strIType = "PAGEREF" then
+
+				oNode.Text = ""  ' we're going to create a new tspan node (or series of them)
+								 ' so blow this one away
+
+				if InStr(1, strID, ",") > 0 then
+					aFParts = Split(strID, ",")
+					strCumID = ""
+					
+					for icum = 0 to UBound(aFParts)
+					    if aFParts(iCum) <> "" then
+							iLen = Len(strCumID)
+							
+							doPageLink iLen, oDoc, oNode, strCell, strPage, aFParts(icum), aFParts(icum), iPopupCount
+							strCumID = strCumID & aFParts(icum)
+						end if
+					next
+				else
+					doPageLink 0, oDoc, oNode, strCell, strPage, strPPText, strID, iPopupCount
+				end if
+
+			   elseif strIType = "CONNREF" or strIType = "GRNDREF" or strIType = "SPLCREF" then
+
+					if strLeftPart <> "" then
+				       oNode.Text = strLeftPart & "      " & strID
+				    else
+				       oNode.Text = strPPText
+				    end if
+				   
+			   
+               ' grab the info from the XML file
+
+               strLocLink = ""
+               strFaceLink = ""
+               strZone = ""
+               strLocation = ""
+               strColor = ""
+
+               oPageDetails.GetItemDetails strID, strIType, strLocLink, strFaceLink, strZone, strLocation, strColor
+
+					if strLocLink <> "" then
+						strLocLink = "<loc_params><legacy>" & strLegacy & "</legacy><vehicle>" & strVehicle & "</vehicle><book>" & strBook & "</book><market>" & strMarket & "</market><lang>" & strLanguage & "</lang><file>" & strLocLink & "</file><zone>" & strZone & "</zone><item>" & strID & "</item></loc_params>"
+					end if
+					
+					if strFaceLink <> "" then
+						strFaceLink = "<face_params><legacy>" & strLegacy & "</legacy><vehicle>" & strVehicle & "</vehicle><book>" & strBook & "</book><market>" & strMarket & "</market><lang>" & strLanguage & "</lang><conn>" & strID & "</conn></face_params>"
+					end if
+
+                  if strFaceLink <> "" or strLocLink <> "" or  strLocation <> "" then
+ 					oNode.removeAttribute "class"
+ 					oNode.removeAttribute "fill"
+		 		      
+					oNode.setAttribute "stroke", "none"
+					oNode.setAttribute "fill", "blue"
+					oNode.setAttribute "font-size", "7"
+					oNode.setAttribute "font-weight", "bold"
+
+					' add a link to the item popup as an anchor 
+					set anchorNode = oDoc.createNode(1, "a", "")
+
+					iPopupCount = iPopupCount + 1
+					
+					anchorNode.setAttribute "id", "POPUP_LINKER" & iPopupCount
+				      
+					if strCell = "151" then
+						anchorNode.setAttribute "onclick", "alert('Not implemented yet\n\nThis will be a link to all pages\non which " & strID & " is found.');"
+					Else
+						anchorNode.setAttribute "onclick", "show_popup(evt, '" & strID & "', '" & strLocLink & "', '" & strFaceLink & "', '" & strZone & "', '" & strLocation & "', '" & strColor & "');"
+					end if
+				      
+					' replace the original node with this one
+					oNode.parentNode.replaceChild anchorNode, oNode
+				      
+					' make the original one a child of the anchor
+					anchorNode.appendChild(oNode)			      
+			      end if
+			   end if
+			   			   
+			end if 
+		next
+   
+      set oPageDetails = nothing
+   
+   end sub
+
+   sub RemoveWatermark(oDoc)
+
+      set oNodeList = oDoc.selectNodes("svg/g")
+      for idi = 0 to oNodeList.length - 1
+         strOpacity = oNodeList.item(idi).getAttribute("opacity")
+         if strOpacity = "0.3" then
+            oNodeList.item(idi).parentNode.removeChild oNodeList.item(idi)
+            exit sub
+         end if
+      next
+      
+   end sub
+
+   sub AdjustLegacyViewBox(oDoc)
+      strViewBox = oDoc.documentElement.getAttribute("viewBox")
+      
+      if strViewBox <> "" then
+         aParts = Split(strViewBox, " ")
+         if UBound(aParts) = 3 then
+            ix = CDbl(aParts(0))
+            iy = CDbl(aParts(1))
+            iw = CDbl(aParts(2))
+            ih = CDbl(aParts(3))
+            
+            strViewBox = (ix + 50) & " " & (iy + 35) & " " & (iw - 100) & " " & (ih - 70)
+            
+            oDoc.documentElement.setAttribute "viewBox", strViewBox
+         end if
+      end if
+   
+   end sub   
+
+   Sub buildDiagramLegacy(strFName)
+      strLocation = strFName
+
+	   ' load up the SVG file into the XMLDOM
+	   
+	   Set oBDoc = CreateObject("Microsoft.XMLDOM")
+	   oBDoc.async = false
+	   oBDoc.ValidateOnParse = false
+	   oBDoc.ResolveExternals = false
+	   
+		oBDoc.load(strLocation)
+
+		CleanFile strFName
+	   
+	   Set myErr =  oBDoc.parseError
+	
+	   If (myErr.errorCode <>  0) Then
+	      alert(strFName & " error: " & myErr.Reason & vbCrLf)
+	   Else   
+	      ' we're sending down SVG, so let's give the browser a head's up
+	      
+             RemoveWatermark oBDoc	
+	         PatchImageReferences oBDoc
+	
+			set oPageDetails = new LegacyPageDetails
+      		oPageDetails.Init strCell, strPage
+
+	         if oPageDetails.isSchematic() then
+				MakeHotSpots oPageDetails, oBDoc, strCell, strPage
+	            AppendInclude oBDoc, "ep_diag_interaction_buttons_include.svg"
+	         End If
+	         
+	         'AppendInclude oDoc, "ep_legacy_zoom.svg"
+	         AdjustLegacyViewBox oBDoc
+	         
+             AppendInclude oBDoc, "ep_load_done_include.svg"
+         
+			' there are high ascii characters in the document, without this replacement
+			' the output chokes
+			
+		   strXML = "<?xml version=""1.0"" encoding=""iso-8859-1""?>" & vbCrLf
+		   strXML = strXML & "<!-- file=" & strFName & "-->" & vbCrLf
+
+		   strXML = strXML & oBDoc.documentElement.xml
+
+ 			ui_object.SaveCachedFile strFName, strXML
+ 			
+ 			strXML = ""
+	      
+	      ' write the XML out to the client (just the XML portion, we supplied our own ?xml tag above)
+	      
+		   ' Response.Write oBDoc.documentElement.xml
+	
+	      ' poof, we're done
+	      	   
+	   End If
+   
+   end Sub
+
+   Function renderLocIndex(strILabel, strIType, iCols)   
+    strLocHTML = renderConnToolbar()
+
+    strLocHTML = strLocHTML & "<TABLE style='WIDTH: 100%' cellSpacing=1 cellPadding=1 width='100%'  bgColor=silver border=0>"
+    strLocHTML = strLocHTML & "<TR>"
+    strLocHTML = strLocHTML & "<TD width='100%'><FONT face='verdana' size='4'><b>" & strVehicle & "&nbsp;" & l_object.GetStringByName_var("localLocIndex") & "</b></font></TD>"
+    strLocHTML = strLocHTML & "<TD nowrap><FONT face='verdana' size='1' align='right'>"
+    
+    strLocHTML = strLocHTML & "<input type='RADIO' name='ALPHANUM' onClick='displayLocIndex(""COMPONENT"");' " & isLocChecked("COMPONENT") & " VALUE='Radio1'>" & l_object.GetStringByName_var("tab_components") & "&nbsp;&nbsp;"
+    strLocHTML = strLocHTML & "<input type='RADIO' name='ALPHANUM' onClick='displayLocIndex(""CONNECTOR"");' " & isLocChecked("CONNECTOR") & " VALUE='Radio1'>" & l_object.GetStringByName_var("tab_connectors") & "&nbsp;&nbsp;"
+    strLocHTML = strLocHTML & "<input type='RADIO' name='ALPHANUM' onClick='displayLocIndex(""SPLICE"");' " & isLocChecked("SPLICE") & " VALUE='Radio1'>" & l_object.GetStringByName_var("tab_splices") & "&nbsp;&nbsp;"
+    strLocHTML = strLocHTML & "<input type='RADIO' name='ALPHANUM' onClick='displayLocIndex(""GROUND"");' " & isLocChecked("GROUND") & " VALUE='Radio1'>" & l_object.GetStringByName_var("tab_grounds") & "&nbsp;&nbsp;"
+
+    if not strLegacy = "Y" then
+        strLocHTML = strLocHTML & "<input type='RADIO' name='ALPHANUM' onClick='displayLocIndex(""HARNESS"");' " & isLocChecked("HARNESS") & " VALUE='Radio1'>" & l_object.GetStringByName_var("tab_harnesses") & "&nbsp;&nbsp;"
+    end if
+    
+    strLocHTML = strLocHTML & "</font></TD></TR></TABLE><br>" & vbCrLf
+    
+	' load up the connector XML data document
+
+	strDataLocation = ExtractFile(strBook & strIType & "_index.xml")
+	   
+	' load up the SVG file into the XMLDOM
+	   
+	Set oLIDoc = CreateObject("Microsoft.XMLDOM")
+	oLIDoc.async = false
+	oLIDoc.resolveExternals = False
+	oLIDoc.validateOnParse = False
+	   
+	oLIDoc.load(strDataLocation)
+	   
+	CleanFile strDataLocation
+
+    resetConnList
+    
+	' send the XML doc into the data object to get the guts
+
+	set oDataInterface = new LocIndexDataInterface  ' they now use the same data structures
+	oDataInterface.Load oLIDoc
+
+	strLast = ""
+
+    iiij = 0	   
+	for iiij = 0 to oDataInterface.Count - 1 
+ 			if oDataInterface.GetEntry(iiij) then
+ 				if strLast <> (oDataInterface.getItemName() & oDataInterface.getQual()) then
+ 					addToLocArray oDataInterface.getItemName(), oDataInterface.getLocDesc(), oDataInterface.getLocPage(), oDataInterface.getLocZone(), oDataInterface.getQual(), oDataInterface.getConnectedTo()
+	 				strLast = (oDataInterface.getItemName() & oDataInterface.getQual())
+	 			end if
+ 			end if
+	next 
+	   
+	if strIType <> "COMPONENT" and strIType <> "HARNESS" then
+	   SortConnArray("NUM")
+	else
+	   SortConnArray("NORMAL_ALPHA")
+	end if
+	   
+	strBack = ""
+
+    strLocHTML = strLocHTML & "<table border='0' width='100%'>"
+    strLocHTML = strLocHTML & "<TR>" & vbCrLf
+    strLocHTML = strLocHTML & "<TD bgcolor='silver' colspan='" & iCols & "'><FONT face='verdana' size='4'><b>" & strILabel & "</b></font></TD>"
+    strLocHTML = strLocHTML & "</TR>"
+    strLocHTML = strLocHTML & "<tr>"
+
+	strLast = ""
+	
+	iiik = 0
+	iCurCount = 0
+	iColPercent = Round(100 / iCols, 0)
+	
+	for iiik = 0 to oDataInterface.Count - 1 
+		oDataInterface.GetEntry iiik
+
+        if getItemName(iiik) <> "" then	    
+            
+   			if iCurCount mod iCols = 0 then
+   				if strBack = "" then
+   					strBack = "bgcolor='#dddddd'"
+   				else
+   					strBack = ""
+   				end if
+   			
+				strLocHTML = strLocHTML & "</tr>"
+				strLocHTML = strLocHTML & "<tr " & strBack & ">"
+   			end if
+   			
+			strLocHTML = strLocHTML & "<td valign='top' width='" & iColPercent & "%'><font face='arial' size='2'>"
+			
+			if strIType = "COMPONENT" and getConnectedTo(iiik) <> "" then 
+				strLocHTML = strLocHTML & "<b><a href=""javascript:show_loc_win('" & PadNum(getEntryPage(iiik)) & "', '" & getConnectedTo(iiik) & "');"">" & getItemName(iiik) & "</a></b>"
+				if Trim(getEntryQual(iiik)) <> "" then
+					    strLocHTML = strLocHTML & "<br>(" & getEntryQual(iiik) & ")"
+				end if 
+		    else
+                if getEntryPage(iiik) <> "" then
+				    strLocHTML = strLocHTML & "<b><a href=""javascript:show_loc_win('" & PadNum(getEntryPage(iiik)) & "', '" & getItemName(iiik) & "');"">" & getItemName(iiik) & "</a></b>"
+				     
+					if Trim(getEntryQual(iiik)) <> "" then 
+						strLocHTML = strLocHTML & "<br>(" & getEntryQual(iiik) & ")"
+					end if
+                else
+					strLocHTML = strLocHTML & "<b>" & getItemName(iiik) & "</b>"
+					if Trim(getEntryQual(iiik)) <> "" then
+						strLocHTML = strLocHTML & "<br>(" & getEntryQual(iiik) & ")"
+					end if
+                end if
+                
+				strLocHTML = strLocHTML & "<br>" & getDescName(iiik) & "</font>"
+			end if
+		
+			strLocHTML = strLocHTML & "</td>" & vbCrLf
+			
+		    iCurCount = iCurCount + 1
+		end if	
+	next 
+
+    strLocHTML = strLocHTML & "</tr></table>"
+
+    set oDataInterface = nothing
+    
+    renderLocIndex = strLocHTML
+    
+end function    
+   
+</script>
+
+<script language="jscript">
+   function show_loc_win(strRRPage, strRRItem)
+      {
+      strLocParams = "<loc_params><legacy>" + strLegacy + "</legacy><vehicle>" + strVehicle + "</vehicle><book>" + strBook + "</book><market>" + strMarket + "</market><lang>" + strLanguage + "</lang><page>" + PadNum(strRRPage) + "</page><item>" + strRRItem + "</item></loc_params>";
+      show_location_viewer(strLocParams);
+      }
+      
+   // post-load initializtion 
+
+   if (strRType == "TOC")
+      {
+      document.all["CONTENTBODY"].innerHTML = renderTOC();
+      }
+   else if (strRType == "DIAGRAM")
+      {
+      document.all["CONTENTBODY"].innerHTML = renderDiagram();
+      }
+   else if (strRType == "CONNLIST")
+      {
+      document.all["CONTENTBODY"].innerHTML = renderConnList();
+      }
+
+   function RecordLastSVG(strFFF)
+      {
+      strLastFile = strFFF
+      }
+
+   function displayConnList(strLLFlavor)
+      {
+      strRType = "CONNLIST"
+
+      strConnFlavor = strLLFlavor
+      document.all["CONTENTBODY"].innerHTML = renderConnList();
+      }
+      
+   function displayPage(strC, strP)
+      {
+      strRType = "DIAGRAM"
+      
+      strFromCell = strCell
+      strFromPage = strPage
+      
+      strCell = strC;
+      strPage = strP;
+      
+      if (strLastFile != "")
+         {
+         ui_object.RemoveCachedFile(strLastFile);
+         strLastFile = ""
+         }
+         
+      document.all["CONTENTBODY"].innerHTML = renderDiagram();
+      }
+
+   function renderIndex()
+      {
+      return renderConnToolbar() + "<p align='center'>index not supported at this time</p>";
+      }
+      
+   function doTOC()
+      {
+      strRType = "TOC";
+      document.all["CONTENTBODY"].innerHTML = renderTOC();
+      }
+      
+   function displayLocIndex(strLFlavor)
+      {
+      strRType = "LOCINDEX";
+      
+	  iColCount = 1
+	  strLTitle = ""
+
+		if (strLFlavor == "")
+		   {
+			if (strLocFlavor != "" )
+				strLFlavor = strLocFlavor
+			else
+				strLFlavor = "CONNECTOR"
+			}
+	  
+      if (strLFlavor == "COMPONENT")
+         {
+         iColCount = 6
+         strLTitle = l_object.GetStringByName_var("tab_components")
+         }
+      else if (strLFlavor == "CONNECTOR")
+         {
+         iColCount = 6
+         strLTitle = l_object.GetStringByName_var("tab_connectors")
+         }
+      else if (strLFlavor == "SPLICE")
+         {
+         iColCount = 6
+         strLTitle = l_object.GetStringByName_var("tab_splices")
+         }
+      else if (strLFlavor == "GROUND")
+         {
+         iColCount = 6
+         strLTitle = l_object.GetStringByName_var("tab_grounds")
+         }
+      else if (strLFlavor == "HARNESS")
+         {
+         iColCount = 6
+         strLTitle = l_object.GetStringByName_var("tab_harnesses")
+         }
+
+      strLocFlavor = strLFlavor
+
+      document.all["CONTENTBODY"].innerHTML = renderLocIndex(strLTitle, strLFlavor, iColCount);
+      }
+
+   function displayIndex()
+      {
+      strRType = "INDEX";
+      document.all["CONTENTBODY"].innerHTML = renderIndex();
+      }
+      
+</script>
+<script language=jscript>
+   function doPan(strDirection)
+      {
+      var sw = document.embeds[0].getSVGDocument();
+      
+      if (sw)
+         {
+         inc = 50;
+         
+         if (event.shiftKey)
+            inc = 100;
+         
+         if (strDirection == "left")
+            sw.documentElement.currentTranslate.x += inc;
+         else if (strDirection == "down")
+            sw.documentElement.currentTranslate.y -= inc;
+         else if (strDirection == "right")
+            sw.documentElement.currentTranslate.x -= inc;
+         else if (strDirection == "up")
+            sw.documentElement.currentTranslate.y += inc;
+         }
+      }
+</script>
+<script language="jscript">
+  function doPrintFullpage()
+     {
+     if (strLastFile != "")
+        {
+		ui_object.RemoveCachedFile(strLastFile);
+		strLastFile = ""
+        }
+     
+	 strPrintParams = "<params><cell>" + strCell + "</cell><title>" + escape(strGlobalTitle) + "</title><flavor>full</flavor><legacy>" + strLegacy + "</legacy><vehicle>" + strVehicle + "</vehicle><book>" + strBook + "</book><market>" + strMarket + "</market><lang>" + strLanguage + "</lang><page>" + PadNum(strPage) + "</page><multi>N</multi></params>";
+	 
+     b_object.SetPreference("SVGPrintParams", strPrintParams, false);
+     window.open(GetVariable("gbl_browserdir") + "asp\\ep_diagram_print.htm","SVG_PRINT","left=50,top=50,height=600,width=750,resize=1,resizable=1,menubar=0,toolbar=0,status=0,scrollbars=0");
+     
+     //strFeatures = "dialogTop:50;dialogLeft:50;dialogWidth:700px;dialogHeight:600px;scroll=no;status=no;help=no;border=thin;resizable=yes;resize=yes;"
+	 //window.showModalDialog(strASPDir + "ep_diagram_print.htm", strPrintParams, strFeatures);
+     }
+
+  function doPrintCell()
+     {
+     if (strLastFile != "")
+        {
+		ui_object.RemoveCachedFile(strLastFile);
+		strLastFile = ""
+        }
+
+	 strPrintParams = "<params><cell>" + strCell + "</cell><count>" + CurrCellNumFiles + "</count><flavor>full</flavor><legacy>" + strLegacy + "</legacy><vehicle>" + strVehicle + "</vehicle><book>" + strBook + "</book><market>" + strMarket + "</market><lang>" + strLanguage + "</lang>";
+	 strPrintParams += "</params>"
+	
+	 b_object.SetPreference("SVGPrintParams", strPrintParams, false);
+	 window.open(GetVariable("gbl_browserdir") + "asp\\ep_diagram_print.htm","SVG_PRINT","left=50,top=50,height=600,width=700,resize=1,resizable=1,menubar=0,toolbar=0,status=0,scrollbars=1");
+     }
+
+  function doSearch()
+     {
+	 strSearchParams = "<params><legacy>" + strLegacy + "</legacy><vehicle>" + strVehicle + "</vehicle><book>" + strBook + "</book><market>" + strMarket + "</market><lang>" + strLanguage + "</lang>";
+	 strSearchParams += "<search_type>" + b_object.GetPreference("gbl_wiring_search_type") + "</search_type><search_item>" + b_object.GetPreference("gbl_wiring_search_item") + "</search_item>";
+	 strSearchParams += "</params>"
+	
+     width = screen.width;
+	 height = screen.height;
+
+     strURL = strASPDir + "ep_search.htm";
+	 strFeatures = "dialogWidth:500px;dialogHeight:600px;scroll=yes;status=no;help=no;border=thin;center=yes;"
+
+     result = window.showModalDialog(strURL, strSearchParams, strFeatures);
+     
+	 if (result != "")
+		{
+		aItems = result.split("\2");
+		
+		if (aItems.length >= 5)
+			{
+			b_object.SetPreference("gbl_wiring_search_type", aItems[3], false)
+			b_object.SetPreference("gbl_wiring_search_item", aItems[4], false)
+			
+			if (aItems[0] == "DIAGRAM")
+				displayPage(aItems[1], aItems[2]);
+			else
+				{ 
+				if (aItems[0] == "CONN")
+					{
+					strLLLDest = "<face_params><legacy>" + strLegacy + "</legacy><vehicle>" + strVehicle + "</vehicle><book>" + strBook + "</book><market>" + strMarket + "</market><lang>" + strLanguage + "</lang><conn>" + aItems[1] + "</conn></face_params>"
+					show_face_viewer(strLLLDest);
+					}
+				else if (aItems[0] == "LOC")
+					{
+					strLLLDest = "<loc_params><legacy>" + strLegacy + "</legacy><vehicle>" + strVehicle + "</vehicle><book>" + strBook + "</book><market>" + strMarket + "</market><lang>" + strLanguage + "</lang><page>" + PadNum(aItems[2]) + "</page><item>" + aItems[1] + "</item></loc_params>"
+					show_location_viewer(strLLLDest);
+					}
+				}
+			}
+		else
+			alert("badly formed response from dialog: [" + result + "]");
+		}
+     }
+
+  function doPrintView()
+     {
+     if (strLastFile != "")
+        {
+		ui_object.RemoveCachedFile(strLastFile);
+		strLastFile = ""
+        }
+     var sw = document.SVGControl1.getWindow();
+
+	 if (sw)
+		{
+		xtrans = sw.document.documentElement.currentTranslate.x;
+		ytrans = sw.document.documentElement.currentTranslate.y;
+		scale = sw.document.documentElement.currentScale;
+		width = document.SVGControl1.clientWidth;
+		height = document.SVGControl1.clientHeight;
+		
+		strPrintParams = "<params><cell>" + strCell + "</cell><title>" + escape(strGlobalTitle) + "</title><flavor>view</flavor><legacy>" + strLegacy + "</legacy><vehicle>" + strVehicle + "</vehicle><book>" + strBook + "</book><market>" + strMarket + "</market><lang>" + strLanguage + "</lang><page>" + PadNum(strPage) + "</page>";
+		strPrintParams += "<x>" + xtrans + "</x><y>" + ytrans + "</y><scale>" + scale + "</scale><width>" + width + "</width><height>" + height + "</height><multi>N</multi>"
+		strPrintParams += "</params>"
+		
+		b_object.SetPreference("SVGPrintParams", strPrintParams, false);
+		window.open(GetVariable("gbl_browserdir") + "asp\\ep_diagram_print.htm","SVG_PRINT","left=50,top=50,height=600,width=700,resize=1,resizable=1,menubar=0,toolbar=0,status=0,scrollbars=0");
+
+		//strFeatures = "dialogTop:50;dialogLeft:50;dialogWidth:700px;dialogHeight:600px;scroll=no;status=no;help=no;border=thin;resizable=yes;resize=yes;"
+		//window.showModalDialog(strASPDir + "ep_diagram_print.htm", strPrintParams, strFeatures);
+		}
+	 else
+	    alert("Could not find embedded SVG control");
+     }
+  
+  function doPrintDialog()
+        {
+        strOfferPage = "Y";
+        strOfferCell = "N";
+
+        if (strLegacy == "N")
+			strOfferView = "Y";
+		else
+			strOfferView = "N";
+
+      if (iLocalPageCount > 1)
+        strOfferCell = "Y";
+      
+      var sw = document.SVGControl1.getWindow();
+
+	  if (sw)
+	     {
+	     xtrans = sw.document.documentElement.currentTranslate.x;
+	     ytrans = sw.document.documentElement.currentTranslate.y;
+	     scale = sw.document.documentElement.currentScale;
+
+	     if (xtrans == 0 && ytrans == 0 && scale == 1)
+	        strOfferView = "N"
+	     }
+      
+      if (strOfferPage == "Y" && strOfferCell == "N" && strOfferView == "N")
+         doPrintFullpage();
+      else
+         {
+           strParams = "<params><offerpage>" + strOfferPage + "</offerpage><offercell>" + strOfferCell + "</offercell><offerview>" + strOfferView + "</offerview></params>"
+           
+		   // show the web dialog here
+		   strFeatures = "dialogWidth:280px;dialogHeight:400px;scroll=no;status=no;help=no;border=thin;center=yes;"
+		   
+		   result = window.showModalDialog(strASPDir + "ep_print.htm", strParams, strFeatures);
+		   
+		   // check return flag for links to assert
+		   
+		   if (result == 1)
+		 	   doPrintFullpage();
+		    else if (result == 2)
+		 	   doPrintCell();
+		    else if (result == 3)
+		 	   doPrintView();
+	 	   }
+     }
+</script>
+</body>
+
+<!-- Mirrored from file:///C:/Documents and Settings/Administrator/Desktop/FORD/Ford Fiesta 2012/SCR~us~en~book=ECR&cell=014&page=&year=&vehicle=2012 Fiesta&market=US&lang=EN&RTYPE=DIAGRAM&legacy=N~gen~emain.htm by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 04 Mar 2025 14:54:21 GMT -->
+</html>

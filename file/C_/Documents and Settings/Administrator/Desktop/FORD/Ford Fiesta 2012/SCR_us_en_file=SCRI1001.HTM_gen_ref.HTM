@@ -1,0 +1,348 @@
+<html>
+<!-- Mirrored from file:///C:/Documents and Settings/Administrator/Desktop/FORD/Ford Fiesta 2012/SCR~us~en~file=SCRI1001.HTM~gen~ref.HTM by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 04 Mar 2025 14:53:43 GMT -->
+<head><META http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>2012 Fiesta Workshop Manual
+
+</title><LINK rel="stylesheet" type="text/css" href="SCR_us_en_file%3dSCRSTYLE.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       ><meta name="tps_translationdatetime" content="06/09/2012 16:28:18"><meta name="tps_type" content="workshop"><meta name="tps_bookcode" content="SCR"><meta name="tps_market" content="US"><meta name="tps_language" content="EN"><meta name="tps_year" content="2012"><meta name="tps_modelname" content="Fiesta"><meta name="tps_system" content="4"><meta name="tps_group" content="18"><meta name="tps_section" content="01"><meta name="tps_section_title" content="Module Configuration"><meta name="tps_ss_title" content="DIAGNOSIS AND TESTING"><meta name="tps_procid" content="s4p7239q0"><meta name="tps_procsgmlid" content="n1235150"><meta name="tps_packetinfo" content="690963"><meta name="tps_effectivity" content="2011,FIESTA,18-010"><meta name="tps_effectivity" content="2012,FIESTA,18-010"><meta name="tps_effectivity" content="2013,FIESTA,18-010"></head><body><TABLE width="95%"><TR><TD><div class="bookinfo">SECTION 418-01:  Module Configuration
+</DIV></TD><TD align="RIGHT"><div class="bookinfo">2012 Fiesta Workshop Manual
+</DIV></TD></TR><TR><TD><div class="bookinfo">DIAGNOSIS AND TESTING
+</div></TD><TD align="RIGHT"><div class="bookinfosmall">Procedure revision date:  07/15/2011
+</div></TD></TR></TABLE><hr><h4>Module Configuration
+</h4><meta name="tps_proctitle" content="Module Configuration">
+
+<br><table border="1" cellpadding="3" cellspacing="0" width="50%"><caption>Special Tool(s)
+</caption><tr valign="top"><td><IMG src="SCR_us_en_file%3dST2834A.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="99" width="99" border="0"></td><td>Vehicle Communication Module (VCM) and Integrated Diagnostic System (IDS) software with appropriate hardware, or equivalent scan
+ tool
+<br></td></tr></table><div><a name="extract_551">&nbsp;
+</a></div>
+
+<p><b>Principles of Operation
+</b></p><p>Configurable modules accommodate a variety of vehicle options, eliminating the need for many unique modules for one vehicle line. These modules must be configured when replaced as part of a repair procedure. Configurable modules should not be
+exchanged between vehicles since the settings are unique to each vehicle. Failure to configure a new module may result in incorrect operation and/or DTCs setting.
+</p><p>The following are the 3 different methods of configuration:
+</p><ul type="disc"><li>Programmable Module Installation (PMI)
+</li><li>Module reprogramming (flashing)
+</li><li>Programmable parameters
+</li></ul><p>Some modules do not support all 3 methods.
+</p><p><b>Definition of Terms
+</b></p><p>The following are definitions of configuration terms:
+</p><h5>Programmable Module Installation (PMI) 
+</h5><p><span title="Programmable Module Installation" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PMI
+</span> is a scan tool process which configures settings in a new module. Data used for the
+
+<span title="Programmable Module Installation" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PMI
+</span> process is automatically downloaded from the original module and stored when a scan tool session is started. If this data cannot be retrieved from the module
+being replaced, the scan tool may prompt for As-Built data entry or display a list of parameter values that need to be manually selected. Some modules are reprogrammed during
+
+<span title="Programmable Module Installation" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PMI
+</span> when a strategy/calibration update is available. To carry out 
+<span title="Programmable Module Installation" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PMI
+</span>, refer
+to 
+<a href="SCR_us_en_file%3dSCRI1002.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       >Programmable Module Installation (PMI)
+</a> in this section.
+</p><p><b>NOTE: 
+</b> It is important for the scan tool to identify the vehicle and obtain configuration data prior to removing any modules. The new module must be able to communicate with the scan tool in order to carry out
+
+<span title="Programmable Module Installation" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PMI
+</span>.
+</p><h5>Module Reprogramming 
+</h5><p>Module reprogramming (also referred to as flashing) is a scan tool process which updates the strategy/calibration in a module. Reprogramming a module with the same level of software will not improve module operation or repair a hardware
+failure. Module reprogramming is automatically carried out during 
+<span title="Programmable Module Installation" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PMI
+</span> when a later strategy/calibration is available.
+</p><p><b>NOTE: 
+</b> Module reprogramming should be limited to circumstances where a published TSB procedure recommends doing so.
+</p><p><b>NOTE: 
+</b> A module cannot communicate with other modules on the communication network while being reprogrammed. Clear any network communication DTCs which may have been set in other modules during the reprogramming process.
+</p><h5>Accessory Protocol Interface Module (APIM) Programming 
+</h5><p>Accessory Protocol Interface Module (APIM) programming is a process that updates the 
+<span title="Accessory Protocol Interface Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">APIM
+</span>Consumer Interface Processor (CIP) and Vehicle Interface Processor (VIP) software. The
+
+<span title="Vehicle Interface Processor" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">VIP
+</span> programming updates the calibration files in the portion of the 
+<span title="Accessory Protocol Interface Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">APIM
+</span> that
+interfaces with the Controller Area Network (CAN). The 
+<span title="Consumer Interface Processor" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">CIP
+</span> programming updates calibration files in the portion of the
+
+<span title="Accessory Protocol Interface Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">APIM
+</span> that interfaces with mobile phones and other customer devices.
+</p><p><span title="Accessory Protocol Interface Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">APIM
+</span> programming uses the Vehicle Communication Module (VCM) to read and program the
+
+<span title="Vehicle Interface Processor" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">VIP
+</span> software through the Data Link Connector (DLC). A web-based
+On-Line Automotive Service Information System (OASIS) application is used to read the 
+<span title="Consumer Interface Processor" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">CIP
+</span> software via a
+Universal Serial Bus (USB) cable between the scan tool and the vehicle's 
+<span title="Universal Serial Bus" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">USB
+</span> port. Both the
+
+<span title="Vehicle Communication Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">VCM
+</span> and the 
+<span title="On-Line Automotive Service Information System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">OASIS
+</span> application must be running on the scan
+tool during 
+<span title="Accessory Protocol Interface Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">APIM
+</span> programming. To carry out 
+<span title="Accessory Protocol Interface Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">APIM
+</span> programming, refer to
+
+<a href="SCR_us_en_file%3dSCRI1003.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       >Accessory Protocol Interface Module (APIM) Programming
+</a> in this section.
+</p><h5>Programmable Parameters 
+</h5><p>Programmable parameters are customer preference items that may be modified by the dealer via scan tool or in some cases, modified by the customer following a procedure listed in the vehicle Owner's Literature. While many
+configuration options may exist for a module, only a few of these options are programmable parameters.
+</p><h5>Adaptive Learning and Calibration 
+</h5><p>Some modules require a separate learning procedure be carried out if replaced as part of a repair procedure. For adaptive learning and calibration instructions, refer to the specific module removal and installation procedures.
+</p><h5>Vehicle Identification (VID) Block 
+</h5><p>Some PCMs contain a memory area called a Vehicle Identification (VID) block. The PCM 
+<span title="Vehicle Identification" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">VID
+</span> block commonly stores
+powertrain configuration items such as Vehicle Identification Number (VIN), tire size, axle ratio, and whether or not the vehicle is equipped with speed control.
+</p><h5>Module Address 
+</h5><p>A unique module address is assigned to each module on the network for identification.
+</p><h5>As-Built Data 
+</h5><p>As-Built data is a 
+<span title="Vehicle Identification Number" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">VIN
+</span>-specific module configuration record. During vehicle build, the configuration from all modules is downloaded and stored in the As-Built
+database. As-Built data does not reflect customer preference items that have been changed from the default state. These items need to be changed using programmable parameters after the module is configured.
+</p><p><b>NOTE: 
+</b> It is not necessary to obtain As-Built data unless directed to do so by the scan tool. This data may be accessed from the technician service publication web site.
+</p><p>The following chart lists As-Built data addresses and describes specific module configuration information:
+</p><br><br><P class="SINGLESPACE"><B>&nbsp;Module Configuration and Parameter Chart 
+</B></P><TABLE cellspacing="0" cellpadding="3" border="1"><TR><TH valign="bottom" align="center">Module
+</TH><TH valign="bottom" align="center">Requires 
+<span title="Programmable Module Installation" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PMI
+</span></TH><TH valign="bottom" align="center">Reprogram/Flash Capable
+</TH><TH valign="bottom" align="center">Requires Adaptive Learning or Calibration
+</TH><TH valign="bottom" align="center">Available Program- mable Parameters
+</TH></TR><TR><TD valign="top" align="left">ABS module
+</TD><TD valign="top" align="center">Yes
+</TD><TD valign="top" align="center">Yes
+</TD><TD valign="top" align="left">Yes
+</TD><TD valign="top" align="left">Tire size
+</TD></TR><TR><TD valign="top" align="left">Accessory Protocol Interface Module (APIM)
+</TD><TD valign="top" align="center">Yes
+</TD><TD valign="top" align="center">Yes
+</TD><TD valign="top" align="left">No
+</TD><TD valign="top" align="left">None
+</TD></TR><TR><TD valign="top" align="left">Audio Control Module (ACM)
+</TD><TD valign="top" align="center">Yes
+</TD><TD valign="top" align="center">Yes
+</TD><TD valign="top" align="left">No
+</TD><TD valign="top" align="left">None
+</TD></TR><TR><TD valign="top" align="left">Body Control Module (BCM)
+</TD><TD valign="top" align="center">Yes
+</TD><TD valign="top" align="center">Yes
+</TD><TD valign="top" align="left">No
+</TD><TD valign="top" align="left"><ul type="disc"><li>Language
+</li><li>Speech Control Language
+</li><li>Tire Circumference
+</li><li>Tire Dimension
+</li></ul></TD></TR><TR><TD valign="top" align="left">Front Control/Display Interface Module (FCDIM)
+</TD><TD valign="top" align="center">No
+</TD><TD valign="top" align="center">Yes
+</TD><TD valign="top" align="left">No
+</TD><TD valign="top" align="left">None
+</TD></TR><TR><TD valign="top" align="left">Global Positioning System Module (GPSM)
+</TD><TD valign="top" align="center">No
+</TD><TD valign="top" align="center">No
+</TD><TD valign="top" align="left">No
+</TD><TD valign="top" align="left">None
+</TD></TR><TR><TD valign="top" align="left">Instrument Panel Cluster (IPC)
+</TD><TD valign="top" align="center">Yes
+</TD><TD valign="top" align="center">Yes
+</TD><TD valign="top" align="left">No
+</TD><TD valign="top" align="left"><ul type="disc"><li>Language
+</li><li>Speech Control Language
+</li><li>Tire Circumference
+</li><li>Tire Dimension
+</li></ul></TD></TR><TR><TD valign="top" align="left">Occupant Classification System Module (OCSM)
+</TD><TD valign="top" align="center">No
+</TD><TD valign="top" align="center">Yes
+</TD><TD valign="top" align="left"><ul type="disc"><li>Seat weight sensor re-zero
+</li></ul></TD><TD valign="top" align="left">None
+</TD></TR><TR><TD valign="top" align="left">PCM
+</TD><TD valign="top" align="center">Yes
+</TD><TD valign="top" align="center">Yes
+</TD><TD valign="top" align="left"><ul type="disc"><li>Adaptive airflow
+</li><li>Idle speed
+</li><li>Refueling event
+</li><li>Fuel trim
+</li></ul></TD><TD valign="top" align="left">None
+</TD></TR><TR><TD valign="top" align="left">Power Steering Control Module (PSCM)
+</TD><TD valign="top" align="center">No
+</TD><TD valign="top" align="center">Yes
+</TD><TD valign="top" align="left">No
+</TD><TD valign="top" align="left">None
+</TD></TR><TR><TD valign="top" align="left">Remote Function Actuator (RFA)
+</TD><TD valign="top" align="center">No
+</TD><TD valign="top" align="center">Yes
+</TD><TD valign="top" align="left">No
+</TD><TD valign="top" align="left">None
+</TD></TR><TR><TD valign="top" align="left">Restraints Control Module (RCM)
+</TD><TD valign="top" align="center">Yes
+</TD><TD valign="top" align="center">Yes
+</TD><TD valign="top" align="left"><ul type="disc"><li>Seat weight sensor re-zero
+</li></ul></TD><TD valign="top" align="left">None
+</TD></TR><TR><TD valign="top" align="left">Tire Pressure Monitor Module (TPM)
+</TD><TD valign="top" align="center">Yes
+</TD><TD valign="top" align="center">Yes
+</TD><TD valign="top" align="left">No
+</TD><TD valign="top" align="left">Tire placard pressure
+</TD></TR><TR><TD valign="top" align="left">Transmission Control Module (TCM)
+</TD><TD valign="top" align="center">No
+</TD><TD valign="top" align="center">No
+</TD><TD valign="top" align="left">Yes
+</TD><TD valign="top" align="left">None
+</TD></TR></TABLE><br><div><a name="extract_552">&nbsp;
+</a></div>
+
+<p><b>Inspection and Verification
+</b></p><p>This section provides step-by-step module configuration procedures. Carry out the Programmable Module Installation (PMI) procedures in this section when directed here from another
+workshop manual section to carry out configuration or when DTCs from the list below are present:
+</p><br><br><P class="SINGLESPACE"><B>&nbsp;DTC Chart 
+</B></P>
+
+<p><b>NOTE: 
+</b> Some modules on this vehicle utilize a 5-character DTC followed by a 2-character failure-type code. The failure-type code provides information about specific fault conditions such as opens, or shorts to ground. Continuous Memory DTCs have an
+additional 2-character DTC status code suffix to assist in determining DTC history.
+</p><TABLE cellspacing="0" cellpadding="3" border="1"><TR><TH valign="bottom" align="center">DTC
+</TH><TH valign="bottom" align="center">Description
+</TH><TH valign="bottom" align="center">Source
+</TH><TH valign="bottom" align="center">Action
+</TH></TR><TR><TD valign="top" align="center">U0300
+</TD><TD valign="top" align="left">Internal Control Module Software Incompatibility
+</TD><TD valign="top" align="left"><ul type="disc"><li><span title="Restraints Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RCM
+</span></li><li><span title="Power Steering Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PSCM
+</span></li></ul></TD><TD valign="top" align="left">CARRY OUT 
+<span title="Programmable Module Installation" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PMI
+</span>. REFER to 
+<a href="SCR_us_en_file%3dSCRI1002.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       >Programmable Module Installation (PMI)
+</a> in this section.
+</TD></TR><TR><TD valign="top" align="center">U0300:4A
+</TD><TD valign="top" align="left">Internal Control Module Software Incompatibility
+</TD><TD valign="top" align="left"><ul type="disc"><li>PCM
+</li></ul></TD><TD valign="top" align="left">CARRY OUT 
+<span title="Programmable Module Installation" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PMI
+</span>. REFER to 
+<a href="SCR_us_en_file%3dSCRI1002.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       >Programmable Module Installation (PMI)
+</a> in this section.
+</TD></TR><TR><TD valign="top" align="center">U2024:54
+</TD><TD valign="top" align="left">Control Module Cal-Config Data
+</TD><TD valign="top" align="left"><ul type="disc"><li>PCM
+</li></ul></TD><TD valign="top" align="left">CARRY OUT 
+<span title="Programmable Module Installation" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PMI
+</span>. REFER to 
+<a href="SCR_us_en_file%3dSCRI1002.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       >Programmable Module Installation (PMI)
+</a> in this section.
+</TD></TR><TR><TD valign="top" align="center">U2050
+</TD><TD valign="top" align="left">No Application Present
+</TD><TD valign="top" align="left"><ul type="disc"><li><span title="Occupant Classification System Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">OCSM
+</span></li><li><span title="Tire Pressure Monitor Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPM
+</span></li></ul></TD><TD valign="top" align="left">CARRY OUT 
+<span title="Programmable Module Installation" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PMI
+</span>. REFER to 
+<a href="SCR_us_en_file%3dSCRI1002.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       >Programmable Module Installation (PMI)
+</a> in this section.
+</TD></TR><TR><TD valign="top" align="center">U2051
+</TD><TD valign="top" align="left">One or More Calibration Files Missing/Corrupt
+</TD><TD valign="top" align="left"><ul type="disc"><li><span title="Occupant Classification System Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">OCSM
+</span></li></ul></TD><TD valign="top" align="left">CARRY OUT 
+<span title="Programmable Module Installation" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PMI
+</span>. REFER to 
+<a href="SCR_us_en_file%3dSCRI1002.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       >Programmable Module Installation (PMI)
+</a> in this section.
+</TD></TR><TR><TD valign="top" align="center">U2100:00
+</TD><TD valign="top" align="left">Initial Configuration Not Complete: No Sub Type Information
+</TD><TD valign="top" align="left"><ul type="disc"><li>ABS module
+</li><li><span title="Audio Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">ACM
+</span></li><li><span title="Front Control/Display Interface Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">FCDIM
+</span></li><li><span title="Power Steering Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PSCM
+</span></li><li><span title="Restraints Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RCM
+</span></li><li><span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span></li></ul></TD><TD valign="top" align="left">CARRY OUT 
+<span title="Programmable Module Installation" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PMI
+</span>. REFER to 
+<a href="SCR_us_en_file%3dSCRI1002.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       >Programmable Module Installation (PMI)
+</a> in this section.
+</TD></TR><TR><TD valign="top" align="center">U2100:00
+</TD><TD valign="top" align="left">Initial Configuration Not Complete: No Sub Type Information
+</TD><TD valign="top" align="left"><ul type="disc"><li><span title="Accessory Protocol Interface Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">APIM
+</span></li></ul></TD><TD valign="top" align="left">CARRY OUT 
+<span title="Accessory Protocol Interface Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">APIM
+</span> programming. REFER to 
+<a href="SCR_us_en_file%3dSCRI1003.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       >Accessory Protocol Interface Module (APIM) Programming
+</a> in this section.
+</TD></TR><TR><TD valign="top" align="center">U2100:55
+</TD><TD valign="top" align="left">Initial Configuration Not Complete
+</TD><TD valign="top" align="left"><ul type="disc"><li>ABS module
+</li></ul></TD><TD valign="top" align="left">CARRY OUT 
+<span title="Programmable Module Installation" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PMI
+</span>. REFER to 
+<a href="SCR_us_en_file%3dSCRI1002.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       >Programmable Module Installation (PMI)
+</a> in this section.
+</TD></TR><TR><TD valign="top" align="center">U2100:55
+</TD><TD valign="top" align="left">Initial Configuration Not Complete
+</TD><TD valign="top" align="left"><ul type="disc"><li>ABS module
+</li></ul></TD><TD valign="top" align="left">CARRY OUT 
+<span title="Programmable Module Installation" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PMI
+</span>. REFER to 
+<a href="SCR_us_en_file%3dSCRI1002.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       >Programmable Module Installation (PMI)
+</a> in this section.
+</TD></TR><TR><TD valign="top" align="center">U2101:00
+</TD><TD valign="top" align="left">Control Module Configuration Incompatible: No Sub Type Information
+</TD><TD valign="top" align="left"><ul type="disc"><li>ABS module
+</li><li><span title="Audio Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">ACM
+</span></li><li><span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span></li><li><span title="Front Control/Display Interface Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">FCDIM
+</span></li><li><span title="Instrument Panel Cluster" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IPC
+</span></li><li><span title="Power Steering Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PSCM
+</span></li></ul></TD><TD valign="top" align="left">CARRY OUT 
+<span title="Programmable Module Installation" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PMI
+</span>. REFER to 
+<a href="SCR_us_en_file%3dSCRI1002.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       >Programmable Module Installation (PMI)
+</a> in this section.
+</TD></TR><TR><TD valign="top" align="center">U2101:00
+</TD><TD valign="top" align="left">Control Module Configuration Incompatible: No Sub Type Information
+</TD><TD valign="top" align="left"><ul type="disc"><li><span title="Accessory Protocol Interface Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">APIM
+</span></li></ul></TD><TD valign="top" align="left">CARRY OUT 
+<span title="Accessory Protocol Interface Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">APIM
+</span> programming. REFER to 
+<a href="SCR_us_en_file%3dSCRI1003.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       >Accessory Protocol Interface Module (APIM) Programming
+</a> in this section.
+</TD></TR><TR><TD valign="top" align="center">U3000:46
+</TD><TD valign="top" align="left">Control Module Calibration/Parameter Memory Failure
+</TD><TD valign="top" align="left"><ul type="disc"><li><span title="Restraints Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RCM
+</span></li></ul></TD><TD valign="top" align="left">CARRY OUT 
+<span title="Programmable Module Installation" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PMI
+</span>. REFER to 
+<a href="SCR_us_en_file%3dSCRI1002.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       >Programmable Module Installation (PMI)
+</a> in this section.
+</TD></TR><TR><TD valign="top" align="center">U3002:62
+</TD><TD valign="top" align="left">Vehicle Identification Number - signal compare failure
+</TD><TD valign="top" align="left"><ul type="disc"><li><span title="Power Steering Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PSCM
+</span></li><li><span title="Restraints Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RCM
+</span></li></ul></TD><TD valign="top" align="left">CARRY OUT 
+<span title="Programmable Module Installation" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PMI
+</span>. REFER to 
+<a href="SCR_us_en_file%3dSCRI1002.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       >Programmable Module Installation (PMI)
+</a> in this section.
+</TD></TR></TABLE><br><br><hr><P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+
+</body>
+<!-- Mirrored from file:///C:/Documents and Settings/Administrator/Desktop/FORD/Ford Fiesta 2012/SCR~us~en~file=SCRI1001.HTM~gen~ref.HTM by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 04 Mar 2025 14:53:43 GMT -->
+</html>

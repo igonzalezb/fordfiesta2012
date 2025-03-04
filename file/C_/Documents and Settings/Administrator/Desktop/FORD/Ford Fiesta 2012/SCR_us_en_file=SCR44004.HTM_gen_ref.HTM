@@ -1,0 +1,2016 @@
+<html>
+<!-- Mirrored from file:///C:/Documents and Settings/Administrator/Desktop/FORD/Ford Fiesta 2012/SCR~us~en~file=SCR44004.HTM~gen~ref.HTM by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 04 Mar 2025 14:54:08 GMT -->
+<head><META http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>2012 Fiesta Workshop Manual
+
+</title><LINK rel="stylesheet" type="text/css" href="SCR_us_en_file%3dSCRSTYLE.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       ><meta name="tps_translationdatetime" content="06/09/2012 16:28:18"><meta name="tps_type" content="workshop"><meta name="tps_bookcode" content="SCR"><meta name="tps_market" content="US"><meta name="tps_language" content="EN"><meta name="tps_year" content="2012"><meta name="tps_modelname" content="Fiesta"><meta name="tps_system" content="2"><meta name="tps_group" content="04"><meta name="tps_section" content="04"><meta name="tps_section_title" content="Wheels and Tires"><meta name="tps_ss_title" content="DIAGNOSIS AND TESTING"><meta name="tps_procid" content="s4p11093q0"><meta name="tps_procsgmlid" content="n1235331"><meta name="tps_packetinfo" content="690963"><meta name="tps_effectivity" content="2011,FIESTA,04-040"><meta name="tps_effectivity" content="2012,FIESTA,04-040"><meta name="tps_effectivity" content="2013,FIESTA,04-040"></head><body><TABLE width="95%"><TR><TD><div class="bookinfo">SECTION 204-04:  Wheels and Tires
+</DIV></TD><TD align="RIGHT"><div class="bookinfo">2012 Fiesta Workshop Manual
+</DIV></TD></TR><TR><TD><div class="bookinfo">DIAGNOSIS AND TESTING
+</div></TD><TD align="RIGHT"><div class="bookinfosmall">Procedure revision date:  07/15/2011
+</div></TD></TR></TABLE><hr><h4>Tire Pressure Monitoring System (TPMS)
+</h4><meta name="tps_proctitle" content="Tire Pressure Monitoring System (TPMS)">
+
+<br><table border="1" cellpadding="3" cellspacing="0" width="50%"><caption>Special Tool(s)
+</caption><tr valign="top"><td><IMG src="SCR_us_en_file%3dST2941A.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="99" width="99" border="0"></td><td>Activation Tool, Tire Pressure Monitor
+<br>204-363, or Customer Activation Tool, Tire Pressure Monitor 8C2T-1AZ03-AA
+</td></tr><tr valign="top"><td><IMG src="SCR_us_en_file%3dST2869A.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="99" width="99" border="0"></td><td>Digital Tire Pressure Gauge
+<br>204-354
+</td></tr><tr valign="top"><td><IMG src="SCR_us_en_file%3dST2574A.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="99" width="99" border="0"></td><td>Flex Probe Kit
+<br>NUD105-R025D or equivalent
+</td></tr><tr valign="top"><td><IMG src="SCR_us_en_file%3dST3093A.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="99" width="99" border="0"></td><td>Fluke 77-IV Digital Multimeter
+<br>FLU77-4 or equivalent
+</td></tr><tr valign="top"><td><IMG src="SCR_us_en_file%3dST2834A.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="99" width="99" border="0"></td><td> 
+
+Vehicle Communication Module (VCM) and Integrated Diagnostic System (IDS) software with appropriate hardware, or equivalent scan tool
+<br></td></tr></table><div><a name="extract_293">&nbsp;
+</a></div>
+
+<p><b>Principles of Operation
+</b></p><p><b><IMG src="SCR_us_en_file%3dani_caut.gif_gen_ref.gif"                                                                                                                                                                                                                                                        border="0">&nbsp;WARNING:  The tire pressure monitoring system (TPMS) sensor battery may release hazardous chemicals if exposed to extreme mechanical damage. If these chemicals contact the skin or eyes, flush immediately with water for a minimum of 15 minutes and get prompt medical attention. If any part of the battery is swallowed, contact a physician immediately. When disposing of TPMS sensors, follow the correct procedures for hazardous material disposal. Failure to follow these instructions may result in serious personal injury.
+</b></p><p><b>NOTE: 
+</b> The Tire Pressure Monitor (TPM) module is identified by the scan tool as the Vehicle Security Module (VSM).
+</p><p>The Tire Pressure Monitoring System (TPMS) uses tire pressure sensors located in the wheels to monitor the tire pressure of all 4 tires (there is no sensor in the spare tire). Each sensor has
+a unique identifier that is transmitted to the 
+<span title="Tire Pressure Monitoring System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPMS
+</span> receiver during system training.
+The 
+<span title="Tire Pressure Monitor" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPM
+</span>/
+<span title="Vehicle Security Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">VSM
+</span> retains these identifiers in memory and associates them with a vehicle position
+based on the training order. The sensors transmit tire pressure information to the 
+<span title="Tire Pressure Monitor" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPM
+</span>/
+<span title="Vehicle Security Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">VSM
+</span> via
+radio frequency signals once every 60 seconds when vehicle speed exceeds 32 km/h (20 mph), or once every 6 hours when stationary.
+The 
+<span title="Tire Pressure Monitor" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPM
+</span>/
+<span title="Vehicle Security Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">VSM
+</span> function compares tire pressure information against a low-pressure limit. If
+it determines the tire pressure has fallen below this limit, the 
+<span title="Tire Pressure Monitor" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPM
+</span>/
+<span title="Vehicle Security Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">VSM
+</span> sends a message
+requesting illumination of the 
+<span title="Tire Pressure Monitoring System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPMS
+</span> indicator to the Instrument Panel Cluster (IPC) over
+the Medium Speed Controller Area Network (MS-CAN) bus. The 
+<span title="Instrument Panel Cluster" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IPC
+</span> illuminates
+the 
+<span title="Tire Pressure Monitoring System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPMS
+</span> indicator when commanded by
+the 
+<span title="Tire Pressure Monitor" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPM
+</span>/
+<span title="Vehicle Security Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">VSM
+</span>.
+</p><p>Radio Frequency Interference (RFI) can create intermittent 
+<span title="Tire Pressure Monitoring System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPMS
+</span> issues that are difficult to
+diagnose. 
+<span title="Radio Frequency Interference" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFI
+</span> can be caused by the addition of aftermarket equipment that blocks the
+
+<span title="Tire Pressure Monitoring System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPMS
+</span> sensor transmissions from getting to the
+Tire Pressure Monitor (TPM)/Vehicle Security Module (VSM). Devices
+causing 
+<span title="Radio Frequency Interference" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFI
+</span> can prevent the module from communicating with any of the 4 tire pressure sensors.
+</p><p><b>Tire Pressure Monitoring System (TPMS) Indicator
+</b></p><p>The 
+<span title="Tire Pressure Monitoring System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPMS
+</span> indicator may display faults that cannot be resolved by the customer. Treat these messages
+as 
+<span title="Tire Pressure Monitoring System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPMS
+</span> DTCs or symptoms that must be serviced.
+</p><p><b>Tire Pressure Monitoring System (TPMS) Indicator Is On Continuously from Key ON.
+</b></p><p>The 
+<span title="Tire Pressure Monitoring System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPMS
+</span> indicator is illuminated continuously when the ignition is turned to the ON position and any of the tire pressures are low. A DTC is not present
+for this condition and the 
+<span title="Tire Pressure Monitoring System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPMS
+</span> status PID: TP_STAT equals LOW. When this condition exists, the tire pressure must be adjusted in all tires to the recommended cold
+pressure as noted on the Vehicle Certification (VC) label. GO to 
+<a href="SCR_us_en_file%3dSCR44004.HTM_gen_ref.HTM#SC3"                                                                                                                                                                                                                                                       >Symptom Chart
+</a>.
+</p><p><b>Ambient Temperature Change and Tire Pressure
+</b></p><p><b><i>NOTICE: 
+</i> Do not inflate tires more than maximum tire pressure stamped on the tire sidewall. Premature tire wear or damage to the tire may result.
+</b></p><p>Tire pressures fluctuate with temperature changes. For this reason, set tire pressures to specification when tires are at outdoor ambient temperatures. If the vehicle is allowed to warm up to shop temperatures, and the outside temperature
+is less than shop temperature, adjust the tire inflation pressure accordingly.
+</p><p>If the tires are inflated to specification at shop temperatures and the vehicle is moved outdoors when the outdoor ambient temperature is significantly lower, the tire pressure may drop enough to be detected by
+the 
+<span title="Tire Pressure Monitoring System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPMS
+</span> and illuminate the 
+<span title="Tire Pressure Monitoring System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPMS
+</span> indicator.
+</p><p>As the ambient temperature decreases by 6°C (10°F), tire pressure decreases 7 kPa (1 psi). Adjust the tire pressure by 7 kPa (1 psi) for each 6°C (10°F) ambient temperature drop as necessary to maintain tire pressure
+as specified on the Vehicle Certification (VC) label. Refer to the following tables to adjust the tire pressure indoors for colder outside temperatures.
+</p><IMG src="SCR_us_en_file%3dN0057700.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="650" width="650" border="1"><p><b>Tire Pressure Monitoring System (TPMS) Indicator Flashes For 70 seconds From Key ON And Then Remains On Continuously
+</b></p><p>The 
+<span title="Tire Pressure Monitoring System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPMS
+</span> indicator flashes for 70 seconds and then remains on continuously if the
+
+<span title="Tire Pressure Monitoring System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPMS
+</span> is malfunctioning. The TP_STAT PID can be used to determine why the
+
+<span title="Tire Pressure Monitoring System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPMS
+</span> indicator is flashing.
+</p><p><b>Tire Pressure Monitoring System (TPMS) PID Definitions
+</b></p><p><b><span title="Tire Pressure Monitor" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPM
+</span>/
+<span title="Vehicle Security Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">VSM
+</span> Status PID
+</b></p><p>The 
+<span title="Tire Pressure Monitor" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPM
+</span>/
+<span title="Vehicle Security Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">VSM
+</span> monitors the
+
+<span title="Tire Pressure Monitoring System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPMS
+</span> status. The 
+<span title="Tire Pressure Monitoring System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPMS
+</span> status can be monitored using the scan tool PID TP_STAT.
+The PID has 4 valid states:
+</p><ol start="1"><li>TP_STAT = SENSOR FAULT.
+
+<ul type="disc"><li>SENSOR FAULT is displayed if the 
+<span title="Tire Pressure Monitor" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPM
+</span>/
+<span title="Vehicle Security Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">VSM
+</span> has not heard from 1 to
+3 
+<span title="Tire Pressure Monitoring System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPMS
+</span> sensors for 20 minutes when the vehicle speed is above 32 km/h (20 mph).
+</li></ul></li></ol><ol start="2"><li>TP_STAT = SYSTEM FAULT.
+
+<ul type="disc"><li>SYSTEM FAULT is displayed if the 
+<span title="Tire Pressure Monitor" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPM
+</span>/
+<span title="Vehicle Security Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">VSM
+</span> does not receive a signal transmission from all
+4 
+<span title="Tire Pressure Monitoring System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPMS
+</span> sensors for 20 minutes and the vehicle speed is above 32 km/h (20 mph).
+</li></ul></li></ol><ol start="3"><li>TP_STAT = LOW.
+
+<ul type="disc"><li>LOW is displayed if the 
+<span title="Tire Pressure Monitor" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPM
+</span>/
+<span title="Vehicle Security Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">VSM
+</span> has detected that at least
+1 
+<span title="Tire Pressure Monitoring System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPMS
+</span> sensor is reporting low tire pressure.
+</li></ul></li></ol><ol start="4"><li>TP_STAT = ACTIVE.
+
+<ul type="disc"><li>ACTIVE is displayed if the 
+<span title="Tire Pressure Monitoring System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPMS
+</span> is functioning normally.
+</li></ul></li></ol><p><b><span title="Tire Pressure Monitoring System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPMS
+</span> Last Warning Event PID Definitions
+</b></p><p>The 
+<span title="Tire Pressure Monitoring System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPMS
+</span> uses the 
+<span title="Tire Pressure Monitoring System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPMS
+</span> last warning event PIDs to store
+detailed information about the last 5 times the 
+<span title="Tire Pressure Monitoring System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPMS
+</span> indicator was illuminated. These PIDs can be used to acquire more information about a
+particular 
+<span title="Tire Pressure Monitoring System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPMS
+</span> event.
+</p><h5>EVT1_IGN through EVT5_IGN 
+</h5><p>The number of key cycles since the 
+<span title="Tire Pressure Monitoring System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPMS
+</span> indicator was illuminated. This PID cycles from zero to 255 and then starts over from zero again. Use this PID
+to determine how long ago a 
+<span title="Tire Pressure Monitoring System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPMS
+</span> event occurred and the time (in key cycles) between events.
+</p><h5>EVT1_TLOC through EVT5_TLOC 
+</h5><p>This is the last programmed location for the sensor causing each 
+<span title="Tire Pressure Monitoring System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPMS
+</span> event. Due to tire rotation, the sensor may no longer be at the location indicated. It
+is suggested that all the PIDs be recorded, the system retrained, and the sensor identifier PIDs be used to pinpoint the actual location of each sensor.
+</p><h5>EVT1_PSI through EVT5_PSI 
+</h5><p>This is the tire pressure associated with each 
+<span title="Tire Pressure Monitoring System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPMS
+</span> indicator event. This can be used to identify
+the 
+<span title="Tire Pressure Monitoring System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPMS
+</span> events that were due to low pressure and to determine when a sensor is transmitting inaccurate tire pressure.
+</p><h5>EVT1_STAT through EVT5_STAT 
+</h5><p>Describes the warning status of each 
+<span title="Tire Pressure Monitoring System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPMS
+</span> event by using the information received from the
+
+<span title="Tire Pressure Monitoring System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPMS
+</span> status (TP_STAT) PID. If there is a communication issue, the status could be NORMAL.
+</p><ul type="disc"><li>UNKNOWN
+</li><li>NORMAL (normal operation)
+</li><li>LOW (low pressure event)
+</li><li>FAULT (sensor fault or system fault)
+</li></ul><h5>EVT1_TxID through EVT5_TxID 
+</h5><p>This is the unique identifier of the sensor involved in each 
+<span title="Tire Pressure Monitoring System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPMS
+</span> event. EVT1 is the most recent event that triggered
+the 
+<span title="Tire Pressure Monitoring System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPMS
+</span> indicator.
+</p><p><b>Wheel Rotation and Sensor Training Techniques
+</b></p><h5>Moving a Problem Sensor/Wheel to a Different Position 
+</h5><p>If a sensor in a certain location has caused several events, yet the sensor trains and seems to operate normally, moving that particular sensor/wheel to a different location on the vehicle can isolate the issue to a certain
+sensor/wheel location. Carry out a road test following sensor/wheel relocation to attempt to recreate the fault. This determines whether the fault followed the sensor or remained in the original sensor location.
+</p><h5>Training Sensors in a Different Order 
+</h5><p>This is a technique to get past a left front sensor that may not be responding to determine if the remaining sensors train to the module. This can help save time determining if other sensors are having issues or if the module is
+experiencing training difficulties with a certain location.
+</p><p><b>NOTE: 
+</b> Training known good sensors from another vehicle cannot differentiate between a faulted module and 
+<span title="Radio Frequency Interference" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFI
+</span>.
+</p><h5>Training Known Good Sensors From Another Vehicle 
+</h5><p>Use this technique to differentiate between a sensor fault and a module fault. If neither the originally installed sensors nor the known good sensors can be trained, then a module fault
+or 
+<span title="Radio Frequency Interference" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFI
+</span> concern is present. See items that cause 
+<span title="Radio Frequency Interference" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFI
+</span>, below. Do not replace the
+original sensors.
+</p><p><b>Items That Cause 
+<span title="Radio Frequency Interference" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFI
+</span></b></p><h5>Non-OEM Equipment 
+</h5><p>The following equipment has been found to cause 
+<span title="Radio Frequency Interference" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFI
+</span>:
+</p><ul type="disc"><li>Video equipment has been found to cause 
+<span title="Radio Frequency Interference" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFI
+</span> especially when the video and power supply lines are near
+the 
+<span title="Tire Pressure Monitoring System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPMS
+</span>.
+</li><li>Car alarms (even those installed by dealerships) can create enough 
+<span title="Radio Frequency Interference" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFI
+</span> to cause
+the 
+<span title="Tire Pressure Monitoring System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPMS
+</span> to malfunction or lose considerable range. These car alarms can sometimes be difficult to locate, as they are usually hidden somewhere out of the way.
+</li><li>Many different in-vehicle cell phone chargers have been found to cause considerable 
+<span title="Radio Frequency Interference" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFI
+</span>. The vehicles with the power point closest to
+the 
+<span title="Tire Pressure Monitor" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPM
+</span>/
+<span title="Vehicle Security Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">VSM
+</span> are the most affected. It must be noted that most cell phone chargers do not
+produce high levels of 
+<span title="Radio Frequency Interference" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFI
+</span> all of the time. This depends on the state of charge of the cell phone battery. The phone must be almost completely discharged in some
+cases.
+</li><li>Power supplies and DC/AC inverters typically create significant 
+<span title="Radio Frequency Interference" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFI
+</span>. Most consumer grade equipment has very little filtering or shielding.
+</li></ul><h5>OEM Modules 
+</h5><p>In some cases, the 
+<span title="Radio Frequency Interference" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFI
+</span> may actually be caused by a module or ground on the vehicle. A poor ground or loose ground shield can disable the system. Modules that
+have microcontrollers using clock circuits to create the timing pulses for the microprocessor may radiate 
+<span title="Radio Frequency Interference" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFI
+</span>.
+</p><h5>Using Customer's Electronics to Pinpoint the Radio Frequency Interference (RFI) Source 
+</h5><p>This can be a way to determine the cause of an issue well before the sensors and module are replaced with little or no affect on the system performance. Since this takes more up-front work, it relies on working with the customer to
+determine what equipment was being used at the time of the event.
+</p><p><b>Options for Eliminating Intermittent 
+<span title="Tire Pressure Monitoring System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPMS
+</span> Conditions Caused by 
+<span title="Radio Frequency Interference" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFI
+</span></b></p><ul type="disc"><li>If an OEM component or customer device is causing an 
+<span title="Radio Frequency Interference" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFI
+</span> issue, the device can be replaced.
+</li><li>If a phone charger is causing an 
+<span title="Radio Frequency Interference" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFI
+</span> issue, the customer should consult with their cell phone provider to acquire a different phone charger.
+</li><li>If a device such as an dealer-installed alarm is causing an 
+<span title="Radio Frequency Interference" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFI
+</span> issue, the device could be moved to another location on the vehicle. In the case of a
+portable device, the power cord could be moved to another power point location.
+</li></ul><p>In summary, if the 
+<span title="Radio Frequency Interference" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFI
+</span> source is present and cannot be moved or replaced, the intermittent issue remains.
+The 
+<span title="Tire Pressure Monitoring System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPMS
+</span> system must accept 
+<span title="Radio Frequency Interference" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFI
+</span> and the unwanted system operation it can cause.
+</p><div><a name="extract_294">&nbsp;
+</a></div>
+
+<p><b>Inspection and Verification
+</b></p><ol start="1"><li>Keep the following items in mind when diagnosing any 
+<span title="Tire Pressure Monitoring System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPMS
+</span> related issue:
+
+<ul type="disc"><li>The tire pressure sensors are not designed to be used with aftermarket wheels. The use of run-flat tires (tires with steel body cord plies in the tire sidewall) that are not originally equipped, may block
+the 
+<span title="Tire Pressure Monitoring System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPMS
+</span> signal and are not recommended.
+</li></ul><ul type="disc"><li>Non-OEM modifications made to the vehicle may result in false 
+<span title="Tire Pressure Monitoring System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPMS
+</span> warnings.
+</li></ul><ul type="disc"><li>Swapping wheels on vehicles with the same 
+<span title="Tire Pressure Monitoring System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPMS
+</span> sensors sets a fault if the sensors are not trained. Refer
+to 
+<a href="SCR_us_en_file%3dSCR44005.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       >Tire Pressure Monitoring System (TPMS) Sensor Training
+</a> in this section.
+</li></ul><ul type="disc"><li>The tire pressure calibrations in the 
+<span title="Tire Pressure Monitor" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPM
+</span>/
+<span title="Vehicle Security Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">VSM
+</span> for the system cannot be changed to use
+lower tire pressures than those listed on the Vehicle Certification (VC) label.
+</li></ul><ul type="disc"><li>Certain non-OEM electronic equipment may cause 
+<span title="Radio Frequency Interference" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFI
+</span> and false 
+<span title="Tire Pressure Monitoring System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPMS
+</span>warnings. To aid in diagnosis, obtain information from the owner regarding any equipment that has been added or was in use at the time the 
+<span title="Tire Pressure Monitoring System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPMS
+</span> fault occurred.
+</li></ul><ul type="disc"><li>It may be necessary to disconnect any electronic add-on equipment to verify its impact on 
+<span title="Tire Pressure Monitoring System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPMS
+</span> operation. For intermittent cases, it may be necessary to
+ask the customer to provide portable electronic equipment to verify its impact on the system.
+</li></ul></li></ol><ol start="2"><li>Visually inspect for obvious signs of mechanical or electrical damage.
+</li></ol><br><br><P class="SINGLESPACE"><B>&nbsp; 
+
+Visual Inspection Chart 
+</B></P><TABLE cellspacing="0" cellpadding="3" border="1"><TR><TH valign="bottom" align="center">Mechanical
+</TH><TH valign="bottom" align="center">Electrical
+</TH></TR><TR><TD valign="top" align="left"><ul type="disc"><li>Low tire pressure
+</li><li>Tire Pressure Monitoring System (TPMS) sensor damaged or missing
+</li><li>Spare tire installed as a road wheel
+</li><li>Incorrect 
+<span title="Tire Pressure Monitoring System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPMS
+</span> sensor installed
+</li><li><span title="Tire Pressure Monitoring System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPMS
+</span> sensor installed incorrectly
+</li><li>Non-OEM wheels installed (aftermarket rims)
+</li><li>Non-OEM equipped run-flat tires installed
+</li><li>Other non-OEM modifications (roll cages, service barriers, part racks, ladder racks)
+</li></ul></TD><TD valign="top" align="left"><ul type="disc"><li>Wiring, terminals or connectors
+</li><li>Electrical connectors
+</li><li><span title="Tire Pressure Monitor" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPM
+</span>/
+<span title="Vehicle Security Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">VSM
+</span> missing or damaged
+</li><li>Aftermarket electronic accessories (in-car chargers or supplies, DC/AC inverters, video screens, car alarms)
+</li></ul></TD></TR></TABLE><br><ol start="3"><li>If an obvious cause for an observed or reported concern is found, correct the cause (if possible) before proceeding to the next step.
+</li></ol><ol start="4"><li><p><b>NOTE: 
+</b> Make sure to use the latest scan tool software release.
+</p>If the cause is not visually evident, connect the scan tool to the Data Link Connector (DLC).
+</li></ol><ol start="5"><li><p><b>NOTE: 
+</b> The Vehicle Communication Module (VCM) LED prove out confirms power and ground from the 
+<span title="Data Link Connector" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">DLC
+</span> are provided to
+the 
+<span title="Vehicle Communication Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">VCM
+</span>.
+</p>If the scan tool does not communicate with the 
+<span title="Vehicle Communication Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">VCM
+</span>:
+
+<ul type="disc"><li>check the 
+<span title="Vehicle Communication Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">VCM
+</span> connection to the vehicle.
+</li></ul><ul type="disc"><li>check the scan tool connection to the 
+<span title="Vehicle Communication Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">VCM
+</span>.
+</li></ul><ul type="disc"><li>refer to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSI00L.HTM%26rightside%3dSCRSI00R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 418-00
+</a>, No Power To The Scan Tool, to diagnose no power to the scan tool.
+</li></ul></li></ol><ol start="6"><li>If the scan tool does not communicate with the vehicle:
+
+<ul type="disc"><li>verify the ignition is ON.
+</li></ul><ul type="disc"><li>verify the scan tool operation with a known good vehicle.
+</li></ul><ul type="disc"><li>refer to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSI00L.HTM%26rightside%3dSCRSI00R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 418-00
+</a> to diagnose no response from the PCM.
+</li></ul></li></ol><ol start="7"><li>Carry out the network test.
+
+<ul type="disc"><li>If the scan tool responds with no communication for one or more modules, refer to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSI00L.HTM%26rightside%3dSCRSI00R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 418-00
+</a>.
+</li></ul><ul type="disc"><li>If the network test passes, retrieve and record Continuous Memory Diagnostic Trouble Codes (CMDTCs).
+</li></ul></li></ol><ol start="8"><li>Clear the 
+<span title="Continuous Memory Diagnostic Trouble Codes" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">CMDTCs
+</span> and carry out the self-test diagnostics for
+the 
+<span title="Tire Pressure Monitor" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPM
+</span>/
+<span title="Vehicle Security Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">VSM
+</span> module.
+</li></ol><ol start="9"><li>If the DTCs retrieved are related to the concern, go to the 
+<span title="Tire Pressure Monitor" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPM
+</span>/
+<span title="Vehicle Security Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">VSM
+</span> DTC Chart. For
+all other DTCs, refer to the Master DTC Chart in 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSJA0L.HTM%26rightside%3dSCRSJA0R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 419-10
+</a>.
+</li></ol><ol start="10"><li>If no DTCs related to the concern are retrieved, GO to 
+<a href="SCR_us_en_file%3dSCR44004.HTM_gen_ref.HTM#SC3"                                                                                                                                                                                                                                                       >Symptom Chart
+</a>.
+</li></ol><div><a name="extract_295">&nbsp;
+</a></div>
+
+<p><b>DTC Charts
+</b></p><P class="SINGLESPACE"><B>&nbsp;Tire Pressure Monitor (TPM)/Vehicle Security Module (VSM) DTC Chart 
+</B></P><TABLE cellspacing="0" cellpadding="3" border="1"><TR><TH valign="bottom" align="center">DTC
+</TH><TH valign="bottom" align="center">Description
+</TH><TH valign="bottom" align="center">Action
+</TH></TR><TR><TD valign="top" align="center">B106A
+</TD><TD valign="top" align="left">TPMS Sensor Pressure Range Bit Incorrect State
+</TD><TD valign="top" align="left"><a href="SCR_us_en_file%3dSCR44004.HTM_gen_ref.HTM#PS2-D"                                                                                                                                                                                                                                                       >GO to Pinpoint Test D
+</a>.
+</TD></TR><TR><TD valign="top" align="center">B106B
+</TD><TD valign="top" align="left">Tire Pressure Sensor Low Battery
+</TD><TD valign="top" align="left">DTC B106B can be set during 
+<span title="Tire Pressure Monitor" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPM
+</span>/
+<span title="Vehicle Security Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">VSM
+</span> configuration. If DTC B106B was set
+during configuration, DISREGARD the DTC. If DTC B106B was not set during configuration.
+<a href="SCR_us_en_file%3dSCR44004.HTM_gen_ref.HTM#PS2-D"                                                                                                                                                                                                                                                       >GO to Pinpoint Test D
+</a>.
+</TD></TR><TR><TD valign="top" align="center">B106E
+</TD><TD valign="top" align="left">Solid State Driver Disabled Due To Short Circuit
+</TD><TD valign="top" align="left"><a href="SCR_us_en_file%3dSCR44004.HTM_gen_ref.HTM#PS2-E"                                                                                                                                                                                                                                                       >GO to Pinpoint Test E
+</a>.
+</TD></TR><TR><TD valign="top" align="center">B106F
+</TD><TD valign="top" align="left">Module Disabled Due To External Fault
+</TD><TD valign="top" align="left"><a href="SCR_us_en_file%3dSCR44004.HTM_gen_ref.HTM#PS2-E"                                                                                                                                                                                                                                                       >GO to Pinpoint Test E
+</a>.
+</TD></TR><TR><TD valign="top" align="center">B1217
+</TD><TD valign="top" align="left">Horn Relay Coil Circuit Failure
+</TD><TD valign="top" align="left">If the horn sounds continuously, REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSD60L.HTM%26rightside%3dSCRSD60R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 413-06
+</a>.
+
+<br><br>If the horn does not sound continuously, 
+<a href="SCR_us_en_file%3dSCR44004.HTM_gen_ref.HTM#PS2-E"                                                                                                                                                                                                                                                       >GO to Pinpoint Test E
+</a>.
+</TD></TR><TR><TD valign="top" align="center">B1218
+</TD><TD valign="top" align="left">Horn Relay Coil Circuit Short to VBatt
+</TD><TD valign="top" align="left"><a href="SCR_us_en_file%3dSCR44004.HTM_gen_ref.HTM#PS2-E"                                                                                                                                                                                                                                                       >GO to Pinpoint Test E
+</a>.
+</TD></TR><TR><TD valign="top" align="center">B1317
+</TD><TD valign="top" align="left">Battery Voltage High
+</TD><TD valign="top" align="left"><a href="SCR_us_en_file%3dSCR44004.HTM_gen_ref.HTM#PS2-F"                                                                                                                                                                                                                                                       >GO to Pinpoint Test F
+</a>.
+</TD></TR><TR><TD valign="top" align="center">B1342
+</TD><TD valign="top" align="left">ECU Is Faulted
+</TD><TD valign="top" align="left"><p><b>NOTE: 
+</b> If other DTCs are present, REPAIR them before installing a new component.
+</p>CLEAR the DTCs. REPEAT the self-test. If DTC B1342 is retrieved, INSTALL a new module. REFER to 
+<a href="SCR_us_en_file%3dSCR44007.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       >Tire Pressure Monitor (TPM) Module — 4-Door Sedan
+</a>or 
+<a href="SCR_us_en_file%3dSCR44008.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       >Tire Pressure Monitor (TPM) Module — 5-Door Hatchback
+</a> in this section. TEST the system for normal operation.
+</TD></TR><TR><TD valign="top" align="center">B1359
+</TD><TD valign="top" align="left">Ignition Run/Acc Circuit Failure
+</TD><TD valign="top" align="left"><a href="SCR_us_en_file%3dSCR44004.HTM_gen_ref.HTM#PS2-G"                                                                                                                                                                                                                                                       >GO to Pinpoint Test G
+</a>.
+</TD></TR><TR><TD valign="top" align="center">B1363
+</TD><TD valign="top" align="left">Ignition Start Circuit Failure
+</TD><TD valign="top" align="left"><a href="SCR_us_en_file%3dSCR44004.HTM_gen_ref.HTM#PS2-G"                                                                                                                                                                                                                                                       >GO to Pinpoint Test G
+</a>.
+</TD></TR><TR><TD valign="top" align="center">B2477
+</TD><TD valign="top" align="left">Module Configuration Failure
+</TD><TD valign="top" align="left">Only present in a new or reconfigured module. To configure the 
+<span title="Tire Pressure Monitor" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPM
+</span>/
+<span title="Vehicle Security Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">VSM
+</span> REFER
+to 
+<a href="SCR_us_en_file%3dSCR44007.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       >Tire Pressure Monitor (TPM) Module — 4-Door Sedan
+</a> or 
+<a href="SCR_us_en_file%3dSCR44008.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       >Tire Pressure Monitor (TPM) Module — 5-Door Hatchback
+</a> in this section.
+TEST the system for normal operation.
+</TD></TR><TR><TD valign="top" align="center">B2868
+</TD><TD valign="top" align="left">Left Front Tire Pressure Sensor Fault
+</TD><TD valign="top" align="left">Only present in a new or reconfigured module. To configure the 
+<span title="Tire Pressure Monitor" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPM
+</span>/
+<span title="Vehicle Security Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">VSM
+</span> REFER
+to 
+<a href="SCR_us_en_file%3dSCR44007.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       >Tire Pressure Monitor (TPM) Module — 4-Door Sedan
+</a> or 
+<a href="SCR_us_en_file%3dSCR44008.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       >Tire Pressure Monitor (TPM) Module — 5-Door Hatchback
+</a> in this section.
+TEST the system for normal operation.
+</TD></TR><TR><TD valign="top" align="center">B2869
+</TD><TD valign="top" align="left">Right Front Tire Pressure Sensor Fault
+</TD><TD valign="top" align="left">Only present in a new or reconfigured module. To configure the 
+<span title="Tire Pressure Monitor" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPM
+</span>/
+<span title="Vehicle Security Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">VSM
+</span> REFER
+to 
+<a href="SCR_us_en_file%3dSCR44007.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       >Tire Pressure Monitor (TPM) Module — 4-Door Sedan
+</a> or 
+<a href="SCR_us_en_file%3dSCR44008.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       >Tire Pressure Monitor (TPM) Module — 5-Door Hatchback
+</a> in this section.
+</TD></TR><TR><TD valign="top" align="center">B2870
+</TD><TD valign="top" align="left">Right Rear Tire Pressure Sensor Fault
+</TD><TD valign="top" align="left">Only present in a new or reconfigured module. To configure the 
+<span title="Tire Pressure Monitor" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPM
+</span>/
+<span title="Vehicle Security Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">VSM
+</span>. REFER
+to 
+<a href="SCR_us_en_file%3dSCR44007.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       >Tire Pressure Monitor (TPM) Module — 4-Door Sedan
+</a> or 
+<a href="SCR_us_en_file%3dSCR44008.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       >Tire Pressure Monitor (TPM) Module — 5-Door Hatchback
+</a> in this section.
+TEST the system for normal operation.
+</TD></TR><TR><TD valign="top" align="center">B2871
+</TD><TD valign="top" align="left">Left Rear Tire Pressure Sensor Fault
+</TD><TD valign="top" align="left">Only present in a new or reconfigured module. To configure the 
+<span title="Tire Pressure Monitor" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPM
+</span>/
+<span title="Vehicle Security Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">VSM
+</span>. REFER
+to 
+<a href="SCR_us_en_file%3dSCR44007.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       >Tire Pressure Monitor (TPM) Module — 4-Door Sedan
+</a> or 
+<a href="SCR_us_en_file%3dSCR44008.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       >Tire Pressure Monitor (TPM) Module — 5-Door Hatchback
+</a> in this section.
+TEST the system for normal operation.
+</TD></TR><TR><TD valign="top" align="center">B2872
+</TD><TD valign="top" align="left">Tire Pressure Sensor Fault
+</TD><TD valign="top" align="left">If DTC B287A is also present, 
+<a href="SCR_us_en_file%3dSCR44004.HTM_gen_ref.HTM#PS2-K"                                                                                                                                                                                                                                                       >GO to Pinpoint Test K
+</a>.
+
+<br><br>Otherwise, 
+<a href="SCR_us_en_file%3dSCR44004.HTM_gen_ref.HTM#PS2-J"                                                                                                                                                                                                                                                       >GO to Pinpoint Test J
+</a>.
+</TD></TR><TR><TD valign="top" align="center">B287A
+</TD><TD valign="top" align="left">Tire Pressure System Fault
+</TD><TD valign="top" align="left"><a href="SCR_us_en_file%3dSCR44004.HTM_gen_ref.HTM#PS2-K"                                                                                                                                                                                                                                                       >GO to Pinpoint Test K
+</a>.
+</TD></TR><TR><TD valign="top" align="center">C2780
+</TD><TD valign="top" align="left"><span title="Electronic Control Unit" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">ECU
+</span> in Manufacturer Sub-state
+</TD><TD valign="top" align="left">To configure the 
+<span title="Tire Pressure Monitor" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPM
+</span>/
+<span title="Vehicle Security Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">VSM
+</span> REFER
+to 
+<a href="SCR_us_en_file%3dSCR44007.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       >Tire Pressure Monitor (TPM) Module — 4-Door Sedan
+</a> or 
+<a href="SCR_us_en_file%3dSCR44008.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       >Tire Pressure Monitor (TPM) Module — 5-Door Hatchback
+</a> in this section.
+TEST the system for normal operation.
+</TD></TR><TR><TD valign="top" align="center">U0155
+</TD><TD valign="top" align="left">Lost Communication With Instrument Panel Cluster
+</TD><TD valign="top" align="left"><a href="SCR_us_en_file%3dSCR44004.HTM_gen_ref.HTM#PS2-L"                                                                                                                                                                                                                                                       >GO to Pinpoint Test L
+</a>.
+</TD></TR><TR><TD valign="top" align="center">U2023
+</TD><TD valign="top" align="left">Fault Received From External Node
+</TD><TD valign="top" align="left">RETRIEVE and REPAIR all non-network DTCs in the 
+<span title="Instrument Panel Cluster" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IPC
+</span>. REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSD10L.HTM%26rightside%3dSCRSD10R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 413-01
+</a>.
+</TD></TR><TR><TD valign="top" align="center">U2050
+</TD><TD valign="top" align="left">No Application Present
+</TD><TD valign="top" align="left">CONFIGURE the 
+<span title="Tire Pressure Monitor" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPM
+</span>/
+<span title="Vehicle Security Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">VSM
+</span>. REFER
+to Programmable Module Installation (PMI) in 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSI10L.HTM%26rightside%3dSCRSI10R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 418-01
+</a>. CARRY OUT the
+
+<span title="Tire Pressure Monitor" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPM
+</span>/
+<span title="Vehicle Security Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">VSM
+</span> self-test. If DTC U2050 returns, INSTALL a new
+
+<span title="Tire Pressure Monitor" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPM
+</span>/
+<span title="Vehicle Security Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">VSM
+</span>. REFER to
+
+<a href="SCR_us_en_file%3dSCR44007.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       >Tire Pressure Monitor (TPM) Module — 4-Door Sedan
+</a> or 
+<a href="SCR_us_en_file%3dSCR44008.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       >Tire Pressure Monitor (TPM) Module — 5-Door Hatchback
+</a> in this section.
+TEST the system for normal operation.
+</TD></TR></TABLE><br><div><a name="extract_296">&nbsp;
+</a></div>
+
+<p><b>Symptom Chart
+</b></p><a name="SC3">&nbsp;
+</a><table width="90%" cellpadding="3" cellspacing="0" rules="groups" border="1">
+
+<caption>Symptom Chart 
+
+<p><b>NOTE: 
+</b> Failure of a 
+<span title="Tire Pressure Monitoring System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPMS
+</span> component may not cause the message center to display a fault message or a DTC to be stored. The Symptom Chart is a starting point to
+begin diagnosis of these concerns.
+</p></caption><colgroup><colgroup><colgroup><tr><th>Condition
+</th><th>Possible Sources
+</th><th>Action
+</th></tr><tbody></tbody>
+
+<tr valign="top"><td><ul type="disc"><li>Tire Pressure Monitoring System (TPMS) indicator ON continuously from key ON with no related DTCs present
+</li></ul></td><td><ul type="disc"><li>Tire pressure not set to specifications listed on the Vehicle Certification (VC) label
+</li></ul></td><td><ul type="disc"><li><a href="SCR_us_en_file%3dSCR44004.HTM_gen_ref.HTM#PS2-I"                                                                                                                                                                                                                                                       >GO to Pinpoint Test I
+</a>.
+</li></ul></td></tr><tbody></tbody>
+
+<tr valign="top"><td><ul type="disc"><li><span title="Tire Pressure Monitoring System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPMS
+</span> indicator flashes for 70 seconds from key ON and then remains on continuously
+</li></ul></td><td><ul type="disc"><li><span title="Tire Pressure Monitoring System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPMS
+</span> sensor(s) not trained to
+the 
+<span title="Tire Pressure Monitor" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPM
+</span>/
+<span title="Vehicle Security Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">VSM
+</span></li><li><span title="Tire Pressure Monitoring System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPMS
+</span> sensor(s) not installed
+</li><li>Spare tire in use or road wheel missing for extended duration
+</li><li>Incorrect 
+<span title="Tire Pressure Monitoring System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPMS
+</span> sensor installed
+</li><li>Network communication concern
+</li><li><span title="Tire Pressure Monitor" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPM
+</span>/
+<span title="Vehicle Security Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">VSM
+</span></li></ul></td><td><ul type="disc"><li>RETRIEVE the DTCs. FOLLOW diagnostics for the DTCs present. REFER to DTC Charts in this section.
+</li></ul></td></tr><tbody></tbody>
+
+<tr valign="top"><td><ul type="disc"><li>The 
+<span title="Tire Pressure Monitoring System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPMS
+</span> does not enter sensor training mode when using the 
+<span title="Tire Pressure Monitoring System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPMS
+</span>sensor training procedure
+</li></ul></td><td><ul type="disc"><li>Stoplamp switch open circuitry
+</li><li>Vehicle communication network
+</li><li><span title="Tire Pressure Monitor" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPM
+</span>/
+<span title="Vehicle Security Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">VSM
+</span></li></ul></td><td><ul type="disc"><li><a href="SCR_us_en_file%3dSCR44004.HTM_gen_ref.HTM#PS2-H"                                                                                                                                                                                                                                                       >GO to Pinpoint Test H
+</a>.
+</li></ul></td></tr><tbody></tbody>
+
+<tr valign="top"><td><ul type="disc"><li>The Tire Pressure Monitoring System (TPMS) enters sensor training mode but one or more sensors do not train and DTCs are present
+</li></ul></td><td><ul type="disc"><li><span title="Tire Pressure Monitoring System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPMS
+</span> sensor(s)
+</li><li>Vehicle communication issue
+</li><li><span title="Tire Pressure Monitor" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPM
+</span>/
+<span title="Vehicle Security Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">VSM
+</span></li></ul></td><td><ul type="disc"><li>RETRIEVE and RECORD DTCs. REFER to Tire Pressure Monitoring System (TPMS) DTC Chart in this section.
+</li></ul></td></tr><tbody></tbody>
+
+<tr valign="top"><td><ul type="disc"><li>The Tire Pressure Monitoring System (TPMS) enters sensor training mode but one or more sensors do not train and no DTCs are present
+</li></ul></td><td><ul type="disc"><li><span title="Tire Pressure Monitoring System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPMS
+</span> sensor(s)
+</li><li>Attempting to install a banded 
+<span title="Tire Pressure Monitoring System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPMS
+</span> sensor that is not compatible with a valve stem mounted sensor
+</li></ul></td><td><ul type="disc"><li>TRAIN all 4 tire pressure sensors. REFER to 
+<a href="SCR_us_en_file%3dSCR44005.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       >Tire Pressure Monitoring System (TPMS) Sensor Training
+</a> in this section.
+</li><li>If a sensor does not respond to the Tire Pressure Monitor Activation Tool, MOVE the vehicle to rotate the wheels at least one-fourth of a turn and ATTEMPT to activate the same sensor again. If the sensor still does not respond, ATTEMPT to
+activate the same sensor again using the customer activation tool (if available). If the sensor still fails to train, ATTEMPT to train the sensor with the vehicle doors open.
+</li><li>If the sensor(s) fails to train a second time, INSTALL a new sensor(s). REFER to 
+<a href="SCR_us_en_file%3dSCR44011.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       >Tire Pressure Monitoring System (TPMS) Sensor
+</a> in this section.
+</li></ul></td></tr></table><div><a name="extract_297">&nbsp;
+</a></div>
+
+<p><b>Pinpoint Tests
+</b></p><a name="PS2-D">&nbsp;
+</a><p><b>Pinpoint Test D: DTCs B106A, B106B
+</b></p><h5>Normal Operation 
+</h5><p>If there is a fault in the Tire Pressure Monitoring System (TPMS), such as a damaged or missing sensor(s), damaged module or a communication issue within the vehicle, DTCs are set in
+the Tire Pressure Monitor (TPM)/Vehicle Security Module (VSM).
+The 
+<span title="Tire Pressure Monitoring System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPMS
+</span> warning indicator flashes for 70 seconds and then remains on continuously when the ignition switch is turned to the ON position.
+</p><ul type="disc"><li>DTC B106A (TPMS Sensor Range Bit Incorrect State) — sets if an attempt has been made to train a non-compatible sensor.
+</li><li>DTC B106B (Tire Pressure Sensor Low Battery) — sets if an attempt has been made to train a tire pressure sensor(s) with a low battery. This DTC can also set in
+the Tire Pressure Monitor (TPM)/Vehicle Security Module (VSM) during configuration.
+</li></ul><ul type="disc"><b>This pinpoint test is intended to diagnose the following: 
+</b>
+
+<li>Non-compatible sensor
+</li><li>Tire pressure sensor battery
+</li><li>Tire pressure sensor(s)
+</li></ul><a name="D">&nbsp;
+</a><h5>PINPOINT TEST D:  DTCs B106A, B106B 
+</h5><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="D1">&nbsp;
+</a><b>D1 DETERMINE WHICH SENSOR HAS A LOW BATTERY OR IS NON-COMPATIBLE 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Train all 4 tire pressure sensors. Refer to 
+<a href="SCR_us_en_file%3dSCR44005.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       >Tire Pressure Monitoring System (TPMS) Sensor Training
+</a> in this section.
+</li><li><b>Did all of the tire pressure sensors transmit correctly and did the horn sound when each tire pressure sensor transmitted to
+the 
+<span title="Tire Pressure Monitor" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPM
+</span>/
+<span title="Vehicle Security Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">VSM
+</span>?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>CLEAR the DTCs. REPEAT the self-test. VERIFY system operation. 
+
+<br><br><b>No
+</b><br><b>Before installing a new sensor(s)
+</b>: If a sensor does not respond to the Tire Pressure Monitor Activation Tool, MOVE the vehicle to ROTATE the wheels at least one-fourth of a turn and ATTEMPT to ACTIVATE the same sensor again.
+ If the sensor still does not respond, ATTEMPT to ACTIVATE the same sensor again using the customer activation tool (if available). If the sensor still fails to train, ATTEMPT to TRAIN the sensor with the vehicle doors open. 
+
+<br><br>If the sensor(s) fails to train a second time, INSTALL a new tire pressure sensor(s). REFER to 
+<a href="SCR_us_en_file%3dSCR44011.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       >Tire Pressure Monitoring System (TPMS) Sensor
+</a> in this section. 
+</td></tr></table><a name="PS2-E">&nbsp;
+</a><p><b>Pinpoint Test E: DTCs B106E, B106F, B1217 and B1218
+</b></p><p><p>Refer to Wiring Diagrams Cell 
+<a target="_parent" href="SCR_us_en_book%3dECR%26cell%3d118%26page%3d%26year%3d%26vehicle%3d2012%20Fiesta%26market%3dUS%26lang%3dEN%26RTYPE%3dDIAGRAM%26lega"                                                                                                                                                                                                                                                               >118
+</a>, Tire Pressure Monitoring System (TPMS) for schematic and connector information.
+</p></p><h5>Normal Operation 
+</h5><p>The Tire Pressure Monitoring System (TPMS) uses the horn as a feedback signal during 
+<span title="Tire Pressure Monitoring System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPMS
+</span> sensor
+training and activation by sending a ground signal to the Body Control Module (BCM). When the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> receives this ground
+signal it activates the horn relay and sounds the horn.
+</p><p>The 
+<span title="Tire Pressure Monitoring System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPMS
+</span> monitors the circuit for shorts to voltage, ground and opens. If one of these conditions is detected, the appropriate DTC sets.
+</p><p>The 
+<span title="Tire Pressure Monitor" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPM
+</span>/
+<span title="Vehicle Security Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">VSM
+</span> utilizes
+a Field-Effect Transistor (FET) (in place of a fuse) to protect itself during a short circuit condition, the 
+<span title="Field-Effect Transistor" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">FET
+</span> is
+also known as a solid state driver. The 
+<span title="Field-Effect Transistor" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">FET
+</span> is only designed to withstand a certain amount of use.
+</p><p>The 
+<span title="Tire Pressure Monitoring System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPMS
+</span> keeps track of how many times DTC B106E is set and once that counter reaches a predetermined number (based off
+of 
+<span title="Field-Effect Transistor" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">FET
+</span> durability) DTC B106F (and usually B1342) set. DTCs B1217, B1218 and/or B106E also set along with B106F. The only way to clear B106F is by installing a new
+Tire Pressure Monitor (TPM)/Vehicle Security Module (VSM). Repair the circuit conditions that set DTCs B1217, B1218 and/or B106E before installing
+a new 
+<span title="Tire Pressure Monitor" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPM
+</span>/
+<span title="Vehicle Security Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">VSM
+</span>.
+</p><br><br><TABLE cellspacing="0" cellpadding="3" border="1"><TR><TH valign="bottom" align="center">DTC Description
+</TH><TH valign="bottom" align="center">Fault Trigger Condition
+</TH></TR><TR><TD valign="top" align="left">• B1217 — Horn Relay Coil Circuit Failure
+</TD><TD valign="top" align="left">This DTC sets when the 
+<span title="Tire Pressure Monitoring System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPMS
+</span> detects an open or a short to ground on horn control circuit. A short to ground on the horn control circuit causes the horn
+to sound continuously.
+</TD></TR><TR><TD valign="top" align="left">• B1218 — Horn Relay Coil Circuit Short to VBatt
+</TD><TD valign="top" align="left">This DTC sets when the 
+<span title="Tire Pressure Monitoring System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPMS
+</span> detects a short to battery voltage.
+</TD></TR><TR><TD valign="top" align="left">• B106E — Solid State Driver Disabled Due to Short Circuit
+</TD><TD valign="top" align="left">This DTC sets when the 
+<span title="Tire Pressure Monitoring System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPMS
+</span> has protected the horn control circuit and the horn driver has been deactivated until the vehicle is serviced.
+</TD></TR><TR><TD valign="top" align="left">• B106F — Module Disabled Due to External Fault
+</TD><TD valign="top" align="left">This DTC sets when DTC B106F indicates the horn control driver has reached the end of its life expectancy and has been permanently disabled.
+</TD></TR></TABLE><br><ul type="disc"><b>This pinpoint test is intended to diagnose the following: 
+</b>
+
+<li>Wiring, terminals or connectors
+</li><li><span title="Tire Pressure Monitor" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPM
+</span>/
+<span title="Vehicle Security Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">VSM
+</span></li><li><span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> module
+</li></ul><a name="E">&nbsp;
+</a><h5>PINPOINT TEST E: DTCs B106E, B106F, B1217 AND B1218 
+</h5><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="E1">&nbsp;
+</a><b>E1 CHECK THE HORN OPERATION 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><p class="singlespace"><b><i>NOTICE: 
+</i> If DTC B106F is present, correct the fault condition prior to installing a new
+Tire Pressure Monitor (TPM)/Vehicle Security Module (VSM). Failure to correct the fault condition first may cause damage to the new
+
+<span title="Tire Pressure Monitor" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPM
+</span>/
+<span title="Vehicle Security Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">VSM
+</span>, resulting in a repeat repair.
+</b></p><li>Push the horn pad.
+</li><li><b>Does the horn sound?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCR44004.HTM_gen_ref.HTM#E2"                                                                                                                                                                                                                                                       >E2
+</a>. 
+
+<br><br><b>No
+</b><br>GO to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSD60L.HTM%26rightside%3dSCRSD60R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 413-06
+</a> to diagnose the horn. 
+</td></tr><tr><td><a name="E2">&nbsp;
+</a><b>E2 CHECK THE HORN CIRCUIT FUNCTION 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><p class="singlespace"><b><i>NOTICE: 
+</i> If the jumper wire fails, refer to the Wiring Diagrams Manual to identify the possible causes of the circuit short. After the repair: If no DTCs are present, test the system for normal operation. If DTC B106E is present, Clear the DTCs
+and repeat the self-test (required to enable the horn driver if DTC B106E is present). Test the system for normal operation. If DTC B106F is present, install a
+new 
+<span title="Tire Pressure Monitor" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPM
+</span>/
+<span title="Vehicle Security Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">VSM
+</span>. Refer
+to 
+<a href="SCR_us_en_file%3dSCR44007.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       >Tire Pressure Monitor (TPM) Module — 4-Door Sedan
+</a> or 
+<a href="SCR_us_en_file%3dSCR44008.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       >Tire Pressure Monitor (TPM) Module — 5-Door Hatchback
+</a> in this section.
+Test the system for normal operation.
+</b></p><li>Ignition OFF.
+</li><li>Disconnect:   
+<span title="Tire Pressure Monitor" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPM
+</span>/
+<span title="Vehicle Security Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">VSM
+</span> C4321B.
+</li><li>Ignition ON.
+</li><li>Connect a fused jumper wire between the 
+<span title="Tire Pressure Monitor" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPM
+</span>/
+<span title="Vehicle Security Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">VSM
+</span>,
+C4321B-9 CRH03 (BN), harness side and ground.
+</li><br><br><IMG src="SCR_us_en_file%3dN0113349.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="211" width="325" border="0"><li><b>Does the horn sound?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REMOVE the jumper wire. GO to 
+<a href="SCR_us_en_file%3dSCR44004.HTM_gen_ref.HTM#E3"                                                                                                                                                                                                                                                       >E3
+</a> 
+
+<br><br><b>No
+</b><br>REMOVE the jumper wire. REPAIR circuit CRH03 (BN) for an open circuit. CLEAR the DTCs and REPEAT the self-test. 
+</td></tr><tr><td><a name="E3">&nbsp;
+</a><b>E3 CHECK FOR CORRECT 
+<span title="TIRE PRESSURE MONITORING SYSTEM" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPMS
+</span> OPERATION 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect all the 
+<span title="Tire Pressure Monitor" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPM
+</span>/
+<span title="Vehicle Security Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">VSM
+</span> electrical connectors.
+</li><li>Check the connectors for:
+</li>
+
+<ul type="square"><li>corrosion.
+</li><li>pushed-out pins.
+</li><li>spread terminals.
+</li></ul><li>Connect all the 
+<span title="Tire Pressure Monitor" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPM
+</span>/
+<span title="Vehicle Security Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">VSM
+</span> connectors and make sure that they are seated correctly.
+</li><li><b>Is the concern still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new 
+<span title="Tire Pressure Monitor" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPM
+</span>/
+<span title="Vehicle Security Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">VSM
+</span>. REFER
+ to 
+<a href="SCR_us_en_file%3dSCR44007.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       >Tire Pressure Monitor (TPM) Module — 4-Door Sedan
+</a> or 
+<a href="SCR_us_en_file%3dSCR44008.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       >Tire Pressure Monitor (TPM) Module — 5-Door Hatchback
+</a> in this section.
+ TEST the system for normal operation. 
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector. CLEAR the DTCs. REPEAT the self-test. 
+</td></tr></table><a name="PS2-F">&nbsp;
+</a><p><b>Pinpoint Test F: DTC B1317
+</b></p><p><p>Refer to Wiring Diagrams Cell 
+<a target="_parent" href="SCR_us_en_book%3dECR%26cell%3d118%26page%3d%26year%3d%26vehicle%3d2012%20Fiesta%26market%3dUS%26lang%3dEN%26RTYPE%3dDIAGRAM%26lega"                                                                                                                                                                                                                                                               >118
+</a>, Tire Pressure Monitoring System (TPMS) for schematic and connector information.
+</p></p><h5>Normal Operation 
+</h5><p>The Tire Pressure Monitoring System (TPMS) monitors the voltage from the battery to determine if it exceeds specific thresholds. DTC B1317 sets in continuous memory if
+the 
+<span title="Tire Pressure Monitoring System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPMS
+</span> detects battery voltage above 16 volts.
+</p><ul type="disc"><li>DTC B1317 (Battery Voltage High) — sets if the voltage supplied to the
+Tire Pressure Monitor (TPM)/Vehicle Security Module (VSM) exceeds 16 volts during the
+
+<span title="Tire Pressure Monitor" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPM
+</span>/
+<span title="Vehicle Security Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">VSM
+</span> self-test or normal operation, with vehicle speed greater than 5 km/h (3 mph).
+</li></ul><ul type="disc"><b>This pinpoint test is intended to diagnose the following: 
+</b>
+
+<li>Wiring, terminals or connectors
+</li><li>Charging system concern
+</li><li><span title="Tire Pressure Monitor" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPM
+</span>/
+<span title="Vehicle Security Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">VSM
+</span></li></ul><a name="F">&nbsp;
+</a><h5>PINPOINT TEST F: DTC B1317 
+</h5>
+
+<p><b>NOTE: 
+</b> DTC B1317 can be set if the vehicle has been recently jump started or the battery has been recently charged. The battery may become discharged due to excessive load(s) on the charging system from aftermarket accessories or if the battery
+has been left unattended with the accessories on.
+</p><p><b>NOTE: 
+</b> Carry out a thorough inspection and verification before proceeding with the pinpoint test. Refer to Inspection and Verification in this section.
+</p><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="F1">&nbsp;
+</a><b>F1 RETRIEVE ALL 
+<span title="CONTINUOUS MEMORY DIAGNOSTIC TROUBLE CODES" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">CMDTCs
+</span> IN ALL MODULES 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Connect the scan tool.
+</li><li>Ignition ON.
+</li><li>Enter the following diagnostic mode on the scan tool:   
+<span title="Vehicle Security Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">VSM
+</span> Self-Test.
+</li><li><b>Is DTC B1317 present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSE00L.HTM%26rightside%3dSCRSE00R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 414-00
+</a> to diagnose the charging system. CLEAR all Continuous Memory Diagnostic Trouble Codes (CMDTCs).
+ TEST the system for normal operation. 
+
+<br><br><b>No
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCR44004.HTM_gen_ref.HTM#F2"                                                                                                                                                                                                                                                       >F2
+</a>. 
+</td></tr><tr><td><a name="F2">&nbsp;
+</a><b>F2 CHECK BATTERY CONDITION 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Ignition OFF.
+</li><li>Refer to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSE10L.HTM%26rightside%3dSCRSE10R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 414-01
+</a> and carry out the battery condition test.
+</li><li><b>Does the battery pass the condition test?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>If the battery passed the condition test but required a recharge, REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSE00L.HTM%26rightside%3dSCRSE00R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 414-00
+</a>. CLEAR all
+ 
+<span title="Continuous Memory Diagnostic Trouble Codes" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">CMDTCs
+</span>. TEST the system for normal operation. If the battery passed the condition test and did not require a recharge, GO to 
+<a href="SCR_us_en_file%3dSCR44004.HTM_gen_ref.HTM#F3"                                                                                                                                                                                                                                                       >F3
+</a>. 
+
+<br><br><b>No
+</b><br>INSTALL a new battery. CLEAR all 
+<span title="Continuous Memory Diagnostic Trouble Codes" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">CMDTCs
+</span>. TEST the system for normal operation. 
+</td></tr><tr><td><a name="F3">&nbsp;
+</a><b>F3 CHECK THE CHARGING SYSTEM VOLTAGE 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><p class="singlespace"><b>NOTE: 
+</b> Do not allow the engine rpm to increase above 2,000 rpm while performing this step or the generator may self-excite and result in default charging system output voltage. If engine rpm has gone above 2,000 rpm, shut the vehicle off and restart
+the engine before performing this step.
+</p><li>Start the engine.
+</li><li>Measure the voltage of the battery:
+</li><ul type="square"><li>Turn off all accessories and run the engine at 1,500 rpm for a minimum of 2 minutes.
+</li></ul><br><br><IMG src="SCR_us_en_file%3dAJ0210A.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="211" width="325" border="0"><li><b>Is the battery voltage between 13-15.2 volts?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCR44004.HTM_gen_ref.HTM#F4"                                                                                                                                                                                                                                                       >F4
+</a> 
+
+<br><br><b>No
+</b><br>REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSE00L.HTM%26rightside%3dSCRSE00R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 414-00
+</a> to diagnose battery and charging system. TEST the system for normal operation. 
+</td></tr><tr><td><a name="F4">&nbsp;
+</a><b>F4 CHECK FOR CORRECT 
+<span title="TIRE PRESSURE MONITORING SYSTEM" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPMS
+</span> OPERATION 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect all the 
+<span title="Tire Pressure Monitor" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPM
+</span>/
+<span title="Vehicle Security Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">VSM
+</span> electrical connectors.
+</li><li>Check the connectors for:
+</li>
+
+<ul type="square"><li>corrosion.
+</li><li>pushed-out pins.
+</li><li>spread terminals.
+</li></ul><li>Connect all the 
+<span title="Tire Pressure Monitor" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPM
+</span>/
+<span title="Vehicle Security Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">VSM
+</span> connectors and make sure that they are seated correctly.
+</li><li><b>Is the concern still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new 
+<span title="Tire Pressure Monitor" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPM
+</span>/
+<span title="Vehicle Security Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">VSM
+</span>. REFER
+ to 
+<a href="SCR_us_en_file%3dSCR44007.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       >Tire Pressure Monitor (TPM) Module — 4-Door Sedan
+</a> or 
+<a href="SCR_us_en_file%3dSCR44008.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       >Tire Pressure Monitor (TPM) Module — 5-Door Hatchback
+</a> in this section.
+ TEST the system for normal operation. 
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector. CLEAR the DTCs. REPEAT the self-test. 
+</td></tr></table><a name="PS2-G">&nbsp;
+</a><p><b>Pinpoint Test G: DTCs B1359 and B1363
+</b></p><p><p>Refer to Wiring Diagrams Cell 
+<a target="_parent" href="SCR_us_en_book%3dECR%26cell%3d118%26page%3d%26year%3d%26vehicle%3d2012%20Fiesta%26market%3dUS%26lang%3dEN%26RTYPE%3dDIAGRAM%26lega"                                                                                                                                                                                                                                                               >118
+</a>, Tire Pressure Monitoring System (TPMS) for schematic and connector information.
+</p></p><h5>Normal Operation 
+</h5><p>The Tire Pressure Monitor (TPM)/Vehicle Security Module (VSM) receives voltage from
+the Central Junction Box (CJB).
+</p><ul type="disc"><li>DTC B1359 (Ignition Run/Acc Circuit Failure) — sets if the 
+<span title="Tire Pressure Monitoring System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPMS
+</span> detects that the RUN/ACC input is open or shorted to ground. This DTC also sets set
+if the self-test is performed with the ignition in the OFF or ACC positions.
+</li><li>DTC B1363 (Ignition Start Circuit Failure) — sets if the 
+<span title="Tire Pressure Monitoring System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPMS
+</span> detects that the RUN/START input is open or shorted to ground. This DTC also sets set
+if the self-test is performed with the ignition in the OFF or ACC positions.
+</li></ul><ul type="disc"><b>This pinpoint test is intended to diagnose the following: 
+</b>
+
+<li>Fuse(s)
+</li><li>Wiring, terminals or connectors
+</li><li><span title="Tire Pressure Monitor" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPM
+</span>/
+<span title="Vehicle Security Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">VSM
+</span></li><li>Ignition switch
+</li></ul><a name="G">&nbsp;
+</a><h5>PINPOINT TEST G: DTCs B1359 and B1363 
+</h5>
+
+<p><b><i>NOTICE: 
+</i> Use the correct probe adapter(s) when making measurements. Failure to use the correct probe adapter(s) may damage the connector.
+</b></p><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="G1">&nbsp;
+</a><b>G1 CHECK VOLTAGE TO THE 
+<span title="TIRE PRESSURE MONITOR" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPM
+</span>/
+<span title="VEHICLE SECURITY MODULE" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">VSM
+</span> 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Ignition In ACC.
+</li><li>Disconnect:   
+<span title="Tire Pressure Monitor" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPM
+</span>/
+<span title="Vehicle Security Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">VSM
+</span> C4321A.
+</li><li>Ignition ON.
+</li><li>Measure the voltage between the 
+<span title="Tire Pressure Monitor" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPM
+</span>/
+<span title="Vehicle Security Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">VSM
+</span> C4321A-20,
+circuit CBP26 (BU/WH), harness side and ground.
+</li><br><br><IMG src="SCR_us_en_file%3dN0113350.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="211" width="325" border="0"><li>Measure the voltage between the 
+<span title="Tire Pressure Monitor" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPM
+</span>/
+<span title="Vehicle Security Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">VSM
+</span> C4321A-23,
+circuit CBP23 (BN/YE), harness side and ground.
+</li><br><br><IMG src="SCR_us_en_file%3dN0113351.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="211" width="325" border="0"><li><b>Are the voltages greater than 10 volts?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCR44004.HTM_gen_ref.HTM#G2"                                                                                                                                                                                                                                                       >G2
+</a> 
+
+<br><br><b>No
+</b><br>VERIFY the 
+<span title="Central Junction Box" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">CJB
+</span> fuses 26 (7.5A) and 23 (10A) are OK. If OK, REPAIR open in circuit CBP26 (BU/WH) or circuit CBP23 (BN/YE). If not OK, REFER to the Wiring Diagrams
+ manual to identify the possible causes of the short circuit. 
+</td></tr><tr><td><a name="G2">&nbsp;
+</a><b>G2 CHECK FOR CORRECT 
+<span title="TIRE PRESSURE MONITORING SYSTEM" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPMS
+</span> OPERATION 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect all the 
+<span title="Tire Pressure Monitor" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPM
+</span>/
+<span title="Vehicle Security Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">VSM
+</span> electrical connectors.
+</li><li>Check the connectors for:
+</li>
+
+<ul type="square"><li>corrosion.
+</li><li>pushed-out pins.
+</li><li>spread terminals.
+</li></ul><li>Connect all the 
+<span title="Tire Pressure Monitor" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPM
+</span>/
+<span title="Vehicle Security Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">VSM
+</span> connectors and make sure that they are seated correctly.
+</li><li><b>Is the concern still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new 
+<span title="Tire Pressure Monitor" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPM
+</span>/
+<span title="Vehicle Security Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">VSM
+</span>. REFER
+ to 
+<a href="SCR_us_en_file%3dSCR44007.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       >Tire Pressure Monitor (TPM) Module — 4-Door Sedan
+</a> or 
+<a href="SCR_us_en_file%3dSCR44008.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       >Tire Pressure Monitor (TPM) Module — 5-Door Hatchback
+</a> in this section.
+ TEST the system for normal operation. 
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector. CLEAR the DTCs. REPEAT the self-test. 
+</td></tr></table><a name="PS2-H">&nbsp;
+</a><p><b>Pinpoint Test H: The Tire Pressure Monitoring System (TPMS) Does Not Enter Sensor Training Mode When Using
+the 
+<span title="Tire Pressure Monitoring System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPMS
+</span> Sensor Training Procedure
+</b></p><h5>Normal Operation 
+</h5><p>For the 
+<span title="Tire Pressure Monitoring System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPMS
+</span> to enter 
+<span title="Tire Pressure Monitoring System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPMS
+</span> sensor training mode,
+the 
+<span title="Tire Pressure Monitor" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPM
+</span>/
+<span title="Vehicle Security Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">VSM
+</span> must receive valid inputs from the stoplamp switch (OFF-ON-OFF) and it must
+receive valid Vehicle Speed Sensor (VSS) input (0 km/h [0 mph]).
+The 
+<span title="Tire Pressure Monitor" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPM
+</span>/
+<span title="Vehicle Security Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">VSM
+</span> also monitors the ignition switch status (both OFF and RUN). Refer
+to 
+<a href="SCR_us_en_file%3dSCR44005.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       >Tire Pressure Monitoring System (TPMS) Sensor Training
+</a> in this section for the complete sensor training procedure.
+</p><ul type="disc"><b>This pinpoint test is intended to diagnose the following: 
+</b>
+
+<li>Wiring, terminals or connectors
+</li><li>Stoplamp switch state
+</li><li><span title="Tire Pressure Monitor" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPM
+</span>/
+<span title="Vehicle Security Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">VSM
+</span></li></ul><a name="H">&nbsp;
+</a><h5>PINPOINT TEST H: 
+<span title="TIRE PRESSURE MONITOR" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPM
+</span>/
+<span title="VEHICLE SECURITY MODULE" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">VSM
+</span> DOES NOT ENTER SENSOR TRAINING MODE WHEN USING
+ THE 
+<span title="TIRE PRESSURE MONITORING SYSTEM" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPMS
+</span> TRAINING PROCEDURE 
+</h5><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="H1">&nbsp;
+</a><b>H1 RETRIEVE THE RECORDED DTCs FROM THE SELF-TEST 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Ignition ON.
+</li><li>Enter the following diagnostic mode on the scan tool:   
+<span title="Vehicle Security Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">VSM
+</span> Self-Test.
+</li><li><b>Are there any 
+<span title="Tire Pressure Monitor" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPM
+</span>/
+<span title="Vehicle Security Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">VSM
+</span> DTCs present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to the 
+<span title="Tire Pressure Monitor" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPM
+</span>/
+<span title="Vehicle Security Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">VSM
+</span> DTC chart in this section. 
+
+<br><br><b>No
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCR44004.HTM_gen_ref.HTM#H2"                                                                                                                                                                                                                                                       >H2
+</a> 
+</td></tr><tr><td><a name="H2">&nbsp;
+</a><b>H2 CHECK THE 
+<span title="TIRE PRESSURE MONITORING SYSTEM" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPMS
+</span> BRAKE ON/OFF (BOO_INPUT) PID 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Enter the following diagnostic mode on the scan tool:   
+<span title="Vehicle Security Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">VSM
+</span> DataLogger.
+</li><li>Monitor the BOO_INPUT PID (
+<span title="Tire Pressure Monitoring System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPMS
+</span> receives the brake pedal information from
+the Instrument Panel Cluster (IPC)).
+</li><li>Press and release the brake pedal while monitoring the PID.
+</li><li><b>Do the brake pedal PID values match the brake pedal positions?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCR44004.HTM_gen_ref.HTM#H3"                                                                                                                                                                                                                                                       >H3
+</a>. 
+
+<br><br><b>No
+</b><br>REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSH10L.HTM%26rightside%3dSCRSH10R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 417-01
+</a> to continue diagnosis of the stoplamps. 
+</td></tr><tr><td><a name="H3">&nbsp;
+</a><b>H3 CHECK THE 
+<span title="TIRE PRESSURE MONITORING SYSTEM" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPMS
+</span> VEHICLE SPEED SENSOR (VSS) PID 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Monitor the VSS PID (
+<span title="Tire Pressure Monitoring System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPMS
+</span> receives vehicle speed from the 
+<span title="Instrument Panel Cluster" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IPC
+</span>).
+</li><li><b>Is the vehicle speed less than 5 km/h (3 mph)?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCR44004.HTM_gen_ref.HTM#H4"                                                                                                                                                                                                                                                       >H4
+</a>. 
+
+<br><br><b>No
+</b><br>REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSD10L.HTM%26rightside%3dSCRSD10R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 413-01
+</a> continue diagnosis of the vehicle speed. 
+</td></tr><tr><td><a name="H4">&nbsp;
+</a><b>H4 CHECK FOR CORRECT 
+<span title="TIRE PRESSURE MONITORING SYSTEM" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPMS
+</span> OPERATION 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect all the 
+<span title="Tire Pressure Monitor" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPM
+</span>/
+<span title="Vehicle Security Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">VSM
+</span> electrical connectors.
+</li><li>Check the connectors for:
+</li>
+
+<ul type="square"><li>corrosion.
+</li><li>pushed-out pins.
+</li><li>spread terminals.
+</li></ul><li>Connect all the 
+<span title="Tire Pressure Monitor" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPM
+</span>/
+<span title="Vehicle Security Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">VSM
+</span> connectors and make sure that they are seated correctly.
+</li><li>Attempt to train the 
+<span title="Tire Pressure Monitoring System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPMS
+</span> sensors again. Refer to 
+<a href="SCR_us_en_file%3dSCR44005.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       >Tire Pressure Monitoring System (TPMS) Sensor Training
+</a> in
+this section.
+</li><li><b>Is the concern still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>The 
+<span title="Tire Pressure Monitoring System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPMS
+</span> sensors may not be present. DISMOUNT the tire. REFER to 
+<a href="SCR_us_en_file%3dSCR44010.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       >Wheel and Tire
+</a> in this section. VERIFY that
+ the sensors are present and mounted to the wheels. If missing, INSTALL new 
+<span title="Tire Pressure Monitoring System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPMS
+</span> sensors. 
+
+<br><br>If the 
+<span title="Tire Pressure Monitoring System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPMS
+</span> sensors are present, INSTALL a
+ new 
+<span title="Tire Pressure Monitor" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPM
+</span>/
+<span title="Vehicle Security Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">VSM
+</span>. REFER
+ to 
+<a href="SCR_us_en_file%3dSCR44007.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       >Tire Pressure Monitor (TPM) Module — 4-Door Sedan
+</a> or 
+<a href="SCR_us_en_file%3dSCR44008.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       >Tire Pressure Monitor (TPM) Module — 5-Door Hatchback
+</a> in this section.
+ TEST the system for normal operation. 
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector. CLEAR the DTCs. REPEAT the self-test. 
+</td></tr></table><a name="PS2-I">&nbsp;
+</a><p><b>Pinpoint Test I: 
+<span title="Tire Pressure Monitoring System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPMS
+</span> Indicator On Continuously From Key ON With No Related DTCs Present
+</b></p><h5>Normal Operation 
+</h5><p>The 
+<span title="Tire Pressure Monitoring System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPMS
+</span> function compares each tire pressure sensor transmission against a low pressure limit. If the pressure falls below this limit,
+the Tire Pressure Monitor (TPM)/Vehicle Security Module (VSM) communicates this on
+the Medium Speed Controller Area Network (MS-CAN) to the Instrument Panel Cluster (IPC).
+The 
+<span title="Instrument Panel Cluster" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IPC
+</span> illuminates the 
+<span title="Tire Pressure Monitoring System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPMS
+</span> indicator.
+</p><ul type="disc"><b>This pinpoint test is intended to diagnose the following: 
+</b>
+
+<li>Low tire pressure
+</li><li>Spare tire in use
+</li><li>Stuck 
+<span title="Tire Pressure Monitoring System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPMS
+</span> sensor
+</li></ul><a name="I">&nbsp;
+</a><h5>PINPOINT TEST I: 
+<span title="TIRE PRESSURE MONITORING SYSTEM" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPMS
+</span> INDICATOR ON CONTINUOUSLY FROM KEY ON WITH NO 
+<span title="TIRE PRESSURE MONITORING SYSTEM" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPMS
+</span> RELATED
+ DTCs PRESENT IN THE 
+<span title="TIRE PRESSURE MONITOR" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPM
+</span>/
+<span title="VEHICLE SECURITY MODULE" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">VSM
+</span> 
+</h5><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="I1">&nbsp;
+</a><b>I1 DETERMINE 
+<span title="TIRE PRESSURE MONITORING SYSTEM" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPMS
+</span> SYSTEM STATUS (TP_STAT) PID 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Connect the scan tool.
+</li><li>Ignition ON.
+</li><li>Enter the following diagnostic mode on the scan tool:   
+<span title="Vehicle Security Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">VSM
+</span> DataLogger.
+</li><li>Read and record the TP_STAT PID.
+</li><li><b>Is the 
+<span title="Tire Pressure Monitoring System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPMS
+</span> system status LOW?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCR44004.HTM_gen_ref.HTM#I2"                                                                                                                                                                                                                                                       >I2
+</a>. 
+
+<br><br><b>No
+</b><br>IF TP_STAT = SENSOR FAULT, 
+<a href="SCR_us_en_file%3dSCR44004.HTM_gen_ref.HTM#J"                                                                                                                                                                                                                                                       >GO to Pinpoint Test J
+</a>. 
+
+<br><br>IF TP_STAT = SYSTEM FAULT, 
+<a href="SCR_us_en_file%3dSCR44004.HTM_gen_ref.HTM#K"                                                                                                                                                                                                                                                       >GO to Pinpoint Test K
+</a>. 
+
+<br><br>IF TP_STAT = SYSTEM ACTIVE, the 
+<span title="Tire Pressure Monitoring System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPMS
+</span> system is working as designed at this time. If an issue was reported by the customer, REFER to the symptom chart in
+ this section. 
+</td></tr><tr><td><a name="I2">&nbsp;
+</a><b>I2 CHECK LOW PRESSURE DETECTED 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><p class="singlespace"><b>NOTE: 
+</b> The spare tire is not programmable even if it is equipped with a 
+<span title="Tire Pressure Monitoring System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPMS
+</span> sensor. If a damaged road wheel is located in the trunk, the sensor may still be
+recognized by the 
+<span title="Tire Pressure Monitor" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPM
+</span>/
+<span title="Vehicle Security Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">VSM
+</span> as low. Make sure the spare tire is not currently in use. To restore
+
+<span title="Tire Pressure Monitoring System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPMS
+</span> functionality, repair the damaged road wheel and re-mount it to the vehicle.
+</p><li>Check spare tire location.
+</li><li><b>Is the spare tire in use?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REPAIR and REMOUNT the wheel to the vehicle. REFER to 
+<a href="SCR_us_en_file%3dSCR44010.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       >Wheel and Tire
+</a> in this section. ADJUST tire pressures to the required pressure as defined on
+ the Vehicle Certification (VC) label located in the driver door jam. 
+
+<br><br><b>No
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCR44004.HTM_gen_ref.HTM#I3"                                                                                                                                                                                                                                                       >I3
+</a>. 
+</td></tr><tr><td><a name="I3">&nbsp;
+</a><b>I3 CHECK FOR LOW TIRE PRESSURE 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Using the Digital Tire Gauge, measure and record the tire pressure in all 4 road tires.
+</li><li>Adjust the pressure for those found to be below the specification listed on the 
+<span title="Vehicle Certification" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">VC
+</span> label.
+</li><li>Activate each sensor at least twice with the training tool or customer activation tool to make sure the module gets the latest tire pressure data. Refer to
+
+<a href="SCR_us_en_file%3dSCR44006.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       >Tire Pressure Monitoring System (TPMS) Sensor Activation
+</a> or drive the vehicle for at least 2 minutes above 32 km/h (20 mph) to clear the low pressure warning. Do not train the sensors at this time.
+</li><li><b>Has the 
+<span title="Tire Pressure Monitoring System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPMS
+</span> indicator gone out?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>The system is functioning normally. INFORM the customer that correct tire pressure maintenance is a customer responsibility and the details are provided in the Owner's Literature. 
+
+<br><br><b>No
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCR44004.HTM_gen_ref.HTM#I4"                                                                                                                                                                                                                                                       >I4
+</a>. 
+</td></tr><tr><td><a name="I4">&nbsp;
+</a><b>I4 CHECK FOR STUCK 
+<span title="TIRE PRESSURE MONITORING SYSTEM" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPMS
+</span> SENSOR 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Read and record the following PIDs:
+</li>
+
+<ul type="square"><li>LF_PRES
+</li><li>RF_PRES
+</li><li>LR_PRES
+</li><li>RR_PRES
+</li></ul><li>Using the Digital Tire Gauge, measure the actual tire pressures.
+</li><li>Compare the tire pressure PIDs with the actual tire pressures.
+</li><li><b>Do the compared tire pressure values match within ± 5 psi and has the 
+<span title="Tire Pressure Monitoring System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPMS
+</span> indicator gone out?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>The system is functioning normally. 
+
+<br><br><b>No
+</b><br>INSTALL a new 
+<span title="Tire Pressure Monitoring System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPMS
+</span> sensor(s). REFER to 
+<a href="SCR_us_en_file%3dSCR44011.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       >Tire Pressure Monitoring System (TPMS) Sensor
+</a> in this section. 
+</td></tr></table><a name="PS2-J">&nbsp;
+</a><p><b>Pinpoint Test J: DTC B2872
+</b></p><h5>Normal Operation 
+</h5><p>If there is a concern with 1, 2 or 3 
+<span title="Tire Pressure Monitoring System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPMS
+</span> sensors, the 
+<span title="Tire Pressure Monitoring System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPMS
+</span> sets
+DTC B2872. The 
+<span title="Tire Pressure Monitoring System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPMS
+</span> indicator flashes for 70 seconds from key ON and then remains ON continuously. This symptom occurs when
+the Tire Pressure Monitor (TPM)/Vehicle Security Module (VSM) does not hear from a sensor or is incapable of hearing a sensor(s) for 20 minutes.
+</p><ul type="disc"><li>DTC B2872 (Tire Pressure Sensor Fault) — sets if the 
+<span title="Tire Pressure Monitoring System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPMS
+</span> has been unable to communicate with 1 or more sensors (up to 3) for more than 20 minutes.
+</li></ul><ul type="disc"><b>This pinpoint test is intended to diagnose the following: 
+</b>
+
+<li><span title="Tire Pressure Monitoring System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPMS
+</span> sensors not trained to the 
+<span title="Tire Pressure Monitoring System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPMS
+</span></li><li><span title="Tire Pressure Monitoring System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPMS
+</span> sensors not transmitting / damaged
+</li><li><span title="Tire Pressure Monitoring System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPMS
+</span> sensors missing
+</li><li>Incorrect 
+<span title="Tire Pressure Monitoring System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPMS
+</span> sensor installed
+</li><li>Spare tire in use
+</li><li>Radio Frequency Interference (RFI)
+</li></ul><a name="J">&nbsp;
+</a><h5>PINPOINT TEST J:  DTC B2872 
+</h5>
+
+<p><b>NOTE: 
+</b> If the vehicle has been stationary for more than 30 minutes, the sensors go into "sleep mode" to conserve battery power. It becomes necessary to wake them up so that they transmit the latest tire pressure information to
+the 
+<span title="Tire Pressure Monitor" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPM
+</span>/
+<span title="Vehicle Security Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">VSM
+</span>. Refer to
+
+<a href="SCR_us_en_file%3dSCR44006.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       >Tire Pressure Monitoring System (TPMS) Sensor Activation
+</a> in this section.
+</p><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="J1">&nbsp;
+</a><b>J1 CHECK 
+<span title="TIRE PRESSURE MONITORING SYSTEM" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPMS
+</span> SENSOR IDENTIFIERS AND FOR SPARE TIRE USE 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><p class="singlespace"><b>NOTE: 
+</b> Make sure that all aftermarket electronic equipment has been disconnected (if possible) and that the customer has been questioned about the kinds of electronic equipment they may have been using in the vehicle when this issue was identified.
+</p><li>Connect the scan tool.
+</li><li><b>NOTE: 
+</b> A spare tire cannot be programmed to the vehicle, even if equipped with a 
+<span title="Tire Pressure Monitoring System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPMS
+</span> sensor. If a damaged road wheel is located in the trunk and
+the 
+<span title="Tire Pressure Monitor" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPM
+</span>/
+<span title="Vehicle Security Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">VSM
+</span> cannot communicate with it, or if the damaged wheel has been dropped off at a
+dealership or repair shop, the 
+<span title="Tire Pressure Monitor" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPM
+</span>/
+<span title="Vehicle Security Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">VSM
+</span> sets
+a 
+<span title="Tire Pressure Monitoring System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPMS
+</span> sensor fault.
+</li><li>Ignition ON.
+</li><li>Enter the following diagnostic mode on the scan tool:   
+<span title="Vehicle Security Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">VSM
+</span> DataLogger.
+</li><li>Read and record the following PIDs:
+</li>
+
+<ul type="square"><li>Left Front Tire Transmitter Identifier (LF_ID)
+</li><li>Right Front Tire Transmitter Identifier (RF_ID)
+</li><li>Left Rear Tire Transmitter Identifier (LR_ID)
+</li><li>Right Rear Tire Transmitter Identifier (RR_ID)
+</li></ul><li><b>Is the spare tire in use?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REPAIR and REMOUNT the wheel to the vehicle. REFER to 
+<a href="SCR_us_en_file%3dSCR44010.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       >Wheel and Tire
+</a> in this section. ADJUST the tire pressure to the required pressure as specified on
+ the Vehicle Certification (VC) label located in the driver door jam. 
+
+<br><br><b>No
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCR44004.HTM_gen_ref.HTM#J2"                                                                                                                                                                                                                                                       >J2
+</a>. 
+</td></tr><tr><td><a name="J2">&nbsp;
+</a><b>J2 CARRY OUT 
+<span title="TIRE PRESSURE MONITORING SYSTEM" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPMS
+</span> SENSOR TRAINING 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Training the 
+<span title="Tire Pressure Monitoring System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPMS
+</span> sensors. Refer to 
+<a href="SCR_us_en_file%3dSCR44005.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       >Tire Pressure Monitoring System (TPMS) Sensor Training
+</a> in this section.
+</li><li><b>Did all the sensors train?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCR44004.HTM_gen_ref.HTM#J3"                                                                                                                                                                                                                                                       >J3
+</a>. 
+
+<br><br><b>No
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCR44004.HTM_gen_ref.HTM#J4"                                                                                                                                                                                                                                                       >J4
+</a>. 
+</td></tr><tr><td><a name="J3">&nbsp;
+</a><b>J3 COMPARE THE SENSOR IDENTIFIERS BEFORE AND AFTER SENSOR TRAINING 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Ignition ON.
+</li><li>Enter the following diagnostic mode on the scan tool:   
+<span title="Vehicle Security Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">VSM
+</span> DataLogger.
+</li><li>Read and record the following PIDs:
+</li>
+
+<ul type="square"><li>Left Front Tire Transmitter Identifier (LF_ID)
+</li><li>Right Front Tire Transmitter Identifier (RF_ID)
+</li><li>Left Rear Tire Transmitter Identifier (LR_ID)
+</li><li>Right Rear Tire Transmitter Identifier (RR_ID)
+</li></ul><li>Compare the recorded transmitter identifier PID readings taken before sensor training with the readings taken after sensor training.
+</li><li><b>Did all the sensors match?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>Sensor identifiers that did not match were mounted to the vehicle without the required sensor training. Sensor training in the previous step has corrected the condition. 
+
+<br><br><b>No
+</b><br>REFER to Tire Pressure Monitoring System (TPMS) PID Definitions in this section for more information on repairing intermittent conditions . 
+</td></tr><tr><td><a name="J4">&nbsp;
+</a><b>J4 SENSOR(S) NOT RESPONDING TO TRAINING 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li><b>NOTE: 
+</b> Sensor(s) that fail to train may be broken, missing, effected by 
+<span title="Radio Frequency Interference" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFI
+</span> or the wrong sensor(s) may be installed.
+</li><li>Dismount tire and inspect the suspect 
+<span title="Tire Pressure Monitoring System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPMS
+</span> sensor(s).
+</li><li>Install a new sensor(s) as necessary. Refer to 
+<a href="SCR_us_en_file%3dSCR44011.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       >Tire Pressure Monitoring System (TPMS) Sensor
+</a> in this section.
+</li><li>Retrain the 
+<span title="Tire Pressure Monitoring System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPMS
+</span> sensors. Refer to 
+<a href="SCR_us_en_file%3dSCR44005.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       >Tire Pressure Monitoring System (TPMS) Sensor Training
+</a> in this section.
+</li><li><b>Did all the tire pressure sensors transmit to the 
+<span title="Tire Pressure Monitor" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPM
+</span>/
+<span title="Vehicle Security Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">VSM
+</span>?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>The system is functioning normally. 
+
+<br><br><b>No
+</b><br>REFER to Tire Pressure Monitoring System (TPMS) principles of operation in this section for additional information on training sensors. 
+</td></tr></table><a name="PS2-K">&nbsp;
+</a><p><b>Pinpoint Test K: DTCs B2872, B287A
+</b></p><p><b>NOTE: 
+</b> If the vehicle has been stationary for more then 30 minutes, the sensors go into sleep mode to conserve battery power. It becomes necessary to wake them up to transmit the latest tire pressure information to
+the Tire Pressure Monitoring System (TPMS). Refer to 
+<a href="SCR_us_en_file%3dSCR44006.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       >Tire Pressure Monitoring System (TPMS) Sensor Activation
+</a> in this section.
+</p><h5>Normal Operation 
+</h5><p>The 
+<span title="Tire Pressure Monitoring System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPMS
+</span> normally receives a response from all 4 sensors, if
+the Tire Pressure Monitor (TPM)/Vehicle Security Module (VSM) does not receive a response from one or more sensors,
+the 
+<span title="Tire Pressure Monitoring System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPMS
+</span> system sets DTCs B2872 and B287A. When no response is received from all four sensors, the
+
+<span title="Tire Pressure Monitoring System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPMS
+</span> indicator flashes for 70 seconds from key ON and then remains ON continuously.
+</p><ul type="disc"><li>DTC B2872 (Tire Pressure Sensor Fault) — sets if the Tire Pressure Monitor (TPM)/Vehicle Security Module (VSM) has been unable
+to communicate with 1 or more sensors (up to 3) for more than 20 minutes.
+</li><li>DTC B287A (Tire Pressure System Fault) — sets if the 
+<span title="Tire Pressure Monitor" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPM
+</span>/
+<span title="Vehicle Security Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">VSM
+</span> has been unable
+to communicate with all 4 sensors for more than 20 minutes.
+</li><li>TP_STAT = SYSTEM FAULT is displayed if the 
+<span title="Tire Pressure Monitor" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPM
+</span>/
+<span title="Vehicle Security Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">VSM
+</span> does not receive a signal
+transmission from all 4 
+<span title="Tire Pressure Monitoring System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPMS
+</span> sensors for 20 minutes and the vehicle speed is above 32 km/h (20 mph).
+</li></ul><ul type="disc"><b>This pinpoint test is intended to diagnose the following: 
+</b>
+
+<li><span title="Tire Pressure Monitoring System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPMS
+</span> sensors not trained to
+the 
+<span title="Tire Pressure Monitor" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPM
+</span>/
+<span title="Vehicle Security Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">VSM
+</span></li><li><span title="Tire Pressure Monitoring System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPMS
+</span> sensors missing
+</li><li>Incorrect 
+<span title="Tire Pressure Monitoring System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPMS
+</span> sensor installed
+</li><li><span title="Tire Pressure Monitoring System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPMS
+</span></li><li>Radio Frequency Interference (RFI)
+</li></ul><a name="K">&nbsp;
+</a><h5>PINPOINT TEST K: DTCs B2872, B287A 
+</h5>
+
+<p><b>NOTE: 
+</b> If the vehicle has been stationary for more than 30 minutes, the sensors go into sleep mode" to conserve battery power. It is necessary to wake them up to transmit the latest tire pressure information to the
+
+<span title="Tire Pressure Monitor" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPM
+</span>/
+<span title="Vehicle Security Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">VSM
+</span>. Refer to
+
+<a href="SCR_us_en_file%3dSCR44006.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       >Tire Pressure Monitoring System (TPMS) Sensor Activation
+</a> in this section.
+</p><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="K1">&nbsp;
+</a><b>K1 CHECK 
+<span title="TIRE PRESSURE MONITORING SYSTEM" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPMS
+</span> SENSOR IDENTIFIERS (IDs) AND CARRY OUT 
+<span title="TIRE PRESSURE MONITORING SYSTEM" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPMS
+</span> SENSOR TRAINING
+ PROCEDURE 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><p class="singlespace"><b>NOTE: 
+</b> Make sure that all aftermarket electronic equipment has been disconnected (if possible) and that the customer has been questioned about the kinds of electronic equipment they may have been using in the vehicle when this issue was identified.
+</p><li>Connect the scan tool.
+</li><li>Ignition ON.
+</li><li>Enter the following diagnostic mode on the scan tool:   
+<span title="Vehicle Security Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">VSM
+</span> DataLogger.
+</li><li>Read and record the following PIDs:
+</li>
+
+<ul type="square"><li>Left Front Tire Transmitter Identifier (LF_ID)
+</li><li>Right Front Tire Transmitter Identifier (RF_ID)
+</li><li>Left Rear Tire Transmitter Identifier (LR_ID)
+</li><li>Right Rear Tire Transmitter Identifier (RR_ID)
+</li></ul><li>Train the 
+<span title="Tire Pressure Monitoring System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPMS
+</span> sensors. Refer to 
+<a href="SCR_us_en_file%3dSCR44005.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       >Tire Pressure Monitoring System (TPMS) Sensor Training
+</a> in this section.
+</li><li>Ignition ON.
+</li><li>Enter the following diagnostic mode on the scan tool:   
+<span title="Vehicle Security Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">VSM
+</span> DataLogger .
+</li><li>Read and record the following PIDs:
+</li>
+
+<ul type="square"><li>Left Front Tire Transmitter Identifier (LF_ID)
+</li><li>Right Front Tire Transmitter Identifier (RF_ID)
+</li><li>Left Rear Tire Transmitter Identifier (LR_ID)
+</li><li>Right Rear Tire Transmitter Identifier (RR_ID)
+</li></ul><li><b>Did all the sensors train?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCR44004.HTM_gen_ref.HTM#K2"                                                                                                                                                                                                                                                       >K2
+</a>. 
+
+<br><br><b>No
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCR44004.HTM_gen_ref.HTM#K3"                                                                                                                                                                                                                                                       >K3
+</a>. 
+</td></tr><tr><td><a name="K2">&nbsp;
+</a><b>K2 COMPARE THE SENSOR IDENTIFIERS BEFORE AND AFTER SENSOR TRAINING 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Read and record the following PIDs:
+</li>
+
+<ul type="square"><li>Left Front Tire Transmitter Identifier (LF_ID)
+</li><li>Right Front Tire Transmitter Identifier (RF_ID)
+</li><li>Left Rear Tire Transmitter Identifier (LR_ID)
+</li><li>Right Rear Tire Transmitter Identifier (RR_ID)
+</li></ul><li>Compare the recorded PID readings taken before sensor training with the readings taken after sensor training.
+</li><li><b>Did all the sensors match?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>If all the sensors trained, REFER to Tire Pressure Monitoring System (TPMS) principles of operation in this section for additional Information on training sensors. 
+
+<br><br><b>No
+</b><br>Any sensor identifiers that do not match were mounted to the vehicle without the required sensor training. REFER to 
+<a href="SCR_us_en_file%3dSCR44005.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       >Tire Pressure Monitoring System (TPMS) Sensor Training
+</a> in this section. 
+</td></tr><tr><td><a name="K3">&nbsp;
+</a><b>K3 SENSOR(S) NOT RESPONDING TO TRAINING 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li><b>NOTE: 
+</b> Sensor(s) that won't train may be broken, missing, or the wrong sensor(s) may be installed.
+</li><li>Dismount tire and inspect the suspect 
+<span title="Tire Pressure Monitoring System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPMS
+</span> sensor(s).
+</li><li>Install a new sensor(s) as necessary. Refer to 
+<a href="SCR_us_en_file%3dSCR44011.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       >Tire Pressure Monitoring System (TPMS) Sensor
+</a> in this section.
+</li><li>Retrain the 
+<span title="Tire Pressure Monitoring System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPMS
+</span> sensors. Refer to 
+<a href="SCR_us_en_file%3dSCR44005.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       >Tire Pressure Monitoring System (TPMS) Sensor Training
+</a> in this section.
+</li><li><b>Did all the 
+<span title="Tire Pressure Monitoring System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPMS
+</span> sensors transmit to
+the 
+<span title="Tire Pressure Monitor" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPM
+</span>/
+<span title="Vehicle Security Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">VSM
+</span>?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>The system is functioning normally. 
+
+<br><br><b>No
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCR44004.HTM_gen_ref.HTM#K4"                                                                                                                                                                                                                                                       >K4
+</a>. 
+</td></tr><tr><td><a name="K4">&nbsp;
+</a><b>K4 CHECK 
+<span title="TIRE PRESSURE MONITORING SYSTEM" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPMS
+</span> SYSTEM OPERATION 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect all the 
+<span title="Tire Pressure Monitor" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPM
+</span>/
+<span title="Vehicle Security Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">VSM
+</span> electrical connectors.
+</li><li>Check the connectors for:
+</li>
+
+<ul type="square"><li>corrosion.
+</li><li>pushed-out pins.
+</li><li>spread terminals.
+</li></ul><li>Connect all the 
+<span title="Tire Pressure Monitor" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPM
+</span>/
+<span title="Vehicle Security Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">VSM
+</span> connectors and make sure that they are seated correctly.
+</li><li>Attempt to train the 
+<span title="Tire Pressure Monitoring System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPMS
+</span> sensors again. Refer to 
+<a href="SCR_us_en_file%3dSCR44005.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       >Tire Pressure Monitoring System (TPMS) Sensor Training
+</a> in
+this section.
+</li><li><b>Is the concern still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCR44004.HTM_gen_ref.HTM#K5"                                                                                                                                                                                                                                                       >K5
+</a>. 
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector. CLEAR the DTCs. REPEAT the self-test. 
+</td></tr><tr><td><a name="K5">&nbsp;
+</a><b>K5 CHECK 
+<span title="TIRE PRESSURE MONITOR" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPM
+</span>/
+<span title="VEHICLE SECURITY MODULE" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">VSM
+</span> 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><p class="singlespace"><b>NOTE: 
+</b> Make sure that all aftermarket electronic equipment has been disconnected (if possible) and that the customer has been questioned about the kinds of electronic equipment they may have been using in the vehicle when this issue was identified.
+A faulty 
+<span title="Tire Pressure Monitor" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPM
+</span>/
+<span title="Vehicle Security Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">VSM
+</span> and a module affected by can behave in the same way. Care must be taken to
+make sure the root cause of the issue is clearly identified.
+</p><li>Attempt to train the 
+<span title="Tire Pressure Monitoring System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPMS
+</span> sensors with all aftermarket electronic equipment disconnected. Refer
+to 
+<a href="SCR_us_en_file%3dSCR44005.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       >Tire Pressure Monitoring System (TPMS) Sensor Training
+</a> in this section.
+</li><li><b>Did all the 
+<span title="Tire Pressure Monitoring System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPMS
+</span> sensors transmit to
+the 
+<span title="Tire Pressure Monitor" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPM
+</span>/
+<span title="Vehicle Security Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">VSM
+</span>?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>If the concern and/or DTCs return after the road test, the customer needs to be informed that their aftermarket equipment is causing unwanted 
+<span title="Radio Frequency Interference" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFI
+</span> with
+ the 
+<span title="Tire Pressure Monitor" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPM
+</span>/
+<span title="Vehicle Security Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">VSM
+</span> and the system is functioning as designed under Federal Communications guidelines. 
+
+<br><br><b>No
+</b><br>INSTALL a new 
+<span title="Tire Pressure Monitor" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPM
+</span>/
+<span title="Vehicle Security Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">VSM
+</span>. REFER
+ to 
+<a href="SCR_us_en_file%3dSCR44007.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       >Tire Pressure Monitor (TPM) Module — 4-Door Sedan
+</a> or 
+<a href="SCR_us_en_file%3dSCR44008.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       >Tire Pressure Monitor (TPM) Module — 5-Door Hatchback
+</a> in this section.
+ TEST the system for normal operation. 
+</td></tr></table><a name="PS2-L">&nbsp;
+</a><p><b>Pinpoint Test L: DTC U0155
+</b></p><p><p>Refer to Wiring Diagrams Cell 
+<a target="_parent" href="SCR_us_en_book%3dECR%26cell%3d118%26page%3d%26year%3d%26vehicle%3d2012%20Fiesta%26market%3dUS%26lang%3dEN%26RTYPE%3dDIAGRAM%26lega"                                                                                                                                                                                                                                                               >118
+</a>, Tire Pressure Monitoring System (TPMS) for schematic and connector information.
+</p></p><ul type="disc"><b>Normal Operation 
+</b>
+
+<li>DTC U0155 (Lost Communication With Instrument Panel Cluster) — this DTC sets in
+the Tire Pressure Monitor (TPM)/Vehicle Security Module (VSM) if the vehicle speed or stoplamp switch messages that should be received from
+the Instrument Panel Cluster (IPC) are missing for 10 seconds or longer. If a communications failure is detected by
+the 
+<span title="Tire Pressure Monitor" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPM
+</span>/
+<span title="Vehicle Security Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">VSM
+</span>, the DTC U0155 is present in the module.
+</li></ul><ul type="disc"><b>This pinpoint test is intended to diagnose the following: 
+</b>
+
+<li>Network communication concern
+</li><li><span title="Instrument Panel Cluster" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IPC
+</span></li><li><span title="Tire Pressure Monitor" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPM
+</span>/
+<span title="Vehicle Security Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">VSM
+</span></li></ul><a name="L">&nbsp;
+</a><h5>PINPOINT TEST L: DTC U0155 
+</h5><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="L1">&nbsp;
+</a><b>L1 VERIFY THE CUSTOMER CONCERN 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Ignition ON.
+</li><li>Verify that there is an observable symptom present.
+</li><li><b>Is an observable symptom present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCR44004.HTM_gen_ref.HTM#L2"                                                                                                                                                                                                                                                       >L2
+</a>. 
+
+<br><br><b>No
+</b><br>The system is operating normally at this time. The DTC may have been set due to high network traffic or an intermittent fault condition. 
+</td></tr><tr><td><a name="L2">&nbsp;
+</a><b>L2 CHECK THE COMMUNICATION NETWORK 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Enter the following diagnostic mode on the scan tool:   
+<span title="Instrument Panel Cluster" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IPC
+</span> Network Test.
+</li><li>Carry out the network test.
+</li><li><b>Does the 
+<span title="Instrument Panel Cluster" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IPC
+</span> pass the network test?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCR44004.HTM_gen_ref.HTM#L3"                                                                                                                                                                                                                                                       >L3
+</a>. 
+
+<br><br><b>No
+</b><br>REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSI00L.HTM%26rightside%3dSCRSI00R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 418-00
+</a>. 
+</td></tr><tr><td><a name="L3">&nbsp;
+</a><b>L3 RETRIEVE THE RECORDED DTCs FROM THE 
+<span title="TIRE PRESSURE MONITOR" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPM
+</span>/
+<span title="VEHICLE SECURITY MODULE" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">VSM
+</span> AND 
+<span title="INSTRUMENT PANEL CLUSTER" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IPC
+</span> SELF-TESTS 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Check for recorded 
+<span title="Tire Pressure Monitor" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPM
+</span>/
+<span title="Vehicle Security Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">VSM
+</span>and 
+<span title="Instrument Panel Cluster" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IPC
+</span> DTCs from the self-test.
+</li><li><b>Is DTC U3003:16 (or B1318) or DTC U3003:17 (or B1317) recorded?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>For the 
+<span title="Tire Pressure Monitor" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPM
+</span>/
+<span title="Vehicle Security Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">VSM
+</span>, REFER to DTC Chart in this section. 
+
+<br><br> For the 
+<span title="Instrument Panel Cluster" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IPC
+</span>, REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSD10L.HTM%26rightside%3dSCRSD10R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 413-01
+</a>. 
+
+<br><br><b>No
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCR44004.HTM_gen_ref.HTM#L4"                                                                                                                                                                                                                                                       >L4
+</a>. 
+</td></tr><tr><td><a name="L4">&nbsp;
+</a><b>L4 CHECK FOR DTC U0155 SET IN OTHER MODULES 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Clear the DTCs.
+</li><li>Ignition OFF.
+</li><li>Ignition ON.
+</li><li>Wait 10 seconds.
+</li><li>Enter the following diagnostic mode on the scan tool:   
+<span title="Vehicle Security Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">VSM
+</span> Self-Test.
+</li><li>Retrieve the continuous memory DTCs from all modules.
+</li><li><b>Is DTC U0155:00 or DTC U0155 set in more than one module?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new 
+<span title="Instrument Panel Cluster" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IPC
+</span>. REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSD10L.HTM%26rightside%3dSCRSD10R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 413-01
+</a>. TEST the system for normal operation. REPEAT the
+ ABS module self-test. 
+
+<br><br><b>No
+</b><br>INSTALL a new 
+<span title="Tire Pressure Monitor" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TPM
+</span>/
+<span title="Vehicle Security Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">VSM
+</span>. REFER
+ to 
+<a href="SCR_us_en_file%3dSCR44007.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       >Tire Pressure Monitor (TPM) Module — 4-Door Sedan
+</a> or 
+<a href="SCR_us_en_file%3dSCR44008.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       >Tire Pressure Monitor (TPM) Module — 5-Door Hatchback
+</a> in this section.
+ TEST the system for normal operation. 
+</td></tr></table><br><hr><P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+
+</body>
+<!-- Mirrored from file:///C:/Documents and Settings/Administrator/Desktop/FORD/Ford Fiesta 2012/SCR~us~en~file=SCR44004.HTM~gen~ref.HTM by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 04 Mar 2025 14:54:08 GMT -->
+</html>

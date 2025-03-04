@@ -1,0 +1,125 @@
+<html>
+<!-- Mirrored from file:///C:/Documents and Settings/Administrator/Desktop/FORD/Ford Fiesta 2012/SCR~us~en~file=SCRI0001.HTM~gen~ref.HTM by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 04 Mar 2025 14:53:00 GMT -->
+<head><META http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>2012 Fiesta Workshop Manual
+
+</title><LINK rel="stylesheet" type="text/css" href="SCR_us_en_file%3dSCRSTYLE.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       ><meta name="tps_translationdatetime" content="06/09/2012 16:28:18"><meta name="tps_type" content="workshop"><meta name="tps_bookcode" content="SCR"><meta name="tps_market" content="US"><meta name="tps_language" content="EN"><meta name="tps_year" content="2012"><meta name="tps_modelname" content="Fiesta"><meta name="tps_system" content="4"><meta name="tps_group" content="18"><meta name="tps_section" content="00"><meta name="tps_section_title" content="Module Communications Network"><meta name="tps_ss_title" content="DESCRIPTION AND OPERATION"><meta name="tps_procid" content="s1p4591q0"><meta name="tps_procsgmlid" content="n1235148"><meta name="tps_packetinfo" content="694052"><meta name="tps_effectivity" content="2011,FIESTA,18-000"><meta name="tps_effectivity" content="2012,FIESTA,18-000"><meta name="tps_effectivity" content="2013,FIESTA,18-000"></head><body><TABLE width="95%"><TR><TD><div class="bookinfo">SECTION 418-00:  Module Communications Network
+</DIV></TD><TD align="RIGHT"><div class="bookinfo">2012 Fiesta Workshop Manual
+</DIV></TD></TR><TR><TD><div class="bookinfo">DESCRIPTION AND OPERATION
+</div></TD><TD align="RIGHT"><div class="bookinfosmall">Procedure revision date:  08/11/2011
+</div></TD></TR></TABLE><hr><h4>Communications Network
+</h4><meta name="tps_proctitle" content="Communications Network">
+
+<p>Multiplexing is a method of sending 2 or more signals simultaneously over a single circuit. Multiplexing allows 2 or more electronic modules (nodes) to communicate simultaneously over a twisted-wire pair [data (+) and data (-)] network. The information or messages that can be communicated on these wires consists of commands, status or data. The advantage of using multiplexing is to reduce the weight of the vehicle by reducing the number of redundant components and electrical wiring.
+</p><p>The vehicle has 2 module communication networks connected to the Data Link Connector (DLC) and communicate with the scan tool. The communication networks are:
+</p><ul type="disc"><li>High Speed Controller Area Network (HS-CAN)
+</li><li>Medium Speed Controller Area Network (MS-CAN)
+</li></ul><p>The Infotainment Controller Area Network (I-CAN) is connected to the 
+<span title="Data Link Connector" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">DLC
+</span>, but the 
+<span title="Infotainment Controller Area Network" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">I-CAN
+</span> modules communicate with the scan tool over the 
+<span title="Medium Speed Controller Area Network" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">MS-CAN
+</span>. The Front Control/Display Interface Module (FCDIM) is used as a gateway module for the messages to transfer between the scan tool and the modules on the 
+<span title="Infotainment Controller Area Network" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">I-CAN
+</span>.
+</p><h5>Network Topology
+</h5><IMG src="SCR_us_en_file%3dN0117861.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="426" width="650" border="1"><br><br><TABLE cellspacing="0" cellpadding="3" border="1"><TR><TH valign="bottom" align="center">Module Name
+</TH><TH valign="bottom" align="center">Network Type
+</TH><TH valign="bottom" align="center">Termination Module
+</TH></TR><TR><TD valign="top" align="left">ABS module
+</TD><TD valign="top" align="center"><span title="High Speed Controller Area Network" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">HS-CAN
+</span></TD><TD valign="top" align="center">No
+</TD></TR><TR><TD valign="top" align="left">Accessory Protocol Interface Module (APIM) (if equipped)
+</TD><TD valign="top" align="center"><span title="High Speed Controller Area Network" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">HS-CAN
+</span>/
+<span title="Infotainment Controller Area Network" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">I-CAN
+</span></TD><TD valign="top" align="center">No/No
+</TD></TR><TR><TD valign="top" align="left">Audio Front Control Module (ACM)
+</TD><TD valign="top" align="center"><span title="Infotainment Controller Area Network" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">I-CAN
+</span></TD><TD valign="top" align="center">Yes
+</TD></TR><TR><TD valign="top" align="left">Body Control Module (BCM)
+</TD><TD valign="top" align="center"><span title="Medium Speed Controller Area Network" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">MS-CAN
+</span></TD><TD valign="top" align="center">Yes
+</TD></TR><TR><TD valign="top" align="left">Front Control/Display Interface Module (FCDIM) (
+<span title="Medium Speed Controller Area Network" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">MS-CAN
+</span>/
+<span title="Infotainment Controller Area Network" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">I-CAN
+</span> gateway module)
+</TD><TD valign="top" align="center"><span title="Medium Speed Controller Area Network" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">MS-CAN
+</span>/
+<span title="Infotainment Controller Area Network" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">I-CAN
+</span><br><br></TD><TD valign="top" align="center">No/Yes
+</TD></TR><TR><TD valign="top" align="left">Global Positioning System Module (GPSM) (if equipped)
+</TD><TD valign="top" align="center"><span title="Infotainment Controller Area Network" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">I-CAN
+</span></TD><TD valign="top" align="center">No
+</TD></TR><TR><TD valign="top" align="left">Instrument Panel Cluster (IPC) (
+<span title="High Speed Controller Area Network" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">HS-CAN
+</span>/
+<span title="Medium Speed Controller Area Network" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">MS-CAN
+</span> gateway module)
+</TD><TD valign="top" align="center"><span title="High Speed Controller Area Network" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">HS-CAN
+</span> /
+<span title="Medium Speed Controller Area Network" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">MS-CAN
+</span></TD><TD valign="top" align="center">Yes/Yes
+</TD></TR><TR><TD valign="top" align="left">Occupant Classification System Module (OCSM)
+</TD><TD valign="top" align="center"><span title="High Speed Controller Area Network" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">HS-CAN
+</span></TD><TD valign="top" align="center">No
+</TD></TR><TR><TD valign="top" align="left">PCM
+</TD><TD valign="top" align="center"><span title="High Speed Controller Area Network" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">HS-CAN
+</span></TD><TD valign="top" align="center">Yes
+</TD></TR><TR><TD valign="top" align="left">Power Steering Control Module (PSCM)
+</TD><TD valign="top" align="center"><span title="High Speed Controller Area Network" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">HS-CAN
+</span></TD><TD valign="top" align="center">No
+</TD></TR><TR><TD valign="top" align="left">Remote Function Actuator (RFA) module (if equipped)
+</TD><TD valign="top" align="center"><span title="High Speed Controller Area Network" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">HS-CAN
+</span>/
+<span title="Medium Speed Controller Area Network" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">MS-CAN
+</span></TD><TD valign="top" align="center">No/No
+</TD></TR><TR><TD valign="top" align="left">Restraints Control Module (RCM)
+</TD><TD valign="top" align="center"><span title="High Speed Controller Area Network" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">HS-CAN
+</span></TD><TD valign="top" align="center">No
+</TD></TR><TR><TD valign="top" align="left">Tire Pressure Monitor (TPM)/Vehicle Security Module (VSM)
+</TD><TD valign="top" align="center"><span title="Medium Speed Controller Area Network" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">MS-CAN
+</span></TD><TD valign="top" align="center">No
+</TD></TR><TR><TD valign="top" align="left">Transmission Control Module (TCM) (if equipped)
+</TD><TD valign="top" align="center"><span title="High Speed Controller Area Network" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">HS-CAN
+</span></TD><TD valign="top" align="center">No
+</TD></TR></TABLE><br><p><b>Network Termination
+</b></p><p>The 
+<span title="Controller Area Network" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">CAN
+</span> uses a network termination circuit to improve communication reliability. The network termination of the 
+<span title="Controller Area Network" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">CAN
+</span> bus occurs inside the termination modules by termination resistors. Termination modules are located at either end of the bus network. As network messages are broadcast in the form of voltage signals, the network voltage signals are stabilized by the termination resistors. Each termination module has a 120 ohm resistor across the positive and negative bus connection in the termination module. With 2 termination modules on each network, and the 120 ohm resistors located in a parallel circuit configuration, the total network impedance, or total resistance is 60 ohms.
+</p><p>Network termination improves bus message reliability by stabilizing bus voltage, and eliminating electrical interference.
+</p><p><b>Gateway Module
+</b></p><p>The 
+<span title="Instrument Panel Cluster" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IPC
+</span> is the gateway module, translating 
+<span title="High Speed Controller Area Network" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">HS-CAN
+</span> to 
+<span title="Medium Speed Controller Area Network" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">MS-CAN
+</span> and vice versa. The 
+<span title="Front Control/Display Interface Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">FCDIM
+</span> is the gateway module, translating 
+<span title="Medium Speed Controller Area Network" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">MS-CAN
+</span> to 
+<span title="Infotainment Controller Area Network" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">I-CAN
+</span> and vice versa, allowing a message to be distributed throughout the three networks. The 
+<span title="Instrument Panel Cluster" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IPC
+</span> and the 
+<span title="Front Control/Display Interface Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">FCDIM
+</span> are the only modules on this vehicle that have this ability.
+</p><br><hr><P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+
+</body>
+<!-- Mirrored from file:///C:/Documents and Settings/Administrator/Desktop/FORD/Ford Fiesta 2012/SCR~us~en~file=SCRI0001.HTM~gen~ref.HTM by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 04 Mar 2025 14:53:00 GMT -->
+</html>

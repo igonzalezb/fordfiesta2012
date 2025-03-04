@@ -1,0 +1,1380 @@
+<html>
+<!-- Mirrored from file:///C:/Documents and Settings/Administrator/Desktop/FORD/Ford Fiesta 2012/SCR~us~en~file=SCRH1004.HTM~gen~ref.HTM by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 04 Mar 2025 14:53:30 GMT -->
+<head><META http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>2012 Fiesta Workshop Manual
+
+</title><LINK rel="stylesheet" type="text/css" href="SCR_us_en_file%3dSCRSTYLE.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       ><meta name="tps_translationdatetime" content="06/09/2012 16:28:18"><meta name="tps_type" content="workshop"><meta name="tps_bookcode" content="SCR"><meta name="tps_market" content="US"><meta name="tps_language" content="EN"><meta name="tps_year" content="2012"><meta name="tps_modelname" content="Fiesta"><meta name="tps_system" content="4"><meta name="tps_group" content="17"><meta name="tps_section" content="01"><meta name="tps_section_title" content="Exterior Lighting"><meta name="tps_ss_title" content="DIAGNOSIS AND TESTING"><meta name="tps_procid" content="s4p2123q0"><meta name="tps_procsgmlid" content="n1317531"><meta name="tps_packetinfo" content="690963"><meta name="tps_effectivity" content="2012,FIESTA,17-010"><meta name="tps_effectivity" content="2013,FIESTA,17-010"></head><body><TABLE width="95%"><TR><TD><div class="bookinfo">SECTION 417-01:  Exterior Lighting
+</DIV></TD><TD align="RIGHT"><div class="bookinfo">2012 Fiesta Workshop Manual
+</DIV></TD></TR><TR><TD><div class="bookinfo">DIAGNOSIS AND TESTING
+</div></TD><TD align="RIGHT"><div class="bookinfosmall">Procedure revision date:  07/15/2011
+</div></TD></TR></TABLE><hr><h4>Headlamps
+</h4><meta name="tps_proctitle" content="Headlamps">
+
+<br><table border="1" cellpadding="3" cellspacing="0" width="50%"><caption>Special Tool(s)
+</caption><tr valign="top"><td><IMG src="SCR_us_en_file%3dST3093A.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="99" width="99" border="0"></td><td>Fluke 77-IV Digital Multimeter
+<br>FLU77-4 or equivalent
+</td></tr><tr valign="top"><td><IMG src="SCR_us_en_file%3dST2834A.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="99" width="99" border="0"></td><td>Vehicle Communication Module (VCM) and Integrated Diagnostic System (IDS) software with appropriate hardware, or equivalent scan
+ tool
+<br></td></tr><tr valign="top"><td><IMG src="SCR_us_en_file%3dST2574A.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="99" width="99" border="0"></td><td>Flex Probe Kit
+<br>NUD105-R025D or equivalent
+</td></tr></table><div><a name="extract_515">&nbsp;
+</a></div>
+
+<p><b>Principles of Operation
+</b></p><p><b>Exterior Lighting
+</b></p><p>The Body Control Module (BCM) monitors the headlamp switch position by sending voltage signals on multiple circuits to the headlamp switch. There is one circuit for each headlamp
+switch position. At any given time, one of the signal circuits is switched to ground to indicate the headlamp switch position.
+</p><p>If, when the ignition is in RUN, the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> does not detect any active inputs from the headlamp switch or if
+the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> detects multiple headlamp switch input circuits short to ground, the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> turns the parking
+lamps and headlamps on and keeps them on until the ignition is transitioned OFF.
+</p><p>If either situation occurs, the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> 
+<b>cannot
+</b> be ruled immediately as being at fault. This is normal behavior of
+the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> design as a fault has been detected with the inputs from the headlamp switch.
+</p><p><b>Flash-to-Pass and High Beam
+</b></p><p>The 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> monitors the multifunction switch for a flash-to-pass or high beam request. With the ignition in RUN and the multifunction switch in the FLASH-TO-PASS
+position, the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> energizes the high beam relay until the multifunction switch is released.
+</p><p>If the low beams are on when the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> detects the multifunction switch is in the HIGH BEAM position,
+the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> energizes the high beam relay to provide voltage to the high beams (high beam mode). The
+
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> defaults to low beam mode if the headlamps are turned off using the headlamp switch or the ignition transitions out of RUN.
+</p><p><b>Field-Effect Transistor (FET) Protection
+</b></p><p>A Field-Effect Transistor (FET) is a type of transistor that, when used with module software, monitors and controls current flow on module outputs. The
+
+<span title="Field-Effect Transistor" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">FET
+</span> protection strategy prevents module damage in the event of excessive current flow.
+</p><p>The 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> utilizes a 
+<span title="Field-Effect Transistor" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">FET
+</span> protective circuit strategy for many of its outputs (such as a
+turn lamp output circuit). Output loads (current level) are monitored for excessive current (typically short circuits) and are shut down when a fault event is detected. A short circuit DTC sets when the fault event occurs.
+</p><p>The circuit remains off until the fault is corrected and the ignition is cycled off and then back on, the module resets the 
+<span title="Field-Effect Transistor" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">FET
+</span> protection and allows the circuit
+to function.
+</p><p>The 
+<span title="Field-Effect Transistor" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">FET
+</span> protected circuits for the headlamp system are the low and high beam relay coil ground circuits.
+</p><div><a name="extract_516">&nbsp;
+</a></div>
+
+<p><b>Inspection and Verification
+</b></p><ol start="1"><li>Verify the customer concern.
+</li></ol><ol start="2"><li>Visually inspect for obvious signs of mechanical or electrical damage.
+
+<br><br><P class="SINGLESPACE"><B>&nbsp; 
+
+Visual Inspection Chart 
+</B></P><TABLE cellspacing="0" cellpadding="3" border="1"><TR><TH valign="bottom" align="center">Mechanical
+</TH><TH valign="bottom" align="center">Electrical
+</TH></TR><TR><TD valign="top" align="left"><ul type="disc"><li>Headlamp switch
+</li><li>Multifunction switch
+</li></ul></TD><TD valign="top" align="left"><ul type="disc"><li>Battery Junction Box (BJB) fuse(s):
+
+<ul type="square"><li>17 (20A) (high beam relay)
+</li><li>19 (20A) (low beam relay)
+</li><li>21 (7.5A) (low beam and high beam relay coils)
+</li><li>35 (10A) (LH low beam)
+</li><li>36 (10A) (RH low beam)
+</li><li>37 (10A) (LH high beam)
+</li><li>38 (10A) (RH high beam)
+</li></ul></li><li>Central Junction Box (CJB) fuse 21 (10A) (ignition ON input)
+</li><li>Low beam relay
+</li><li>High beam relay
+</li><li>Bulb(s)
+</li><li>Wiring, terminals or connectors
+</li></ul></TD></TR></TABLE><br></li></ol><ol start="3"><li>If an obvious cause for an observed or reported concern is found, correct the cause (if possible) before proceeding to the next step.
+</li></ol><ol start="4"><li><p><b>NOTE: 
+</b> Make sure to use the latest scan tool software release.
+</p>If the cause is not visually evident, connect the scan tool to the Data Link Connector (DLC).
+</li></ol><ol start="5"><li><p><b>NOTE: 
+</b> The Vehicle Communication Module (VCM) LED prove-out confirms power and ground from the 
+<span title="Data Link Connector" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">DLC
+</span> are provided to
+the 
+<span title="Vehicle Communication Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">VCM
+</span>.
+</p>If the scan tool does not communicate with the 
+<span title="Vehicle Communication Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">VCM
+</span>:
+
+<ul type="disc"><li>check the 
+<span title="Vehicle Communication Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">VCM
+</span> connection to the vehicle.
+</li></ul><ul type="disc"><li>check the scan tool connection to the 
+<span title="Vehicle Communication Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">VCM
+</span>.
+</li></ul><ul type="disc"><li>refer to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSI00L.HTM%26rightside%3dSCRSI00R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 418-00
+</a>, No Power To The Scan Tool, to diagnose no power to the scan tool.
+</li></ul></li></ol><ol start="6"><li>If the scan tool does not communicate with the vehicle:
+
+<ul type="disc"><li>verify the ignition is ON.
+
+<ul type="square"> 
+<li>The air bag warning indicator prove-out confirms ignition ON (other indicators may not prove ignition ON). If the ignition does not turn on, refer to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSB50L.HTM%26rightside%3dSCRSB50R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 211-05
+</a> to
+diagnose no power in RUN.
+</li></ul></li></ul><ul type="disc"><li>verify the scan tool operation with a known good vehicle.
+</li></ul><ul type="disc"><li>refer to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSI00L.HTM%26rightside%3dSCRSI00R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 418-00
+</a> to diagnose no response from the PCM.
+</li></ul></li></ol><ol start="7"><li>Carry out the network test.
+
+<ul type="disc"><li>If the scan tool responds with no communication for one or more modules, refer to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSI00L.HTM%26rightside%3dSCRSI00R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 418-00
+</a>.
+</li></ul><ul type="disc"><li>If the network test passes, retrieve and record the continuous memory DTCs.
+</li></ul></li></ol><ol start="8"><li>Clear the continuous DTCs and carry out the self-test diagnostics for the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span>.
+</li></ol><ol start="9"><li>If the DTCs retrieved are related to the concern, refer to 
+<a href="SCR_us_en_file%3dSCRH1003.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       >Diagnostic Trouble Code (DTC) Chart
+</a> in this section. For all other DTCs, refer to the Diagnostic Trouble Code (DTC) Chart
+in 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSJA0L.HTM%26rightside%3dSCRSJA0R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 419-10
+</a>.
+</li></ol><ol start="10"><li>If no DTCs related to the concern are retrieved, GO to 
+<a href="SCR_us_en_file%3dSCRH1004.HTM_gen_ref.HTM#HEADLAMPS"                                                                                                                                                                                                                                                       >Symptom Chart
+</a>.
+</li></ol><div><a name="extract_517">&nbsp;
+</a></div>
+
+<p><b>Symptom Chart
+</b></p><a name="HEADLAMPS">&nbsp;
+</a><table width="90%" cellpadding="3" cellspacing="0" rules="groups" border="1">
+
+<caption>Symptom Chart 
+</caption><colgroup><colgroup><colgroup><tr><th>Condition
+</th><th>Possible Sources
+</th><th>Action
+</th></tr><tbody></tbody>
+
+<tr valign="top"><td><ul type="disc"><li>One or both low beams are inoperative
+</li></ul></td><td><ul type="disc"><li>Fuse
+</li><li>Wiring, terminals or connectors
+</li><li>Low beam relay
+</li><li>Headlamp assembly
+</li><li>Body Control Module (BCM)
+</li></ul></td><td><ul type="disc"><li>VERIFY the bulbs are OK. If OK, 
+<a href="SCR_us_en_file%3dSCRH1004.HTM_gen_ref.HTM#PS2-A"                                                                                                                                                                                                                                                       >GO to Pinpoint Test A
+</a>.
+</li></ul></td></tr><tbody></tbody>
+
+<tr valign="top"><td><ul type="disc"><li>One or both high beams are inoperative
+</li></ul></td><td><ul type="disc"><li>Fuse
+</li><li>Wiring, terminals or connectors
+</li><li>High beam relay
+</li><li>Multifunction switch
+</li><li>Headlamp assembly
+</li><li>Battery Junction Box (BJB)
+</li><li><span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span></li></ul></td><td><ul type="disc"><li>VERIFY the bulbs are OK. If OK, 
+<a href="SCR_us_en_file%3dSCRH1004.HTM_gen_ref.HTM#PS2-B"                                                                                                                                                                                                                                                       >GO to Pinpoint Test B
+</a>.
+</li></ul></td></tr><tbody></tbody>
+
+<tr valign="top"><td><ul type="disc"><li>The low beam are always on
+</li></ul></td><td><ul type="disc"><li>Wiring, terminals or connectors
+</li><li>Low beam relay
+</li><li>Daytime Running Lamps (DRL) system concern
+</li><li>Headlamp switch
+</li><li><span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span></li></ul></td><td><ul type="disc"><li><a href="SCR_us_en_file%3dSCRH1004.HTM_gen_ref.HTM#PS2-C"                                                                                                                                                                                                                                                       >GO to Pinpoint Test C
+</a>.
+</li></ul></td></tr><tbody></tbody>
+
+<tr valign="top"><td><ul type="disc"><li>The high beams are always on
+</li></ul></td><td><ul type="disc"><li>Wiring, terminals or connectors
+</li><li>High beam relay
+</li><li>Multifunction switch
+</li><li><span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span></li></ul></td><td><ul type="disc"><li><a href="SCR_us_en_file%3dSCRH1004.HTM_gen_ref.HTM#PS2-D"                                                                                                                                                                                                                                                       >GO to Pinpoint Test D
+</a>.
+</li></ul></td></tr><tbody></tbody>
+
+<tr valign="top"><td><ul type="disc"><li>The flash-to-pass feature is inoperative
+</li></ul></td><td><ul type="disc"><li>Wiring, terminals or connectors
+</li><li>Multifunction switch
+</li><li><span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span></li></ul></td><td><ul type="disc"><li><a href="SCR_us_en_file%3dSCRH1004.HTM_gen_ref.HTM#PS2-E"                                                                                                                                                                                                                                                       >GO to Pinpoint Test E
+</a>.
+</li></ul></td></tr></table><div><a name="extract_518">&nbsp;
+</a></div>
+
+<p><b>Pinpoint Tests
+</b></p><a name="PS2-A">&nbsp;
+</a><p><b>Pinpoint Test A: One Or Both Low Beams Are Inoperative
+</b></p><p><p>Refer to Wiring Diagrams Cell 
+<a target="_parent" href="SCR_us_en_book%3dECR%26cell%3d085%26page%3d%26year%3d%26vehicle%3d2012%20Fiesta%26market%3dUS%26lang%3dEN%26RTYPE%3dDIAGRAM%26lega"                                                                                                                                                                                                                                                               >85
+</a>, Headlamps for schematic and connector information.
+</p></p><h5>Normal Operation 
+</h5><p>The low beams do not turn on unless the ignition is in RUN. The Body Control Module (BCM) monitors a circuit that is provided voltage when the ignition is in RUN.
+</p><p>Voltage is provided at all times to the switch and coil sides of the low beam relay. When the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> detects the headlamp switch in the HEADLAMPS ON position,
+the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> provides ground for the low beam relay coil. When the low beam relay energizes, voltage is routed
+through Battery Junction Box (BJB) fuses 35 (10A) (LH low beam) and 36 (10A) (RH low beam) to the headlamps.
+</p><ul type="disc"><li>DTC B10A8:12 (Low Beam Relay: Circuit Short To Battery) — a continuous and on-demand DTC that sets when the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> detects a short to voltage from the low beam
+relay coil ground controlled circuit.
+</li><li>DTC B10A8:14 (Low Beam Relay: Circuit Short To Ground Or Open) — a continuous and on-demand DTC that sets when the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> detects an open from the low beam relay
+coil ground controlled circuit.
+</li></ul><p><b>This pinpoint test is intended to diagnose the following:
+</b></p><ul type="disc"><li>Fuse
+</li><li>Wiring, terminals or connectors
+</li><li>Low beam relay
+</li><li>Headlamp assembly
+</li><li><span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span></li></ul><a name="A">&nbsp;
+</a><h5>PINPOINT TEST A: ONE OR BOTH LOW BEAMS ARE INOPERATIVE 
+</h5>
+
+<p><b><i>NOTICE: 
+</i> Use the correct probe adapter(s) when making measurements. Failure to use the correct probe adapter(s) may damage the connector.
+</b></p><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="A1">&nbsp;
+</a><b>A1 DETERMINE IF BOTH HEADLAMPS ARE INOPERATIVE 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Ignition ON.
+</li><li>Place the headlamp switch in the HEADLAMPS ON position and observe the headlamps.
+</li><li><b>Are both headlamps inoperative?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>VERIFY the 
+<span title="Battery Junction Box" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BJB
+</span> fuses 19 (20A) and 21 (7.5A) are OK. If OK, GO to 
+<a href="SCR_us_en_file%3dSCRH1004.HTM_gen_ref.HTM#A5"                                                                                                                                                                                                                                                       >A5
+</a>. If not OK, REFER to the Wiring Diagrams manual to identify the possible causes of
+ the circuit short. 
+
+<br><br><b>No
+</b><br>VERIFY the 
+<span title="Battery Junction Box" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BJB
+</span> fuse 35 (10A) (LH low beam) or fuse 36 (10A) (RH low beam) is OK. If OK, GO to 
+<a href="SCR_us_en_file%3dSCRH1004.HTM_gen_ref.HTM#A2"                                                                                                                                                                                                                                                       >A2
+</a>. If not OK, REFER to the Wiring Diagrams manual to
+ identify the possible causes of the circuit short. 
+</td></tr><tr><td><a name="A2">&nbsp;
+</a><b>A2 CHECK FOR VOLTAGE TO THE HEADLAMP 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Place the headlamp switch in the HEADLAMPS OFF position.
+</li><li>Ignition OFF.
+</li><li>Disconnect:   Inoperative Headlamp.
+</li><li>Ignition ON.
+</li><li>Place the headlamp switch in the HEADLAMPS ON position.
+</li><li>Measure the voltage between the LH headlamp C1021-1, circuit CBB35 (YE/GY), harness side and ground; or between the RH headlamp C1041-1, circuit CBB36 (BU/BN), harness side
+and ground.
+</li><br><br><IMG src="SCR_us_en_file%3dN0114653.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="211" width="325" border="0"><li><b>Is the voltage greater than 10 volts?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRH1004.HTM_gen_ref.HTM#A3"                                                                                                                                                                                                                                                       >A3
+</a>. 
+
+<br><br><b>No
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRH1004.HTM_gen_ref.HTM#A4"                                                                                                                                                                                                                                                       >A4
+</a>. 
+</td></tr><tr><td><a name="A3">&nbsp;
+</a><b>A3 CHECK THE HEADLAMP GROUND CIRCUIT FOR AN OPEN 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Measure the voltage between the LH headlamp C1021-1, circuit CBB35 (YE/GY), harness side and the LH headlamp C1021-2, circuit GD123 (BK/GY), harness side; or between the RH
+headlamp C1041-1, circuit CBB36 (BU/BN), harness side and the RH headlamp C1041-2, circuit GD188 (BK/YE), harness side.
+</li><br><br><IMG src="SCR_us_en_file%3dN0114654.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="211" width="325" border="0"><li><b>Is the voltage greater than 10 volts?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REPAIR or INSTALL a new headlamp assembly. REFER to 
+<a href="SCR_us_en_file%3dSCRH1011.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       >Headlamp Assembly
+</a> in this section. TEST the system for normal operation. 
+
+<br><br><b>No
+</b><br>REPAIR circuit GD123 (BK/GY) (LH headlamp) or circuit GD188 (BK/YE) (RH headlamp) for an open. TEST the system for normal operation. 
+</td></tr><tr><td><a name="A4">&nbsp;
+</a><b>A4 CHECK FOR VOLTAGE TO THE LOW BEAM FUSE 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect:   
+<span title="Battery Junction Box" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BJB
+</span> Fuse 35 (10A) (LH low beam) or Fuse 36 (10A) (RH low beam) .
+</li><li>Measure the voltage between the 
+<span title="Battery Junction Box" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BJB
+</span> fuse 35 (10A) (LH low beam), circuit CLF09 (BU/GY), input side and ground; or between
+the 
+<span title="Battery Junction Box" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BJB
+</span> fuse 36 (10A) (RH low beam), circuit CLF09 (BU/GY), input side and ground.
+</li><br><br><IMG src="SCR_us_en_file%3dN0129232.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="211" width="325" border="0"><li><b>Is the voltage greater than 10 volts?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REPAIR circuit CBB35 (YE/GY) (LH headlamp) or circuit CBB36 (BU/BN) (RH headlamp) for an open. TEST the system for normal operation. 
+
+<br><br><b>No
+</b><br>REPAIR circuit CLF09 (BU/GY) for an open. TEST the system for normal operation. 
+</td></tr><tr><td><a name="A5">&nbsp;
+</a><b>A5 CHECK THE LOW BEAM RELAY 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Place the headlamp switch in the HEADLAMPS OFF position.
+</li><li>Ignition OFF.
+</li><li>Disconnect:   Low Beam Relay.
+</li><li>Substitute a known good relay.
+</li><li>Ignition ON.
+</li><li>Place the headlamp switch in the HEADLAMPS ON position.
+</li><li><b>Do the headlamps illuminate?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REMOVE the known good relay. INSTALL a new low beam relay. TEST the system for normal operation. 
+
+<br><br><b>No
+</b><br>REMOVE the known good relay. GO to 
+<a href="SCR_us_en_file%3dSCRH1004.HTM_gen_ref.HTM#A6"                                                                                                                                                                                                                                                       >A6
+</a>. 
+</td></tr><tr><td><a name="A6">&nbsp;
+</a><b>A6 CHECK FOR VOLTAGE TO THE LOW BEAM RELAY 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Ignition OFF.
+</li><li>Measure the voltage between the low beam relay pin 5, circuit SBB19 (BU/RD), 
+<span title="Battery Junction Box" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BJB
+</span> face side and ground.
+</li><br><br><IMG src="SCR_us_en_file%3dN0129233.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="211" width="325" border="0"><li><b>Is the voltage greater than 10 volts?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRH1004.HTM_gen_ref.HTM#A7"                                                                                                                                                                                                                                                       >A7
+</a>. 
+
+<br><br><b>No
+</b><br>REPAIR circuit SBB19 (BU/RD) for an open. TEST the system for normal operation. 
+</td></tr><tr><td><a name="A7">&nbsp;
+</a><b>A7 BYPASS THE LOW BEAM RELAY 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Connect a fused jumper wire between the low beam relay pin 5, circuit SBB19 (BU/RD), 
+<span title="Battery Junction Box" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BJB
+</span> face side and the low beam relay pin 3, circuit CLF09
+(BU/GY), 
+<span title="Battery Junction Box" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BJB
+</span> face side.
+</li><br><br><IMG src="SCR_us_en_file%3dN0130465.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="211" width="325" border="0"><li><b>Do the headlamps illuminate?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REMOVE the jumper wire. GO to 
+<a href="SCR_us_en_file%3dSCRH1004.HTM_gen_ref.HTM#A8"                                                                                                                                                                                                                                                       >A8
+</a>. 
+
+<br><br><b>No
+</b><br>REMOVE the jumper wire. REPAIR circuit CLF09 (BU/GY) for an open. TEST the system for normal operation. 
+</td></tr><tr><td><a name="A8">&nbsp;
+</a><b>A8 CHECK FOR VOLTAGE TO THE LOW BEAM RELAY COIL 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Measure the voltage between the low beam relay pin 1, circuit SBB21 (GY/RD), 
+<span title="Battery Junction Box" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BJB
+</span> face side and ground.
+</li><br><br><IMG src="SCR_us_en_file%3dN0130466.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="211" width="325" border="0"><li><b>Is the voltage greater than 10 volts?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRH1004.HTM_gen_ref.HTM#A9"                                                                                                                                                                                                                                                       >A9
+</a>. 
+
+<br><br><b>No
+</b><br>REPAIR circuit SBB21 (GY/RD) for an open. CLEAR the DTCs. TEST the system for normal operation. 
+</td></tr><tr><td><a name="A9">&nbsp;
+</a><b>A9 CHECK THE LOW BEAM RELAY COIL GROUND CONTROLLED CIRCUIT FOR A SHORT TO VOLTAGE 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Ignition OFF.
+</li><li>Disconnect:   
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> C2280D.
+</li><li>Ignition ON.
+</li><li>Measure the voltage between the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> C2280D-5, circuit CLF04 (BN/BU), harness side and ground.
+</li><br><br><IMG src="SCR_us_en_file%3dN0114659.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="211" width="325" border="0"><li><b>Is any voltage present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REPAIR circuit CLF04 (BN/BU) for a short to voltage. CYCLE the ignition ON then OFF. CLEAR the DTCs. TEST the system for normal operation. 
+
+<br><br><b>No
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRH1004.HTM_gen_ref.HTM#A10"                                                                                                                                                                                                                                                       >A10
+</a>. 
+</td></tr><tr><td><a name="A10">&nbsp;
+</a><b>A10 CHECK THE LOW BEAM RELAY COIL GROUND CONTROLLED CIRCUIT FOR AN OPEN 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Ignition OFF.
+</li><li>Connect:   Low Beam Relay.
+</li><li>Ignition ON.
+</li><li>Measure the voltage between the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> C2280D-5, circuit CLF04 (BN/BU), harness side and ground.
+</li><br><br><IMG src="SCR_us_en_file%3dN0114659.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="211" width="325" border="0"><li><b>Is the voltage greater than 10 volts?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRH1004.HTM_gen_ref.HTM#A11"                                                                                                                                                                                                                                                       >A11
+</a>. 
+
+<br><br><b>No
+</b><br>REPAIR circuit CLF04 (BN/BU) for an open. CLEAR the DTCs. TEST the system for normal operation. 
+</td></tr><tr><td><a name="A11">&nbsp;
+</a><b>A11 CHECK THE IGNITION RUN INPUT CIRCUIT FOR AN OPEN 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect:   
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> C2280B.
+</li><li>Ignition ON.
+</li><li>Measure the voltage between the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> C2280B-4, circuit CBP21 (BU/GY), harness side and ground.
+</li><br><br><IMG src="SCR_us_en_file%3dN0114660.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="211" width="325" border="0"><li><b>Is the voltage greater than 10 volts?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRH1004.HTM_gen_ref.HTM#A12"                                                                                                                                                                                                                                                       >A12
+</a>. 
+
+<br><br><b>No
+</b><br>REPAIR circuit CBP21 (BU/GY) for an open. CLEAR the DTCs. TEST the system for normal operation. 
+</td></tr><tr><td><a name="A12">&nbsp;
+</a><b>A12 CHECK FOR CORRECT 
+<span title="BODY CONTROL MODULE" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> OPERATION 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect all the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> connectors.
+</li><li>Check for:
+</li><ul type="square"><li>corrosion
+</li></ul><ul type="square"><li>damaged pins
+</li></ul><ul type="square"><li>pushed-out pins
+</li></ul><li>Connect all the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> connectors and make sure they seat correctly.
+</li><li>Operate the system and verify the concern is still present.
+</li><li><b>Is the concern still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span>. REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSJA0L.HTM%26rightside%3dSCRSJA0R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 419-10
+</a>. TEST the system for normal operation. 
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector. 
+</td></tr></table><a name="PS2-B">&nbsp;
+</a><p><b>Pinpoint Test B: One or Both High Beams are Inoperative
+</b></p><p><p>Refer to Wiring Diagrams Cell 
+<a target="_parent" href="SCR_us_en_book%3dECR%26cell%3d085%26page%3d%26year%3d%26vehicle%3d2012%20Fiesta%26market%3dUS%26lang%3dEN%26RTYPE%3dDIAGRAM%26lega"                                                                                                                                                                                                                                                               >85
+</a>, Headlamps for schematic and connector information.
+</p></p><h5>Normal Operation 
+</h5><p>Voltage is provided at all times to the switch and coil sides of the high beam relay. The Body Control Module (BCM) sends a voltage signal to the multifunction switch to monitor for a
+high beam request. The multifunction switch routes the voltage signal to ground when placed in the HIGH BEAM position. When the headlamps are on and the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> detects a request
+for the high beams, the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> provides ground for the high beam relay coil. When the high beam relay energizes, voltage is routed
+through Battery Junction Box (BJB) fuses 37 (10A) (LH high beam) and 38 (10A) (RH high beam) to the headlamps.
+</p><ul type="disc"><li>DTC B109A:12 (High Beam Relay: Circuit Short To Battery) — a continuous and on-demand DTC that sets when the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> detects a short to voltage from the high beam
+relay coil ground controlled circuit.
+</li><li>DTC B109A:14 (High Beam Relay: Circuit Short To Ground Or Open) — a continuous and on-demand DTC that sets when the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> detects an open from the high beam
+relay coil ground controlled circuit.
+</li></ul><p><b>This pinpoint test is intended to diagnose the following:
+</b></p><ul type="disc"><li>Fuse
+</li><li>Wiring, terminals or connectors
+</li><li>High beam relay
+</li><li>Multifunction switch
+</li><li>Headlamp assembly
+</li><li><span title="Battery Junction Box" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BJB
+</span></li><li><span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span></li></ul><a name="B">&nbsp;
+</a><h5>PINPOINT TEST B: ONE OR BOTH HIGH BEAMS ARE INOPERATIVE 
+</h5>
+
+<p><b><i>NOTICE: 
+</i> Use the correct probe adapter(s) when making measurements. Failure to use the correct probe adapter(s) may damage the connector.
+</b></p><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="B1">&nbsp;
+</a><b>B1 CHECK THE LOW BEAM OPERATION 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Ignition ON.
+</li><li>Place the headlamp switch in the HEADLAMPS ON position.
+</li><li><b>Do both low beams illuminate?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>If an individual high beam is inoperative, VERIFY the 
+<span title="Battery Junction Box" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BJB
+</span> fuse 37 (10A) (LH high beam) or fuse 38 (10A) (RH high beam) is OK. If OK, GO to 
+<a href="SCR_us_en_file%3dSCRH1004.HTM_gen_ref.HTM#B2"                                                                                                                                                                                                                                                       >B2
+</a>. If not
+ OK, REFER to the Wiring Diagrams manual to identify the possible causes of the circuit short. 
+If both high beams are inoperative, VERIFY the 
+<span title="Battery Junction Box" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BJB
+</span> fuse 17 (20A) is OK. If OK, GO to 
+<a href="SCR_us_en_file%3dSCRH1004.HTM_gen_ref.HTM#B4"                                                                                                                                                                                                                                                       >B4
+</a>. If not OK, REFER to the Wiring Diagrams manual to identify the
+ possible causes of the circuit short. 
+
+<br><br><b>No
+</b><br><a href="SCR_us_en_file%3dSCRH1004.HTM_gen_ref.HTM#PS2-A"                                                                                                                                                                                                                                                       >GO to Pinpoint Test A
+</a>. 
+</td></tr><tr><td><a name="B2">&nbsp;
+</a><b>B2 CHECK FOR VOLTAGE TO THE HEADLAMP 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Place the headlamp switch in the HEADLAMPS OFF position.
+</li><li>Ignition OFF.
+</li><li>Disconnect:   Inoperative Headlamp.
+</li><li>Ignition ON.
+</li><li>Place the headlamp switch in the HEADLAMPS ON position and the multifunction switch in the HIGH BEAM position.
+</li><li>Measure the voltage between the LH headlamp C1021-3, circuit CBB37 (WH), harness side and ground; or between the RH headlamp C1041-3, circuit CBB38 (GY/BN), harness side and ground.
+</li><br><br><IMG src="SCR_us_en_file%3dN0114661.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="211" width="325" border="0"><li><b>Is the voltage greater than 10 volts?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REPAIR or INSTALL a new headlamp assembly. REFER to 
+<a href="SCR_us_en_file%3dSCRH1011.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       >Headlamp Assembly
+</a> in this section. TEST the system for normal operation. 
+
+<br><br><b>No
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRH1004.HTM_gen_ref.HTM#B3"                                                                                                                                                                                                                                                       >B3
+</a>. 
+</td></tr><tr><td><a name="B3">&nbsp;
+</a><b>B3 CHECK FOR VOLTAGE TO THE HIGH BEAM FUSE 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Ignition OFF.
+</li><li>Disconnect:   
+<span title="Battery Junction Box" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BJB
+</span> Fuse 37 (10A) (LH high beam) or Fuse 38 (10A) (RH high beam).
+</li><li>Measure the voltage between the 
+<span title="Battery Junction Box" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BJB
+</span> fuse 37 (10A) (LH high beam), circuit CLF08 (YE/VT), input side and ground; or between
+the 
+<span title="Battery Junction Box" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BJB
+</span> fuse 38 (10A) (RH high beam), circuit CLF08 (YE/VT), input side and ground.
+</li><br><br><IMG src="SCR_us_en_file%3dN0130467.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="211" width="325" border="0"><li><b>Is the voltage greater than 10 volts?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REPAIR circuit CBB37 (WH) (LH headlamp) or circuit CBB38 (GY/BN) (RH headlamp) for an open. TEST the system for normal operation. 
+
+<br><br><b>No
+</b><br>REPAIR circuit CLF08 (YE/VT) for an open. TEST the system for normal operation. 
+</td></tr><tr><td><a name="B4">&nbsp;
+</a><b>B4 CHECK THE 
+<span title="BODY CONTROL MODULE" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> MULTIFUNCTION SWITCH PID 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Enter the following diagnostic mode on the scan tool:   
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> DataLogger.
+</li><li>Monitor the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> multifunction switch input PID (HIGH_BEAM_SW) while placing the multifunction switch in the HIGH BEAM position.
+</li><li><b>Does the PID indicate a request for high beams?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRH1004.HTM_gen_ref.HTM#B5"                                                                                                                                                                                                                                                       >B5
+</a>. 
+
+<br><br><b>No
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRH1004.HTM_gen_ref.HTM#B10"                                                                                                                                                                                                                                                       >B10
+</a>. 
+</td></tr><tr><td><a name="B5">&nbsp;
+</a><b>B5 CHECK THE HIGH BEAM RELAY 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Place the headlamp switch in the HEADLAMPS OFF position.
+</li><li>Ignition OFF.
+</li><li>Disconnect:   High Beam Relay.
+</li><li>Substitute a known good relay.
+</li><li>Ignition ON.
+</li><li>Place the headlamp switch in the HEADLAMPS ON position and the multifunction switch in the HIGH BEAM position.
+</li><li><b>Do the high beams illuminate?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REMOVE the known good relay. INSTALL a new high beam relay. TEST the system for normal operation. 
+
+<br><br><b>No
+</b><br>REMOVE the known good relay. GO to 
+<a href="SCR_us_en_file%3dSCRH1004.HTM_gen_ref.HTM#B6"                                                                                                                                                                                                                                                       >B6
+</a>. 
+</td></tr><tr><td><a name="B6">&nbsp;
+</a><b>B6 CHECK FOR VOLTAGE TO THE HIGH BEAM RELAY 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Ignition OFF.
+</li><li>Measure the voltage between the high beam relay pin 1, circuit SBB21 (GY/RD), 
+<span title="Battery Junction Box" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BJB
+</span> face side and ground; and between the high beam relay pin 3, circuit SBB17
+(YE/RD), 
+<span title="Battery Junction Box" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BJB
+</span> face side and ground.
+</li><br><br><IMG src="SCR_us_en_file%3dN0130468.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="211" width="325" border="0"><li><b>Are the voltages greater than 10 volts?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRH1004.HTM_gen_ref.HTM#B7"                                                                                                                                                                                                                                                       >B7
+</a>. 
+
+<br><br><b>No
+</b><br>INSTALL a new 
+<span title="Battery Junction Box" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BJB
+</span>. CLEAR the DTCs. TEST the system for normal operation. 
+</td></tr><tr><td><a name="B7">&nbsp;
+</a><b>B7 BYPASS THE HIGH BEAM RELAY 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Connect a fused jumper wire between the high beam relay pin 3, circuit SBB17 (YE/RD), 
+<span title="Battery Junction Box" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BJB
+</span> face side and the high beam relay pin 5, circuit CLF08
+(YE/VT), 
+<span title="Battery Junction Box" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BJB
+</span> face side.
+</li><br><br><IMG src="SCR_us_en_file%3dN0130469.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="211" width="325" border="0"><li><b>Do the high beams illuminate?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REMOVE the jumper wire. GO to 
+<a href="SCR_us_en_file%3dSCRH1004.HTM_gen_ref.HTM#B8"                                                                                                                                                                                                                                                       >B8
+</a>. 
+
+<br><br><b>No
+</b><br>REMOVE the jumper wire. REPAIR circuit CLF08 (YE/VT) for an open. TEST the system for normal operation. 
+</td></tr><tr><td><a name="B8">&nbsp;
+</a><b>B8 CHECK THE HIGH BEAM RELAY COIL GROUND CONTROLLED CIRCUIT FOR A SHORT TO VOLTAGE 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect:   
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> C2280D .
+</li><li>Ignition ON.
+</li><li>Measure the voltage between the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> C2280D-11, circuit CLF02 (GY/BN), harness side and ground.
+</li><br><br><IMG src="SCR_us_en_file%3dN0114665.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="211" width="325" border="0"><li><b>Is any voltage present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REPAIR circuit CLF02 (GY/BN) for a short to voltage. CYCLE the ignition ON then OFF. CLEAR the DTCs. TEST the system for normal operation. 
+
+<br><br><b>No
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRH1004.HTM_gen_ref.HTM#B9"                                                                                                                                                                                                                                                       >B9
+</a>. 
+</td></tr><tr><td><a name="B9">&nbsp;
+</a><b>B9 CHECK THE HIGH BEAM RELAY COIL GROUND CONTROLLED CIRCUIT FOR AN OPEN 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Ignition OFF.
+</li><li>Connect:   High Beam Relay.
+</li><li>Ignition ON.
+</li><li>Measure the voltage between the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> C2280D-11, circuit CLF02 (GY/BN), harness side and ground.
+</li><br><br><IMG src="SCR_us_en_file%3dN0114665.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="211" width="325" border="0"><li><b>Is the voltage greater than 10 volts?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRH1004.HTM_gen_ref.HTM#B13"                                                                                                                                                                                                                                                       >B13
+</a>. 
+
+<br><br><b>No
+</b><br>REPAIR circuit CLF02 (GY/BN) for an open. CLEAR the DTCs. TEST the system for normal operation. 
+</td></tr><tr><td><a name="B10">&nbsp;
+</a><b>B10 BYPASS THE MULTIFUNCTION SWITCH 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Ignition OFF.
+</li><li>Disconnect:   Multifunction Switch C202A.
+</li><li>Ignition ON.
+</li><li>Connect a fused jumper wire between the multifunction switch C202A-10, circuit CLF17 (WH/OG), harness side and the multifunction switch C202A-9, circuit GD115 (BK/GY), harness side.
+</li><br><br><IMG src="SCR_us_en_file%3dN0114666.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="211" width="325" border="0"><li>Enter the following diagnostic mode on the scan tool:   
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> DataLogger.
+</li><li>Monitor the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> multifunction switch input PID (HIGH_BEAM_SW).
+</li><li><b>Does the PID indicate a request for high beams?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REMOVE the jumper wire. INSTALL a new multifunction switch. REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSB50L.HTM%26rightside%3dSCRSB50R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 211-05
+</a>. TEST the system for normal operation. 
+
+<br><br><b>No
+</b><br>REMOVE the jumper wire. GO to 
+<a href="SCR_us_en_file%3dSCRH1004.HTM_gen_ref.HTM#B11"                                                                                                                                                                                                                                                       >B11
+</a>. 
+</td></tr><tr><td><a name="B11">&nbsp;
+</a><b>B11 BYPASS THE MULTIFUNCTION SWITCH GROUND CIRCUIT 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Connect a fused jumper wire between the multifunction switch C202D-10, circuit CLF17 (WH/OG), harness side and ground.
+</li><br><br><IMG src="SCR_us_en_file%3dN0114667.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="211" width="325" border="0"><li>Enter the following diagnostic mode on the scan tool:   
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> DataLogger.
+</li><li>Monitor the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> multifunction switch input PID (HIGH_BEAM_SW).
+</li><li><b>Does the PID indicate a request for high beams?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REMOVE the jumper wire. REPAIR circuit GD115 (BK/GY) for an open. TEST the system for normal operation. 
+
+<br><br><b>No
+</b><br>REMOVE the jumper wire. GO to 
+<a href="SCR_us_en_file%3dSCRH1004.HTM_gen_ref.HTM#B12"                                                                                                                                                                                                                                                       >B12
+</a>. 
+</td></tr><tr><td><a name="B12">&nbsp;
+</a><b>B12 CHECK THE HIGH BEAM REQUEST INPUT CIRCUIT FOR AN OPEN 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Ignition OFF.
+</li><li>Disconnect:   
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> C2280F.
+</li><li>Measure the resistance between the multifunction switch C202A-10, circuit CLF17 (WH/OG), harness side and the
+
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> C2280F-10, circuit CLF17 (WH/OG), harness side.
+</li><br><br><IMG src="SCR_us_en_file%3dN0114668.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="211" width="325" border="0"><li><b>Is the resistance less than 5 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRH1004.HTM_gen_ref.HTM#B13"                                                                                                                                                                                                                                                       >B13
+</a>. 
+
+<br><br><b>No
+</b><br>REPAIR circuit CLF17 (WH/OG) for an open. TEST the system for normal operation. 
+</td></tr><tr><td><a name="B13">&nbsp;
+</a><b>B13 CHECK FOR CORRECT 
+<span title="BODY CONTROL MODULE" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> OPERATION 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect all the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> connectors.
+</li><li>Check for:
+</li><ul type="square"><li>corrosion
+</li></ul><ul type="square"><li>damaged pins
+</li></ul><ul type="square"><li>pushed-out pins
+</li></ul><li>Connect all the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> connectors and make sure they seat correctly.
+</li><li>Operate the system and verify the concern is still present.
+</li><li><b>Is the concern still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span>. REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSJA0L.HTM%26rightside%3dSCRSJA0R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 419-10
+</a>. TEST the system for normal operation. 
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector. 
+</td></tr></table><a name="PS2-C">&nbsp;
+</a><p><b>Pinpoint Test C: The Low Beams Are Always On
+</b></p><p><p>Refer to Wiring Diagrams Cell 
+<a target="_parent" href="SCR_us_en_book%3dECR%26cell%3d085%26page%3d%26year%3d%26vehicle%3d2012%20Fiesta%26market%3dUS%26lang%3dEN%26RTYPE%3dDIAGRAM%26lega"                                                                                                                                                                                                                                                               >85
+</a>, Headlamps for schematic and connector information.
+</p></p><h5>Normal Operation 
+</h5><p>The Body Control Module (BCM) sends voltage signals to the headlamp switch through the headlamp switch input circuits (off, parking lamps, headlamps). At any given time, the headlamp
+switch routes one of the input circuits to ground, indicating the headlamp switch position to the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span>. When
+the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> detects the headlamp switch in the HEADLAMPS ON position, the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> provides ground for the
+low beam relay coil. When the low beam relay energizes, voltage is routed through Battery Junction Box (BJB) fuses 35 (10A) (LH low beam) and 36 (10A) (RH low beam) to the headlamps.
+</p><p>If the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> detects multiple or no active headlamp switch inputs, the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> defaults the
+exterior lamps on.
+</p><p>Vehicles equipped with Daytime Running Lamps (DRL) utilize a separate relay in conjunction with the existing headlamp circuitry to illuminate the low beams at a reduced intensity when
+the ignition is in RUN.
+</p><ul type="disc"><li>DTC B10A6:92 (Main Light Switch: Performance Or Incorrect Operation) — a continuous and on-demand DTC that sets when the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> detects a no inputs from the
+headlamp switch are active (circuits open) or more than one headlamp switch input circuits are active (short to ground).
+</li><li>DTC B10A8:14 (Low Beam Relay: Circuit Short To Ground Or Open) — a continuous and on-demand DTC that sets when the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> detects a short to ground from the low
+beam relay coil ground controlled circuit.
+</li></ul><p><b>This pinpoint test is intended to diagnose the following:
+</b></p><ul type="disc"><li>Wiring, terminals or connectors
+</li><li>Low beam relay
+</li><li><span title="Daytime Running Lamps" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">DRL
+</span> system concern
+</li><li>Headlamp switch
+</li><li><span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span></li></ul><a name="C">&nbsp;
+</a><h5>PINPOINT TEST C: THE LOW BEAMS ARE ALWAYS ON 
+</h5>
+
+<p><b><i>NOTICE: 
+</i> Use the correct probe adapter(s) when making measurements. Failure to use the correct probe adapter(s) may damage the connector.
+</b></p><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="C1">&nbsp;
+</a><b>C1 CHECK THE 
+<span title="BODY CONTROL MODULE" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> HEADLAMP SWITCH PIDs 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><p class="singlespace"><b>NOTE: 
+</b> Make sure the headlamp switch is aligned in the correct position when monitoring the PIDs.
+</p><p class="singlespace"><b>NOTE: 
+</b> Only one PID should indicate ON at each headlamp switch position.
+</p><li>Ignition ON.
+</li><li>Enter the following diagnostic mode on the scan tool:   
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> DataLogger.
+</li><li>While moving the headlamp switch through all positions (OFF, PARKING LAMPS and HEADLAMPS), monitor the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> headlamp switch input PIDs (LIGHTNG_MODE,
+PARK_LMP_SW, LOW_BEAM_SW).
+</li><li><b>Do the headlamp switch positions agree with the PIDs (with only one PID indicating ON in each position?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRH1004.HTM_gen_ref.HTM#C7"                                                                                                                                                                                                                                                       >C7
+</a>. 
+
+<br><br><b>No
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRH1004.HTM_gen_ref.HTM#C2"                                                                                                                                                                                                                                                       >C2
+</a>. 
+</td></tr><tr><td><a name="C2">&nbsp;
+</a><b>C2 CHECK THE HEADLAMP SWITCH 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Ignition OFF.
+</li><li>Disconnect:   Headlamp Switch C205.
+</li><li>Carry out the headlamp switch component test.
+
+<p>Refer to Wiring Diagrams Cell 
+<a target="_parent" href="SCR_us_en_book%3dECR%26cell%3d149%26page%3d%26year%3d%26vehicle%3d2012%20Fiesta%26market%3dUS%26lang%3dEN%26RTYPE%3dDIAGRAM%26lega"                                                                                                                                                                                                                                                               >149
+</a> for component testing.
+</p></li><li><b>Does the headlamp switch pass the component test?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRH1004.HTM_gen_ref.HTM#C3"                                                                                                                                                                                                                                                       >C3
+</a>. 
+
+<br><br><b>No
+</b><br>INSTALL a new headlamp switch. REFER to 
+<a href="SCR_us_en_file%3dSCRH1017.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       >Headlamp Switch
+</a> in this section. CLEAR the DTCs. TEST the system for normal operation. 
+</td></tr><tr><td><a name="C3">&nbsp;
+</a><b>C3 DETERMINE IF A HEADLAMP SWITCH INPUT IS SHORT TO GROUND 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Ignition ON.
+</li><li>Enter the following diagnostic mode on the scan tool:   
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> DataLogger.
+</li><li>Monitor the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> headlamp switch input PIDs (LIGHTNG_MODE, PARK_LMP_SW, LOW_BEAM_SW).
+</li><li><b>Do any of the headlamp switch PIDs indicate ON?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRH1004.HTM_gen_ref.HTM#C4"                                                                                                                                                                                                                                                       >C4
+</a>. 
+
+<br><br><b>No
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRH1004.HTM_gen_ref.HTM#C5"                                                                                                                                                                                                                                                       >C5
+</a>. 
+</td></tr><tr><td><a name="C4">&nbsp;
+</a><b>C4 CHECK THE HEADLAMP SWITCH INPUT CIRCUITS FOR A SHORT TO GROUND 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Ignition OFF.
+</li><li>Disconnect:   
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> C2280E.
+</li><li>Measure the resistance between the headlamp switch, harness side and ground as follows:
+</li><br><br><TABLE cellspacing="0" cellpadding="3" border="1"><TR><TH valign="bottom" align="center">Headlamp Switch Connector-Pin
+</TH><TH valign="bottom" align="center">Circuit
+</TH></TR><TR><TD valign="top" align="center">C205-6
+</TD><TD valign="top" align="center">CLF23 (WH/VT)
+</TD></TR><TR><TD valign="top" align="center">C205-2
+</TD><TD valign="top" align="center">CLF24 (YE/BU)
+</TD></TR><TR><TD valign="top" align="center">C205-7
+</TD><TD valign="top" align="center">CLF18 (BU/WH)
+</TD></TR></TABLE><br>
+
+<br><br><IMG src="SCR_us_en_file%3dN0090404.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="211" width="325" border="0"><li><b>Are the resistances greater than 10,000 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRH1004.HTM_gen_ref.HTM#C12"                                                                                                                                                                                                                                                       >C12
+</a>. 
+
+<br><br><b>No
+</b><br>REPAIR the circuit in question for a short to ground. CLEAR the DTCs. TEST the system for normal operation. 
+</td></tr><tr><td><a name="C5">&nbsp;
+</a><b>C5 DETERMINE IF A HEADLAMP SWITCH INPUT IS OPEN 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Enter the following diagnostic mode on the scan tool:   
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> DataLogger.
+</li><li>Monitor the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> headlamp switch input PIDs while connecting a fused jumper wire between the headlamp switch pins and ground as follows:
+</li><br><br><TABLE cellspacing="0" cellpadding="3" border="1"><TR><TH valign="bottom" align="center">PID to Monitor
+</TH><TH valign="bottom" align="center">Headlamp Switch Connector-Pin
+</TH><TH valign="bottom" align="center">Circuit
+</TH></TR><TR><TD valign="top" align="center">LIGHTNG_MODE
+</TD><TD valign="top" align="center">C205-6
+</TD><TD valign="top" align="center">CLF23 (WH/VT)
+</TD></TR><TR><TD valign="top" align="center">PARK_LMP_SW
+</TD><TD valign="top" align="center">C205-2
+</TD><TD valign="top" align="center">CLF24 (YE/BU)
+</TD></TR><TR><TD valign="top" align="center">LOW_BEAM_SW
+</TD><TD valign="top" align="center">C205-7
+</TD><TD valign="top" align="center">CLF18 (BU/WH)
+</TD></TR></TABLE><br>
+
+<br><br><IMG src="SCR_us_en_file%3dN0117257.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="211" width="325" border="0"><li><b>Do the PIDs indicate ON with each corresponding connection?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REPAIR circuit GD115 (BK/GY) for an open. CLEAR the DTCs. TEST the system for normal operation. 
+
+<br><br><b>No
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRH1004.HTM_gen_ref.HTM#C6"                                                                                                                                                                                                                                                       >C6
+</a>. 
+</td></tr><tr><td><a name="C6">&nbsp;
+</a><b>C6 CHECK THE HEADLAMP SWITCH INPUT CIRCUITS FOR AN OPEN 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Ignition OFF.
+</li><li>Disconnect:   
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> C2280E.
+</li><li>Measure the resistance between the headlamp switch, harness side and the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span>, harness side as follows:
+</li><br><br><TABLE cellspacing="0" cellpadding="3" border="1"><TR><TH valign="bottom" align="center">Headlamp Switch Connector-Pin
+</TH><TH valign="bottom" align="center"><span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> Connector-Pin
+</TH><TH valign="bottom" align="center">Circuit
+</TH></TR><TR><TD valign="top" align="center">C205-6
+</TD><TD valign="top" align="center">C2280E-3
+</TD><TD valign="top" align="center">CLF23 (WH/VT)
+</TD></TR><TR><TD valign="top" align="center">C205-2
+</TD><TD valign="top" align="center">C2280E-9
+</TD><TD valign="top" align="center">CLF24 (YE/BU)
+</TD></TR><TR><TD valign="top" align="center">C205-7
+</TD><TD valign="top" align="center">C2280E-13
+</TD><TD valign="top" align="center">CLF18 (BU/WH)
+</TD></TR></TABLE><br>
+
+<br><br><IMG src="SCR_us_en_file%3dN0117258.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="211" width="325" border="0"><li><b>Are the resistances less than 5 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRH1004.HTM_gen_ref.HTM#C12"                                                                                                                                                                                                                                                       >C12
+</a>. 
+
+<br><br><b>No
+</b><br>REPAIR the circuit in question for an open. CLEAR the DTCs. TEST the system for normal operation. 
+</td></tr><tr><td><a name="C7">&nbsp;
+</a><b>C7 CHECK THE LOW BEAM RELAY OUTPUT 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Ignition OFF.
+</li><li>Disconnect:   Low Beam Relay.
+</li><li>Ignition ON.
+</li><li><b>Do the low beams continue to illuminate?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRH1004.HTM_gen_ref.HTM#C8"                                                                                                                                                                                                                                                       >C8
+</a>. 
+
+<br><br><b>No
+</b><br>If equipped with 
+<span title="Daytime Running Lamps" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">DRL
+</span>, GO to 
+<a href="SCR_us_en_file%3dSCRH1004.HTM_gen_ref.HTM#C9"                                                                                                                                                                                                                                                       >C9
+</a>. 
+If not equipped with 
+<span title="Daytime Running Lamps" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">DRL
+</span>, GO to 
+<a href="SCR_us_en_file%3dSCRH1004.HTM_gen_ref.HTM#C10"                                                                                                                                                                                                                                                       >C10
+</a>. 
+</td></tr><tr><td><a name="C8">&nbsp;
+</a><b>C8 ISOLATE THE SHORT TO VOLTAGE 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect:   
+<span title="Battery Junction Box" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BJB
+</span> Fuses 35 (10A) and 36 (10A).
+</li><li><b>Does either low beam continue to illuminate?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REPAIR circuit CBB35 (YE/GY) (LH headlamp) or circuit CBB36 (BU/BN) (RH headlamp) for a short to voltage as necessary. TEST the system for normal operation. 
+
+<br><br><b>No
+</b><br>REPAIR circuit CLF09 (BU/GY) for a short to voltage. TEST the system for normal operation. 
+</td></tr><tr><td><a name="C9">&nbsp;
+</a><b>C9 CHECK THE 
+<span title="DAYTIME RUNNING LAMPS" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">DRL
+</span> SYSTEM 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Ignition OFF.
+</li><li>Measure the voltage between the low beam relay pin 4, circuit CLF13 (YE/BU), 
+<span title="Battery Junction Box" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BJB
+</span> face side and ground.
+</li><br><br><IMG src="SCR_us_en_file%3dN0130470.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="211" width="325" border="0"><li><b>Is any voltage present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br><a href="SCR_us_en_file%3dSCRH1005.HTM_gen_ref.HTM#PS2-G"                                                                                                                                                                                                                                                       >GO to Pinpoint Test G
+</a>. 
+
+<br><br><b>No
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRH1004.HTM_gen_ref.HTM#C10"                                                                                                                                                                                                                                                       >C10
+</a>. 
+</td></tr><tr><td><a name="C10">&nbsp;
+</a><b>C10 CHECK THE LOW BEAM RELAY 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Ignition OFF.
+</li><li>Substitute a known good relay.
+</li><li>Ignition ON.
+</li><li><b>Do the low beams continue to illuminate?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REMOVE the known good relay. GO to 
+<a href="SCR_us_en_file%3dSCRH1004.HTM_gen_ref.HTM#C11"                                                                                                                                                                                                                                                       >C11
+</a>. 
+
+<br><br><b>No
+</b><br>REMOVE the known good relay. INSTALL a new low beam relay. TEST the system for normal operation. 
+</td></tr><tr><td><a name="C11">&nbsp;
+</a><b>C11 CHECK THE LOW BEAM RELAY COIL GROUND CONTROLLED CIRCUIT FOR A SHORT TO GROUND 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Ignition OFF.
+</li><li>Disconnect:   
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> C2280D.
+</li><li>Measure the resistance between the low beam relay pin 2, circuit CLF04 (BN/BU), 
+<span title="Battery Junction Box" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BJB
+</span> face side and ground.
+</li><br><br><IMG src="SCR_us_en_file%3dN0130471.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="211" width="325" border="0"><li><b>Is the resistance greater than 10,000 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRH1004.HTM_gen_ref.HTM#C12"                                                                                                                                                                                                                                                       >C12
+</a>. 
+
+<br><br><b>No
+</b><br>REPAIR circuit CLF04 (BN/BU), for a short to ground. CLEAR the DTCs. TEST the system for normal operation. 
+</td></tr><tr><td><a name="C12">&nbsp;
+</a><b>C12 CHECK FOR CORRECT 
+<span title="BODY CONTROL MODULE" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> OPERATION 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect all the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> connectors.
+</li><li>Check for:
+</li><ul type="square"><li>corrosion
+</li></ul><ul type="square"><li>damaged pins
+</li></ul><ul type="square"><li>pushed-out pins
+</li></ul><li>Connect all the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> connectors and make sure they seat correctly.
+</li><li>Operate the system and verify the concern is still present.
+</li><li><b>Is the concern still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span>. REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSJA0L.HTM%26rightside%3dSCRSJA0R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 419-10
+</a>. TEST the system for normal operation. 
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector. 
+</td></tr></table><a name="PS2-D">&nbsp;
+</a><p><b>Pinpoint Test D: The High Beams Are Always On
+</b></p><p><p>Refer to Wiring Diagrams Cell 
+<a target="_parent" href="SCR_us_en_book%3dECR%26cell%3d085%26page%3d%26year%3d%26vehicle%3d2012%20Fiesta%26market%3dUS%26lang%3dEN%26RTYPE%3dDIAGRAM%26lega"                                                                                                                                                                                                                                                               >85
+</a>, Headlamps for schematic and connector information.
+</p></p><h5>Normal Operation 
+</h5><p>Voltage is provided at all times to the switch and coil sides of the high beam relay. The Body Control Module (BCM) sends two voltage signals to the multifunction switch. One is to monitor
+for a high beam request and the other for a flash-to-pass request. The multifunction switch routes the corresponding voltage signal to ground when placed in the HIGH BEAM or FLASH-TO-PASS position. When the headlamps are on and
+the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> detects a request for the high beams or flash-to-pass feature, the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> provides ground for
+the high beam relay coil. When the high beam relay energizes, voltage is routed through Battery Junction Box (BJB) fuses 37 (10A) (LH high beam) and 38 (10A) (RH high beam) to the headlamps.
+</p><ul type="disc"><li>DTC B1007:92 (High-Beam Headlamp Switch: Performance Or Incorrect Operation) — an on-demand DTC that sets when the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> detects a short to ground from the high
+beam or flash-to-pass request input circuits.
+</li><li>DTC B109A:14 (High Beam Relay: Circuit Short To Ground Or Open) — a continuous and on-demand DTC that sets when the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> detects a short to ground from the high
+beam relay coil ground controlled circuit.
+</li></ul><p><b>This pinpoint test is intended to diagnose the following:
+</b></p><ul type="disc"><li>Wiring, terminals or connectors
+</li><li>High beam relay
+</li><li>Multifunction switch
+</li><li><span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span></li></ul><a name="D">&nbsp;
+</a><h5>PINPOINT TEST D: THE HIGH BEAM(S) ARE ALWAYS ON 
+</h5>
+
+<p><b><i>NOTICE: 
+</i> Use the correct probe adapter(s) when making measurements. Failure to use the correct probe adapter(s) may damage the connector.
+</b></p><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="D1">&nbsp;
+</a><b>D1 CHECK THE MULTIFUNCTION SWITCH INPUT 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Ignition ON.
+</li><li>Enter the following diagnostic mode on the scan tool:   
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> DataLogger.
+</li><li>Monitor the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> multifunction switch high beam and flash-to-pass PIDs (HIGH_BEAM_SW, FLASH-to-PASS).
+</li><li><b>Does either PID indicate a high beam or flash-to-pass request?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRH1004.HTM_gen_ref.HTM#D2"                                                                                                                                                                                                                                                       >D2
+</a>. 
+
+<br><br><b>No
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRH1004.HTM_gen_ref.HTM#D4"                                                                                                                                                                                                                                                       >D4
+</a>. 
+</td></tr><tr><td><a name="D2">&nbsp;
+</a><b>D2 CHECK THE MULTIFUNCTION SWITCH 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Ignition OFF.
+</li><li>Disconnect:   Multifunction Switch C202A.
+</li><li>Ignition ON.
+</li><li>Enter the following diagnostic mode on the scan tool:   
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> DataLogger.
+</li><li>Monitor the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> multifunction switch high beam and flash-to-pass PIDs (HIGH_BEAM_SW, FLASH-to-PASS).
+</li><li><b>Does either PID indicate a high beam or flash-to-pass request?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRH1004.HTM_gen_ref.HTM#D3"                                                                                                                                                                                                                                                       >D3
+</a>. 
+
+<br><br><b>No
+</b><br>INSTALL a new multifunction switch. REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSB50L.HTM%26rightside%3dSCRSB50R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 211-05
+</a>. TEST the system for normal operation. 
+</td></tr><tr><td><a name="D3">&nbsp;
+</a><b>D3 CHECK THE HIGH BEAM AND FLASH-TO-PASS INPUT CIRCUITS FOR A SHORT TO GROUND 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Ignition OFF.
+</li><li>Disconnect:   
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> C2280E and C2280F.
+</li><li>Measure the resistance between the multifunction switch C202A-5, circuit CLF27 (GN/BN), harness side and ground; and between the multifunction switch C202A-10, circuit CLF17
+(WH/OG), harness side and ground.
+</li><br><br><IMG src="SCR_us_en_file%3dN0117261.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="211" width="325" border="0"><li><b>Are the resistances greater than 10,000 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRH1004.HTM_gen_ref.HTM#D8"                                                                                                                                                                                                                                                       >D8
+</a>. 
+
+<br><br><b>No
+</b><br>REPAIR circuit CLF27 (GN/BN) (flash-to-pass) or circuit CLF17 (WH/OG) (high beam) for a short to ground. TEST the system for normal operation. 
+</td></tr><tr><td><a name="D4">&nbsp;
+</a><b>D4 CHECK THE HIGH BEAM RELAY OUTPUT 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Ignition OFF.
+</li><li>Disconnect:   High Beam Relay.
+</li><li>Ignition ON.
+</li><li><b>Do the high beams continue to illuminate?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRH1004.HTM_gen_ref.HTM#D5"                                                                                                                                                                                                                                                       >D5
+</a>. 
+
+<br><br><b>No
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRH1004.HTM_gen_ref.HTM#D6"                                                                                                                                                                                                                                                       >D6
+</a>. 
+</td></tr><tr><td><a name="D5">&nbsp;
+</a><b>D5 ISOLATE THE SHORT TO VOLTAGE 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect:   
+<span title="Battery Junction Box" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BJB
+</span> Fuses 37 (10A) and 38 (10A).
+</li><li><b>Does either high beam continue to illuminate?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REPAIR circuit CBB37 (WH) (LH headlamp) or circuit CBB38 (GY/BN) (RH headlamp) for a short to voltage as necessary. TEST the system for normal operation. 
+
+<br><br><b>No
+</b><br>REPAIR circuit CLF08 (YE/VT) for a short to voltage. TEST the system for normal operation. 
+</td></tr><tr><td><a name="D6">&nbsp;
+</a><b>D6 CHECK THE HIGH BEAM RELAY 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Ignition OFF.
+</li><li>Substitute a known good relay.
+</li><li>Ignition ON.
+</li><li><b>Do the high beams continue to illuminate?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REMOVE the known good relay. GO to 
+<a href="SCR_us_en_file%3dSCRH1004.HTM_gen_ref.HTM#D7"                                                                                                                                                                                                                                                       >D7
+</a>. 
+
+<br><br><b>No
+</b><br>REMOVE the known good relay. INSTALL a new high beam relay. TEST the system for normal operation. 
+</td></tr><tr><td><a name="D7">&nbsp;
+</a><b>D7 CHECK THE HIGH BEAM RELAY COIL GROUND CONTROLLED CIRCUIT FOR A SHORT TO GROUND 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Ignition OFF.
+</li><li>Disconnect:   
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> C2280D.
+</li><li>Measure the resistance between the high beam relay pin 2, circuit CLF02 (GY/BN), 
+<span title="Battery Junction Box" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BJB
+</span> face side and ground.
+</li><br><br><IMG src="SCR_us_en_file%3dN0130472.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="211" width="325" border="0"><li><b>Is the resistance greater than 10,000 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRH1004.HTM_gen_ref.HTM#D8"                                                                                                                                                                                                                                                       >D8
+</a>. 
+
+<br><br><b>No
+</b><br>REPAIR circuit CLF02 (GY/BN), for a short to ground. CLEAR the DTCs. TEST the system for normal operation. 
+</td></tr><tr><td><a name="D8">&nbsp;
+</a><b>D8 CHECK FOR CORRECT 
+<span title="BODY CONTROL MODULE" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> OPERATION 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect all the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> connectors.
+</li><li>Check for:
+</li><ul type="square"><li>corrosion
+</li></ul><ul type="square"><li>damaged pins
+</li></ul><ul type="square"><li>pushed-out pins
+</li></ul><li>Connect all the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> connectors and make sure they seat correctly.
+</li><li>Operate the system and verify the concern is still present.
+</li><li><b>Is the concern still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span>. REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSJA0L.HTM%26rightside%3dSCRSJA0R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 419-10
+</a>. TEST the system for normal operation. 
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector. 
+</td></tr></table><a name="PS2-E">&nbsp;
+</a><p><b>Pinpoint Test E: The Flash-To-Pass Feature Is Inoperative
+</b></p><h5>Normal Operation 
+</h5><p>The Body Control Module (BCM) sends a voltage signal to the multifunction switch to monitor for a flash-to-pass feature request. The multifunction switch routes the voltage signal to
+ground when placed in the FLASH-TO-PASS position. When the headlamps are on and the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> detects a request for the flash-to-pass feature,
+the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> activates the high beams.
+</p><p><b>This pinpoint test is intended to diagnose the following:
+</b></p><ul type="disc"><li>Wiring, terminals or connectors
+</li><li>Multifunction switch
+</li><li><span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span></li></ul><a name="E">&nbsp;
+</a><h5>PINPOINT TEST E: THE FLASH-TO-PASS FEATURE IS INOPERATIVE 
+</h5>
+
+<p><b><i>NOTICE: 
+</i> Use the correct probe adapter(s) when making measurements. Failure to use the correct probe adapter(s) may damage the connector.
+</b></p><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="E1">&nbsp;
+</a><b>E1 VERIFY THE HIGH BEAM HEADLAMP OPERATION 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Ignition ON.
+</li><li>Place the headlamp switch in the HEADLAMPS ON position.
+</li><li>Place the multifunction switch in the HIGH BEAM position while observing the headlamps.
+</li><li><b>Do the high beams illuminate?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRH1004.HTM_gen_ref.HTM#E2"                                                                                                                                                                                                                                                       >E2
+</a>. 
+
+<br><br><b>No
+</b><br><a href="SCR_us_en_file%3dSCRH1004.HTM_gen_ref.HTM#PS2-B"                                                                                                                                                                                                                                                       >GO to Pinpoint Test B
+</a>. 
+</td></tr><tr><td><a name="E2">&nbsp;
+</a><b>E2 BYPASS THE MULTIFUNCTION SWITCH 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Place the headlamp switch in the OFF position.
+</li><li>Ignition OFF.
+</li><li>Disconnect:   Multifunction Switch C202A.
+</li><li>Ignition ON.
+</li><li>Connect a fused jumper wire between the multifunction switch C202A-5, circuit CLF27 (GN/BN), harness side and the multifunction switch C202A-9, circuit GD115 (BK/GY), harness side.
+</li><br><br><IMG src="SCR_us_en_file%3dN0117263.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="211" width="325" border="0"><li><b>Do the high beams illuminate?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REMOVE the jumper wire. INSTALL a new multifunction switch. REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSB50L.HTM%26rightside%3dSCRSB50R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 211-05
+</a>. TEST the system for normal operation. 
+
+<br><br><b>No
+</b><br>REMOVE the jumper wire. GO to 
+<a href="SCR_us_en_file%3dSCRH1004.HTM_gen_ref.HTM#E3"                                                                                                                                                                                                                                                       >E3
+</a>. 
+</td></tr><tr><td><a name="E3">&nbsp;
+</a><b>E3 CHECK THE FLASH-TO-PASS INPUT CIRCUIT FOR AN OPEN 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Ignition OFF.
+</li><li>Disconnect:   
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> C2280E.
+</li><li>Measure the resistance between the multifunction switch C202A-5, circuit CLF27 (GN/BN), harness side and the
+
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> C2280E-22, circuit CLF27 (GN/BN), harness side.
+</li><br><br><IMG src="SCR_us_en_file%3dN0117264.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="211" width="325" border="0"><li><b>Is the resistance less than 5 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRH1004.HTM_gen_ref.HTM#E4"                                                                                                                                                                                                                                                       >E4
+</a>. 
+
+<br><br><b>No
+</b><br>REPAIR circuit CLF27 (GN/BN) for an open. TEST the system for normal operation. 
+</td></tr><tr><td><a name="E4">&nbsp;
+</a><b>E4 CHECK FOR CORRECT 
+<span title="BODY CONTROL MODULE" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> OPERATION 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect all the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> connectors.
+</li><li>Check for:
+</li><ul type="square"><li>corrosion
+</li></ul><ul type="square"><li>damaged pins
+</li></ul><ul type="square"><li>pushed-out pins
+</li></ul><li>Connect all the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> connectors and make sure they seat correctly.
+</li><li>Operate the system and verify the concern is still present.
+</li><li><b>Is the concern still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span>. REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSJA0L.HTM%26rightside%3dSCRSJA0R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 419-10
+</a>. TEST the system for normal operation. 
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector. 
+</td></tr></table><br><hr><P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+
+</body>
+<!-- Mirrored from file:///C:/Documents and Settings/Administrator/Desktop/FORD/Ford Fiesta 2012/SCR~us~en~file=SCRH1004.HTM~gen~ref.HTM by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 04 Mar 2025 14:53:30 GMT -->
+</html>

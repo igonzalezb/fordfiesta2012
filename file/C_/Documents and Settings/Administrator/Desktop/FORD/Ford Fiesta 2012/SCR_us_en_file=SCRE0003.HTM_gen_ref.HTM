@@ -1,0 +1,126 @@
+<html>
+<!-- Mirrored from file:///C:/Documents and Settings/Administrator/Desktop/FORD/Ford Fiesta 2012/SCR~us~en~file=SCRE0003.HTM~gen~ref.HTM by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 04 Mar 2025 14:53:47 GMT -->
+<head><META http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>2012 Fiesta Workshop Manual
+
+</title><LINK rel="stylesheet" type="text/css" href="SCR_us_en_file%3dSCRSTYLE.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       ><meta name="tps_translationdatetime" content="06/09/2012 16:28:18"><meta name="tps_type" content="workshop"><meta name="tps_bookcode" content="SCR"><meta name="tps_market" content="US"><meta name="tps_language" content="EN"><meta name="tps_year" content="2012"><meta name="tps_modelname" content="Fiesta"><meta name="tps_system" content="4"><meta name="tps_group" content="14"><meta name="tps_section" content="00"><meta name="tps_section_title" content="Charging System"><meta name="tps_ss_title" content="DIAGNOSIS AND TESTING"><meta name="tps_procid" content="s4p705187q0"><meta name="tps_procsgmlid" content="n1235032"><meta name="tps_packetinfo" content="690963"><meta name="tps_effectivity" content="2011,FIESTA,14-000"><meta name="tps_effectivity" content="2012,FIESTA,14-000"><meta name="tps_effectivity" content="2013,FIESTA,14-000"></head><body><TABLE width="95%"><TR><TD><div class="bookinfo">SECTION 414-00:  Charging System
+</DIV></TD><TD align="RIGHT"><div class="bookinfo">2012 Fiesta Workshop Manual
+</DIV></TD></TR><TR><TD><div class="bookinfo">DIAGNOSIS AND TESTING
+</div></TD><TD align="RIGHT"><div class="bookinfosmall">Procedure revision date:  07/15/2011
+</div></TD></TR></TABLE><hr><h4>Principles of Operation
+</h4><meta name="tps_proctitle" content="Principles of Operation">
+
+<p>The PCM-controlled charging system, or Smart Charge charging system, determines the optimal voltage setpoint for the charging system and communicates this information to the voltage regulator. The Smart Charge charging system is designed to
+set 1 of 9 DTCs any time a charging system fault is present. All of the DTCs can set continuous faults, but not all DTCs set as on-demand faults.
+</p><br><br><TABLE cellspacing="0" cellpadding="3" border="1"><TR><TH valign="bottom" align="center">DTC
+</TH><TH valign="bottom" align="center">Key ON Engine OFF (KOEO)
+</TH><TH valign="bottom" align="center">Key ON Engine Running (KOER)
+</TH><TH valign="bottom" align="center">Continuous
+</TH></TR><TR><TD valign="top" align="center">P065B:09
+</TD><TD valign="top" align="center">&nbsp;
+</TD><TD valign="top" align="center">X
+</TD><TD valign="top" align="center">X
+</TD></TR><TR><TD valign="top" align="center">P065C:09
+</TD><TD valign="top" align="center">&nbsp;
+</TD><TD valign="top" align="center">X
+</TD><TD valign="top" align="center">X
+</TD></TR><TR><TD valign="top" align="center">P0A3B:09
+</TD><TD valign="top" align="center">&nbsp;
+</TD><TD valign="top" align="center">X
+</TD><TD valign="top" align="center">X
+</TD></TR><TR><TD valign="top" align="center">P1794:16
+</TD><TD valign="top" align="center">X
+</TD><TD valign="top" align="center">X
+</TD><TD valign="top" align="center">X
+</TD></TR><TR><TD valign="top" align="center">P1794:17
+</TD><TD valign="top" align="center">X
+</TD><TD valign="top" align="center">X
+</TD><TD valign="top" align="center">X
+</TD></TR><TR><TD valign="top" align="center">U0120:13
+</TD><TD valign="top" align="center">X
+</TD><TD valign="top" align="center">X
+</TD><TD valign="top" align="center">X
+</TD></TR><TR><TD valign="top" align="center">U0469:09
+</TD><TD valign="top" align="center">&nbsp;
+</TD><TD valign="top" align="center">X
+</TD><TD valign="top" align="center">X
+</TD></TR><TR><TD valign="top" align="center">U3003:16
+</TD><TD valign="top" align="center">X
+</TD><TD valign="top" align="center">X
+</TD><TD valign="top" align="center">X
+</TD></TR><TR><TD valign="top" align="center">U3003:17
+</TD><TD valign="top" align="center">X
+</TD><TD valign="top" align="center">X
+</TD><TD valign="top" align="center">X
+</TD></TR></TABLE><br><p>This system uses a dedicated Local Interconnect Network (LIN) communication circuit. The generator uses
+this 
+<span title="Local Interconnect Network" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">LIN
+</span> circuit to communicate the desired setpoint from the PCM to the voltage regulator. The generator also uses
+this 
+<span title="Local Interconnect Network" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">LIN
+</span> circuit to communicate the generator load and error conditions to the PCM.
+</p><p>The PCM simultaneously controls and monitors the output of the generator. When the usage of current is high or the battery is discharged, the PCM raises engine speed as needed to increase generator output. The generator charges the battery
+and at the same time supplies power for all of the electrical loads that are required. The battery is more effectively charged with a higher voltage when the battery is cold and a lower voltage when the battery is warm. The PCM uses the measurement
+from the Intake Air Temperature (IAT) sensor to adjust the charging voltage according to the battery temperature. The PCM also uses other inputs to control charging system voltage such as
+the Vehicle Speed Sensor (VSS) and Engine Coolant Temperature (ECT) sensor. The voltage setpoint is calculated by the PCM and communicated to
+the voltage regulator by the 
+<span title="Local Interconnect Network" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">LIN
+</span> circuit based on the needs of the vehicle and the operating conditions.
+</p><p>The PCM turns off the generator during cranking to reduce the generator load and improve cranking speed. Once the engine starts, the PCM slowly increases generator output to desired voltage.
+</p><p>The PCM controls the charging system warning indicator by sending a message over the High Speed Controller Area Network (HS-CAN) to
+the Instrument Panel Cluster (IPC) module. The 
+<span title="Instrument Panel Cluster" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IPC
+</span> module controls the charging system warning indication based on
+the message from the PCM. The 
+<span title="Instrument Panel Cluster" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IPC
+</span> module controls the charging system indication based on the message from the PCM, turning it on or off. If equipped with
+a Front Control/Display Interface Module (FCDIM) (message center), the 
+<span title="Instrument Panel Cluster" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IPC
+</span> module displays a CHECK CHARGING
+SYSTEM message. When the ignition is on and the engine is off on vehicles equipped with a message center, the CHECK CHARGING SYSTEM message may not be displayed. For additional information regarding
+the 
+<span title="Instrument Panel Cluster" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IPC
+</span> module, refer to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSD10L.HTM%26rightside%3dSCRSD10R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 413-01
+</a>. For additional information regarding
+the 
+<span title="Front Control/Display Interface Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">FCDIM
+</span>, refer to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSF00L.HTM%26rightside%3dSCRSF00R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 415-00
+</a>.
+</p><p>Under certain circumstances the charging system may have a concern but still keep the battery charged and the vehicle running. The 
+<span title="Local Interconnect Network" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">LIN
+</span> normally initiates
+charging from the PCM, but the generator may continue charging when a fault is present on this circuit. If the engine is operated at greater than 2,000 rpm momentarily, the generator may self-excite or start charging on its own. The charging system
+warning indicator is illuminated and/or CHECK CHARGING SYSTEM message is displayed, and the generator operates in a default mode (approximately 13.5 volts) until the engine is turned off. When the engine is restarted and the engine is operated at
+greater than 2,000 rpm momentarily, the generator may again self-excite and again the charging system warning indicator is illuminated and/or CHECK CHARGING SYSTEM message is displayed.
+</p><p>The PIDs and their associated descriptions used in the charging system diagnosis are listed below:
+</p><br><br><P class="SINGLESPACE"><B>&nbsp;PID Chart 
+</B></P><TABLE cellspacing="0" cellpadding="3" border="1"><TR><TH valign="bottom" align="center">PID
+</TH><TH valign="bottom" align="center">Description
+</TH><TH valign="bottom" align="center">Normal Display
+</TH><TH valign="bottom" align="center">Associated Circuit Name
+</TH><TH valign="bottom" align="center">Connector, Circuit
+</TH></TR><TR><TD valign="top" align="center">GENVDSD
+</TD><TD valign="top" align="center">Generator Voltage Desired
+</TD><TD valign="top" align="center">Voltage varies by vehicle needs - May be controlled by an output state control
+</TD><TD valign="top" align="center">—
+</TD><TD valign="top" align="center">—
+</TD></TR><TR><TD valign="top" align="center">VPWR
+</TD><TD valign="top" align="center">Module Supply Voltage
+</TD><TD valign="top" align="center">Within 0.5 volt of battery voltage
+</TD><TD valign="top" align="center">—
+</TD><TD valign="top" align="center">—
+</TD></TR></TABLE><br><br><hr><P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+
+</body>
+<!-- Mirrored from file:///C:/Documents and Settings/Administrator/Desktop/FORD/Ford Fiesta 2012/SCR~us~en~file=SCRE0003.HTM~gen~ref.HTM by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 04 Mar 2025 14:53:47 GMT -->
+</html>

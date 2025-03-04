@@ -1,0 +1,1561 @@
+<html>
+<!-- Mirrored from file:///C:/Documents and Settings/Administrator/Desktop/FORD/Ford Fiesta 2012/SCR~us~en~file=SCRJA004.HTM~gen~ref.HTM by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 04 Mar 2025 14:52:53 GMT -->
+<head><META http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>2012 Fiesta Workshop Manual
+
+</title><LINK rel="stylesheet" type="text/css" href="SCR_us_en_file%3dSCRSTYLE.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       ><meta name="tps_translationdatetime" content="06/09/2012 16:28:18"><meta name="tps_type" content="workshop"><meta name="tps_bookcode" content="SCR"><meta name="tps_market" content="US"><meta name="tps_language" content="EN"><meta name="tps_year" content="2012"><meta name="tps_modelname" content="Fiesta"><meta name="tps_system" content="4"><meta name="tps_group" content="19"><meta name="tps_section" content="10"><meta name="tps_section_title" content="Multifunction Electronic Modules"><meta name="tps_ss_title" content="DIAGNOSIS AND TESTING"><meta name="tps_procid" content="s4p706427q0"><meta name="tps_procsgmlid" content="n1235079"><meta name="tps_packetinfo" content="700099"><meta name="tps_effectivity" content="2011,FIESTA,19-100"><meta name="tps_effectivity" content="2012,FIESTA,19-100"><meta name="tps_effectivity" content="2013,FIESTA,19-100"></head><body><TABLE width="95%"><TR><TD><div class="bookinfo">SECTION 419-10:  Multifunction Electronic Modules
+</DIV></TD><TD align="RIGHT"><div class="bookinfo">2012 Fiesta Workshop Manual
+</DIV></TD></TR><TR><TD><div class="bookinfo">DIAGNOSIS AND TESTING
+</div></TD><TD align="RIGHT"><div class="bookinfosmall">Procedure revision date:  12/23/2011
+</div></TD></TR></TABLE><hr><h4>Body Control Module (BCM)
+</h4><meta name="tps_proctitle" content="Body Control Module (BCM)">
+
+<br><table border="1" cellpadding="3" cellspacing="0" width="50%"><caption>Special Tool(s)
+</caption><tr valign="top"><td><IMG src="SCR_us_en_file%3dST3093A.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="99" width="99" border="0"></td><td>Fluke 77-IV Digital Multimeter
+<br>FLU77-4 or equivalent
+</td></tr><tr valign="top"><td><IMG src="SCR_us_en_file%3dST2834A.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="99" width="99" border="0"></td><td>Vehicle Communication Module (VCM) and Integrated Diagnostic System (IDS) software with appropriate hardware, or equivalent scan
+ tool
+<br></td></tr><tr valign="top"><td><IMG src="SCR_us_en_file%3dST2574A.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="99" width="99" border="0"></td><td>Flex Probe Kit
+<br>NUD105-R025D or equivalent
+</td></tr></table><div><a name="extract_582">&nbsp;
+</a></div>
+
+<p><b>Principles of Operation
+</b></p><p>The Body Control Module (BCM) controls various systems by monitoring inputs from switches, sensors and messages sent over the
+Medium Speed Controller Area Network (MS-CAN) from other modules. The 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> activates outputs based on the inputs received.
+For example, the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> monitors the headlamp switch position, and based on this input, the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> may
+provide voltage to the exterior lamps.
+</p><p><b>Field-Effect Transistor (FET) Protection
+</b></p><p>A Field-Effect Transistor (FET) is a type of transistor that, when used with module software, monitors and controls current flow on module outputs. The
+
+<span title="Field-Effect Transistor" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">FET
+</span> protection strategy prevents module damage in the event of excessive current flow.
+</p><p>The 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> utilizes a 
+<span title="Field-Effect Transistor" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">FET
+</span> protective circuit strategy for many of its outputs (such as a
+turn lamp output circuit). Output loads (current level) are monitored for excessive current (typically short circuits) and are shut down when a fault event is detected. A short circuit DTC sets when the fault event occurs.
+</p><p>The circuit remains off until the fault is corrected and the ignition state is cycled off and then back on, the module resets the 
+<span title="Field-Effect Transistor" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">FET
+</span> protection and allows the
+circuit to function.
+</p><div><a name="extract_583">&nbsp;
+</a></div>
+
+<p><b>Inspection and Verification
+</b></p><ol start="1"><li>Verify the customer concern.
+</li></ol><ol start="2"><li>Visually inspect for obvious signs of electrical damage.
+</li></ol><br><br><P class="SINGLESPACE"><B>&nbsp; 
+
+Visual Inspection Chart 
+</B></P><TABLE cellspacing="0" cellpadding="3" border="1"><TR><TH valign="bottom" align="center">Electrical
+</TH></TR><TR><TD valign="top" align="left"><ul type="disc"><li>Wiring, terminals or connectors
+</li></ul></TD></TR></TABLE><br><ol start="3"><li>If an obvious cause for an observed or reported concern is found, correct the cause (if possible) before proceeding to the next step.
+</li></ol><ol start="4"><li><p><b>NOTE: 
+</b> Make sure to use the latest scan tool software release.
+</p>If the cause is not visually evident, connect the scan tool to the Data Link Connector (DLC).
+</li></ol><ol start="5"><li><p><b>NOTE: 
+</b> The Vehicle Communication Module (VCM) LED prove-out confirms power and ground from the 
+<span title="Data Link Connector" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">DLC
+</span> are provided to the
+
+<span title="Vehicle Communication Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">VCM
+</span>.
+</p>If the scan tool does not communicate with the 
+<span title="Vehicle Communication Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">VCM
+</span>:
+
+<ul type="disc"><li>check the 
+<span title="Vehicle Communication Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">VCM
+</span> connection to the vehicle.
+</li></ul><ul type="disc"><li>check the scan tool connection to the 
+<span title="Vehicle Communication Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">VCM
+</span>.
+</li></ul><ul type="disc"><li>refer to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSI00L.HTM%26rightside%3dSCRSI00R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 418-00
+</a>, No Power To The Scan Tool, to diagnose no power to the scan tool.
+</li></ul></li></ol><ol start="6"><li>If the scan tool does not communicate with the vehicle:
+
+<ul type="disc"><li>Verify the ignition is in the ON state.
+
+<ul type="square"> 
+<li>The air bag warning indicator prove-out confirms ignition ON (other indicators may not prove ignition ON). If the ignition does not turn on, refer to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSB50L.HTM%26rightside%3dSCRSB50R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 211-05
+</a> to
+diagnose no power in RUN.
+</li></ul></li></ul><ul type="disc"><li>Verify the scan tool operation with a known good vehicle.
+</li></ul><ul type="disc"><li>Refer to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSI00L.HTM%26rightside%3dSCRSI00R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 418-00
+</a> to diagnose no response from the PCM.
+</li></ul></li></ol><ol start="7"><li>Carry out the network test.
+
+<ul type="disc"><li>If the scan tool responds with no communication for one or more modules, refer to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSI00L.HTM%26rightside%3dSCRSI00R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 418-00
+</a>.
+</li></ul><ul type="disc"><li>If the network test passes, retrieve and record the continuous memory DTCs.
+</li></ul></li></ol><ol start="8"><li>Clear the continuous DTCs and carry out the self-test diagnostics for the Body Control Module (BCM).
+</li></ol><ol start="9"><li>If the DTCs retrieved are related to the concern, go to the Body Control Module (BCM) DTC Chart.
+</li></ol><ol start="10"><li>If no DTCs related to the concern are retrieved, GO to 
+<a href="SCR_us_en_file%3dSCRJA004.HTM_gen_ref.HTM#BCM"                                                                                                                                                                                                                                                       >Symptom Chart
+</a>.
+</li></ol><div><a name="extract_584">&nbsp;
+</a></div>
+
+<p><b>DTC Charts
+</b></p><P class="SINGLESPACE"><B>&nbsp;Body Control Module (BCM) DTC Chart 
+</B></P><TABLE cellspacing="0" cellpadding="3" border="1"><TR><TH valign="bottom" align="center">DTC
+</TH><TH valign="bottom" align="center">Description
+</TH><TH valign="bottom" align="center">Action
+</TH></TR><TR><TD valign="top" align="center">B1007:92
+</TD><TD valign="top" align="left">High-Beam Headlamp Switch: Performance Or Incorrect Operation
+</TD><TD valign="top" align="left">REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSH10L.HTM%26rightside%3dSCRSH10R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 417-01
+</a>.
+</TD></TR><TR><TD valign="top" align="center">B1008:92
+</TD><TD valign="top" align="left">Wiper Mode Switch: Performance Or Incorrect Operation
+</TD><TD valign="top" align="left">REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRS1G0L.HTM%26rightside%3dSCRS1G0R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 501-16
+</a>.
+</TD></TR><TR><TD valign="top" align="center">B1013:23
+</TD><TD valign="top" align="left">Heater Rear Defog Switch: Signal Stuck Low
+</TD><TD valign="top" align="left">REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRS1B0L.HTM%26rightside%3dSCRS1B0R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 501-11
+</a>.
+</TD></TR><TR><TD valign="top" align="center">B1034:12
+</TD><TD valign="top" align="left">Left Front Seat Heater Element: Circuit Short To Battery
+</TD><TD valign="top" align="left">REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRS1A0L.HTM%26rightside%3dSCRS1A0R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 501-10
+</a>.
+</TD></TR><TR><TD valign="top" align="center">B1034:14
+</TD><TD valign="top" align="left">Left Front Seat Heater Element: Circuit Short To Ground Or Open
+</TD><TD valign="top" align="left">REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRS1A0L.HTM%26rightside%3dSCRS1A0R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 501-10
+</a>.
+</TD></TR><TR><TD valign="top" align="center">B1051:92
+</TD><TD valign="top" align="left">Front Washer Switch: Performance Or Incorrect Operation
+</TD><TD valign="top" align="left">REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRS1G0L.HTM%26rightside%3dSCRS1G0R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 501-16
+</a>.
+</TD></TR><TR><TD valign="top" align="center">B1052:92
+</TD><TD valign="top" align="left">Rear Washer Switch: Performance Or Incorrect Operation
+</TD><TD valign="top" align="left">REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRS1G0L.HTM%26rightside%3dSCRS1G0R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 501-16
+</a>.
+</TD></TR><TR><TD valign="top" align="center">B108F:23
+</TD><TD valign="top" align="left">Cabin Lock/Unlock Switch: Signal Stuck Low
+</TD><TD valign="top" align="left">REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRS1E0L.HTM%26rightside%3dSCRS1E0R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 501-14
+</a>.
+</TD></TR><TR><TD valign="top" align="center">B1091:12
+</TD><TD valign="top" align="left">Courtesy Lamp Sense: Circuit Short To Battery
+</TD><TD valign="top" align="left">REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSH20L.HTM%26rightside%3dSCRSH20R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 417-02
+</a>.
+</TD></TR><TR><TD valign="top" align="center">B1092:12
+</TD><TD valign="top" align="left">Daytime Running Light Relay: Circuit Short To Battery
+</TD><TD valign="top" align="left">REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSH10L.HTM%26rightside%3dSCRSH10R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 417-01
+</a>.
+</TD></TR><TR><TD valign="top" align="center">B1092:14
+</TD><TD valign="top" align="left">Daytime Running Light Relay: Circuit Short To Ground Or Open
+</TD><TD valign="top" align="left">REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSH10L.HTM%26rightside%3dSCRSH10R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 417-01
+</a>.
+</TD></TR><TR><TD valign="top" align="center">B1098:11
+</TD><TD valign="top" align="left">Left Position Light: Circuit Short To Ground
+</TD><TD valign="top" align="left">REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSH10L.HTM%26rightside%3dSCRSH10R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 417-01
+</a>.
+</TD></TR><TR><TD valign="top" align="center">B1098:15
+</TD><TD valign="top" align="left">Left Position Light: Circuit Short To Battery Or Open
+</TD><TD valign="top" align="left">REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSH10L.HTM%26rightside%3dSCRSH10R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 417-01
+</a>.
+</TD></TR><TR><TD valign="top" align="center">B1099:11
+</TD><TD valign="top" align="left">Right Position Light: Circuit Short To Ground
+</TD><TD valign="top" align="left">REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSH10L.HTM%26rightside%3dSCRSH10R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 417-01
+</a>.
+</TD></TR><TR><TD valign="top" align="center">B1099:15
+</TD><TD valign="top" align="left">Right Position Light: Circuit Short To Battery Or Open
+</TD><TD valign="top" align="left">REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSH10L.HTM%26rightside%3dSCRSH10R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 417-01
+</a>.
+</TD></TR><TR><TD valign="top" align="center">B109A:12
+</TD><TD valign="top" align="left">High Beam Relay: Circuit Short To Battery
+</TD><TD valign="top" align="left">REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSH10L.HTM%26rightside%3dSCRSH10R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 417-01
+</a>.
+</TD></TR><TR><TD valign="top" align="center">B109A:14
+</TD><TD valign="top" align="left">High Beam Relay: Circuit Short To Ground Or Open
+</TD><TD valign="top" align="left">REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSH10L.HTM%26rightside%3dSCRSH10R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 417-01
+</a>.
+</TD></TR><TR><TD valign="top" align="center">B10A6:92
+</TD><TD valign="top" align="left">Main Light Switch: Performance Or Incorrect Operation
+</TD><TD valign="top" align="left">REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSH10L.HTM%26rightside%3dSCRSH10R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 417-01
+</a>.
+</TD></TR><TR><TD valign="top" align="center">B10A8:12
+</TD><TD valign="top" align="left">Low Beam Relay: Circuit Short To Battery
+</TD><TD valign="top" align="left">REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSH10L.HTM%26rightside%3dSCRSH10R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 417-01
+</a>.
+</TD></TR><TR><TD valign="top" align="center">B10A8:14
+</TD><TD valign="top" align="left">Low Beam Relay: Circuit Short To Ground Or Open
+</TD><TD valign="top" align="left">REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSH10L.HTM%26rightside%3dSCRSH10R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 417-01
+</a>.
+</TD></TR><TR><TD valign="top" align="center">B10B1:92
+</TD><TD valign="top" align="left">Cabin Set/Reset Switch: Performance Or Incorrect Operation
+</TD><TD valign="top" align="left">REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSJ1AL.HTM%26rightside%3dSCRSJ1AR.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 419-01A
+</a>.
+</TD></TR><TR><TD valign="top" align="center">B10F1:23
+</TD><TD valign="top" align="left">Key In Switch: Signal Stuck Low
+</TD><TD valign="top" align="left">REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSD10L.HTM%26rightside%3dSCRSD10R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 413-01
+</a>.
+</TD></TR><TR><TD valign="top" align="center">B1108:92
+</TD><TD valign="top" align="left">Driver Door Central Locking Motor: Performance Or Incorrect Operation
+</TD><TD valign="top" align="left">REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRS1E0L.HTM%26rightside%3dSCRS1E0R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 501-14
+</a>.
+</TD></TR><TR><TD valign="top" align="center">B1118:11
+</TD><TD valign="top" align="left">Left Rear Sidemarker: Circuit Short To Ground
+</TD><TD valign="top" align="left">REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSH10L.HTM%26rightside%3dSCRSH10R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 417-01
+</a>.
+</TD></TR><TR><TD valign="top" align="center">B1118:15
+</TD><TD valign="top" align="left">Left Rear Sidemarker: Circuit Short To Battery Or Open
+</TD><TD valign="top" align="left">REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSH10L.HTM%26rightside%3dSCRSH10R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 417-01
+</a>.
+</TD></TR><TR><TD valign="top" align="center">B113E:23
+</TD><TD valign="top" align="left">External Boot/Trunk Release Switch: Signal Stuck Low
+</TD><TD valign="top" align="left">REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRS1E0L.HTM%26rightside%3dSCRS1E0R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 501-14
+</a>.
+</TD></TR><TR><TD valign="top" align="center">B115A:23
+</TD><TD valign="top" align="left">Front Passenger Seat Heater: Signal Stuck Low
+</TD><TD valign="top" align="left">REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRS1A0L.HTM%26rightside%3dSCRS1A0R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 501-10
+</a>.
+</TD></TR><TR><TD valign="top" align="center">B115B:23
+</TD><TD valign="top" align="left">Front Driver Seat Heater: Signal Stuck Low
+</TD><TD valign="top" align="left">REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRS1A0L.HTM%26rightside%3dSCRS1A0R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 501-10
+</a>.
+</TD></TR><TR><TD valign="top" align="center">B1175:92
+</TD><TD valign="top" align="left">Drivers Door Ajar Switch: Performance Or Incorrect Operation
+</TD><TD valign="top" align="left">REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSH20L.HTM%26rightside%3dSCRSH20R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 417-02
+</a>.
+</TD></TR><TR><TD valign="top" align="center">B1176:92
+</TD><TD valign="top" align="left">Passenger Door Ajar Switch: Performance Or Incorrect Operation
+</TD><TD valign="top" align="left">REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSH20L.HTM%26rightside%3dSCRSH20R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 417-02
+</a>.
+</TD></TR><TR><TD valign="top" align="center">B1178:92
+</TD><TD valign="top" align="left">Boot/Trunk Ajar Switch: Performance Or Incorrect Operation
+</TD><TD valign="top" align="left">REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSH20L.HTM%26rightside%3dSCRSH20R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 417-02
+</a>.
+</TD></TR><TR><TD valign="top" align="center">B1187:92
+</TD><TD valign="top" align="left">Trunk Motor: Performance Or Incorrect Operation
+</TD><TD valign="top" align="left">REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRS1E0L.HTM%26rightside%3dSCRS1E0R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 501-14
+</a>.
+</TD></TR><TR><TD valign="top" align="center">B11DC:92
+</TD><TD valign="top" align="left">Rear Wiper Mode Switch: Performance Or Incorrect Operation
+</TD><TD valign="top" align="left">REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRS1G0L.HTM%26rightside%3dSCRS1G0R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 501-16
+</a>.
+</TD></TR><TR><TD valign="top" align="center">B11E9:92
+</TD><TD valign="top" align="left">Left Rear Door Ajar Switch: Performance Or Incorrect Operation
+</TD><TD valign="top" align="left">REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSH20L.HTM%26rightside%3dSCRSH20R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 417-02
+</a>.
+</TD></TR><TR><TD valign="top" align="center">B11EA:92
+</TD><TD valign="top" align="left">Right Rear Door Ajar Switch: Performance Or Incorrect Operation
+</TD><TD valign="top" align="left">REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSH20L.HTM%26rightside%3dSCRSH20R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 417-02
+</a>.
+</TD></TR><TR><TD valign="top" align="center">B12F1:11
+</TD><TD valign="top" align="left">Ambient Lighting Zone 1 Output: Circuit Short To Ground
+</TD><TD valign="top" align="left">REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSH20L.HTM%26rightside%3dSCRSH20R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 417-02
+</a>.
+</TD></TR><TR><TD valign="top" align="center">B12F1:15
+</TD><TD valign="top" align="left">Ambient Lighting Zone 1 Output: Circuit Short To Battery Or Open
+</TD><TD valign="top" align="left">REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSH20L.HTM%26rightside%3dSCRSH20R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 417-02
+</a>.
+</TD></TR><TR><TD valign="top" align="center">B132B:12
+</TD><TD valign="top" align="left">Left Stop/Turn Lamp: Circuit Short To Battery
+</TD><TD valign="top" align="left">REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSH10L.HTM%26rightside%3dSCRSH10R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 417-01
+</a>.
+</TD></TR><TR><TD valign="top" align="center">B132B:14
+</TD><TD valign="top" align="left">Left Stop/Turn Lamp: Circuit Short To Ground Or Open
+</TD><TD valign="top" align="left">REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSH10L.HTM%26rightside%3dSCRSH10R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 417-01
+</a>.
+</TD></TR><TR><TD valign="top" align="center">B132C:12
+</TD><TD valign="top" align="left">Right Stop/Turn Lamp: Circuit Short To Battery
+</TD><TD valign="top" align="left">REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSH10L.HTM%26rightside%3dSCRSH10R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 417-01
+</a>.
+</TD></TR><TR><TD valign="top" align="center">B132C:14
+</TD><TD valign="top" align="left">Right Stop/Turn Lamp: Circuit Short To Ground Or Open
+</TD><TD valign="top" align="left">REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSH10L.HTM%26rightside%3dSCRSH10R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 417-01
+</a>.
+</TD></TR><TR><TD valign="top" align="center">B134E:23
+</TD><TD valign="top" align="left">Switch Illumination Adjustment Control: Signal Stuck Low
+</TD><TD valign="top" align="left">REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSD00L.HTM%26rightside%3dSCRSD00R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 413-00
+</a>.
+</TD></TR><TR><TD valign="top" align="center">B1A84:41
+</TD><TD valign="top" align="left">Car Configuration Data: General Checksum Failure
+</TD><TD valign="top" align="left">CARRY OUT 
+<span title="Programmable Module Installation" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PMI
+</span> on the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span>. REFER to
+
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSI10L.HTM%26rightside%3dSCRSI10R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 418-01
+</a>. CLEAR the DTCs. REPEAT the self-test. If DTC B1A84:41 is retrieved again, INSTALL a new 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span>.
+REFER to 
+<a href="SCR_us_en_file%3dSCRJA006.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       >Body Control Module (BCM)
+</a> in this section. TEST the system for normal operation.
+</TD></TR><TR><TD valign="top" align="center">B1A84:51
+</TD><TD valign="top" align="left">Car Configuration Data: Not Programmed
+</TD><TD valign="top" align="left">CARRY OUT 
+<span title="Programmable Module Installation" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PMI
+</span> on the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span>. REFER to
+
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSI10L.HTM%26rightside%3dSCRSI10R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 418-01
+</a>. CLEAR the DTCs. REPEAT the self-test. If DTC B1A84:51 is retrieved again, INSTALL a new 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span>.
+REFER to 
+<a href="SCR_us_en_file%3dSCRJA006.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       >Body Control Module (BCM)
+</a> in this section. TEST the system for normal operation.
+</TD></TR><TR><TD valign="top" align="center">B1C45:24
+</TD><TD valign="top" align="left">Front Wiper Park Position Switch: Signal Stuck High
+</TD><TD valign="top" align="left">REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRS1G0L.HTM%26rightside%3dSCRS1G0R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 501-16
+</a>.
+</TD></TR><TR><TD valign="top" align="center">B1C53:13
+</TD><TD valign="top" align="left">Front Wiper Intermittent Data: Circuit Open
+</TD><TD valign="top" align="left">REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRS1G0L.HTM%26rightside%3dSCRS1G0R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 501-16
+</a>.
+</TD></TR><TR><TD valign="top" align="center">B1D06:11
+</TD><TD valign="top" align="left">Left Turn Indicator: Circuit Short To Ground
+</TD><TD valign="top" align="left">REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSH10L.HTM%26rightside%3dSCRSH10R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 417-01
+</a>.
+</TD></TR><TR><TD valign="top" align="center">B1D06:15
+</TD><TD valign="top" align="left">Left Turn Indicator: Circuit Short To Battery Or Open
+</TD><TD valign="top" align="left">REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSH10L.HTM%26rightside%3dSCRSH10R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 417-01
+</a>.
+</TD></TR><TR><TD valign="top" align="center">B1D07:11
+</TD><TD valign="top" align="left">Right Turn Indicator: Circuit Short To Ground
+</TD><TD valign="top" align="left">REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSH10L.HTM%26rightside%3dSCRSH10R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 417-01
+</a>.
+</TD></TR><TR><TD valign="top" align="center">B1D07:15
+</TD><TD valign="top" align="left">Right Turn Indicator: Circuit Short To Battery Or Open
+</TD><TD valign="top" align="left">REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSH10L.HTM%26rightside%3dSCRSH10R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 417-01
+</a>.
+</TD></TR><TR><TD valign="top" align="center">B1D14:11
+</TD><TD valign="top" align="left">Interior Lights Circuit "B": Circuit Short To Ground
+</TD><TD valign="top" align="left">REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSH20L.HTM%26rightside%3dSCRSH20R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 417-02
+</a>.
+</TD></TR><TR><TD valign="top" align="center">B1D35:23
+</TD><TD valign="top" align="left">Hazard Switch: Signal Stuck Low
+</TD><TD valign="top" align="left">REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSH10L.HTM%26rightside%3dSCRSH10R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 417-01
+</a>.
+</TD></TR><TR><TD valign="top" align="center">B1D36:92
+</TD><TD valign="top" align="left">Turn Indicator Switch: Performance Or Incorrect Operation
+</TD><TD valign="top" align="left">REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSH10L.HTM%26rightside%3dSCRSH10R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 417-01
+</a>.
+</TD></TR><TR><TD valign="top" align="center">C1137:24
+</TD><TD valign="top" align="left">Reverse Gear Switch: Signal Stuck High
+</TD><TD valign="top" align="left">REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSH10L.HTM%26rightside%3dSCRSH10R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 417-01
+</a>.
+</TD></TR><TR><TD valign="top" align="center">P062F:41
+</TD><TD valign="top" align="left">Internal Control Module EEPROM Error: General Checksum Failure
+</TD><TD valign="top" align="left">CARRY OUT Programmable Module Installation (PMI) on the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span>. REFER to
+
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSI10L.HTM%26rightside%3dSCRSI10R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 418-01
+</a>.
+</TD></TR><TR><TD valign="top" align="center">P062F:46
+</TD><TD valign="top" align="left">Internal Control Module EEPROM Error: Calibration/Parameter Memory Failure
+</TD><TD valign="top" align="left">CARRY OUT the Programmable Module Installation (PMI) Using the Integrated Diagnostic System (IDS) When the Original Module is NOT Available procedure. REFER to
+
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSI10L.HTM%26rightside%3dSCRSI10R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 418-01
+</a>. TEST the system for normal operation.
+</TD></TR><TR><TD valign="top" align="center">P1397:00
+</TD><TD valign="top" align="left">System Voltage Out Of Self Test Range: No Sub Type Information
+</TD><TD valign="top" align="left"><a href="SCR_us_en_file%3dSCRJA004.HTM_gen_ref.HTM#PS2-A"                                                                                                                                                                                                                                                       >GO to Pinpoint Test A
+</a>.
+</TD></TR><TR><TD valign="top" align="center">P254F:00
+</TD><TD valign="top" align="left">Engine Hood Switch Circuit/Open: No Sub Type Information
+</TD><TD valign="top" align="left">REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSJ1AL.HTM%26rightside%3dSCRSJ1AR.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 419-01A
+</a>.
+</TD></TR><TR><TD valign="top" align="center">U0010:88
+</TD><TD valign="top" align="left">Medium Speed CAN Communication Bus: Bus Off
+</TD><TD valign="top" align="left">REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSI00L.HTM%26rightside%3dSCRSI00R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 418-00
+</a>.
+</TD></TR><TR><TD valign="top" align="center">U0121:00
+</TD><TD valign="top" align="left">Lost Communication With Anti-Lock Brake System (ABS) Control Module: No Sub Type Information
+</TD><TD valign="top" align="left"><a href="SCR_us_en_file%3dSCRJA004.HTM_gen_ref.HTM#PS2-B"                                                                                                                                                                                                                                                       >GO to Pinpoint Test B
+</a>.
+</TD></TR><TR><TD valign="top" align="center">U0155:00
+</TD><TD valign="top" align="left">Lost Communication With Instrument Panel Cluster (IPC) Control Module: No Sub Type Information
+</TD><TD valign="top" align="left"><a href="SCR_us_en_file%3dSCRJA004.HTM_gen_ref.HTM#PS2-C"                                                                                                                                                                                                                                                       >GO to Pinpoint Test C
+</a>.
+</TD></TR><TR><TD valign="top" align="center">U0167:00
+</TD><TD valign="top" align="left">Lost Communication With Vehicle Immobilizer Control Module: No Sub Type Information
+</TD><TD valign="top" align="left"><a href="SCR_us_en_file%3dSCRJA004.HTM_gen_ref.HTM#PS2-D"                                                                                                                                                                                                                                                       >GO to Pinpoint Test D
+</a>.
+</TD></TR><TR><TD valign="top" align="center">U0257:00
+</TD><TD valign="top" align="left">Lost Communication With Front Controls/Display Interface Module: No Sub Type Information
+</TD><TD valign="top" align="left"><a href="SCR_us_en_file%3dSCRJA004.HTM_gen_ref.HTM#PS2-E"                                                                                                                                                                                                                                                       >GO to Pinpoint Test E
+</a>.
+</TD></TR><TR><TD valign="top" align="center">U0415:68
+</TD><TD valign="top" align="left">Invalid Data Received From Anti-Lock Brake System (ABS) Control Module: Event Information
+</TD><TD valign="top" align="left">RETRIEVE and REPAIR all non-network DTCs set in the ABS module. REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRS690L.HTM%26rightside%3dSCRS690R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 206-09
+</a> or the Powertrain Control/Emissions Diagnosis (PC/ED) manual.
+</TD></TR><TR><TD valign="top" align="center">U2005:81
+</TD><TD valign="top" align="left">Vehicle Speed: Invalid Serial Data Received
+</TD><TD valign="top" align="left">A speed signal is detected during the self-test. DIAGNOSE any symptoms or other module DTCs that are present. CLEAR the DTCs. REPEAT the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> self-test. If no
+other symptoms (inaccurate speedometer) or DTCs are present, INSTALL a new 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span>. REFER to 
+<a href="SCR_us_en_file%3dSCRJA006.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       >Body Control Module (BCM)
+</a> in this section.
+TEST the system for normal operation.
+</TD></TR><TR><TD valign="top" align="center">U2010:11
+</TD><TD valign="top" align="left">Switch Illumination: Circuit Short To Ground
+</TD><TD valign="top" align="left">REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSD00L.HTM%26rightside%3dSCRSD00R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 413-00
+</a>.
+</TD></TR><TR><TD valign="top" align="center">U2101:00
+</TD><TD valign="top" align="left">Control Module Configuration Incompatible: No Sub Type Information
+</TD><TD valign="top" align="left">CARRY OUT Programmable Module Installation (PMI) on the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span>. REFER to
+
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSI10L.HTM%26rightside%3dSCRSI10R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 418-01
+</a>.
+</TD></TR><TR><TD valign="top" align="center">U3000:44
+</TD><TD valign="top" align="left">Control Module: Data Memory Failure
+</TD><TD valign="top" align="left">CARRY OUT 
+<span title="Programmable Module Installation" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PMI
+</span> on the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span>. REFER to
+
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSI10L.HTM%26rightside%3dSCRSI10R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 418-01
+</a>. CLEAR the DTCs. REPEAT the self-test. If DTC U3000:44 is retrieved again, INSTALL a new 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span>.
+REFER to 
+<a href="SCR_us_en_file%3dSCRJA006.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       >Body Control Module (BCM)
+</a> in this section. TEST the system for normal operation.
+</TD></TR><TR><TD valign="top" align="center">U3000:45
+</TD><TD valign="top" align="left">Control Module: Program Memory Failure
+</TD><TD valign="top" align="left">CARRY OUT 
+<span title="Programmable Module Installation" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PMI
+</span> on the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span>. REFER to
+
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSI10L.HTM%26rightside%3dSCRSI10R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 418-01
+</a>. CLEAR the DTCs. REPEAT the self-test. If DTC U3000:45 is retrieved again, INSTALL a new 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span>.
+REFER to 
+<a href="SCR_us_en_file%3dSCRJA006.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       >Body Control Module (BCM)
+</a> in this section. TEST the system for normal operation.
+</TD></TR><TR><TD valign="top" align="center">U3003:16
+</TD><TD valign="top" align="left">Battery Voltage: Circuit Voltage Below Threshold
+</TD><TD valign="top" align="left"><a href="SCR_us_en_file%3dSCRJA004.HTM_gen_ref.HTM#PS2-F"                                                                                                                                                                                                                                                       >GO to Pinpoint Test F
+</a>.
+</TD></TR><TR><TD valign="top" align="center">U3003:17
+</TD><TD valign="top" align="left">Battery Voltage: Circuit Voltage Above Threshold
+</TD><TD valign="top" align="left"><a href="SCR_us_en_file%3dSCRJA004.HTM_gen_ref.HTM#PS2-G"                                                                                                                                                                                                                                                       >GO to Pinpoint Test G
+</a>.
+</TD></TR></TABLE><br><div><a name="extract_585">&nbsp;
+</a></div>
+
+<p><b>Symptom Chart
+</b></p><a name="BCM">&nbsp;
+</a><table width="90%" cellpadding="3" cellspacing="0" rules="groups" border="1">
+
+<caption>Symptom Chart 
+</caption><colgroup><colgroup><colgroup><tr><th>Condition
+</th><th>Possible Sources
+</th><th>Action
+</th></tr><tbody></tbody>
+
+<tr valign="top"><td><ul type="disc"><li>No communication with the Body Control Module (BCM)
+</li></ul></td><td><ul type="disc"><li>Fuse(s)
+</li><li>Wiring, terminals or connectors
+</li><li><span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span></li></ul></td><td><ul type="disc"><li>REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSI00L.HTM%26rightside%3dSCRSI00R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 418-00
+</a>, The 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> Does Not Respond To The Scan Tool.
+</li></ul></td></tr></table><div><a name="extract_586">&nbsp;
+</a></div>
+
+<p><b>Pinpoint Tests
+</b></p><a name="PS2-A">&nbsp;
+</a><p><b>Pinpoint Test A: DTC P1397:00
+</b></p><ul type="disc"><b>Normal Operation 
+</b>
+
+<li>DTC P1397:00 (System Voltage Out Of Self Test Range: No Sub Type Information) — an on-demand DTC that sets when the Body Control Module (BCM) detects voltage below 10 volts or above
+15.5 volts from either voltage supply circuit to 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> C2280A-8 or
+
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> C2280A-14.
+</li></ul><p><b>This pinpoint test is intended to diagnose the following:
+</b></p><ul type="disc"><li>Wiring, terminals or connectors
+</li><li>High circuit resistance
+</li><li>Charging system concern
+</li><li><span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span></li></ul><a name="A">&nbsp;
+</a><h5>PINPOINT TEST A: DTC P1397:00 
+</h5>
+
+<p><b><i>NOTICE: 
+</i> Use the correct probe adapter(s) when making measurements. Failure to use the correct probe adapter(s) may damage the connector.
+</b></p><p><b>NOTE: 
+</b> Failure to disconnect the battery when instructed results in false resistance readings. Refer to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSE10L.HTM%26rightside%3dSCRSE10R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 414-01
+</a>.
+</p><p><b>NOTE: 
+</b> DTC P1397:00 may be stored in the module memory due to previous battery charging or vehicle jump starting events.
+</p><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="A1">&nbsp;
+</a><b>A1 CHECK FOR DTCs U3003:16 AND U3003:17 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Check for recorded 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> DTCs from the self-test.
+</li><li><b>Is DTC U3003:16 or DTC U3003:17 present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>For DTC U3003:16, 
+<a href="SCR_us_en_file%3dSCRJA004.HTM_gen_ref.HTM#PS2-F"                                                                                                                                                                                                                                                       >GO to Pinpoint Test F
+</a>. 
+For DTC U3003:17, 
+<a href="SCR_us_en_file%3dSCRJA004.HTM_gen_ref.HTM#PS2-G"                                                                                                                                                                                                                                                       >GO to Pinpoint Test G
+</a>. 
+
+<br><br><b>No
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRJA004.HTM_gen_ref.HTM#A2"                                                                                                                                                                                                                                                       >A2
+</a>. 
+</td></tr><tr><td><a name="A2">&nbsp;
+</a><b>A2 RECHECK THE 
+<span title="BODY CONTROL MODULE" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> DTCs 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Ignition OFF.
+</li><li>Ignition ON.
+</li><li>Enter the following diagnostic mode on the scan tool:   
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> Module Self-Test.
+</li><li>Clear the DTCs. Repeat the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> self-test.
+</li><li><b>Is DTC P1397:00 still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRJA004.HTM_gen_ref.HTM#A3"                                                                                                                                                                                                                                                       >A3
+</a>. 
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. The DTC may have been set due to a previous low battery voltage condition, during battery charging or while jump starting the vehicle. 
+</td></tr><tr><td><a name="A3">&nbsp;
+</a><b>A3 CHECK FOR CHARGING SYSTEM DTCs IN THE PCM 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Enter the following diagnostic mode on the scan tool:   PCM Self-Test.
+</li><li>Carry out the PCM 
+<span title="Key ON Engine OFF" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">KOEO
+</span> self-test.
+</li><li>Retrieve the continuous memory DTCs from the PCM.
+</li><li><b>Is DTC P0562, P0620, P0622, P0625, P0626 or P065B set in the PCM?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSE00L.HTM%26rightside%3dSCRSE00R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 414-00
+</a>. 
+
+<br><br><b>No
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRJA004.HTM_gen_ref.HTM#A4"                                                                                                                                                                                                                                                       >A4
+</a>. 
+</td></tr><tr><td><a name="A4">&nbsp;
+</a><b>A4 CHECK FOR DTCs B1317, B1318, B1676, P0563 OR U3003:17 SET IN OTHER MODULES 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Enter the following diagnostic mode on the scan tool:   Self-Test.
+</li><li>Retrieve the continuous memory DTCs from all modules.
+</li><li><b>Is DTC B1317, B1318, B1676, P0563 (PCM) or U3003:17 set in any other module?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSE00L.HTM%26rightside%3dSCRSE00R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 414-00
+</a> to diagnose the charging system condition. 
+
+<br><br><b>No
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRJA004.HTM_gen_ref.HTM#A5"                                                                                                                                                                                                                                                       >A5
+</a>. 
+</td></tr><tr><td><a name="A5">&nbsp;
+</a><b>A5 CHECK THE BATTERY VOLTAGE 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Turn off all interior/exterior lights and accessories.
+</li><li>Start and run the engine at approximately 2,000 rpm for 3 minutes while monitoring the battery voltage.
+</li><li><b>Does the battery voltage rise to 15.5 volts or higher?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSE00L.HTM%26rightside%3dSCRSE00R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 414-00
+</a> to diagnose an overcharging condition. 
+
+<br><br><b>No
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRJA004.HTM_gen_ref.HTM#A6"                                                                                                                                                                                                                                                       >A6
+</a>. 
+</td></tr><tr><td><a name="A6">&nbsp;
+</a><b>A6 CHECK THE BATTERY CONDITION AND STATE OF CHARGE 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Ignition OFF.
+</li><li>Check the battery condition and verify the battery is fully charged. Refer to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSE10L.HTM%26rightside%3dSCRSE10R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 414-01
+</a>.
+</li><li><b>Is the battery OK and fully charged?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRJA004.HTM_gen_ref.HTM#A7"                                                                                                                                                                                                                                                       >A7
+</a>. 
+
+<br><br><b>No
+</b><br>REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSE00L.HTM%26rightside%3dSCRSE00R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 414-00
+</a>. 
+</td></tr><tr><td><a name="A7">&nbsp;
+</a><b>A7 CHECK THE 
+<span title="BODY CONTROL MODULE" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> VOLTAGE PID 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Ignition ON.
+</li><li>Measure and record the voltage at the battery.
+</li><li>Enter the following diagnostic mode on the scan tool:   
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> DataLogger.
+</li><li>Monitor the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> voltage PID.
+</li><li><b>Is the voltage within 0.2 volt of the recorded battery voltage?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRJA004.HTM_gen_ref.HTM#A10"                                                                                                                                                                                                                                                       >A10
+</a>. 
+
+<br><br><b>No
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRJA004.HTM_gen_ref.HTM#A8"                                                                                                                                                                                                                                                       >A8
+</a>. 
+</td></tr><tr><td><a name="A8">&nbsp;
+</a><b>A8 CHECK THE 
+<span title="BODY CONTROL MODULE" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> VOLTAGE SUPPLY 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Ignition OFF.
+</li><li>Disconnect:   
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> C2280A.
+</li><li>Ignition ON.
+</li><li>Measure the voltage between the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> C2280A-8, circuit SBB06 (BN/RD), harness side and ground; and between
+the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> C2280A-14, circuit SBB24 (VT/RD), harness side and ground.
+</li><br><br><IMG src="SCR_us_en_file%3dN0117256.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="211" width="325" border="0"><li><b>Is the voltage within 0.2 volt of the recorded battery voltage?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRJA004.HTM_gen_ref.HTM#A9"                                                                                                                                                                                                                                                       >A9
+</a>. 
+
+<br><br><b>No
+</b><br>REPAIR circuit SBB06 (BN/RD) or circuit SBB24 (VT/RD) as necessary for high resistance. CLEAR the DTC. REPEAT the self-test. 
+</td></tr><tr><td><a name="A9">&nbsp;
+</a><b>A9 CHECK THE 
+<span title="BODY CONTROL MODULE" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> GROUND CIRCUIT FOR HIGH RESISTANCE 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Ignition OFF.
+</li><li>Disconnect:   Negative Battery Cable .
+</li><li>Disconnect:   
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> C2280B.
+</li><li>Measure the resistance between the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> C2280A-16, circuit GD115 (BK/GY), harness side and ground; and between
+the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> C2280B-7, circuit GD115 (BK/GY), harness side and ground.
+</li><br><br><IMG src="SCR_us_en_file%3dN0114628.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="211" width="325" border="0"><li><b>Is the resistance less than 5 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRJA004.HTM_gen_ref.HTM#A10"                                                                                                                                                                                                                                                       >A10
+</a>. 
+
+<br><br><b>No
+</b><br>REPAIR circuit GD115 (BK/GY) for high resistance. CLEAR the DTC. REPEAT the self-test. 
+</td></tr><tr><td><a name="A10">&nbsp;
+</a><b>A10 CHECK FOR CORRECT 
+<span title="BODY CONTROL MODULE" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> OPERATION 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> connectors.
+</li><li>Check for:
+</li><ul type="square"><li>corrosion
+</li></ul><ul type="square"><li>damaged pins
+</li></ul><ul type="square"><li>pushed-out pins
+</li></ul><li>Connect the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> connectors and make sure they seat correctly.
+</li><li>Operate the system and verify the concern is still present.
+</li><li><b>Is the concern still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> . REFER to 
+<a href="SCR_us_en_file%3dSCRJA006.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       >Body Control Module (BCM)
+</a> in this section. TEST the system for normal operation. 
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector. 
+</td></tr></table><a name="PS2-B">&nbsp;
+</a><p><b>Pinpoint Test B: DTC U0121:00
+</b></p><ul type="disc"><b>Normal Operation 
+</b>
+
+<li>DTC U0121:00 (Lost Communication With Anti-Lock Brake System (ABS) Control Module: No Sub Type Information) — sets in the Body Control Module (BCM) if data messages received from the
+ABS module are missing. For a complete list of all network messages, refer to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSI00L.HTM%26rightside%3dSCRSI00R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 418-00
+</a>.
+</li></ul><p><b>This pinpoint test is intended to diagnose the following:
+</b></p><ul type="disc"><li>Communication network concern
+</li><li>ABS module
+</li><li><span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span></li></ul><a name="B">&nbsp;
+</a><h5>PINPOINT TEST B: DTC U0121:00 
+</h5><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="B1">&nbsp;
+</a><b>B1 VERIFY THE CUSTOMER CONCERN 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Ignition ON.
+</li><li>Verify that there is an observable symptom present.
+</li><li><b>Is an observable symptom present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRJA004.HTM_gen_ref.HTM#B2"                                                                                                                                                                                                                                                       >B2
+</a>. 
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. The DTC may have been set due to high network traffic or an intermittent fault condition. 
+</td></tr><tr><td><a name="B2">&nbsp;
+</a><b>B2 CHECK THE COMMUNICATION NETWORK 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Ignition ON.
+</li><li>Enter the following diagnostic mode on the scan tool:   Network Test.
+</li><li>Carry out the network test.
+</li><li><b>Does the ABS module pass the network test?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRJA004.HTM_gen_ref.HTM#B3"                                                                                                                                                                                                                                                       >B3
+</a>. 
+
+<br><br><b>No
+</b><br>REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSI00L.HTM%26rightside%3dSCRSI00R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 418-00
+</a>, The ABS Module Does Not Respond To The Scan Tool. 
+</td></tr><tr><td><a name="B3">&nbsp;
+</a><b>B3 RETRIEVE THE RECORDED DTCs FROM THE 
+<span title="BODY CONTROL MODULE" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> SELF-TEST 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Check for recorded 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> DTCs from the self-test.
+</li><li><b>Is DTC U3003:16 or DTC U3003:17 recorded?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>For DTC U3003:16, 
+<a href="SCR_us_en_file%3dSCRJA004.HTM_gen_ref.HTM#PS2-F"                                                                                                                                                                                                                                                       >GO to Pinpoint Test F
+</a>. 
+For DTC U3003:17, 
+<a href="SCR_us_en_file%3dSCRJA004.HTM_gen_ref.HTM#PS2-G"                                                                                                                                                                                                                                                       >GO to Pinpoint Test G
+</a>. 
+
+<br><br><b>No
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRJA004.HTM_gen_ref.HTM#B4"                                                                                                                                                                                                                                                       >B4
+</a>. 
+</td></tr><tr><td><a name="B4">&nbsp;
+</a><b>B4 CHECK FOR DTCs U3003:16 AND U3003:17 FROM THE ABS MODULE SELF-TEST 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Retrieve the continuous memory DTCs from the ABS module.
+</li><li><b>Is DTC U3003:16 or DTC U3003:17 recorded?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRS690L.HTM%26rightside%3dSCRS690R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 206-09
+</a>. 
+
+<br><br><b>No
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRJA004.HTM_gen_ref.HTM#B5"                                                                                                                                                                                                                                                       >B5
+</a>. 
+</td></tr><tr><td><a name="B5">&nbsp;
+</a><b>B5 RECHECK THE 
+<span title="BODY CONTROL MODULE" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> DTCs 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><p class="singlespace"><b>NOTE: 
+</b> If new modules were installed prior to the DTC being set, the module configuration may be incorrectly set during Programmable Module Installation (PMI) or the
+
+<span title="Programmable Module Installation" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PMI
+</span> may not have been carried out.
+</p><li>Clear the DTCs. Repeat the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> self-test.
+</li><li><b>Is DTC U0121:00 still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRJA004.HTM_gen_ref.HTM#B6"                                                                                                                                                                                                                                                       >B6
+</a>. 
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. The DTC may have been set due to high network traffic or an intermittent fault condition. 
+</td></tr><tr><td><a name="B6">&nbsp;
+</a><b>B6 CHECK FOR DTC U0121:00 or U0121 SET IN OTHER MODULES 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Clear the DTCs.
+</li><li>Ignition OFF.
+</li><li>Ignition ON.
+</li><li>Wait 10 seconds.
+</li><li>Enter the following diagnostic mode on the scan tool:   Self-Test.
+</li><li>Retrieve the continuous memory DTCs from all modules.
+</li><li><b>Is DTC U0121:00 or DTC U0121 set in any other module?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new ABS module. REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRS690L.HTM%26rightside%3dSCRS690R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 206-09
+</a>. CLEAR the DTCs. REPEAT the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> self-test. 
+
+<br><br><b>No
+</b><br>INSTALL a new 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span>. REFER to 
+<a href="SCR_us_en_file%3dSCRJA006.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       >Body Control Module (BCM)
+</a> in this section. TEST the system for normal operation. 
+</td></tr></table><a name="PS2-C">&nbsp;
+</a><p><b>Pinpoint Test C: DTC U0155:00
+</b></p><ul type="disc"><b>Normal Operation 
+</b>
+
+<li>DTC U0155:00 (Lost Communication With Instrument Panel Cluster (IPC) Control Module: No Sub Type Information) — sets in the Body Control Module (BCM) if data messages received from
+the Instrument Panel Cluster (IPC) are missing. For a complete list of all network messages, refer to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSI00L.HTM%26rightside%3dSCRSI00R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 418-00
+</a>.
+</li></ul><p><b>This pinpoint test is intended to diagnose the following:
+</b></p><ul type="disc"><li>Communication network concern
+</li><li><span title="Instrument Panel Cluster" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IPC
+</span></li><li><span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span></li></ul><a name="C">&nbsp;
+</a><h5>PINPOINT TEST C: DTC U0155:00 
+</h5><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="C1">&nbsp;
+</a><b>C1 VERIFY THE CUSTOMER CONCERN 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Ignition ON.
+</li><li>Verify that there is an observable symptom present.
+</li><li><b>Is an observable symptom present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRJA004.HTM_gen_ref.HTM#C2"                                                                                                                                                                                                                                                       >C2
+</a>. 
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. The DTC may have been set due to high network traffic or an intermittent fault condition. 
+</td></tr><tr><td><a name="C2">&nbsp;
+</a><b>C2 CHECK THE COMMUNICATION NETWORK 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Ignition ON.
+</li><li>Enter the following diagnostic mode on the scan tool:   Network Test.
+</li><li>Carry out the network test.
+</li><li><b>Does the 
+<span title="Instrument Panel Cluster" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IPC
+</span> pass the network test?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRJA004.HTM_gen_ref.HTM#C3"                                                                                                                                                                                                                                                       >C3
+</a>. 
+
+<br><br><b>No
+</b><br>REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSI00L.HTM%26rightside%3dSCRSI00R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 418-00
+</a>, The Instrument Panel Cluster (IPC) Does Not Respond To The Scan Tool. 
+</td></tr><tr><td><a name="C3">&nbsp;
+</a><b>C3 RETRIEVE THE RECORDED DTCs FROM THE 
+<span title="BODY CONTROL MODULE" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> SELF-TEST 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Check for recorded 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> DTCs from the self-test.
+</li><li><b>Is DTC U3003:16 or DTC U3003:17 recorded?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>For DTC U3003:16, 
+<a href="SCR_us_en_file%3dSCRJA004.HTM_gen_ref.HTM#PS2-F"                                                                                                                                                                                                                                                       >GO to Pinpoint Test F
+</a>. 
+For DTC U3003:17, 
+<a href="SCR_us_en_file%3dSCRJA004.HTM_gen_ref.HTM#PS2-G"                                                                                                                                                                                                                                                       >GO to Pinpoint Test G
+</a>. 
+
+<br><br><b>No
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRJA004.HTM_gen_ref.HTM#C4"                                                                                                                                                                                                                                                       >C4
+</a>. 
+</td></tr><tr><td><a name="C4">&nbsp;
+</a><b>C4 CHECK FOR DTC U3006:16 FROM THE 
+<span title="INSTRUMENT PANEL CLUSTER" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IPC
+</span> SELF-TEST 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Retrieve the continuous memory DTCs from the 
+<span title="Instrument Panel Cluster" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IPC
+</span>.
+</li><li><b>Is DTC U3006:16 recorded?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSD10L.HTM%26rightside%3dSCRSD10R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 413-01
+</a>. 
+
+<br><br><b>No
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRJA004.HTM_gen_ref.HTM#C5"                                                                                                                                                                                                                                                       >C5
+</a>. 
+</td></tr><tr><td><a name="C5">&nbsp;
+</a><b>C5 RECHECK THE 
+<span title="BODY CONTROL MODULE" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> DTCs 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><p class="singlespace"><b>NOTE: 
+</b> If new modules were installed prior to the DTC being set, the module configuration may be incorrectly set during Programmable Module Installation (PMI) or the
+
+<span title="Programmable Module Installation" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PMI
+</span> may not have been carried out.
+</p><li>Clear the DTCs. Repeat the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> self-test.
+</li><li><b>Is DTC U0155:00 still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRJA004.HTM_gen_ref.HTM#C6"                                                                                                                                                                                                                                                       >C6
+</a>. 
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. The DTC may have been set due to high network traffic or an intermittent fault condition. 
+</td></tr><tr><td><a name="C6">&nbsp;
+</a><b>C6 CHECK FOR DTC U0155:00 or U0155 SET IN OTHER MODULES 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Clear the DTCs.
+</li><li>Ignition OFF.
+</li><li>Ignition ON.
+</li><li>Wait 10 seconds.
+</li><li>Enter the following diagnostic mode on the scan tool:   Self-Test.
+</li><li>Retrieve the continuous memory DTCs from all modules.
+</li><li><b>Is DTC U0155:00 or DTC U0155 set in any other module?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new 
+<span title="Instrument Panel Cluster" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IPC
+</span> . REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSD10L.HTM%26rightside%3dSCRSD10R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 413-01
+</a>. CLEAR the DTCs. REPEAT
+ the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> self-test. 
+
+<br><br><b>No
+</b><br>INSTALL a new 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span>. REFER to 
+<a href="SCR_us_en_file%3dSCRJA006.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       >Body Control Module (BCM)
+</a> in this section. TEST the system for normal operation. 
+</td></tr></table><a name="PS2-D">&nbsp;
+</a><p><b>Pinpoint Test D: DTC U0167:00
+</b></p><ul type="disc"><b>Normal Operation 
+</b>
+
+<li>DTC U0167:00 (Lost Communication With Vehicle Immobilizer Control Module: No Sub Type Information) — sets in the Body Control Module (BCM) if data messages received from
+the Remote Function Actuator (RFA) module are missing. For a complete list of all network messages, refer to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSI00L.HTM%26rightside%3dSCRSI00R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 418-00
+</a>.
+</li></ul><p><b>This pinpoint test is intended to diagnose the following:
+</b></p><ul type="disc"><li>Communication network concern
+</li><li><span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module
+</li><li><span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span></li></ul><a name="D">&nbsp;
+</a><h5>PINPOINT TEST D: DTC U0167:00 
+</h5><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="D1">&nbsp;
+</a><b>D1 VERIFY THE CUSTOMER CONCERN 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Ignition ON.
+</li><li>Verify that there is an observable symptom present.
+</li><li><b>Is an observable symptom present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRJA004.HTM_gen_ref.HTM#D2"                                                                                                                                                                                                                                                       >D2
+</a>. 
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. The DTC may have been set due to high network traffic or an intermittent fault condition. 
+</td></tr><tr><td><a name="D2">&nbsp;
+</a><b>D2 CHECK THE COMMUNICATION NETWORK 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Ignition ON.
+</li><li>Enter the following diagnostic mode on the scan tool:   Network Test.
+</li><li>Carry out the network test.
+</li><li><b>Does the 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module pass the network test?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRJA004.HTM_gen_ref.HTM#D3"                                                                                                                                                                                                                                                       >D3
+</a>. 
+
+<br><br><b>No
+</b><br>REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSI00L.HTM%26rightside%3dSCRSI00R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 418-00
+</a>, The Remote Function Actuator (RFA) Module Does Not Respond To The Scan Tool. 
+</td></tr><tr><td><a name="D3">&nbsp;
+</a><b>D3 RETRIEVE THE RECORDED DTCs FROM THE 
+<span title="BODY CONTROL MODULE" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> SELF-TEST 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Check for recorded 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> DTCs from the self-test.
+</li><li><b>Is DTC U3003:16 or DTC U3003:17 recorded?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>For DTC U3003:16, 
+<a href="SCR_us_en_file%3dSCRJA004.HTM_gen_ref.HTM#PS2-F"                                                                                                                                                                                                                                                       >GO to Pinpoint Test F
+</a>. 
+For DTC U3003:17, 
+<a href="SCR_us_en_file%3dSCRJA004.HTM_gen_ref.HTM#PS2-G"                                                                                                                                                                                                                                                       >GO to Pinpoint Test G
+</a>. 
+
+<br><br><b>No
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRJA004.HTM_gen_ref.HTM#D4"                                                                                                                                                                                                                                                       >D4
+</a>. 
+</td></tr><tr><td><a name="D4">&nbsp;
+</a><b>D4 CHECK FOR DTCs U3003:16 AND U3003:17 FROM THE 
+<span title="REMOTE FUNCTION ACTUATOR" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> MODULE SELF-TEST 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Retrieve the continuous memory DTCs from the 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module.
+</li><li><b>Is DTC U3003:16 or U3003:17 recorded?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>For DTC U3003:16, 
+<a href="SCR_us_en_file%3dSCRJA005.HTM_gen_ref.HTM#PS2-O"                                                                                                                                                                                                                                                       >GO to Pinpoint Test O
+</a>. 
+For DTC U3003:17, 
+<a href="SCR_us_en_file%3dSCRJA005.HTM_gen_ref.HTM#PS2-P"                                                                                                                                                                                                                                                       >GO to Pinpoint Test P
+</a>. 
+
+<br><br><b>No
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRJA004.HTM_gen_ref.HTM#D5"                                                                                                                                                                                                                                                       >D5
+</a>. 
+</td></tr><tr><td><a name="D5">&nbsp;
+</a><b>D5 RECHECK THE 
+<span title="BODY CONTROL MODULE" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> DTCs 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><p class="singlespace"><b>NOTE: 
+</b> If new modules were installed prior to the DTC being set, the module configuration may be incorrectly set during Programmable Module Installation (PMI) or the
+
+<span title="Programmable Module Installation" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PMI
+</span> may not have been carried out.
+</p><li>Clear the DTCs. Repeat the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> self-test.
+</li><li><b>Is DTC U0167:00 still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module. REFER to 
+<a href="SCR_us_en_file%3dSCRJA007.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       >Remote Function Actuator (RFA) Module
+</a> in this section. CLEAR the DTCs. REPEAT
+ the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> self-test. 
+If the concern is still present after the repair, INSTALL a new 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span>. REFER to 
+<a href="SCR_us_en_file%3dSCRJA006.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       >Body Control Module (BCM)
+</a> in this section.
+ TEST the system for normal operation. 
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. The DTC may have been set due to high network traffic or an intermittent fault condition. 
+</td></tr></table><a name="PS2-E">&nbsp;
+</a><p><b>Pinpoint Test E: DTC U0257:00
+</b></p><ul type="disc"><b>Normal Operation 
+</b>
+
+<li>DTC U0257:00 (Lost Communication With Front Controls/Display Interface Module: No Sub Type Information) — sets in the Body Control Module (BCM) if data messages received from
+the Front Control/Display Interface Module (FCDIM) are missing. For a complete list of all network messages, refer to
+
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSI00L.HTM%26rightside%3dSCRSI00R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 418-00
+</a>.
+</li></ul><p><b>This pinpoint test is intended to diagnose the following:
+</b></p><ul type="disc"><li>Communication network concern
+</li><li><span title="Front Control/Display Interface Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">FCDIM
+</span></li><li><span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span></li></ul><a name="E">&nbsp;
+</a><h5>PINPOINT TEST E: DTC U0257:00 
+</h5><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="E1">&nbsp;
+</a><b>E1 VERIFY THE CUSTOMER CONCERN 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Ignition ON.
+</li><li>Verify that there is an observable symptom present.
+</li><li><b>Is an observable symptom present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRJA004.HTM_gen_ref.HTM#E2"                                                                                                                                                                                                                                                       >E2
+</a>. 
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. The DTC may have been set due to high network traffic or an intermittent fault condition. 
+</td></tr><tr><td><a name="E2">&nbsp;
+</a><b>E2 CHECK THE COMMUNICATION NETWORK 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Ignition ON.
+</li><li>Enter the following diagnostic mode on the scan tool:   Network Test.
+</li><li>Carry out the network test.
+</li><li><b>Does the 
+<span title="Front Control/Display Interface Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">FCDIM
+</span> pass the network test?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRJA004.HTM_gen_ref.HTM#E3"                                                                                                                                                                                                                                                       >E3
+</a>. 
+
+<br><br><b>No
+</b><br>REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSI00L.HTM%26rightside%3dSCRSI00R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 418-00
+</a>, The Front Control/Display Interface Module (FCDIM) Does Not Respond To The Scan Tool. 
+</td></tr><tr><td><a name="E3">&nbsp;
+</a><b>E3 RETRIEVE THE RECORDED DTCs FROM THE 
+<span title="BODY CONTROL MODULE" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> SELF-TEST 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Check for recorded 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> DTCs from the self-test.
+</li><li><b>Is DTC U3003:16 or DTC U3003:17 recorded?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>For DTC U3003:16, 
+<a href="SCR_us_en_file%3dSCRJA004.HTM_gen_ref.HTM#PS2-F"                                                                                                                                                                                                                                                       >GO to Pinpoint Test F
+</a>. 
+For DTC U3003:17, 
+<a href="SCR_us_en_file%3dSCRJA004.HTM_gen_ref.HTM#PS2-G"                                                                                                                                                                                                                                                       >GO to Pinpoint Test G
+</a>. 
+
+<br><br><b>No
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRJA004.HTM_gen_ref.HTM#E4"                                                                                                                                                                                                                                                       >E4
+</a>. 
+</td></tr><tr><td><a name="E4">&nbsp;
+</a><b>E4 CHECK FOR DTCs U3006:16 AND U3006:17 FROM THE 
+<span title="FRONT CONTROL/DISPLAY INTERFACE MODULE" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">FCDIM
+</span> SELF-TEST 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Retrieve the continuous memory DTCs from the 
+<span title="Front Control/Display Interface Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">FCDIM
+</span>.
+</li><li><b>Is DTC U3006:16 or DTC U3006:17 recorded?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSF00L.HTM%26rightside%3dSCRSF00R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 415-00
+</a>. 
+
+<br><br><b>No
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRJA004.HTM_gen_ref.HTM#E5"                                                                                                                                                                                                                                                       >E5
+</a>. 
+</td></tr><tr><td><a name="E5">&nbsp;
+</a><b>E5 RECHECK THE 
+<span title="BODY CONTROL MODULE" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> DTCs 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><p class="singlespace"><b>NOTE: 
+</b> If new modules were installed prior to the DTC being set, the module configuration may be incorrectly set during Programmable Module Installation (PMI) or the
+
+<span title="Programmable Module Installation" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PMI
+</span> may not have been carried out.
+</p><li>Clear the DTCs. Repeat the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> self-test.
+</li><li><b>Is DTC U0257:00 still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRJA004.HTM_gen_ref.HTM#E6"                                                                                                                                                                                                                                                       >E6
+</a>. 
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. The DTC may have been set due to high network traffic or an intermittent fault condition. 
+</td></tr><tr><td><a name="E6">&nbsp;
+</a><b>E6 CHECK FOR DTC U0257:00 OR U0257 SET IN OTHER MODULES 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Clear the DTCs.
+</li><li>Ignition OFF.
+</li><li>Ignition ON.
+</li><li>Wait 10 seconds.
+</li><li>Enter the following diagnostic mode on the scan tool:   Self-Test.
+</li><li>Retrieve the continuous memory DTCs from all modules.
+</li><li><b>Is DTC U0257:00 or DTC U0257 set in any other module?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new 
+<span title="Front Control/Display Interface Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">FCDIM
+</span>. REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSF00L.HTM%26rightside%3dSCRSF00R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 415-00
+</a>. CLEAR the DTCs. REPEAT
+ the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> self-test. 
+
+<br><br><b>No
+</b><br>INSTALL a new 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span>. REFER to 
+<a href="SCR_us_en_file%3dSCRJA006.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       >Body Control Module (BCM)
+</a> in this section. TEST the system for normal operation. 
+</td></tr></table><a name="PS2-F">&nbsp;
+</a><p><b>Pinpoint Test F: DTC U3003:16
+</b></p><p><p>Refer to Wiring Diagrams Cell 
+<a target="_parent" href="SCR_us_en_book%3dECR%26cell%3d013%26page%3d%26year%3d%26vehicle%3d2012%20Fiesta%26market%3dUS%26lang%3dEN%26RTYPE%3dDIAGRAM%26lega"                                                                                                                                                                                                                                                               >13
+</a>, Power Distribution/SJB for schematic and connector information.
+</p></p><ul type="disc"><b>Normal Operation 
+</b>
+
+<li>DTC U3003:16 (Battery Voltage: Circuit Voltage Below Threshold) — sets in the Body Control Module (BCM) when
+the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> detects that battery voltage has dropped below 9 volts from the voltage supply circuit.
+</li></ul><p><b>This pinpoint test is intended to diagnose the following:
+</b></p><ul type="disc"><li>Wiring, terminals or connectors
+</li><li>High circuit resistance
+</li><li><span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span></li></ul><a name="F">&nbsp;
+</a><h5>PINPOINT TEST F: DTC U3003:16 
+</h5>
+
+<p><b><i>NOTICE: 
+</i> Use the correct probe adapter(s) when making measurements. Failure to use the correct probe adapter(s) may damage the connector.
+</b></p><p><b>NOTE: 
+</b> Failure to disconnect the battery when instructed results in false resistance readings. Refer to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSE10L.HTM%26rightside%3dSCRSE10R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 414-01
+</a>.
+</p><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="F1">&nbsp;
+</a><b>F1 RECHECK THE 
+<span title="BODY CONTROL MODULE" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> DTCs 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Ignition ON.
+</li><li>Enter the following diagnostic mode on the scan tool:   
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> Self-Test.
+</li><li>Clear the DTCs. Repeat the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> self-test.
+</li><li><b>Is DTC U3003:16 still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRJA004.HTM_gen_ref.HTM#F2"                                                                                                                                                                                                                                                       >F2
+</a>. 
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. The DTC may have been set due to a previous low battery voltage condition. 
+</td></tr><tr><td><a name="F2">&nbsp;
+</a><b>F2 CHECK FOR CHARGING SYSTEM DTCs IN THE PCM 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Enter the following diagnostic mode on the scan tool:   PCM Self-Test.
+</li><li>Carry out the PCM 
+<span title="Key ON Engine OFF" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">KOEO
+</span> self-test.
+</li><li>Retrieve the continuous memory DTCs from the PCM.
+</li><li><b>Is DTC P0562, P0620, P0622, P0625, P0626 or P065B set in the PCM?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSE00L.HTM%26rightside%3dSCRSE00R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 414-00
+</a>. 
+
+<br><br><b>No
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRJA004.HTM_gen_ref.HTM#F3"                                                                                                                                                                                                                                                       >F3
+</a>. 
+</td></tr><tr><td><a name="F3">&nbsp;
+</a><b>F3 CHECK THE BATTERY CONDITION AND STATE OF CHARGE 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Ignition OFF.
+</li><li>Check the battery condition and verify the battery is fully charged. Refer to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSE10L.HTM%26rightside%3dSCRSE10R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 414-01
+</a>.
+</li><li><b>Is the battery OK and fully charged?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRJA004.HTM_gen_ref.HTM#F4"                                                                                                                                                                                                                                                       >F4
+</a>. 
+
+<br><br><b>No
+</b><br>REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSE00L.HTM%26rightside%3dSCRSE00R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 414-00
+</a>. 
+</td></tr><tr><td><a name="F4">&nbsp;
+</a><b>F4 CHECK THE 
+<span title="BODY CONTROL MODULE" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> VOLTAGE PID 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Ignition ON.
+</li><li>Measure and record the voltage at the battery.
+</li><li>Enter the following diagnostic mode on the scan tool:   
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> DataLogger.
+</li><li>Monitor the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> voltage PID.
+</li><li><b>Is the voltage within 0.2 volt of the recorded battery voltage?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRJA004.HTM_gen_ref.HTM#F7"                                                                                                                                                                                                                                                       >F7
+</a>. 
+
+<br><br><b>No
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRJA004.HTM_gen_ref.HTM#F5"                                                                                                                                                                                                                                                       >F5
+</a>. 
+</td></tr><tr><td><a name="F5">&nbsp;
+</a><b>F5 CHECK THE 
+<span title="BODY CONTROL MODULE" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> VOLTAGE SUPPLY 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Ignition OFF.
+</li><li>Disconnect:   
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> C2280A.
+</li><li>Ignition ON.
+</li><li>Measure the voltage between the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> C2280A-8, circuit SBB06 (BN/RD), harness side and ground; and between
+the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> C2280A-14, circuit SBB24 (VT/RD), harness side and ground.
+</li><br><br><IMG src="SCR_us_en_file%3dN0117256.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="211" width="325" border="0"><li><b>Is the voltage within 0.2 volt of the recorded battery voltage?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRJA004.HTM_gen_ref.HTM#F6"                                                                                                                                                                                                                                                       >F6
+</a>. 
+
+<br><br><b>No
+</b><br>REPAIR circuit SBB06 (BN/RD) or circuit SBB24 (VT/RD) as necessary for high resistance. CLEAR the DTC. REPEAT the self-test. 
+</td></tr><tr><td><a name="F6">&nbsp;
+</a><b>F6 CHECK THE 
+<span title="BODY CONTROL MODULE" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> GROUND CIRCUIT FOR HIGH RESISTANCE 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Ignition OFF.
+</li><li>Disconnect:   Negative Battery Cable.
+</li><li>Disconnect:   
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> C2280D.
+</li><li>Measure the resistance between the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> C2280A-16, circuit GD115 (BK/GY), harness side and ground; and between
+the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> C2280B-7, circuit GD115 (BK/GY), harness side and ground.
+</li><br><br><IMG src="SCR_us_en_file%3dN0114628.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="211" width="325" border="0"><li><b>Is the resistance less than 5 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRJA004.HTM_gen_ref.HTM#F7"                                                                                                                                                                                                                                                       >F7
+</a>. 
+
+<br><br><b>No
+</b><br>REPAIR circuit GD115 (BK/GY) for high resistance. CLEAR the DTC. REPEAT the self-test. 
+</td></tr><tr><td><a name="F7">&nbsp;
+</a><b>F7 CHECK FOR CORRECT 
+<span title="BODY CONTROL MODULE" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> OPERATION 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> connectors.
+</li><li>Check for:
+</li><ul type="square"><li>corrosion
+</li></ul><ul type="square"><li>damaged pins
+</li></ul><ul type="square"><li>pushed-out pins
+</li></ul><li>Connect the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> connectors and make sure they seat correctly.
+</li><li>Operate the system and verify the concern is still present.
+</li><li><b>Is the concern still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span>. REFER to 
+<a href="SCR_us_en_file%3dSCRJA006.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       >Body Control Module (BCM)
+</a> in this section. TEST the system for normal operation. 
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector. 
+</td></tr></table><a name="PS2-G">&nbsp;
+</a><p><b>Pinpoint Test G: DTC U3003:17
+</b></p><p><p>Refer to Wiring Diagrams Cell 
+<a target="_parent" href="SCR_us_en_book%3dECR%26cell%3d013%26page%3d%26year%3d%26vehicle%3d2012%20Fiesta%26market%3dUS%26lang%3dEN%26RTYPE%3dDIAGRAM%26lega"                                                                                                                                                                                                                                                               >13
+</a>, Power Distribution/SJB for schematic and connector information.
+</p></p><ul type="disc"><b>Normal Operation 
+</b>
+
+<li>DTC U3003:17 (Battery Voltage: Circuit Voltage Above Threshold) — sets in the Body Control Module (BCM) when
+the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> detects that battery voltage exceeds 15.9 volts on the voltage supply circuit.
+</li></ul><p><b>This pinpoint test is intended to diagnose the following:
+</b></p><ul type="disc"><li>Charging system concern
+</li><li><span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span></li></ul><a name="G">&nbsp;
+</a><h5>PINPOINT TEST G: DTC U3003:17 
+</h5>
+
+<p><b>NOTE: 
+</b> DTC U3003:17 may be stored in the module memory due to previous battery charging or vehicle jump starting events.
+</p><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="G1">&nbsp;
+</a><b>G1 CHECK FOR DTC B1317, B1676, P0563 (PCM) OR U3003:17 SET IN OTHER MODULES 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Ignition ON.
+</li><li>Enter the following diagnostic mode on the scan tool:   Self-Test.
+</li><li>Retrieve the continuous memory DTCs from all modules.
+</li><li><b>Is DTC B1317, B1676, P0563 (PCM) or U3003:17 set in more than one module?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSE00L.HTM%26rightside%3dSCRSE00R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 414-00
+</a> to diagnose an overcharging condition. 
+
+<br><br><b>No
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRJA004.HTM_gen_ref.HTM#G2"                                                                                                                                                                                                                                                       >G2
+</a>. 
+</td></tr><tr><td><a name="G2">&nbsp;
+</a><b>G2 CHECK THE BATTERY VOLTAGE 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Turn off all interior/exterior lights and accessories.
+</li><li>Start and run the engine at approximately 2,000 rpm for 3 minutes while monitoring the battery voltage.
+</li><li><b>Does the battery voltage rise to 15.5 volts or higher?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSE00L.HTM%26rightside%3dSCRSE00R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 414-00
+</a> to diagnose an overcharging condition. 
+
+<br><br><b>No
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRJA004.HTM_gen_ref.HTM#G3"                                                                                                                                                                                                                                                       >G3
+</a>. 
+</td></tr><tr><td><a name="G3">&nbsp;
+</a><b>G3 RECHECK FOR DTC U3003:17 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Turn the engine off.
+</li><li>Ignition ON.
+</li><li>Enter the following diagnostic mode on the scan tool:   
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> Self-Test.
+</li><li>Clear the continuous memory DTCs.
+</li><li>Carry out the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> self-test.
+</li><li><b>Is DTC U3003:17 present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span>. REFER to 
+<a href="SCR_us_en_file%3dSCRJA006.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       >Body Control Module (BCM)
+</a> in this section. TEST the system for normal operation. 
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. The DTC may have been set previously during battery charging or while jump starting the vehicle. 
+</td></tr></table><br><hr><P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+
+</body>
+<!-- Mirrored from file:///C:/Documents and Settings/Administrator/Desktop/FORD/Ford Fiesta 2012/SCR~us~en~file=SCRJA004.HTM~gen~ref.HTM by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 04 Mar 2025 14:52:53 GMT -->
+</html>

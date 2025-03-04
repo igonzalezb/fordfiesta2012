@@ -1,0 +1,927 @@
+<html>
+<!-- Mirrored from file:///C:/Documents and Settings/Administrator/Desktop/FORD/Ford Fiesta 2012/SCR~us~en~file=SCRJ1A03.HTM~gen~ref.HTM by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 04 Mar 2025 14:52:50 GMT -->
+<head><META http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>2012 Fiesta Workshop Manual
+
+</title><LINK rel="stylesheet" type="text/css" href="SCR_us_en_file%3dSCRSTYLE.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       ><meta name="tps_translationdatetime" content="06/09/2012 16:28:18"><meta name="tps_type" content="workshop"><meta name="tps_bookcode" content="SCR"><meta name="tps_market" content="US"><meta name="tps_language" content="EN"><meta name="tps_year" content="2012"><meta name="tps_modelname" content="Fiesta"><meta name="tps_system" content="4"><meta name="tps_group" content="19"><meta name="tps_section" content="01A"><meta name="tps_section_title" content="Anti-Theft — Perimeter"><meta name="tps_ss_title" content="DIAGNOSIS AND TESTING"><meta name="tps_procid" content="s4p4596q0"><meta name="tps_procsgmlid" content="n1236944"><meta name="tps_packetinfo" content="690963"><meta name="tps_effectivity" content="2011,FIESTA,19-01A"><meta name="tps_effectivity" content="2012,FIESTA,19-01A"><meta name="tps_effectivity" content="2013,FIESTA,19-01A"></head><body><TABLE width="95%"><TR><TD><div class="bookinfo">SECTION 419-01A:  Anti-Theft — Perimeter
+</DIV></TD><TD align="RIGHT"><div class="bookinfo">2012 Fiesta Workshop Manual
+</DIV></TD></TR><TR><TD><div class="bookinfo">DIAGNOSIS AND TESTING
+</div></TD><TD align="RIGHT"><div class="bookinfosmall">Procedure revision date:  07/15/2011
+</div></TD></TR></TABLE><hr><h4>Anti-Theft
+</h4><meta name="tps_proctitle" content="Anti-Theft">
+
+<br><table border="1" cellpadding="3" cellspacing="0" width="50%"><caption>Special Tool(s)
+</caption><tr valign="top"><td><IMG src="SCR_us_en_file%3dST3093A.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="99" width="99" border="0"></td><td>Fluke 77-IV Digital Multimeter
+<br>FLU77-4 or equivalent
+</td></tr><tr valign="top"><td><IMG src="SCR_us_en_file%3dST2834A.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="99" width="99" border="0"></td><td>Vehicle Communication Module (VCM) and Integrated Diagnostic System (IDS) software with appropriate hardware, or equivalent scan
+ tool
+<br></td></tr><tr valign="top"><td><IMG src="SCR_us_en_file%3dST2574A.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="99" width="99" border="0"></td><td>Flex Probe Kit
+<br>NUD105-R025D or equivalent
+</td></tr></table><div><a name="extract_556">&nbsp;
+</a></div>
+
+<p><b>Principles of Operation
+</b></p><p>The Body Control Module (BCM) controls the operation of the perimeter alarm based on the following inputs:
+</p><ul type="disc"><li>door ajar switches
+</li><li>hood ajar
+</li><li>driver door lock cylinder
+</li><li>door lock control switch
+</li><li>Passive Anti-Theft System (PATS) input
+</li><li>and the Remote Keyless Entry (RKE) transmitters
+</li></ul><p>On vehicles equipped with Intelligent Access (IA) the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> receives
+the 
+<span title="Remote Keyless Entry" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RKE
+</span> transmitter and 
+<span title="Intelligent Access" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IA
+</span> input from
+the Remote Function Actuator (RFA) module over the Medium Speed Controller Area Network (MS-CAN). If the perimeter alarm is armed, and
+the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> receives an input indicating an unauthorized entry into the vehicle or the ignition is turned to the RUN position without a
+programmed 
+<span title="Passive Anti-Theft System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PATS
+</span> key, the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> activates the perimeter alarm. When the perimeter alarm is
+activated, the anti-theft horn sounds and the turn signals flash in regular intervals. The traffic horn does not sound during a perimeter alarm event.
+</p><p><b>Battery Disconnect
+</b></p><p>If the battery is disconnected and then reconnected, the perimeter alarm remains in the same state (disarmed, pre-armed, armed, or activated) it was prior to the battery disconnect.
+</p><p><b>Alarm Event PIDs
+</b></p><p>The 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> has PIDs available that show what caused the last alarm events. The 5 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> alarm
+event PIDs are ALARM_1 through 5. The cause for the most recent alarm activation is always listed in the first alarm event PID. These PIDs display what caused the alarm to activate and can be a very useful tool when trying to identify the cause of a
+false alarm activation.
+</p><div><a name="extract_557">&nbsp;
+</a></div>
+
+<p><b>Inspection and Verification
+</b></p><ol start="1"><li>Verify the customer concern.
+</li></ol><ol start="2"><li>Visually inspect for obvious signs of electrical damage.
+</li></ol><br><br><P class="SINGLESPACE"><B>&nbsp; 
+
+Visual Inspection Chart 
+</B></P><TABLE cellspacing="0" cellpadding="3" border="1"><TR><TH valign="bottom" align="center" rowspan="1">Electrical
+</TH></TR><TR><TD valign="top" align="left" rowspan="1"><ul type="disc"><li>Wiring, terminals or connectors
+</li><li>Hood switch
+</li></ul></TD></TR></TABLE><br><ol start="3"><li>If an obvious cause for an observed or reported concern is found, correct the cause (if possible) before proceeding to the next step.
+</li></ol><ol start="4"><li><p><b>NOTE: 
+</b> Make sure to use the latest scan tool software release.
+</p>If the cause is not visually evident, connect the scan tool to the Data Link Connector (DLC).
+</li></ol><ol start="5"><li><p><b>NOTE: 
+</b> The Vehicle Communication Module (VCM) LED prove-out confirms power and ground from the 
+<span title="Data Link Connector" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">DLC
+</span> are provided to the
+
+<span title="Vehicle Communication Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">VCM
+</span>.
+</p>If the scan tool does not communicate with the 
+<span title="Vehicle Communication Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">VCM
+</span>:
+
+<ul type="disc"><li>check the 
+<span title="Vehicle Communication Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">VCM
+</span> connection to the vehicle.
+</li></ul><ul type="disc"><li>check the scan tool connection to the 
+<span title="Vehicle Communication Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">VCM
+</span>.
+</li></ul><ul type="disc"><li>cefer to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSI00L.HTM%26rightside%3dSCRSI00R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 418-00
+</a>, No Power To The Scan Tool, to diagnose no power to the scan tool.
+</li></ul></li></ol><ol start="6"><li>If the scan tool does not communicate with the vehicle:
+
+<ul type="disc"><li>verify the ignition key is in the ON position.
+</li></ul><ul type="disc"><li>verify the scan tool operation with a known good vehicle.
+</li></ul><ul type="disc"><li>refer to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSI00L.HTM%26rightside%3dSCRSI00R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 418-00
+</a> to diagnose no response from the PCM.
+</li></ul></li></ol><ol start="7"><li>Carry out the network test.
+
+<ul type="disc"><li>If the scan tool responds with no communication for one or more modules, refer to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSI00L.HTM%26rightside%3dSCRSI00R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 418-00
+</a>.
+</li></ul><ul type="disc"><li>If the network test passes, retrieve and record the continuous memory DTCs.
+</li></ul></li></ol><ol start="8"><li>Clear the continuous DTCs and carry out the self-test diagnostics for the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span>.
+</li></ol><ol start="9"><li>If the DTCs retrieved are related to the concern, go to DTC Charts. For all other DTCs, refer to the Diagnostic Trouble Code (DTC) Chart in 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSJA0L.HTM%26rightside%3dSCRSJA0R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 419-10
+</a>.
+</li></ol><ol start="10"><li>If no DTCs related to the concern are retrieved, GO to 
+<a href="SCR_us_en_file%3dSCRJ1A03.HTM_gen_ref.HTM#SC1"                                                                                                                                                                                                                                                       >Symptom Chart
+</a>.
+</li></ol><div><a name="extract_558">&nbsp;
+</a></div>
+
+<p><b>DTC Charts
+</b></p><P class="SINGLESPACE"><B>&nbsp;Body Control Module (BCM) DTC Chart 
+</B></P><TABLE cellspacing="0" cellpadding="3" border="1"><TR><TH valign="bottom" align="center" rowspan="1">DTC
+</TH><TH valign="bottom" align="center" rowspan="1">Description
+</TH><TH valign="bottom" align="center" rowspan="1">Action
+</TH></TR><TR><TD valign="top" align="center" rowspan="1">B10B1:92
+</TD><TD valign="top" align="left" rowspan="1">Cabin Set/Reset Switch: Performance or Incorrect Operation
+</TD><TD valign="top" align="left" rowspan="1"><a href="SCR_us_en_file%3dSCRJ1A03.HTM_gen_ref.HTM#PS2-A"                                                                                                                                                                                                                                                       >GO to Pinpoint Test A
+</a>.
+</TD></TR><TR><TD valign="top" align="center" rowspan="1">P254F:00
+</TD><TD valign="top" align="left" rowspan="1">Engine Hood Switch Circuit/Open: No Sub Type Information
+</TD><TD valign="top" align="left" rowspan="1"><a href="SCR_us_en_file%3dSCRJ1A03.HTM_gen_ref.HTM#PS2-C"                                                                                                                                                                                                                                                       >GO to Pinpoint Test C
+</a>.
+</TD></TR><TR><TD valign="top" align="center" rowspan="1">All other DTCs
+</TD><TD valign="top" align="left" rowspan="1">—
+</TD><TD valign="top" align="left" rowspan="1">REFER to the Diagnostic Trouble Code (DTC) Chart in 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSJA0L.HTM%26rightside%3dSCRSJA0R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 419-10
+</a>.
+</TD></TR></TABLE><br><div><a name="extract_559">&nbsp;
+</a></div>
+
+<p><b>Symptom Chart
+</b></p><a name="SC1">&nbsp;
+</a><table width="90%" cellpadding="3" cellspacing="0" rules="groups" border="1">
+
+<caption> 
+</caption><colgroup><colgroup><colgroup><tr><th>Condition
+</th><th>Possible Sources
+</th><th>Action
+</th></tr><tbody></tbody>
+
+<tr valign="top"><td><ul type="disc"><li>The alarm system does not arm/disarm from the driver door lock cylinder
+</li></ul></td><td><ul type="disc"><li>Wiring, terminals or connectors
+</li><li>Driver door set/reset switch (part of the door latch)
+</li><li>Body Control Module (BCM)
+</li></ul></td><td><ul type="disc"><li><a href="SCR_us_en_file%3dSCRJ1A03.HTM_gen_ref.HTM#PS2-A"                                                                                                                                                                                                                                                       >GO to Pinpoint Test A
+</a></li></ul></td></tr><tbody></tbody>
+
+<tr valign="top"><td><ul type="disc"><li>The alarm system does not activate from an unauthorized entry at the hood
+</li></ul></td><td><ul type="disc"><li>Wiring, terminals or connectors
+</li><li>Hood switch (part of the hood latch)
+</li><li><span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span></li></ul></td><td><ul type="disc"><li><a href="SCR_us_en_file%3dSCRJ1A03.HTM_gen_ref.HTM#PS2-B"                                                                                                                                                                                                                                                       >GO to Pinpoint Test B
+</a>.
+</li></ul></td></tr><tbody></tbody>
+
+<tr valign="top"><td><ul type="disc"><li>The alarm system does not activate from an unauthorized entry at a door
+</li></ul></td><td><ul type="disc"><li>Door ajar input
+</li></ul></td><td><ul type="disc"><li>Refer to section 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSH20L.HTM%26rightside%3dSCRSH20R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 417-02
+</a> to diagnose the door ajar switch inputs.
+</li></ul></td></tr><tbody></tbody>
+
+<tr valign="top"><td><ul type="disc"><li>The alarm system does not activate from an unauthorized entry at the liftgate/luggage compartment
+</li></ul></td><td><ul type="disc"><li>Liftgate/luggage compartment ajar input
+</li></ul></td><td><ul type="disc"><li>Refer to section 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSH20L.HTM%26rightside%3dSCRSH20R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 417-02
+</a> to diagnose the liftgate/luggage compartment ajar switch inputs.
+</li></ul></td></tr><tbody></tbody>
+
+<tr valign="top"><td><ul type="disc"><li>The alarm system does not arm/no turn signal flash confirmation
+</li></ul></td><td><ul type="disc"><li>Door ajar input
+</li><li>Hood ajar input
+</li><li>Liftgate/luggage compartment ajar input
+</li><li>Turn signals
+</li><li>Remote Keyless Entry (RKE) transmitter concern
+</li><li><span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span></li></ul></td><td><ul type="disc"><li><a href="SCR_us_en_file%3dSCRJ1A03.HTM_gen_ref.HTM#PS2-D"                                                                                                                                                                                                                                                       >GO to Pinpoint Test D
+</a>.
+</li></ul></td></tr><tbody></tbody>
+
+<tr valign="top"><td><ul type="disc"><li>No horn output during alarm activation
+</li></ul></td><td><ul type="disc"><li>Wiring, terminals or connectors
+</li><li>Anti-theft alarm horn
+</li><li><span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span></li></ul></td><td><ul type="disc"><li><a href="SCR_us_en_file%3dSCRJ1A03.HTM_gen_ref.HTM#PS2-E"                                                                                                                                                                                                                                                       >GO to Pinpoint Test E
+</a>.
+</li></ul></td></tr><tbody></tbody>
+
+<tr valign="top"><td><ul type="disc"><li>The anti-theft alarm horn is always on
+</li></ul></td><td><ul type="disc"><li>Wiring, terminals or connectors
+</li><li><span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span></li></ul></td><td><ul type="disc"><li><a href="SCR_us_en_file%3dSCRJ1A03.HTM_gen_ref.HTM#PS2-F"                                                                                                                                                                                                                                                       >GO to Pinpoint Test F
+</a>.
+</li></ul></td></tr><tbody></tbody>
+
+<tr valign="top"><td><ul type="disc"><li>No turn signal flash during alarm activation
+</li></ul></td><td><ul type="disc"><li>Turn signals
+</li></ul></td><td><ul type="disc"><li>REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSH10L.HTM%26rightside%3dSCRSH10R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 417-01
+</a> to diagnose the turn signals.
+</li></ul></td></tr><tbody></tbody>
+
+<tr valign="top"><td><ul type="disc"><li>False alarm activation
+</li></ul></td><td><ul type="disc"><li>Door ajar input
+</li><li>Hood ajar input
+</li><li>Liftgate/luggage compartment ajar input
+</li><li>A valid Passive Anti-Theft System (PATS) key read is 
+<b>NOT
+</b> received when the ignition is turned to RUN
+</li></ul></td><td><ul type="disc"><li>An intermittent fault exists. MONITOR the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> alarm event PIDs ALARM_1 through 5 to identify and isolate the cause of the last alarm activations.
+</li></ul></td></tr></table><div><a name="extract_560">&nbsp;
+</a></div>
+
+<p><b>Pinpoint Tests
+</b></p><a name="PS2-A">&nbsp;
+</a><p><b>Pinpoint Test A: The Alarm System Does Not Arm/Disarm From The Driver Door Lock Cylinder
+</b></p><p><p>Refer to Wiring Diagrams Cell 
+<a target="_parent" href="SCR_us_en_book%3dECR%26cell%3d117%26page%3d%26year%3d%26vehicle%3d2012%20Fiesta%26market%3dUS%26lang%3dEN%26RTYPE%3dDIAGRAM%26lega"                                                                                                                                                                                                                                                               >117
+</a>, Remote Keyless Entry and Alarm for schematic and connector information.
+</p></p><h5>Normal Operation 
+</h5><p>The Body Control Module (BCM) monitors the driver door lock through the set/reset switch (part of the driver door latch) and the set and reset input circuits. When a key in the door
+lock cylinder is turned to the LOCK position it grounds the set circuit signaling the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> to arm the alarm. When a key in the door lock cylinder is turned to the UNLOCK
+position it grounds the reset circuit signaling the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> to disarm the alarm. The driver door latch uses a dedicated ground circuit for the door ajar and set/reset switches.
+</p><ul type="disc"><li>B10B1:92 (Cabin Set/Reset Switch: Performance or Incorrect Operation) — a continuous and on-demand DTC that sets when the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> detects a short to ground on
+the driver door lock cylinder set or reset input circuits.
+</li></ul><p><b>This pinpoint test is intended to diagnose the following:
+</b></p><ul type="disc"><li>Wiring, terminals or connectors
+</li><li>Door set/reset switch (part of the driver door latch)
+</li><li><span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span></li></ul><a name="A">&nbsp;
+</a><h5>PINPOINT TEST A: THE ALARM SYSTEM DOES NOT ARM/DISARM FROM THE DRIVER DOOR LOCK CYLINDER 
+</h5>
+
+<p><b><i>NOTICE: 
+</i> Use the correct probe adapter(s) when making measurements. Failure to use the correct probe adapter(s) may damage the connector.
+</b></p><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="A1">&nbsp;
+</a><b>A1 CHECK THE RECORDED 
+<span title="BODY CONTROL MODULE" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> DTCs FROM THE SELF-TEST 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Check the recorded results from the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> self-test.
+</li><li><b>Is DTC B10B1:92 present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRJ1A03.HTM_gen_ref.HTM#A2"                                                                                                                                                                                                                                                       >A2
+</a>. 
+
+<br><br><b>No
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRJ1A03.HTM_gen_ref.HTM#A4"                                                                                                                                                                                                                                                       >A4
+</a>. 
+</td></tr><tr><td><a name="A2">&nbsp;
+</a><b>A2 CHECK THE DRIVER DOOR LATCH FOR A SHORT TO GROUND 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect:   Driver Door Latch C525.
+</li><li>Clear the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> DTCs.
+</li><li>Repeat the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> self-test.
+</li><li><b>Is DTC B10B1:92 still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRJ1A03.HTM_gen_ref.HTM#A3"                                                                                                                                                                                                                                                       >A3
+</a>. 
+
+<br><br><b>No
+</b><br>INSTALL a new driver door latch. REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRS1E0L.HTM%26rightside%3dSCRS1E0R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 501-14
+</a>. TEST the system for normal operation. 
+</td></tr><tr><td><a name="A3">&nbsp;
+</a><b>A3 CHECK THE SET/RESET CIRCUITS FOR A SHORT TO GROUND 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Ignition OFF.
+</li><li>Disconnect:   
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> C2280G.
+</li><li>Measure the resistance between the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> C2280G-6, circuit CPL29 (YE/GY), harness side and ground, and between
+the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> C2280G-19, circuit CPL28 (VT/BN), harness side and ground
+</li><br><br><IMG src="SCR_us_en_file%3dN0116814.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="211" width="325" border="0"><li><b>Are the resistances greater than 10,000 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRJ1A03.HTM_gen_ref.HTM#A7"                                                                                                                                                                                                                                                       >A7
+</a>. 
+
+<br><br><b>No
+</b><br>REPAIR the circuit in question for a short to ground. CLEAR the DTCs. TEST the system for normal operation. 
+</td></tr><tr><td><a name="A4">&nbsp;
+</a><b>A4  CHECK THE COURTESY LAMP OPERATION 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Open and close the driver door while checking the courtesy lamp operation.
+</li><li><b>Do the courtesy lamps operate correctly?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRJ1A03.HTM_gen_ref.HTM#A5"                                                                                                                                                                                                                                                       >A5
+</a>. 
+
+<br><br><b>No
+</b><br>REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSH20L.HTM%26rightside%3dSCRSH20R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 417-02
+</a> to diagnose the driver door ajar input concern. 
+</td></tr><tr><td><a name="A5">&nbsp;
+</a><b>A5 CHECK THE DRIVER DOOR LATCH 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect:   Driver Door Latch C525.
+</li><li>Enter the following diagnostic mode on the scan tool:   
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> DataLogger.
+</li><li>Monitor the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> PID (KCS_DRVR) while connecting and disconnecting a fused jumper wire between the driver door latch C525-1 CPL29
+(YE/GY), harness side and ground, and between the driver door latch C525-2 CPL28 (VT/BN), harness side and ground
+</li><br><br><IMG src="SCR_us_en_file%3dN0116807.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="211" width="325" border="0"><li><b>Does the PID indicate LOCK and UNLOCK when the jumper wire is connected?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new driver door latch. REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRS1E0L.HTM%26rightside%3dSCRS1E0R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 501-14
+</a>. TEST the system for normal operation. 
+
+<br><br><b>No
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRJ1A03.HTM_gen_ref.HTM#A6"                                                                                                                                                                                                                                                       >A6
+</a>. 
+</td></tr><tr><td><a name="A6">&nbsp;
+</a><b>A6 CHECK THE SET/RESET CIRCUITS FOR AN OPEN 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Ignition OFF.
+</li><li>Disconnect:   
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> C2280G.
+</li><li>If the PID did not indicate UNLOCK, measure the resistance between the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> C2280G-19, circuit CPL28 (VT/BN), harness side and the
+driver door latch C525-2, circuit CPL28 (VT/BN), harness side.
+</li><br><br><IMG src="SCR_us_en_file%3dN0116808.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="211" width="325" border="0"><li>If the PID did not indicate LOCK, measure the resistance between the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> C2280G-6, circuit CPL29 (YE/GY), harness side and the driver door
+latch C525-1, circuit CPL29 (YE/GY), harness side.
+</li><br><br><IMG src="SCR_us_en_file%3dN0116809.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="211" width="325" border="0"><li><b>Is the resistance less than 5 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRJ1A03.HTM_gen_ref.HTM#A7"                                                                                                                                                                                                                                                       >A7
+</a>. 
+
+<br><br><b>No
+</b><br>REPAIR the circuit in question for an open. TEST the system for normal operation. 
+</td></tr><tr><td><a name="A7">&nbsp;
+</a><b>A7 CHECK FOR CORRECT 
+<span title="BODY CONTROL MODULE" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> OPERATION 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect all the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> connectors.
+</li><li>Check for:
+</li><ul type="square"><li>corrosion
+</li></ul><ul type="square"><li>damaged pins
+</li></ul><ul type="square"><li>pushed-out pins
+</li></ul><li>Connect all the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> connectors and make sure they seat correctly.
+</li><li>Operate the system and verify the concern is still present.
+</li><li><b>Is the concern still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span>. REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSJA0L.HTM%26rightside%3dSCRSJA0R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 419-10
+</a>. TEST the system for normal operation. 
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector. 
+</td></tr></table><a name="PS2-B">&nbsp;
+</a><p><b>Pinpoint Test B: The Alarm System Does Not Activate From An Unauthorized Entry At The Hood
+</b></p><p><p>Refer to Wiring Diagrams Cell 
+<a target="_parent" href="SCR_us_en_book%3dECR%26cell%3d117%26page%3d%26year%3d%26vehicle%3d2012%20Fiesta%26market%3dUS%26lang%3dEN%26RTYPE%3dDIAGRAM%26lega"                                                                                                                                                                                                                                                               >117
+</a>, Remote Keyless Entry and Alarm for schematic and connector information.
+</p></p><h5>Normal Operation 
+</h5><p>When the alarm system is armed, the Body Control Module (BCM) monitors the hood ajar switch. If the hood is opened while the alarm is armed, the hood ajar switch removes ground from the signal
+circuit. This signals the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> that an unauthorized intrusion to the engine compartment has occurred and the alarm is activated.
+</p><p><b>This pinpoint test is intended to diagnose the following:
+</b></p><ul type="disc"><li>Wiring, terminals or connectors
+</li><li>Hood switch (part of the hood latch)
+</li><li><span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span></li></ul><a name="B">&nbsp;
+</a><h5>PINPOINT TEST B: THE ALARM SYSTEM DOES NOT ACTIVATE FROM AN UNAUTHORIZED ENTRY AT THE HOOD 
+</h5>
+
+<p><b><i>NOTICE: 
+</i> Use the correct probe adapter(s) when making measurements. Failure to use the correct probe adapter(s) may damage the connector.
+</b></p><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="B1">&nbsp;
+</a><b>B1 RETRIEVE THE RECORDED DTCs IN THE 
+<span title="BODY CONTROL MODULE" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><p class="singlespace"><b>NOTE: 
+</b> DTC P254F:00 sets if the hood is open. Make sure the hood is closed prior to running the self-test.
+</p><li>Retrieve the recorded DTCs from the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> self-test.
+</li><li><b>Is DTC P254F:00 present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br><a href="SCR_us_en_file%3dSCRJ1A03.HTM_gen_ref.HTM#PS2-C"                                                                                                                                                                                                                                                       >GO to Pinpoint Test C
+</a>. 
+
+<br><br><b>No
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRJ1A03.HTM_gen_ref.HTM#B2"                                                                                                                                                                                                                                                       >B2
+</a>. 
+</td></tr><tr><td><a name="B2">&nbsp;
+</a><b>B2 CHECK THE HOOD SWITCH (HOOD_SW) PID 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Enter the following diagnostic mode on the scan tool:   
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> DataLogger.
+</li><li>Monitor the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> PID (HOOD_SW) while disconnecting the hood switch.
+</li><li>Disconnect:   Hood Switch C127.
+</li><li><b>Does the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> PID read AJAR when the switch is disconnected?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new hood latch. REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRS1E0L.HTM%26rightside%3dSCRS1E0R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 501-14
+</a>. TEST the system for normal operation. 
+
+<br><br><b>No
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRJ1A03.HTM_gen_ref.HTM#B3"                                                                                                                                                                                                                                                       >B3
+</a>. 
+</td></tr><tr><td><a name="B3">&nbsp;
+</a><b>B3 CHECK THE HOOD SWITCH INPUT CIRCUIT FOR A SHORT TO GROUND 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Ignition OFF.
+</li><li>Disconnect:   
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> C2280D.
+</li><li>Measure the resistance between the hood switch C127-2, circuit CPL25 (BU/OG), harness side and ground.
+</li><br><br><IMG src="SCR_us_en_file%3dN0058785.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="211" width="325" border="0"><li><b>Is the resistance greater than 10,000 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRJ1A03.HTM_gen_ref.HTM#B4"                                                                                                                                                                                                                                                       >B4
+</a>. 
+
+<br><br><b>No
+</b><br>REPAIR circuit CPL25 (BU/OG) for a short to ground. TEST the system for normal operation. 
+</td></tr><tr><td><a name="B4">&nbsp;
+</a><b>B4 CHECK FOR CORRECT 
+<span title="BODY CONTROL MODULE" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> OPERATION 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect all the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> connectors.
+</li><li>Check for:
+</li><ul type="square"><li>corrosion
+</li></ul><ul type="square"><li>damaged pins
+</li></ul><ul type="square"><li>pushed-out pins
+</li></ul><li>Connect all the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> connectors and make sure they seat correctly.
+</li><li>Operate the system and verify the concern is still present.
+</li><li><b>Is the concern still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span>. REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSJA0L.HTM%26rightside%3dSCRSJA0R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 419-10
+</a>. TEST the system for normal operation. 
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector. 
+</td></tr></table><a name="PS2-C">&nbsp;
+</a><p><b>Pinpoint Test C: DTC P254F:00
+</b></p><p><p>Refer to Wiring Diagrams Cell 
+<a target="_parent" href="SCR_us_en_book%3dECR%26cell%3d117%26page%3d%26year%3d%26vehicle%3d2012%20Fiesta%26market%3dUS%26lang%3dEN%26RTYPE%3dDIAGRAM%26lega"                                                                                                                                                                                                                                                               >117
+</a>, Remote Keyless Entry and Alarm for schematic and connector information.
+</p></p><p>When the alarm system is armed, the Body Control Module (BCM) monitors the hood ajar switch. If the hood is opened while the alarm is armed, the hood ajar switch removes ground from the signal
+circuit. This signals the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> that an unauthorized intrusion to the engine compartment has occurred and the perimeter alarm is activated.
+</p><ul type="disc"><li>DTC P254F:00 (Engine Hood Switch Circuit / Open: No Sub Type Information) — an on-demand DTC that sets when the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> detects an open in the hood switch
+circuit during the self-test. This DTC sets if the hood is open during a self-test
+</li></ul><p><b>This pinpoint test is intended to diagnose the following:
+</b></p><ul type="disc"><li>Wiring, terminals or connectors
+</li><li>Hood switch
+</li><li><span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span></li></ul><a name="C">&nbsp;
+</a><h5>PINPOINT TEST C: DTC P254F:00 
+</h5>
+
+<p><b><i>NOTICE: 
+</i> Use the correct probe adapter(s) when making measurements. Failure to use the correct probe adapter(s) may damage the connector.
+</b></p><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="C1">&nbsp;
+</a><b>C1 CHECK THE HOOD SWITCH 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect:   Hood Switch C127.
+</li><li>Connect a fused jumper wire between the hood switch C127-2, circuit CPL25 (BU/OG), harness side and the hood switch C127-1, circuit GD187 (BK/GN), harness side.
+</li><br><br><IMG src="SCR_us_en_file%3dN0058786.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="211" width="325" border="0"><li>Clear the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> DTCs.
+</li><li>Repeat the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> self-test.
+</li><li><b>Is the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> DTC P254F:00 retrieved?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REMOVE the jumper wire. GO to 
+<a href="SCR_us_en_file%3dSCRJ1A03.HTM_gen_ref.HTM#C2"                                                                                                                                                                                                                                                       >C2
+</a>. 
+
+<br><br><b>No
+</b><br>REMOVE the jumper wire. INSTALL a new hood latch. REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRS1E0L.HTM%26rightside%3dSCRS1E0R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 501-14
+</a>. TEST the system for normal operation. 
+</td></tr><tr><td><a name="C2">&nbsp;
+</a><b>C2 CHECK THE HOOD SWITCH GROUND CIRCUIT 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Connect a fused jumper wire between the hood switch C127-2, circuit CPL25 (BU/OG), harness side and ground.
+</li><br><br><IMG src="SCR_us_en_file%3dN0116813.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="211" width="325" border="0"><li>Clear the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> DTCs.
+</li><li>Repeat the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> self-test.
+</li><li><b>Is the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> DTC P254F:00 retrieved?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRJ1A03.HTM_gen_ref.HTM#C3"                                                                                                                                                                                                                                                       >C3
+</a>. 
+
+<br><br><b>No
+</b><br>REPAIR circuit GD187 (BK/GN) for an open. TEST the system for normal operation. 
+</td></tr><tr><td><a name="C3">&nbsp;
+</a><b>C3 CHECK THE HOOD SWITCH SIGNAL CIRCUIT FOR AN OPEN 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Ignition OFF.
+</li><li>Disconnect:   
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> C2280D.
+</li><li>Measure the resistance between the hood switch C127-2, circuit CPL25 (BU/OG), harness side and the
+
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> C2280D-12, circuit CPL25 (BU/OG), harness side.
+</li><br><br><IMG src="SCR_us_en_file%3dN0116810.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="211" width="325" border="0"><li><b>Is the resistance less than 5 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRJ1A03.HTM_gen_ref.HTM#C4"                                                                                                                                                                                                                                                       >C4
+</a>. 
+
+<br><br><b>No
+</b><br>REPAIR circuit CPL25 (BU/OG) for an open. CLEAR the DTCs. REPEAT the self-test. 
+</td></tr><tr><td><a name="C4">&nbsp;
+</a><b>C4 CHECK FOR CORRECT 
+<span title="BODY CONTROL MODULE" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> OPERATION 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect all the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> connectors.
+</li><li>Check for:
+</li><ul type="square"><li>corrosion
+</li></ul><ul type="square"><li>damaged pins
+</li></ul><ul type="square"><li>pushed-out pins
+</li></ul><li>Connect all the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> connectors and make sure they seat correctly.
+</li><li>Operate the system and verify the concern is still present.
+</li><li><b>Is the concern still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span>. REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSJA0L.HTM%26rightside%3dSCRSJA0R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 419-10
+</a>. TEST the system for normal operation. 
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector. 
+</td></tr></table><a name="PS2-D">&nbsp;
+</a><p><b>Pinpoint Test D: The Alarm System Does Not Arm/No Turn Signal Flash Confirmation
+</b></p><h5>Normal Operation 
+</h5><p>The Body Control Module (BCM) controls the perimeter alarm system and based on inputs either arms, disarms or activates the alarm. When the alarm is activated, the
+
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> sounds the anti-theft horn and flashes the turn signals at regular intervals. The 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> receives
+inputs for the door lock status, hood ajar, door ajar and the liftgate/luggage compartment lid ajar. The 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> also receives signals from the
+Remote Keyless Entry (RKE) transmitters.
+</p><p>For the perimeter alarm to arm and provide a flash of the turn signals, the following conditions must be met:
+</p><ul type="disc"><li>ignition must be off
+</li><li>the hood closed
+</li><li>all doors closed
+</li><li>the liftgate/luggage compartment closed
+</li><li>an electronic lock command received from a Remote Keyless Entry (RKE) transmitter, driver door lock cylinder, or door lock control switch (front door opened and then shut after lock
+is pressed).
+</li><li>An Intelligent Access (IA) lock command received (if equipped with 
+<span title="Intelligent Access" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IA
+</span>)
+</li></ul><p>Once all the conditions are met, the alarm system enters a pre-arm phase and begins a 11-second countdown. The perimeter alarm arms after 11 seconds have passed and no unlock command is received or any hood, door or liftgate/luggage
+compartment is opened.
+</p><p>The perimeter alarm is triggered when any door, the hood, or the liftgate/luggage compartment is opened without first receiving an electronic unlock command from a
+
+<span title="Remote Keyless Entry" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RKE
+</span> transmitter, the driver door lock cylinder, or an 
+<span title="Intelligent Access" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IA
+</span> unlock. The perimeter alarm also activates if
+the ignition is turned to RUN without a valid Passive Anti-Theft System (PATS) key read received.
+</p><p><b>This pinpoint test is intended to diagnose the following:
+</b></p><ul type="disc"><li>Door ajar input
+</li><li>Hood ajar input
+</li><li>Liftgate/luggage compartment ajar input
+</li><li>Turn signals
+</li><li><span title="Remote Keyless Entry" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RKE
+</span> transmitter concern
+</li><li><span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span></li></ul><a name="D">&nbsp;
+</a><h5>PINPOINT TEST D: THE ALARM SYSTEM DOES NOT ARM/NO TURN SIGNAL FLASH CONFIRMATION 
+</h5><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="D1">&nbsp;
+</a><b>D1 RETRIEVE THE RECORDED DTCs IN THE 
+<span title="BODY CONTROL MODULE" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Retrieve the recorded DTCs from the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> self-test.
+</li><li><b>Is DTC P254F:00 present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br><a href="SCR_us_en_file%3dSCRJ1A03.HTM_gen_ref.HTM#PS2-C"                                                                                                                                                                                                                                                       >GO to Pinpoint Test C
+</a>. 
+
+<br><br><b>No
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRJ1A03.HTM_gen_ref.HTM#D2"                                                                                                                                                                                                                                                       >D2
+</a>. 
+</td></tr><tr><td><a name="D2">&nbsp;
+</a><b>D2  CHECK THE COURTESY LAMP OPERATION 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Open and close all the doors and liftgate/luggage compartment while checking the courtesy lamp operation.
+</li><li><b>Do the courtesy lamps operate correctly?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRJ1A03.HTM_gen_ref.HTM#D3"                                                                                                                                                                                                                                                       >D3
+</a>. 
+
+<br><br><b>No
+</b><br>REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSH20L.HTM%26rightside%3dSCRSH20R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 417-02
+</a> to diagnose the ajar inputs. 
+</td></tr><tr><td><a name="D3">&nbsp;
+</a><b>D3 VERIFY THE HAZARD LAMP OPERATION 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Place the hazard switch in the ON position.
+</li><li><b>Do the hazard lamps operate correctly?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRJ1A03.HTM_gen_ref.HTM#D4"                                                                                                                                                                                                                                                       >D4
+</a>. 
+
+<br><br><b>No
+</b><br>REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSH10L.HTM%26rightside%3dSCRSH10R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 417-01
+</a> to diagnose the hazard lamps. 
+</td></tr><tr><td><a name="D4">&nbsp;
+</a><b>D4 CHECK THE 
+<span title="REMOTE KEYLESS ENTRY" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RKE
+</span> TRANSMITTER FUNCTION 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Using the 
+<span title="Remote Keyless Entry" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RKE
+</span> transmitter, lock and unlock the doors.
+</li><li><b>Do the 
+<span title="Remote Keyless Entry" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RKE
+</span> transmitter functions operate correctly?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRJ1A03.HTM_gen_ref.HTM#D5"                                                                                                                                                                                                                                                       >D5
+</a>. 
+
+<br><br><b>No
+</b><br>REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRS1E0L.HTM%26rightside%3dSCRS1E0R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 501-14
+</a> to diagnose the 
+<span title="Remote Keyless Entry" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RKE
+</span> function. 
+</td></tr><tr><td><a name="D5">&nbsp;
+</a><b>D5 CHECK FOR CORRECT 
+<span title="BODY CONTROL MODULE" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> OPERATION 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect all the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> connectors.
+</li><li>Check for:
+</li><ul type="square"><li>corrosion
+</li></ul><ul type="square"><li>damaged pins
+</li></ul><ul type="square"><li>pushed-out pins
+</li></ul><li>Connect all the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> connectors and make sure they seat correctly.
+</li><li>Operate the system and verify the concern is still present.
+</li><li><b>Is the concern still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span>. REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSJA0L.HTM%26rightside%3dSCRSJA0R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 419-10
+</a>. TEST the system for normal operation. 
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector. 
+</td></tr></table><a name="PS2-E">&nbsp;
+</a><p><b>Pinpoint Test E: No Horn Output During Alarm Activation
+</b></p><h5>Normal Operation 
+</h5><p>The Body Control Module (BCM) receives voltage for the anti-theft alarm horn from the Battery Junction Box (BJB) fuse 6 (30A). When
+the perimeter alarm is activated, the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> cycles voltage on and off to the anti-theft horn causing the horn output to cycle in conjunction with the turn signals flashing. The
+horn is case grounded.
+</p><p><b>NOTE: 
+</b> The traffic horn does not sound during a perimeter alarm event.
+</p><p><b>This pinpoint test is intended to diagnose the following:
+</b></p><ul type="disc"><li>Wiring, terminals or connectors
+</li><li>Anti-theft alarm horn
+</li><li><span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span></li></ul><a name="E">&nbsp;
+</a><h5>PINPOINT TEST E: NO HORN OUTPUT DURING ALARM ACTIVATION 
+</h5><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="E1">&nbsp;
+</a><b>E1  CHECK THE POWER DOOR LOCK OPERATION 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Press the door lock control switch twice.
+</li><li><b>Do the doors lock and unlock?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRJ1A03.HTM_gen_ref.HTM#E2"                                                                                                                                                                                                                                                       >E2
+</a>. 
+
+<br><br><b>No
+</b><br>REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRS1E0L.HTM%26rightside%3dSCRS1E0R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 501-14
+</a> to diagnose the power door locks. 
+</td></tr><tr><td><a name="E2">&nbsp;
+</a><b>E2 CHECK FOR VOLTAGE TO THE ANTI-THEFT HORN 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect:   Anti-Theft Alarm Horn C4380.
+</li><li>Enter the following diagnostic mode on the scan tool:   
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> DataLogger.
+</li><li>Measure the voltage between the anti-theft alarm horn C4380-1, circuit CRT02 (GY/VT), harness side and ground while active commanding
+the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> PID (ANTITHFT_HRN) on.
+</li><br><br><IMG src="SCR_us_en_file%3dN0116811.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="211" width="325" border="0"><li><b>Is the voltage momentarily greater than 10 volts?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new anti-theft alarm horn. REFER to 
+<a href="SCR_us_en_file%3dSCRJ1A04.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       >Anti-Theft Alarm Horn — 4-Door Sedan
+</a> or 
+<a href="SCR_us_en_file%3dSCRJ1A05.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       >Anti-Theft Alarm Horn — 5-Door Hatchback
+</a> in this section.
+ TEST the system for normal operation. 
+
+<br><br><b>No
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRJ1A03.HTM_gen_ref.HTM#E3"                                                                                                                                                                                                                                                       >E3
+</a>. 
+</td></tr><tr><td><a name="E3">&nbsp;
+</a><b>E3  CHECK THE ANTI-THEFT HORN OUTPUT CIRCUIT FOR AN OPEN OR SHORT TO GROUND 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Ignition OFF.
+</li><li>Disconnect:   
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> C2280C.
+</li><li>Measure the resistance between the anti-theft alarm horn C4380-1, circuit CRT02 (GY/VT), harness side and the
+
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> C2280C-8, circuit CRT02 (GY/VT), harness side; and between the anti-theft alarm horn C4380-1, circuit CRT02
+(GY/VT), harness side and ground.
+</li><br><br><IMG src="SCR_us_en_file%3dN0116812.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="211" width="325" border="0"><li><b>Is the resistance less than 5 ohms between the anti-theft alarm horn and the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span>, and greater than 10,000 ohms between the anti-theft alarm horn and ground?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRJ1A03.HTM_gen_ref.HTM#E4"                                                                                                                                                                                                                                                       >E4
+</a>. 
+
+<br><br><b>No
+</b><br>REPAIR circuit CRT02 (GY/VT) for an open or short to ground. TEST the system for normal operation. 
+</td></tr><tr><td><a name="E4">&nbsp;
+</a><b>E4 CHECK FOR CORRECT 
+<span title="BODY CONTROL MODULE" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> OPERATION 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect all the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> connectors.
+</li><li>Check for:
+</li><ul type="square"><li>corrosion
+</li></ul><ul type="square"><li>damaged pins
+</li></ul><ul type="square"><li>pushed-out pins
+</li></ul><li>Connect all the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> connectors and make sure they seat correctly.
+</li><li>Operate the system and verify the concern is still present.
+</li><li><b>Is the concern still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span>. REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSJA0L.HTM%26rightside%3dSCRSJA0R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 419-10
+</a>. TEST the system for normal operation. 
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector. 
+</td></tr></table><a name="PS2-F">&nbsp;
+</a><p><b>Pinpoint Test F: The Anti-Theft Alarm Horn Is Always On
+</b></p><h5>Normal Operation 
+</h5><p>The Body Control Module (BCM) receives voltage for the anti-theft alarm horn from the Battery Junction Box (BJB) fuse 6 (30A). When
+the perimeter alarm is activated, the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> cycles voltage on and off to the horn causing the anti-theft horn output to cycle in conjunction with the turn signals flashing. The
+horn is case grounded.
+</p><p><b>This pinpoint test is intended to diagnose the following:
+</b></p><ul type="disc"><li>Wiring, terminals or connectors
+</li><li><span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span></li></ul><a name="F">&nbsp;
+</a><h5>PINPOINT TEST F: THE ANTI-THEFT ALARM HORN IS ALWAYS ON 
+</h5><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="F1">&nbsp;
+</a><b>F1 ISOLATE THE SHORT TO VOLTAGE 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Ignition OFF.
+</li><li>Disconnect:   
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> C2280C.
+</li><li>Ignition ON.
+</li><li><b>Does the anti-theft alarm horn continue to sound?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REPAIR circuit CRT02 (GY/VT) for a short to voltage. TEST the system for normal operation. 
+
+<br><br><b>No
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRJ1A03.HTM_gen_ref.HTM#F2"                                                                                                                                                                                                                                                       >F2
+</a>. 
+</td></tr><tr><td><a name="F2">&nbsp;
+</a><b>F2 CHECK FOR CORRECT 
+<span title="BODY CONTROL MODULE" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> OPERATION 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect all the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> connectors.
+</li><li>Check for:
+</li><ul type="square"><li>corrosion
+</li></ul><ul type="square"><li>damaged pins
+</li></ul><ul type="square"><li>pushed-out pins
+</li></ul><li>Connect all the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> connectors and make sure they seat correctly.
+</li><li>Operate the system and verify the concern is still present.
+</li><li><b>Is the concern still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span>. REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSJA0L.HTM%26rightside%3dSCRSJA0R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 419-10
+</a>. TEST the system for normal operation. 
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector. 
+</td></tr></table><br><hr><P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+
+</body>
+<!-- Mirrored from file:///C:/Documents and Settings/Administrator/Desktop/FORD/Ford Fiesta 2012/SCR~us~en~file=SCRJ1A03.HTM~gen~ref.HTM by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 04 Mar 2025 14:52:50 GMT -->
+</html>

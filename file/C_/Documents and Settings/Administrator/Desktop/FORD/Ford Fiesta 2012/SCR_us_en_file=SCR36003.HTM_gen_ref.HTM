@@ -1,0 +1,2205 @@
+<html>
+<!-- Mirrored from file:///C:/Documents and Settings/Administrator/Desktop/FORD/Ford Fiesta 2012/SCR~us~en~file=SCR36003.HTM~gen~ref.HTM by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 04 Mar 2025 14:53:59 GMT -->
+<head><META http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>2012 Fiesta Workshop Manual
+
+</title><LINK rel="stylesheet" type="text/css" href="SCR_us_en_file%3dSCRSTYLE.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       ><meta name="tps_translationdatetime" content="06/09/2012 16:28:18"><meta name="tps_type" content="workshop"><meta name="tps_bookcode" content="SCR"><meta name="tps_market" content="US"><meta name="tps_language" content="EN"><meta name="tps_year" content="2012"><meta name="tps_modelname" content="Fiesta"><meta name="tps_system" content="3"><meta name="tps_group" content="03"><meta name="tps_section" content="06"><meta name="tps_section_title" content="Starting System"><meta name="tps_ss_title" content="DIAGNOSIS AND TESTING"><meta name="tps_procid" content="s4p211q0"><meta name="tps_procsgmlid" content="n1317904"><meta name="tps_packetinfo" content="699149"><meta name="tps_effectivity" content="2012,FIESTA,03-060"><meta name="tps_effectivity" content="2013,FIESTA,03-060"></head><body><TABLE width="95%"><TR><TD><div class="bookinfo">SECTION 303-06:  Starting System
+</DIV></TD><TD align="RIGHT"><div class="bookinfo">2012 Fiesta Workshop Manual
+</DIV></TD></TR><TR><TD><div class="bookinfo">DIAGNOSIS AND TESTING
+</div></TD><TD align="RIGHT"><div class="bookinfosmall">Procedure revision date:  12/15/2011
+</div></TD></TR></TABLE><hr><h4>Starting System
+</h4><meta name="tps_proctitle" content="Starting System">
+
+<br><table border="1" cellpadding="3" cellspacing="0" width="50%"><caption>Special Tool(s)
+</caption><tr valign="top"><td><IMG src="SCR_us_en_file%3dST2574A.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="99" width="99" border="0"></td><td>Flex Probe Kit
+<br>NUD105-R025D or equivalent
+</td></tr><tr valign="top"><td><IMG src="SCR_us_en_file%3dST3093A.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="99" width="99" border="0"></td><td>Fluke 77-IV Digital Multimeter
+<br>FLU77-4 or equivalent
+</td></tr><tr valign="top"><td><IMG src="SCR_us_en_file%3dST3094A.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="99" width="99" border="0"></td><td>Test Light
+<br>SGT27000 or equivalent 250-300 mA incandescent bulb test lamp
+</td></tr><tr valign="top"><td><IMG src="SCR_us_en_file%3dST2834A.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="99" width="99" border="0"></td><td>Vehicle Communication Module (VCM) and Integrated Diagnostic System (IDS) software with appropriate hardware, or equivalent scan tool
+<br></td></tr></table><div><a name="extract_233">&nbsp;
+</a></div>
+
+<p><b>Principles of Operation — Without Intelligent Access (IA)
+</b></p><p><b>NOTE: 
+</b> This vehicle is equipped with Passive Anti-Theft System (PATS) that disables the engine if an unprogrammed 
+<span title="Passive Anti-Theft System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PATS
+</span>key is used or an invalid PCM ID is received. 
+<span title="Passive Anti-Theft System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PATS
+</span> is controlled by the Instrument Panel Cluster (IPC). If there is a
+
+<span title="Passive Anti-Theft System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PATS
+</span> concern that caused the engine to be disabled, the anti-theft light flashes rapidly in the
+
+<span title="Instrument Panel Cluster" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IPC
+</span>. Refer to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSJ1BL.HTM%26rightside%3dSCRSJ1BR.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 419-01B
+</a> to diagnose a
+
+<span title="Passive Anti-Theft System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PATS
+</span> concern.
+</p><p>The starting system is electronically controlled by the PCM. The PCM receives the following inputs:
+</p><ul type="disc"><li>Correctly coded ignition key from the 
+<span title="Instrument Panel Cluster" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IPC
+</span></li><li>Clutch pedal applied from the Clutch Pedal Position (CPP) switch (vehicles equipped with manual transmission)
+</li><li>Transmission in PARK or NEUTRAL from the Transmission Range (TR) sensor (vehicles equipped with automatic transmission)
+</li><li>Request to start the engine, ignition switch in the START position
+</li></ul><p>Under normal operation when the ignition is turned to the START position the 
+<span title="Instrument Panel Cluster" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IPC
+</span> generates a key verification message. It sends this message to the
+
+<span title="Passive Anti-Theft System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PATS
+</span> transceiver. The transceiver reads the key and sends a key verification message back
+to the
+<span title="Instrument Panel Cluster" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IPC
+</span>. If the message received does not match the key verified in the 
+<span title="Instrument Panel Cluster" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IPC
+</span> memory, the
+engine will not crank and start. Once the 
+<span title="Instrument Panel Cluster" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IPC
+</span> determines the correct programmed key was used to START the vehicle,
+the 
+<span title="Instrument Panel Cluster" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IPC
+</span> sends the PCM a request to crank and start the engine. When the PCM receives the message, it generates a response and sends it back to
+the 
+<span title="Instrument Panel Cluster" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IPC
+</span>. If the response from the PCM does not match the response in the 
+<span title="Instrument Panel Cluster" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IPC
+</span>memory, 
+<span title="Passive Anti-Theft System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PATS
+</span> is not enabled and the engine does not crank. If both the key verification and PCM ID pass,
+
+<span title="Passive Anti-Theft System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PATS
+</span> is enabled. The PCM recognizes the correct electronically coded passive key and provides voltage and ground to the starter relay coil. The starter relay coil is
+energized causing the relay contacts to close providing voltage to the starter solenoid, allowing the starter motor to crank and start the engine. The PCM disengages the starter once an engine rpm threshold is reached, a set crank time is exceeded
+or the ignition is turned OFF. For additional information, refer to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSJ1BL.HTM%26rightside%3dSCRSJ1BR.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 419-01B
+</a>.
+</p><p>Vehicles equipped with an automatic transmission have a 
+<span title="Transmission Range" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TR
+</span> sensor. The 
+<span title="Transmission Range" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TR
+</span> sensor prevents operation
+of the starter unless the transmission is in NEUTRAL or PARK.
+</p><p>Vehicles equipped a manual transmission have a 
+<span title="Clutch Pedal Position" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">CPP
+</span> switch. The 
+<span title="Clutch Pedal Position" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">CPP
+</span> switch prevents operation of
+the starter unless the clutch pedal is fully pressed.
+</p><div><a name="extract_234">&nbsp;
+</a></div>
+
+<p><b>Principles of Operation — With Intelligent Access (IA)
+</b></p><p><b>NOTE: 
+</b> This vehicle is equipped with Passive Anti-Theft System (PATS) that disables the engine if an unprogrammed
+
+<span title="Passive Anti-Theft System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PATS
+</span> key is used or an invalid PCM ID is received. 
+<span title="Passive Anti-Theft System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PATS
+</span> is controlled by the
+Remote Function Actuator (RFA) module. If there is a 
+<span title="Passive Anti-Theft System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PATS
+</span> concern that caused the engine to be disabled, the anti-theft
+light flashes rapidly in the Instrument Panel Cluster (IPC). Refer to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSJ1BL.HTM%26rightside%3dSCRSJ1BR.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 419-01B
+</a> to diagnose
+a 
+<span title="Passive Anti-Theft System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PATS
+</span> concern.
+</p><p>The Intelligent Access (IA) starting system is electronically controlled by the 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module which acts as
+the 
+<span title="Passive Anti-Theft System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PATS
+</span> control function. The 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module receives the following inputs:
+</p><ul type="disc"><li>Correctly coded ignition key from 
+<span title="Passive Anti-Theft System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PATS
+</span></li><li>Clutch pedal applied input from the Clutch Pedal Position (CPP) switch (vehicles equipped with manual transmission)
+</li><li>Transmission in PARK or NEUTRAL from the Transmission Control Module (TCM) (vehicles equipped with automatic transmission)
+</li><li>Request to start the engine, start/stop switch is pushed
+</li><li>Brake pedal applied input (automatic transmission)
+</li></ul><p>During a start event, the start/stop button is pushed in combination with either the brake or clutch pedal input. The 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module receives a request to start the
+engine. The 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module recognizes the correct electronically coded passive key and provides voltage to the starter relay coil and signals the PCM. The PCM recognizes the
+correct inputs and provides ground to energize the relay coil and close the relay contacts. The starter relay contacts close, providing voltage to the starter solenoid, allowing the starter to crank and start the engine. The PCM disengages the
+starter once an engine rpm threshold is reached, a set crank time is exceeded or the stop/start button is pressed indicating an engine shutdown request.
+</p><p>Vehicles equipped with an automatic transmission have a 
+<span title="Transmission Range" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TR
+</span> sensor. The 
+<span title="Transmission Range" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TR
+</span> sensor prevents operation
+of the starter unless the transmission is in NEUTRAL or PARK.
+</p><p>Vehicles equipped a manual transmission have a 
+<span title="Clutch Pedal Position" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">CPP
+</span> switch. The 
+<span title="Clutch Pedal Position" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">CPP
+</span> switch prevents operation of
+the starter unless the clutch pedal is fully pressed.
+</p><div><a name="extract_235">&nbsp;
+</a></div>
+
+<p><b>Inspection and Verification
+</b></p><p><b><IMG src="SCR_us_en_file%3dani_caut.gif_gen_ref.gif"                                                                                                                                                                                                                                                        border="0">&nbsp;WARNING:  Always disconnect the battery ground cable at the battery before disconnecting the starter motor battery terminal lead. If a tool is shorted at the starter motor battery terminal, the tool can quickly heat enough to cause a skin burn. Failure to follow this instruction may result in serious personal injury.
+</b></p><p><b>NOTE: 
+</b> Make sure the anti-theft system is functioning correctly before carrying out a logical starting system diagnosis. Address anti-theft system concerns before continuing. Refer to
+
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSJ1BL.HTM%26rightside%3dSCRSJ1BR.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 419-01B
+</a>.
+</p><ol start="1"><li>Verify the customer concern.
+</li></ol><ol start="2"><li>Remove the accessory drive belt. Refer to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRS350L.HTM%26rightside%3dSCRS350R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 303-05
+</a>. Verify the crankshaft and each of the components driven by the accessory drive belt rotate and are not seized or
+damaged.
+</li></ol><ol start="3"><li>Visually inspect for obvious signs of mechanical or electrical damage.
+</li></ol><br><br><P class="SINGLESPACE"><B>&nbsp; 
+
+Visual Inspection Chart 
+</B></P><TABLE cellspacing="0" cellpadding="3" border="1"><TR><TH valign="bottom" align="center">Mechanical
+</TH><TH valign="bottom" align="center">Electrical
+</TH></TR><TR><TD valign="top" align="left"><ul type="disc"><li>Starter motor
+</li><li>Starter motor bolts
+</li><li><span title="Intelligent Access" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IA
+</span> key (with Intelligent access)
+</li><li>Start/stop button (with 
+<span title="Intelligent Access" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IA
+</span>)
+</li></ul></TD><TD valign="top" align="left"><ul type="disc"><li>Battery
+</li><li>Battery cables
+</li><li>High-current Battery Junction Box (BJB) mega fuse 1 (450A)
+</li><li><span title="Battery Junction Box" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BJB
+</span> fuse 10 (30A)
+</li><li>Wiring, terminals or connectors
+</li><li>Starter relay
+</li><li><span title="Passive Anti-Theft System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PATS
+</span></li><li>Loose or corroded connections
+</li></ul></TD></TR></TABLE><br><ol start="4"><li>If an obvious cause for an observed or reported concern is found, correct the cause (if possible) before proceeding to the next step.
+</li></ol><ol start="5"><li><p><b>NOTE: 
+</b> Make sure to use the latest scan tool software release.
+</p>If the cause is not visually evident, connect the scan tool to the Data Link Connector (DLC).
+</li></ol><ol start="6"><li><p><b>NOTE: 
+</b> The Vehicle Communication Module (VCM) LED prove-out confirms power and ground from the 
+<span title="Data Link Connector" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">DLC
+</span> are provided to
+the 
+<span title="Vehicle Communication Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">VCM
+</span>.
+</p>If the scan tool does not communicate with the 
+<span title="Vehicle Communication Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">VCM
+</span>:
+
+<ul type="disc"><li>check the 
+<span title="Vehicle Communication Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">VCM
+</span> connection to the vehicle.
+</li></ul><ul type="disc"><li>check the scan tool connection to the 
+<span title="Vehicle Communication Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">VCM
+</span>.
+</li></ul><ul type="disc"><li>refer to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSI00L.HTM%26rightside%3dSCRSI00R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 418-00
+</a>, No Power To The Scan Tool, to diagnose no power to the scan tool.
+</li></ul></li></ol><ol start="7"><li>For vehicles 
+<b>without Intelligent Access, 
+</b> if the scan tool does not communicate with the vehicle:
+
+<ul type="disc"><li>verify the ignition key is in the ON position.
+</li></ul><ul type="disc"><li>verify the scan tool operation with a known good vehicle.
+</li></ul><ul type="disc"><li>refer to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSI00L.HTM%26rightside%3dSCRSI00R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 418-00
+</a> to diagnose no response from the PCM.
+</li></ul></li></ol><ol start="8"><li>For vehicles 
+<b>with Intelligent Access,
+</b> if the scan tool does not communicate with the vehicle:
+
+<ul type="disc"><li>verify the ignition is in the ON mode.
+
+<ul type="square"> 
+<li>the air bag warning indicator prove-out (other indicators may NOT prove ignition is ON) confirms ignition ON. If ignition does not turn ON, refer to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSB50L.HTM%26rightside%3dSCRSB50R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 211-05
+</a> to diagnose
+no power in RUN.
+</li></ul></li></ul><ul type="disc"><li>verify the scan tool operation with a known good vehicle.
+</li></ul><ul type="disc"><li>refer to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSI00L.HTM%26rightside%3dSCRSI00R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 418-00
+</a>, to diagnose no response from the PCM.
+</li></ul></li></ol><ol start="9"><li>Carry out the network test.
+
+<ul type="disc"><li>If the scan tool responds with no communication for one or more modules, refer to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSI00L.HTM%26rightside%3dSCRSI00R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 418-00
+</a>.
+</li></ul><ul type="disc"><li>If the network test passes, proceed with module self-test diagnostics.
+</li></ul></li></ol><ol start="10"><li>Carry out the self-test diagnostics for the Transmission Control Module (TCM) (if equipped), 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module (if
+equipped) and the PCM.
+</li></ol><ol start="11"><li>If the DTCs retrieved are related to the concern, go to DTC Charts.
+</li></ol><ol start="12"><li>If no DTCs related to the concern are retrieved, GO to 
+<a href="SCR_us_en_file%3dSCR36003.HTM_gen_ref.HTM#SC1"                                                                                                                                                                                                                                                       >Symptom Chart
+</a>.
+</li></ol><div><a name="extract_236">&nbsp;
+</a></div>
+
+<p><b>DTC Chart
+</b></p><P class="SINGLESPACE"><B>&nbsp;PCM DTC Chart 
+</B></P><TABLE cellspacing="0" cellpadding="3" border="1"><TR><TH valign="bottom" align="center">DTC
+</TH><TH valign="bottom" align="center">Description
+</TH><TH valign="bottom" align="center">Action
+</TH></TR><TR><TD valign="top" align="center">P0617:12
+</TD><TD valign="top" align="left">Starter Relay Circuit High: Circuit Short To Battery
+</TD><TD valign="top" align="left"><a href="SCR_us_en_file%3dSCR36003.HTM_gen_ref.HTM#PS2-C"                                                                                                                                                                                                                                                       >GO to Pinpoint Test C
+</a>.
+</TD></TR><TR><TD valign="top" align="center">P0850:00
+</TD><TD valign="top" align="left">Park / Neutral Switch Input Circuit: No Sub Type Information
+</TD><TD valign="top" align="left">For vehicles without Intelligent Access (IA), 
+<a href="SCR_us_en_file%3dSCR36003.HTM_gen_ref.HTM#PS2-A"                                                                                                                                                                                                                                                       >GO to Pinpoint Test A
+</a>.
+
+<br><br>For vehicles with 
+<span title="Intelligent Access" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IA
+</span>, 
+<a href="SCR_us_en_file%3dSCR36003.HTM_gen_ref.HTM#PS2-B"                                                                                                                                                                                                                                                       >GO to Pinpoint Test B
+</a>.
+</TD></TR><TR><TD valign="top" align="center">P0851:00
+</TD><TD valign="top" align="left">Park / Neutral Switch Input Circuit Low: No Sub Type Information
+</TD><TD valign="top" align="left">For vehicles without 
+<span title="Intelligent Access" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IA
+</span>, 
+<a href="SCR_us_en_file%3dSCR36003.HTM_gen_ref.HTM#PS2-A"                                                                                                                                                                                                                                                       >GO to Pinpoint Test A
+</a>.
+
+<br><br>For vehicles with 
+<span title="Intelligent Access" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IA
+</span>, 
+<a href="SCR_us_en_file%3dSCR36003.HTM_gen_ref.HTM#PS2-B"                                                                                                                                                                                                                                                       >GO to Pinpoint Test B
+</a>.
+</TD></TR><TR><TD valign="top" align="center">All other DTCs
+</TD><TD valign="top" align="left">—
+</TD><TD valign="top" align="left">REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRS3E0L.HTM%26rightside%3dSCRS3E0R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 303-14
+</a>.
+</TD></TR></TABLE><br><br><br><P class="SINGLESPACE"><B>&nbsp;Transmission Control Module (TCM) DTC Chart 
+</B></P><TABLE cellspacing="0" cellpadding="3" border="1"><TR><TH valign="bottom" align="center">DTC
+</TH><TH valign="bottom" align="center">Description
+</TH><TH valign="bottom" align="center">Action
+</TH></TR><TR><TD valign="top" align="center">P0706:00
+</TD><TD valign="top" align="left">Transmission Range Sensor A Circuit Range/Performance: No Sub Type Information
+</TD><TD valign="top" align="left">REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRS7B0L.HTM%26rightside%3dSCRS7B0R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 307-11
+</a>.
+</TD></TR><TR><TD valign="top" align="center">P0707:00
+</TD><TD valign="top" align="left">Transmission Range Sensor A Circuit Low: No Sub Type Information
+</TD><TD valign="top" align="left">REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRS7B0L.HTM%26rightside%3dSCRS7B0R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 307-11
+</a>.
+</TD></TR><TR><TD valign="top" align="center">P0708:00
+</TD><TD valign="top" align="left">Transmission Range Sensor A Circuit High: No Sub Type Information
+</TD><TD valign="top" align="left">REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRS7B0L.HTM%26rightside%3dSCRS7B0R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 307-11
+</a>.
+</TD></TR><TR><TD valign="top" align="center">P0709:00
+</TD><TD valign="top" align="left">Transmission Range Sensor A Circuit Intermittent: No Sub Type Information
+</TD><TD valign="top" align="left">REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRS7B0L.HTM%26rightside%3dSCRS7B0R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 307-11
+</a>.
+</TD></TR><TR><TD valign="top" align="center">P2801:00
+</TD><TD valign="top" align="left">Transmission Range Sensor B Circuit Range/Performance: No Sub Type Information
+</TD><TD valign="top" align="left">REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRS7B0L.HTM%26rightside%3dSCRS7B0R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 307-11
+</a>.
+</TD></TR><TR><TD valign="top" align="center">P2802:00
+</TD><TD valign="top" align="left">Transmission Range Sensor B Circuit Low: No Sub Type Information
+</TD><TD valign="top" align="left">REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRS7B0L.HTM%26rightside%3dSCRS7B0R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 307-11
+</a>.
+</TD></TR><TR><TD valign="top" align="center">P2803:00
+</TD><TD valign="top" align="left">Transmission Range Sensor B Circuit High: No Sub Type Information
+</TD><TD valign="top" align="left">REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRS7B0L.HTM%26rightside%3dSCRS7B0R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 307-11
+</a>.
+</TD></TR><TR><TD valign="top" align="center">P2804:00
+</TD><TD valign="top" align="left">Transmission Range Sensor B Circuit Intermittent: No Sub Type Information
+</TD><TD valign="top" align="left">REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRS7B0L.HTM%26rightside%3dSCRS7B0R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 307-11
+</a>.
+</TD></TR><TR><TD valign="top" align="center">All other DTCs
+</TD><TD valign="top" align="left">—
+</TD><TD valign="top" align="left">REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRS7B0L.HTM%26rightside%3dSCRS7B0R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 307-11
+</a></TD></TR></TABLE><br><br><br><P class="SINGLESPACE"><B>&nbsp;Remote Function Actuator (RFA) Module DTC Chart 
+</B></P><TABLE cellspacing="0" cellpadding="3" border="1"><TR><TH valign="bottom" align="center">DTC
+</TH><TH valign="bottom" align="center">Description
+</TH><TH valign="bottom" align="center">Action
+</TH></TR><TR><TD valign="top" align="center">P0615:12
+</TD><TD valign="top" align="left">Starter Relay Circuit: Circuit Short to Battery
+</TD><TD valign="top" align="left"><a href="SCR_us_en_file%3dSCR36003.HTM_gen_ref.HTM#PS2-C"                                                                                                                                                                                                                                                       >GO to Pinpoint Test C
+</a>.
+</TD></TR><TR><TD valign="top" align="center">P1708:62
+</TD><TD valign="top" align="left">Clutch Switch Circuit: Signal Compare Failure
+</TD><TD valign="top" align="left"><a href="SCR_us_en_file%3dSCR36003.HTM_gen_ref.HTM#PS2-B"                                                                                                                                                                                                                                                       >GO to Pinpoint Test B
+</a>.
+</TD></TR><TR><TD valign="top" align="center">All other DTCs
+</TD><TD valign="top" align="left">—
+</TD><TD valign="top" align="left">REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSJ1BL.HTM%26rightside%3dSCRSJ1BR.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 419-01B
+</a>.
+</TD></TR></TABLE><br><div><a name="extract_237">&nbsp;
+</a></div>
+
+<p><b>Symptom Chart
+</b></p><a name="SC1">&nbsp;
+</a><table width="90%" cellpadding="3" cellspacing="0" rules="groups" border="1">
+
+<caption>Symptom Chart 
+</caption><colgroup><colgroup><colgroup><tr><th>Condition
+</th><th>Possible Sources
+</th><th>Action
+</th></tr><tbody></tbody>
+
+<tr valign="top"><td><ul type="disc"><li>The engine does not crank — without Intelligent Access (IA)
+</li></ul></td><td><ul type="disc"><li>Fuse
+</li><li>Battery
+</li><li>Battery cables
+</li><li>Passive Anti-Theft System (PATS)
+</li><li>Starter motor
+</li><li>Wiring, terminals or connectors
+</li><li>PCM
+</li><li>Starter relay
+</li><li>Ignition switch
+</li><li>Transmission Range (TR) sensor (automatic transmission only)
+</li><li>Transmission Control Module (TCM) (automatic transmission only)
+</li><li><span title="Clutch Pedal Position" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">CPP
+</span> switch (manual transmission only)
+</li></ul></td><td><ul type="disc"><li><a href="SCR_us_en_file%3dSCR36003.HTM_gen_ref.HTM#PS2-A"                                                                                                                                                                                                                                                       >GO to Pinpoint Test A
+</a>.
+</li></ul></td></tr><tbody></tbody>
+
+<tr valign="top"><td><ul type="disc"><li>The engine does not crank — with Intelligent Access (IA)
+</li></ul></td><td><ul type="disc"><li>Fuse
+</li><li>Battery
+</li><li>Battery cables
+</li><li><span title="Passive Anti-Theft System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PATS
+</span></li><li>Starter motor
+</li><li>Wiring, terminals or connectors
+</li><li>PCM
+</li><li>Remote Function Actuator (RFA) module
+</li><li>Starter relay
+</li><li>Start/stop switch
+</li><li>Brake switch input
+</li><li><span title="Transmission Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TCM
+</span> (automatic transmission only)
+</li><li><span title="Clutch Pedal Position" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">CPP
+</span> switch (manual transmission only)
+</li></ul></td><td><ul type="disc"><li><a href="SCR_us_en_file%3dSCR36003.HTM_gen_ref.HTM#PS2-B"                                                                                                                                                                                                                                                       >GO to Pinpoint Test B
+</a>.
+</li></ul></td></tr><tbody></tbody>
+
+<tr valign="top"><td><ul type="disc"><li>Unusual starter noise
+</li></ul></td><td><ul type="disc"><li>Starter motor
+</li><li>Starter motor mounting
+</li><li>Flywheel or flexplate ring gear
+</li><li>Starter motor engagement
+</li></ul></td><td><ul type="disc"><li><a href="SCR_us_en_file%3dSCR36003.HTM_gen_ref.HTM#PS2-D"                                                                                                                                                                                                                                                       >GO to Pinpoint Test D
+</a>.
+</li></ul></td></tr><tbody></tbody>
+
+<tr valign="top"><td><ul type="disc"><li>The engine cranks slowly
+</li></ul></td><td><ul type="disc"><li>Battery
+</li><li>Starter motor
+</li><li>Circuitry
+</li></ul></td><td><ul type="disc"><li>CARRY OUT the Starter Motor Component Test.
+</li></ul></td></tr><tbody></tbody>
+
+<tr valign="top"><td><ul type="disc"><li>The starter spins but the engine does not crank
+</li></ul></td><td><ul type="disc"><li>Starter motor
+</li></ul></td><td><ul type="disc"><li>INSPECT the flywheel/flexplate ring gear for missing teeth. CHECK the starter motor for correct mounting. If concern persists, INSTALL a new starter motor. REFER to 
+<a href="SCR_us_en_file%3dSCR36004.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       >Starter Motor
+</a> in this section. TEST the
+system for normal operation.
+</li></ul></td></tr></table><div><a name="extract_238">&nbsp;
+</a></div>
+
+<p><b>Pinpoint Tests
+</b></p><a name="PS2-A">&nbsp;
+</a><p><b>Pinpoint Test A: The Engine Does Not Crank — Without Intelligent Access
+</b></p><p><p>Refer to Wiring Diagrams Cell 
+<a target="_parent" href="SCR_us_en_book%3dECR%26cell%3d020%26page%3d%26year%3d%26vehicle%3d2012%20Fiesta%26market%3dUS%26lang%3dEN%26RTYPE%3dDIAGRAM%26lega"                                                                                                                                                                                                                                                               >20
+</a>, Starting System for schematic and connector information.
+</p></p><h5>Normal Operation 
+</h5><p>Under normal operation the ignition switch is turned to the START position, the PCM receives a request to start the engine. The PCM receives a signal from theTransmission Control Module (TCM)
+that the vehicle is in PARK or NEUTRAL as determined by the 
+<span title="Transmission Range" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TR
+</span> sensor (vehicles equipped with an automatic transmission) or from the
+Clutch Pedal Position (CPP) switch indicating the clutch pedal is fully pressed (vehicles equipped with manual transmission). The PCM supplies voltage and ground to energize the starter relay coil.
+The energized coil causes the starter relay contacts to close. This allows voltage to be supplied from Battery Junction Box (BJB) fuse 10 (30A) to the starter solenoid. The starter solenoid is
+grounded at the starter. Energizing the starter solenoid closes the solenoid contacts allowing voltage directly from the battery to the starter, engaging the starter drive into the ring gear causing the engine to crank and start. The PCM disengages
+the starter once an engine rpm threshold is reached, a set crank time is exceeded or the ignition is turned OFF.
+</p><ul type="disc"><li>DTC P0850:00 (Park/Neutral Switch Input Circuit: No Sub Type Information) — sets when the message from the P/N_SW/CLUTCH 2 circuit is invalid causing a mismatch with
+the High Speed Controller Area Network (HS-CAN) message from the 
+<span title="Transmission Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TCM
+</span>.
+</li><li>DTC P0851:00 (Park/Neutral Switch Input Circuit Low: No Sub Type Information) — sets when the PCM detects a short to ground on the P/N_SW/CLUTCH 2 circuit.
+</li></ul><ul type="disc"><b>This pinpoint test is intended to diagnose the following: 
+</b>
+
+<li>Battery
+</li><li>Battery cables
+</li><li>Passive Anti-Theft System (PATS)
+</li><li>Ignition switch
+</li><li>Fuse
+</li><li>Starter motor
+</li><li>Starter relay
+</li><li>Wiring, terminals or connectors
+</li><li>PCM
+</li><li><span title="Transmission Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TCM
+</span> (automatic transmission)
+</li><li><span title="Clutch Pedal Position" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">CPP
+</span> switch (manual transmission only)
+</li></ul><a name="A">&nbsp;
+</a><h5>PINPOINT TEST A: THE ENGINE DOES NOT CRANK — WITHOUT INTELLIGENT ACCESS 
+</h5>
+
+<p><b><i>NOTICE: 
+</i> Use the correct probe adapter(s) when making measurements. Failure to use the correct probe adapter(s) may damage the connector.
+</b></p><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="A1">&nbsp;
+</a><b>A1 CHECK THE BATTERY 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Check the battery condition and state of charge. Refer to Diagnosis and Testing in 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSE10L.HTM%26rightside%3dSCRSE10R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 414-01
+</a></li><li><b>Is the battery OK?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCR36003.HTM_gen_ref.HTM#A2"                                                                                                                                                                                                                                                       >A2
+</a>. 
+
+<br><br><b>No
+</b><br>CHARGE or INSTALL a new battery as necessary. REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSE10L.HTM%26rightside%3dSCRSE10R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 414-01
+</a>. TEST the system for normal operation. 
+</td></tr><tr><td><a name="A2">&nbsp;
+</a><b>A2 RETRIEVE DTCs 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Ignition ON.
+</li><li>Enter the following diagnostic mode on the scan tool:   PCM — Self-Test.
+</li><li>Enter the following diagnostic mode on the scan tool:   
+<span title="Instrument Panel Cluster" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IPC
+</span> — Self-Test.
+</li><li>Enter the following diagnostic mode on the scan tool:   
+<span title="Transmission Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TCM
+</span> — Self-Test.
+</li><li><b>Were DTCs retrieved on-demand during self-test?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>For 
+<span title="Instrument Panel Cluster" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IPC
+</span> DTCs, REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSD10L.HTM%26rightside%3dSCRSD10R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 413-01
+</a>. 
+
+<br><br>For all 
+<span title="Transmission Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TCM
+</span> DTCs, REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRS7B0L.HTM%26rightside%3dSCRS7B0R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 307-11
+</a>. 
+
+<br><br> For PCM DTC P0617:12, 
+<a href="SCR_us_en_file%3dSCR36003.HTM_gen_ref.HTM#PS2-C"                                                                                                                                                                                                                                                       >GO to Pinpoint Test C
+</a>. For PCM DTC P0850:00, GO to 
+<a href="SCR_us_en_file%3dSCR36003.HTM_gen_ref.HTM#A4"                                                                                                                                                                                                                                                       >A4
+</a>. For DTC P0851:00, GO to 
+<a href="SCR_us_en_file%3dSCR36003.HTM_gen_ref.HTM#A7"                                                                                                                                                                                                                                                       >A7
+</a>. For all other PCM DTCs, REFER
+ to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRS3E0L.HTM%26rightside%3dSCRS3E0R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 303-14
+</a>. 
+
+<br><br><b>No
+</b><br>For automatic transmission, GO to 
+<a href="SCR_us_en_file%3dSCR36003.HTM_gen_ref.HTM#A3"                                                                                                                                                                                                                                                       >A3
+</a>. For manual transmission, GO to 
+<a href="SCR_us_en_file%3dSCR36003.HTM_gen_ref.HTM#A9"                                                                                                                                                                                                                                                       >A9
+</a>. 
+</td></tr><tr><td><a name="A3">&nbsp;
+</a><b>A3 CHECK THE PCM TRANSMISSION PARK OR NEUTRAL RANGE SWITCH (TRP/N) PID 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Enter the following diagnostic mode on the scan tool:   DataLogger — PCM.
+</li><li>While observing the TRP/N PID, place the gear selector in NEUTRAL and then PARK
+</li><li><b>Does the PID indicate YES with the gear selector in NEUTRAL or PARK?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCR36003.HTM_gen_ref.HTM#A10"                                                                                                                                                                                                                                                       >A10
+</a>. 
+
+<br><br><b>No
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCR36003.HTM_gen_ref.HTM#A4"                                                                                                                                                                                                                                                       >A4
+</a>. 
+</td></tr><tr><td><a name="A4">&nbsp;
+</a><b>A4 CHECK THE P/N_SW/CLUTCH 2 CIRCUIT FOR A SHORT TO VOLTAGE 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Ignition OFF.
+</li><li>Disconnect:   PCM C175B.
+</li><li>Disconnect:   
+<span title="Transmission Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TCM
+</span> C1750A.
+</li><li>Ignition ON.
+</li><li>Measure the voltage between PCM C175B-7, circuit CE903 (BU/OG), harness side and ground.
+</li><br><br><IMG src="SCR_us_en_file%3dN0130041.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="211" width="325" border="0"><li><b>Is any voltage present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REPAIR circuit CE903 (BU/OG). TEST the system for normal operation. 
+
+<br><br><b>No
+</b><br> GO to 
+<a href="SCR_us_en_file%3dSCR36003.HTM_gen_ref.HTM#A5"                                                                                                                                                                                                                                                       >A5
+</a>. 
+</td></tr><tr><td><a name="A5">&nbsp;
+</a><b>A5 CHECK THE P/N_SW/CLUTCH 2 CIRCUIT FOR AN OPEN 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Ignition OFF.
+</li><li>Measure the resistance between PCM C175B-7, circuit CE903 (BU/OG), harness side and 
+<span title="Transmission Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TCM
+</span> C1750A-39,
+circuit CE903 (BU/OG), harness side.
+</li><br><br><IMG src="SCR_us_en_file%3dN0130362.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="211" width="325" border="0"><li><b>Is the resistance less than 5 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCR36003.HTM_gen_ref.HTM#A6"                                                                                                                                                                                                                                                       >A6
+</a>. 
+
+<br><br><b>No
+</b><br>REPAIR circuit CE903 (BU/OG). TEST the system for normal operation. 
+</td></tr><tr><td><a name="A6">&nbsp;
+</a><b>A6 CHECK THE 
+<span title="TRANSMISSION CONTROL MODULE" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TCM
+</span> TRANSMISSION RANGE INPUT ALLOWING ENGINE START (TR_CRANK) AND PCM TRANSMISSION PARK OR NEUTRAL RANGE SWITCH (TRP/N) PIDs 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Connect:   PCM C175B.
+</li><li>Connect:   
+<span title="Transmission Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TCM
+</span> C1750A.
+</li><li>Ignition ON.
+</li><li>Enter the following diagnostic mode on the scan tool:   DataLogger — 
+<span title="Transmission Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TCM
+</span>.
+</li><li>While observing the TR_CRANK PID, place the gear selector in NEUTRAL and then PARK.
+</li><li>Enter the following diagnostic mode on the scan tool:   DataLogger — PCM.
+</li><li>While observing the TRP/N PID, place the gear selector in NEUTRAL and then PARK.
+</li><li><b>Do the PIDs indicate YES with the gear selector in NEUTRAL or PARK?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector. CLEAR the DTCs. REPEAT the self-test. TEST the system for normal operation. 
+
+<br><br><b>No
+</b><br> If the concern is with TRP/N PID, GO to 
+<a href="SCR_us_en_file%3dSCR36003.HTM_gen_ref.HTM#A26"                                                                                                                                                                                                                                                       >A26
+</a>. 
+
+<br><br> If the concern is with TR_CRANK PID, GO to 
+<a href="SCR_us_en_file%3dSCR36003.HTM_gen_ref.HTM#A27"                                                                                                                                                                                                                                                       >A27
+</a>. 
+</td></tr><tr><td><a name="A7">&nbsp;
+</a><b>A7 CHECK FOR DTC WITH 
+<span title="TRANSMISSION CONTROL MODULE" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TCM
+</span> DISCONNECTED 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Ignition OFF.
+</li><li>Disconnect:   
+<span title="Transmission Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TCM
+</span> C1750A.
+</li><li>Ignition ON.
+</li><li>Enter the following diagnostic mode on the scan tool:   PCM — Self-Test.
+</li><li><b>Was DTC P0851:00 retrieved on-demand during self-test?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCR36003.HTM_gen_ref.HTM#A8"                                                                                                                                                                                                                                                       >A8
+</a>. 
+
+<br><br><b>No
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCR36003.HTM_gen_ref.HTM#A27"                                                                                                                                                                                                                                                       >A27
+</a>. 
+</td></tr><tr><td><a name="A8">&nbsp;
+</a><b>A8 CHECK THE P/N_SW/CLUTCH 2 CIRCUIT FOR A SHORT TO GROUND 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Ignition OFF.
+</li><li>Disconnect:   PCM C175B.
+</li><li>Measure the resistance between PCM C175B-7, circuit CE903 (BU/OG), harness side and ground.
+</li><br><br><IMG src="SCR_us_en_file%3dN0130042.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="211" width="325" border="0"><li><b>Is the resistance greater than 10,000 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new PCM. REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRS3E0L.HTM%26rightside%3dSCRS3E0R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 303-14
+</a>. TEST the system for normal operation. 
+
+<br><br><b>No
+</b><br>REPAIR circuit CE903 (BU/OG). CLEAR the DTCs. REPEAT the self-test. TEST the system for normal operation. 
+</td></tr><tr><td><a name="A9">&nbsp;
+</a><b>A9 CHECK THE PCM CLUTCH PEDAL AT OR NEAR BOTTOM OF TRAVEL (CPP_BOT) PID 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Enter the following diagnostic mode on the scan tool:   DataLogger — PCM.
+</li><li>While observing the CPP_BOT PID, fully disengage the clutch pedal.
+</li><li><b>Does the PID change from NO to YES?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCR36003.HTM_gen_ref.HTM#A10"                                                                                                                                                                                                                                                       >A10
+</a>. 
+
+<br><br><b>No
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCR36003.HTM_gen_ref.HTM#A23"                                                                                                                                                                                                                                                       >A23
+</a>. 
+</td></tr><tr><td><a name="A10">&nbsp;
+</a><b>A10 CHECK THE PCM STARTER MOTOR RELAY ENABLE (STRT_RLY) PID 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Enter the following diagnostic mode on the scan tool:   DataLogger — PCM.
+</li><li><b>NOTE: 
+</b> For manual transmissions, fully disengage the clutch pedal.
+</li><li>Monitor the STRT_RLY PID while holding the key in the START position.
+</li><li><b>Does the PID change from DISENGAGED to ENGAGED?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCR36003.HTM_gen_ref.HTM#A11"                                                                                                                                                                                                                                                       >A11
+</a>. 
+
+<br><br><b>No
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCR36003.HTM_gen_ref.HTM#A21"                                                                                                                                                                                                                                                       >A21
+</a>. 
+</td></tr><tr><td><a name="A11">&nbsp;
+</a><b>A11 CHECK THE STARTER MOTOR RELAY 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Swap the starter relay with a known good relay and attempt to crank the engine.
+</li><li><b>Does the engine crank?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new starter relay. TEST the system for normal operation. 
+
+<br><br><b>No
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCR36003.HTM_gen_ref.HTM#A12"                                                                                                                                                                                                                                                       >A12
+</a>. 
+</td></tr><tr><td><a name="A12">&nbsp;
+</a><b>A12 CHECK THE VOLTAGE TO THE STARTER MOTOR RELAY 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Ignition OFF.
+</li><li>Disconnect:   Starter Motor Relay.
+</li><li>Measure the voltage between Battery Junction Box (BJB) starter relay cavity pin 3, circuit SBB10 (YE/RD), harness side and ground.
+</li><br><br><IMG src="SCR_us_en_file%3dN0129598.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="446" width="325" border="0"><li><b>Is the voltage greater than 10 volts?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCR36003.HTM_gen_ref.HTM#A13"                                                                                                                                                                                                                                                       >A13
+</a>. 
+
+<br><br><b>No
+</b><br>VERIFY 
+<span title="Battery Junction Box" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BJB
+</span> fuse 10 (30A) is OK. If OK, REPAIR circuit SBB10 (YE/RD) for an open. If not OK, REFER to the Wiring Diagrams manual to identify the possible causes of
+ the circuit short. TEST the system for normal operation. 
+</td></tr><tr><td><a name="A13">&nbsp;
+</a><b>A13 CHECK THE STARTER MOTOR OPERATION AT THE STARTER MOTOR RELAY 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Ignition OFF.
+</li><li>With the transmission in PARK or NEUTRAL, connect one end of a fused jumper wire to 
+<span title="Battery Junction Box" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BJB
+</span> starter relay cavity 3, circuit SBB10 (YE/RD) and momentarily connect the other end
+of the fused jumper wire to 
+<span title="Battery Junction Box" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BJB
+</span> starter relay cavity 5, circuit CDC26 (GY/OG).
+</li><br><br><IMG src="SCR_us_en_file%3dN0129600.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="446" width="325" border="0"><li><b>Did the starter engage and the engine crank?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCR36003.HTM_gen_ref.HTM#A19"                                                                                                                                                                                                                                                       >A19
+</a>. 
+
+<br><br><b>No
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCR36003.HTM_gen_ref.HTM#A14"                                                                                                                                                                                                                                                       >A14
+</a>. 
+</td></tr><tr><td><a name="A14">&nbsp;
+</a><b>A14 CHECK THE BATTERY GROUND CABLE 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Measure the voltage between the positive battery post and the battery ground cable connection at the engine.
+</li><br><br><IMG src="SCR_us_en_file%3dAJ0280A.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="211" width="325" border="0"><li><b>Is the voltage greater than 10 volts?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCR36003.HTM_gen_ref.HTM#A15"                                                                                                                                                                                                                                                       >A15
+</a>. 
+
+<br><br><b>No
+</b><br> CARRY OUT the Starter Motor — Ground Circuit Test. REFER to Component Test in this section. TEST the system for normal operation. 
+</td></tr><tr><td><a name="A15">&nbsp;
+</a><b>A15 CHECK THE STARTER MOTOR GROUND 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Measure the voltage between the positive battery post and the starter motor case.
+</li><br><br><IMG src="SCR_us_en_file%3dN0042835.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="211" width="325" border="0"><li><b>Is the voltage greater than 10 volts?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCR36003.HTM_gen_ref.HTM#A16"                                                                                                                                                                                                                                                       >A16
+</a>. 
+
+<br><br><b>No
+</b><br>CLEAN the starter motor mounting flange and make sure the starter motor is correctly mounted. TEST the system for normal operation. 
+</td></tr><tr><td><a name="A16">&nbsp;
+</a><b>A16 CHECK THE VOLTAGE TO THE STARTER MOTOR 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Measure the voltage between starter solenoid C197A, circuit SBF01 (RD) and ground.
+</li><br><br><IMG src="SCR_us_en_file%3dN0042836.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="211" width="325" border="0"><li><b>Is the voltage greater than 10 volts?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCR36003.HTM_gen_ref.HTM#A17"                                                                                                                                                                                                                                                       >A17
+</a>. 
+
+<br><br><b>No
+</b><br> INSTALL a new positive battery cable. REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSE10L.HTM%26rightside%3dSCRSE10R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 414-01
+</a>. TEST the system for normal operation. 
+</td></tr><tr><td><a name="A17">&nbsp;
+</a><b>A17 CHECK THE STARTER MOTOR FOR CORRECT OPERATION 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Connect one end of a fused jumper wire to starter solenoid C197A, circuit SBF01 (RD) and momentarily connect the other end of the fused jumper wire to starter solenoid C197B, circuit CDC26 (GY/OG).
+</li><br><br><IMG src="SCR_us_en_file%3dN0084970.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="211" width="325" border="0"><li><b>Did the starter engage and the engine crank?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCR36003.HTM_gen_ref.HTM#A18"                                                                                                                                                                                                                                                       >A18
+</a>. 
+
+<br><br><b>No
+</b><br>INSTALL a new starter motor. REFER to 
+<a href="SCR_us_en_file%3dSCR36004.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       >Starter Motor
+</a> in this section. TEST the system for normal operation. 
+</td></tr><tr><td><a name="A18">&nbsp;
+</a><b>A18 CHECK FOR START INPUT AT THE STARTER 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Connect:   Starter Relay.
+</li><li>Disconnect:   Starter Solenoid C197B.
+</li><li>Measure the voltage between the starter solenoid C197B-1, circuit CDC26 (GY/OG) and ground, while holding the key in the START position.
+</li><br><br><IMG src="SCR_us_en_file%3dN0130365.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="211" width="325" border="0"><li><b>Is the voltage greater than 10 volts?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>CLEAN the starter solenoid "S" terminal and connector. CHECK the wiring and the starter motor for a loose or intermittent connection. TEST the system for normal operation. 
+
+<br><br><b>No
+</b><br>REPAIR circuit CDC26 (GY/OG). TEST the system for normal operation. 
+</td></tr><tr><td><a name="A19">&nbsp;
+</a><b>A19 CHECK THE PCM START CIRCUITS FOR A SHORT TO GROUND 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Ignition OFF.
+</li><li>Disconnect:   PCM C175B.
+</li><li>Disconnect:   Starter Relay.
+</li><li>Disconnect:   
+<span title="Instrument Panel Cluster" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IPC
+</span> C220.
+</li><li>Disconnect:   
+<span title="Audio Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">ACM
+</span> C240A.
+</li><li>Measure the resistance between PCM C175B, harness side and ground, using the following chart.
+</li><br><br><TABLE cellspacing="0" cellpadding="3" border="1"><TR><TH valign="bottom" align="center">PCM Connector
+</TH><TH valign="bottom" align="center">Circuit
+</TH></TR><TR><TD valign="top" align="center">C175B-24
+</TD><TD valign="top" align="center">CDC12 (YE)
+</TD></TR><TR><TD valign="top" align="center">C175B-22
+</TD><TD valign="top" align="center">CDC54 (WH/GN)
+</TD></TR></TABLE><br>
+
+<br><br><IMG src="SCR_us_en_file%3dN0130364.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="211" width="325" border="0"><li><b>Are the resistances greater than 10,000 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCR36003.HTM_gen_ref.HTM#A20"                                                                                                                                                                                                                                                       >A20
+</a>. 
+
+<br><br><b>No
+</b><br>REPAIR the affected circuit. TEST the system for normal operation. 
+</td></tr><tr><td><a name="A20">&nbsp;
+</a><b>A20 CHECK THE PCM START CIRCUITS FOR AN OPEN 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Measure the resistance between PCM C175B, harness side and 
+<span title="Battery Junction Box" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BJB
+</span> starter relay cavity, using the following chart.
+</li><br><br><TABLE cellspacing="0" cellpadding="3" border="1"><TR><TH valign="bottom" align="center">PCM Connector
+</TH><TH valign="bottom" align="center">Circuit
+</TH><TH valign="bottom" align="center"><span title="Battery Junction Box" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BJB
+</span></TH></TR><TR><TD valign="top" align="center">C175B-24
+</TD><TD valign="top" align="center">CDC12 (YE)
+</TD><TD valign="top" align="center"><span title="Battery Junction Box" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BJB
+</span> starter relay cavity 2
+</TD></TR><TR><TD valign="top" align="center">C175B-22
+</TD><TD valign="top" align="center">CDC54 (WH/GN)
+</TD><TD valign="top" align="center"><span title="Battery Junction Box" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BJB
+</span> starter relay cavity 1
+</TD></TR></TABLE><br>
+
+<br><br><IMG src="SCR_us_en_file%3dN0129636.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="446" width="325" border="0"><li><b>Are the resistances less than 5 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCR36003.HTM_gen_ref.HTM#A26"                                                                                                                                                                                                                                                       >A26
+</a>. 
+
+<br><br><b>No
+</b><br>REPAIR the affected circuit. TEST the system for normal operation. 
+</td></tr><tr><td><a name="A21">&nbsp;
+</a><b>A21 CHECK THE START CIRCUIT FOR VOLTAGE AT THE PCM 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect:   PCM C175B.
+</li><li>Measure the voltage between PCM C175B-9, circuit CDC35 (BU/WH) and ground, while holding the key in the START position.
+</li><br><br><IMG src="SCR_us_en_file%3dN0130361.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="211" width="325" border="0"><li><b>Is the voltage greater than 10 volts?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCR36003.HTM_gen_ref.HTM#A26"                                                                                                                                                                                                                                                       >A26
+</a>. 
+
+<br><br><b>No
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCR36003.HTM_gen_ref.HTM#A22"                                                                                                                                                                                                                                                       >A22
+</a>. 
+</td></tr><tr><td><a name="A22">&nbsp;
+</a><b>A22 CHECK THE IGNITION SWITCH 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Carry out the Ignition Switch Component Test.
+
+<p>Refer to Wiring Diagrams Cell 
+<a target="_parent" href="SCR_us_en_book%3dECR%26cell%3d149%26page%3d%26year%3d%26vehicle%3d2012%20Fiesta%26market%3dUS%26lang%3dEN%26RTYPE%3dDIAGRAM%26lega"                                                                                                                                                                                                                                                               >149
+</a> for component testing.
+</p></li><li><b>Did the ignition switch pass the component test?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REPAIR circuit CDC35 (BU/WH). TEST the system for normal operation. 
+
+<br><br><b>No
+</b><br>INSTALL a new ignition switch. REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSB50L.HTM%26rightside%3dSCRSB50R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 211-05
+</a>. TEST the system for normal operation. 
+</td></tr><tr><td><a name="A23">&nbsp;
+</a><b>A23 CHECK THE CPP SWITCH CIRCUIT FOR AN OPEN 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Ignition OFF.
+</li><li>Disconnect:   
+<span title="Clutch Pedal Position" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">CPP
+</span> Switch C257.
+</li><li>Disconnect:   PCM C175B.
+</li><li>Measure the resistance between 
+<span title="Clutch Pedal Position" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">CPP
+</span> switch C257-1, circuit CE903 (BU/OG), harness side and PCM C175B-7,
+circuit CE903 (BU/OG), harness side.
+</li><br><br><IMG src="SCR_us_en_file%3dN0129623.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="211" width="325" border="0"><li><b>Is the resistance less than 5 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCR36003.HTM_gen_ref.HTM#A24"                                                                                                                                                                                                                                                       >A24
+</a>. 
+
+<br><br><b>No
+</b><br>REPAIR circuit CE903 (BU/OG). TEST the system for normal operation. 
+</td></tr><tr><td><a name="A24">&nbsp;
+</a><b>A24 CHECK THE CPP GROUND CIRCUIT FOR AN OPEN 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Measure the resistance between CPP switch C257-2, circuit GD187 (BK/GN), harness side and ground.
+</li><br><br><IMG src="SCR_us_en_file%3dN0095736.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="211" width="325" border="0"><li><b>Is the resistance less than 5 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br> GO to 
+<a href="SCR_us_en_file%3dSCR36003.HTM_gen_ref.HTM#A25"                                                                                                                                                                                                                                                       >A25
+</a>. 
+
+<br><br><b>No
+</b><br>REPAIR circuit GD187 (BK/GN). TEST the system for normal operation. 
+</td></tr><tr><td><a name="A25">&nbsp;
+</a><b>A25 CHECK THE 
+<span title="CLUTCH PEDAL POSITION" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">CPP
+</span> SWITCH 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Connect:   
+<span title="Clutch Pedal Position" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">CPP
+</span> Switch C257.
+</li><li>Measure the resistance between PCM C175B-7, circuit CE903 (BU/OG), harness side and ground while depressing the clutch pedal.
+</li><br><br><IMG src="SCR_us_en_file%3dN0130042.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="211" width="325" border="0"><li><b>Is the resistance less than 5 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCR36003.HTM_gen_ref.HTM#A26"                                                                                                                                                                                                                                                       >A26
+</a>. 
+
+<br><br><b>No
+</b><br>INSTALL a new 
+<span title="Clutch Pedal Position" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">CPP
+</span> switch. REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRS3E0L.HTM%26rightside%3dSCRS3E0R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 303-14
+</a>. TEST the system for normal operation. 
+</td></tr><tr><td><a name="A26">&nbsp;
+</a><b>A26 CHECK FOR CORRECT PCM OPERATION 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Ignition OFF.
+</li><li>Disconnect all PCM connectors.
+</li><li>Check the connectors for:
+</li><ul type="square"><li>corrosion
+</li></ul><ul type="square"><li>damaged pins
+</li></ul><ul type="square"><li>pushed-out pins
+</li></ul><li>Connect all PCM connectors and make sure they seat correctly.
+</li><li>Operate the system and verify the concern is still present.
+</li><li><b>Is the concern still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new PCM. REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRS3E0L.HTM%26rightside%3dSCRS3E0R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 303-14
+</a>. TEST the system for normal operation. 
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector. 
+</td></tr><tr><td><a name="A27">&nbsp;
+</a><b>A27 CHECK FOR CORRECT 
+<span title="TRANSMISSION CONTROL MODULE" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TCM
+</span> OPERATION 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Ignition OFF.
+</li><li>Disconnect all 
+<span title="Transmission Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TCM
+</span> connectors.
+</li><li>Check the connectors for:
+</li><ul type="square"><li>corrosion
+</li></ul><ul type="square"><li>damaged pins
+</li></ul><ul type="square"><li>pushed-out pins
+</li></ul><li>Connect all 
+<span title="Transmission Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TCM
+</span> connectors and make sure they seat correctly.
+</li><li>Operate the system and verify the concern is still present.
+</li><li><b>Is the concern still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new 
+<span title="Transmission Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TCM
+</span>. REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRS7B0L.HTM%26rightside%3dSCRS7B0R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 307-11
+</a>. TEST the system for normal operation. 
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector. 
+</td></tr></table><a name="PS2-B">&nbsp;
+</a><p><b>Pinpoint Test B: The Engine Does Not Crank — With Intelligent Access (IA)
+</b></p><p><p>Refer to Wiring Diagrams Cell 
+<a target="_parent" href="SCR_us_en_book%3dECR%26cell%3d020%26page%3d%26year%3d%26vehicle%3d2012%20Fiesta%26market%3dUS%26lang%3dEN%26RTYPE%3dDIAGRAM%26lega"                                                                                                                                                                                                                                                               >20
+</a>, Starting System for schematic and connector information.
+</p></p><h5>Normal Operation 
+</h5><p>Under normal operation the start/stop switch, when pushed in combination with pressing either the brake or clutch pedal (depending upon transmission), provides the
+Remote Function Actuator (RFA) module a request to start the engine. The 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module and PCM receive a signal from the
+Transmission Control Module (TCM) that the vehicle is in PARK or NEUTRAL (vehicles equipped with an automatic transmission) or from the
+Clutch Pedal Position (CPP) switch when the clutch pedal is fully pressed (vehicles equipped with manual transmission). The
+
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module supplies voltage to the starter relay coil and signals the PCM to provide ground to the relay coil. The energized coil causes the starter relay contacts to
+close. This allows voltage to be supplied from Battery Junction Box (BJB) fuse 10 (30A) to the starter solenoid. The starter solenoid is grounded at the starter. Energizing the starter solenoid
+closes the solenoid contacts allowing voltage directly from the battery to the starter, engaging the starter drive into the ring gear causing the engine to crank and start. The PCM disengages the starter once an engine rpm threshold is reached, a
+set crank time is exceeded or the stop/start button is pressed indicating engine shut down.
+</p><ul type="disc"><li>DTC P0850:00 (Park/Neutral Switch Input Circuit: No Sub Type Information) — sets when the message from the P/N_SW/CLUTCH 2 circuit is invalid causing a mismatch with
+the High Speed Controller Area Network (HS-CAN) message from the 
+<span title="Transmission Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TCM
+</span>.
+</li><li>DTC P0851:00 (Park/Neutral Switch Input Circuit Low: No Sub Type Information) — sets when the PCM detects a short to ground on the P/N_SW/CLUTCH 2 circuit.
+</li><li>DTC P1708:62 (Clutch Switch Circuit: Signal Compare Failure) — sets when the clutch switch input to the 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module indicates the clutch pedal is pressed but
+the Medium Speed Controller Area Network (MS-CAN) message transmitted by the Instrument Panel Cluster (IPC) module indicates the clutch pedal is
+not pressed.
+</li></ul><ul type="disc"><b>This pinpoint test is intended to diagnose the following: 
+</b>
+
+<li>Battery
+</li><li>Battery cables
+</li><li>Start/stop switch
+</li><li>Cruise control deactivation switch
+</li><li>Fuses
+</li><li><span title="Passive Anti-Theft System" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PATS
+</span></li><li>Starter motor
+</li><li>Starter relay
+</li><li>Wiring, terminals or connectors
+</li><li>PCM
+</li><li><span title="Transmission Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TCM
+</span> (automatic transmission)
+</li><li><span title="Clutch Pedal Position" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">CPP
+</span> switch (manual transmission only)
+</li><li><span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module
+</li></ul><a name="B">&nbsp;
+</a><h5>PINPOINT TEST B: THE ENGINE DOES NOT CRANK — WITH INTELLIGENT ACCESS (IA) 
+</h5>
+
+<p><b><i>NOTICE: 
+</i> Use the correct probe adapter(s) when making measurements. Failure to use the correct probe adapter(s) may damage the connector.
+</b></p><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="B1">&nbsp;
+</a><b>B1 CHECK THE BATTERY 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Check the battery condition and state of charge. Refer to Diagnosis and Testing in 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSE10L.HTM%26rightside%3dSCRSE10R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 414-01
+</a>.
+</li><li><b>Is the battery OK?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCR36003.HTM_gen_ref.HTM#B2"                                                                                                                                                                                                                                                       >B2
+</a>. 
+
+<br><br><b>No
+</b><br>CHARGE or INSTALL a new battery as necessary. REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSE10L.HTM%26rightside%3dSCRSE10R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 414-01
+</a>. TEST the system for normal operation. 
+</td></tr><tr><td><a name="B2">&nbsp;
+</a><b>B2 CHECK FOR KEY NOT DETECTED 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><p class="singlespace"><b>NOTE: 
+</b> There are certain areas inside the vehicle where the 
+<span title="Intelligent Access" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IA
+</span> key may not be detected and the message center displays KEY NOT DETECTED. If
+the 
+<span title="Intelligent Access" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IA
+</span> key is in the far outside edges of the interior (like in a door map pocket or above a sun visor) it might not be detected. Move
+the 
+<span title="Intelligent Access" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IA
+</span> key to a different location and try to crank the vehicle again.
+</p><li>Check the Front Control/Display Interface Module (FCDIM) while pressing the start/stop switch.
+</li><li><b>Is KEY NOT DETECTED displayed?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSJ1BL.HTM%26rightside%3dSCRSJ1BR.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 419-01B
+</a> to diagnose KEY NOT DETECTED is displayed. 
+
+<br><br><b>No
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCR36003.HTM_gen_ref.HTM#B3"                                                                                                                                                                                                                                                       >B3
+</a>. 
+</td></tr><tr><td><a name="B3">&nbsp;
+</a><b>B3 CHECK THE 
+<span title="INSTRUMENT PANEL CLUSTER" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IPC
+</span> OPERATION 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Observe the 
+<span title="Instrument Panel Cluster" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IPC
+</span> operation while pressing the start/stop switch.
+</li><li><b>Do some indicators in the 
+<span title="Instrument Panel Cluster" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IPC
+</span> illuminate?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCR36003.HTM_gen_ref.HTM#B5"                                                                                                                                                                                                                                                       >B5
+</a>. 
+
+<br><br><b>No
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCR36003.HTM_gen_ref.HTM#B4"                                                                                                                                                                                                                                                       >B4
+</a>. 
+</td></tr><tr><td><a name="B4">&nbsp;
+</a><b>B4 CHECK FOR COMMUNICATION WITH THE SCAN TOOL 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Refer to Inspection and Verification in 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSI00L.HTM%26rightside%3dSCRSI00R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 418-00
+</a>, and follow the procedure to establish a session with the vehicle.
+</li><li><b>Does the 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module pass the network test?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSB50L.HTM%26rightside%3dSCRSB50R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 211-05
+</a> to diagnose no power in RUN. 
+
+<br><br><b>No
+</b><br>REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSI00L.HTM%26rightside%3dSCRSI00R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 418-00
+</a> to diagnose no communication with the 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module or PCM. 
+</td></tr><tr><td><a name="B5">&nbsp;
+</a><b>B5 RETRIEVED DTCs 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Ignition ON.
+</li><li>Enter the following diagnostic mode on the scan tool:   PCM — Self-Test.
+</li><li>Enter the following diagnostic mode on the scan tool:   
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module — Self-Test.
+</li><li>Enter the following diagnostic mode on the scan tool:   
+<span title="Transmission Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TCM
+</span> — Self-Test.
+</li><li>Enter the following diagnostic mode on the scan tool:    PCM — Self-Test.
+</li><li><b>Were DTCs retrieved on-demand during self-test?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>For 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module DTC P1708:62, GO to 
+<a href="SCR_us_en_file%3dSCR36003.HTM_gen_ref.HTM#B33"                                                                                                                                                                                                                                                       >B33
+</a>. For 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module DTC
+ P0615:12, 
+<a href="SCR_us_en_file%3dSCR36003.HTM_gen_ref.HTM#PS2-C"                                                                                                                                                                                                                                                       >GO to Pinpoint Test C
+</a>. For all other 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module DTCs, REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSJ1BL.HTM%26rightside%3dSCRSJ1BR.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 419-01B
+</a>. 
+
+<br><br> For PCM DTC P0617:12, 
+<a href="SCR_us_en_file%3dSCR36003.HTM_gen_ref.HTM#PS2-C"                                                                                                                                                                                                                                                       >GO to Pinpoint Test C
+</a>. For PCM DTC P0850:00, GO to 
+<a href="SCR_us_en_file%3dSCR36003.HTM_gen_ref.HTM#B10"                                                                                                                                                                                                                                                       >B10
+</a>. For DTC P0851:00, GO to 
+<a href="SCR_us_en_file%3dSCR36003.HTM_gen_ref.HTM#B13"                                                                                                                                                                                                                                                       >B13
+</a>. For all other PCM DTCs, REFER
+ to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRS3E0L.HTM%26rightside%3dSCRS3E0R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 303-14
+</a>. 
+
+<br><br>For all 
+<span title="Transmission Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TCM
+</span> DTCs, REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRS7B0L.HTM%26rightside%3dSCRS7B0R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 307-11
+</a>. 
+
+<br><br><b>No
+</b><br> For automatic transmission, GO to 
+<a href="SCR_us_en_file%3dSCR36003.HTM_gen_ref.HTM#B6"                                                                                                                                                                                                                                                       >B6
+</a>. 
+
+<br><br> For manual transmission, GO to 
+<a href="SCR_us_en_file%3dSCR36003.HTM_gen_ref.HTM#B15"                                                                                                                                                                                                                                                       >B15
+</a>. 
+</td></tr><tr><td><a name="B6">&nbsp;
+</a><b>B6 CHECK THE 
+<span title="REMOTE FUNCTION ACTUATOR" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> MODULE BRAKE SWITCH (BRAKE_SW) PID 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Enter the following diagnostic mode on the scan tool:   DataLogger — 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module.
+</li><li>While observing the BRAKE_SW PID, apply the brake pedal.
+</li><li><b>Does the PID change from OFF to ON?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCR36003.HTM_gen_ref.HTM#B9"                                                                                                                                                                                                                                                       >B9
+</a>. 
+
+<br><br><b>No
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCR36003.HTM_gen_ref.HTM#B7"                                                                                                                                                                                                                                                       >B7
+</a>. 
+</td></tr><tr><td><a name="B7">&nbsp;
+</a><b>B7 CHECK THE CRUISE CONTROL DEACTIVATION CIRCUIT TO THE 
+<span title="REMOTE FUNCTION ACTUATOR" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> MODULE FOR A SHORT TO GROUND 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Ignition OFF.
+</li><li>Disconnect:   
+<span title="Instrument Panel Cluster" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IPC
+</span> C220.
+</li><li>Disconnect:   
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module C3503B.
+</li><li>Disconnect:   Cruise Control Deactivation Switch C278.
+</li><li>Measure the resistance between 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module C3503B-21, circuit CCA29 (GN/BU), harness side and ground.
+</li><br><br><IMG src="SCR_us_en_file%3dN0116354.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="211" width="325" border="0"><li><b>Is the resistance greater than 10,000 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCR36003.HTM_gen_ref.HTM#B8"                                                                                                                                                                                                                                                       >B8
+</a>. 
+
+<br><br><b>No
+</b><br>REPAIR circuit CCA29 (GN/BU). TEST the system for normal operation. 
+</td></tr><tr><td><a name="B8">&nbsp;
+</a><b>B8 CHECK THE BRAKE SWITCH 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Connect:   Cruise Control Deactivation Switch C278.
+</li><li>Measure the resistance between 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module C3503B-21, circuit CCA29 (GN/BU) and ground while applying the brake pedal.
+</li><br><br><IMG src="SCR_us_en_file%3dN0116354.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="211" width="325" border="0"><li><b>Is the resistance greater than 10,000 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCR36003.HTM_gen_ref.HTM#B36"                                                                                                                                                                                                                                                       >B36
+</a>. 
+
+<br><br><b>No
+</b><br>INSTALL a new cruise control deactivation switch. REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSJ30L.HTM%26rightside%3dSCRSJ30R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 419-03
+</a>. TEST the system for normal operation. 
+</td></tr><tr><td><a name="B9">&nbsp;
+</a><b>B9 CHECK THE PCM TRANSMISSION PARK OR NEUTRAL RANGE SWITCH (TRP/N) PID 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Enter the following diagnostic mode on the scan tool:   DataLogger — PCM .
+</li><li>While observing the TRP/N PID, place the gear selector in NEUTRAL and then PARK.
+</li><li><b>Does the PID indicate YES with the gear selector in NEUTRAL or PARK?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCR36003.HTM_gen_ref.HTM#B16"                                                                                                                                                                                                                                                       >B16
+</a>. 
+
+<br><br><b>No
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCR36003.HTM_gen_ref.HTM#B10"                                                                                                                                                                                                                                                       >B10
+</a>. 
+</td></tr><tr><td><a name="B10">&nbsp;
+</a><b>B10 CHECK THE P/N_SW/CLUTCH 2 CIRCUIT FOR A SHORT TO VOLTAGE 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Ignition OFF.
+</li><li>Disconnect:   PCM C175B.
+</li><li>Disconnect:   
+<span title="Transmission Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TCM
+</span> C1750A.
+</li><li>Ignition ON.
+</li><li>Measure the voltage between PCM C175B-7, circuit CE903 (BU/OG), harness side and ground.
+</li><br><br><IMG src="SCR_us_en_file%3dN0130041.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="211" width="325" border="0"><li><b>Is any voltage present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REPAIR circuit CE903 (BU/OG). TEST the system for normal operation. 
+
+<br><br><b>No
+</b><br> GO to 
+<a href="SCR_us_en_file%3dSCR36003.HTM_gen_ref.HTM#B11"                                                                                                                                                                                                                                                       >B11
+</a>. 
+</td></tr><tr><td><a name="B11">&nbsp;
+</a><b>B11 CHECK THE P/N_SW/CLUTCH 2 CIRCUIT FOR AN OPEN 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Ignition OFF.
+</li><li>Measure the resistance between PCM C175B-7, circuit CE903 (BU/OG), harness side and 
+<span title="Transmission Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TCM
+</span> C1750A-39,
+circuit CE903 (BU/OG), harness side.
+</li><br><br><IMG src="SCR_us_en_file%3dN0130362.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="211" width="325" border="0"><li><b>Is the resistance less than 5 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCR36003.HTM_gen_ref.HTM#B12"                                                                                                                                                                                                                                                       >B12
+</a>. 
+
+<br><br><b>No
+</b><br>REPAIR circuit CE903 (BU/OG). TEST the system for normal operation. 
+</td></tr><tr><td><a name="B12">&nbsp;
+</a><b>B12 CHECK THE 
+<span title="TRANSMISSION CONTROL MODULE" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TCM
+</span> TRANSMISSION RANGE INPUT ALLOWING ENGINE START (TR_CRANK) AND PCM TRANSMISSION PARK OR NEUTRAL RANGE SWITCH (TRP/N) PIDs 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Connect:   PCM C175B.
+</li><li>Connect:   
+<span title="Transmission Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TCM
+</span> C1750A.
+</li><li>Ignition ON.
+</li><li>Enter the following diagnostic mode on the scan tool:   DataLogger — 
+<span title="Transmission Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TCM
+</span>.
+</li><li>While observing the TR_CRANK PID, place the gear selector in PARK and then NEUTRAL.
+</li><li>Enter the following diagnostic mode on the scan tool:   DataLogger — PCM.
+</li><li>While observing the TRP/N PID, place the gear selector in PARK and then NEUTRAL.
+</li><li><b>Do the PIDs indicate YES with the gear selector in NEUTRAL or PARK?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector. CLEAR the DTCs. REPEAT the self-test. TEST the system for normal operation. 
+
+<br><br><b>No
+</b><br> If the concern is with TRP/N PID, GO to 
+<a href="SCR_us_en_file%3dSCR36003.HTM_gen_ref.HTM#B37"                                                                                                                                                                                                                                                       >B37
+</a>. 
+
+<br><br> If the concern is with TR_CRANK PID, GO to 
+<a href="SCR_us_en_file%3dSCR36003.HTM_gen_ref.HTM#B38"                                                                                                                                                                                                                                                       >B38
+</a>. 
+</td></tr><tr><td><a name="B13">&nbsp;
+</a><b>B13 CHECK FOR DTC WITH 
+<span title="TRANSMISSION CONTROL MODULE" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TCM
+</span> DISCONNECTED 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Ignition OFF.
+</li><li>Disconnect:   
+<span title="Transmission Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TCM
+</span> C1750A.
+</li><li>Ignition ON.
+</li><li>Enter the following diagnostic mode on the scan tool:    PCM — Self-Test.
+</li><li><b>Was DTC P0851:00 retrieved on-demand during self-test?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCR36003.HTM_gen_ref.HTM#B14"                                                                                                                                                                                                                                                       >B14
+</a>. 
+
+<br><br><b>No
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCR36003.HTM_gen_ref.HTM#B38"                                                                                                                                                                                                                                                       >B38
+</a>. 
+</td></tr><tr><td><a name="B14">&nbsp;
+</a><b>B14 CHECK THE P/N_SW/CLUTCH 2 CIRCUIT FOR A SHORT TO GROUND 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Ignition OFF.
+</li><li>Disconnect:   PCM C175B.
+</li><li>Measure the resistance between PCM C175B-7, circuit CE903 (BU/OG), harness side and ground.
+</li><br><br><IMG src="SCR_us_en_file%3dN0130042.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="211" width="325" border="0"><li><b>Is the resistance greater than 10,000 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCR36003.HTM_gen_ref.HTM#B37"                                                                                                                                                                                                                                                       >B37
+</a>. 
+
+<br><br><b>No
+</b><br>REPAIR circuit CE903 (BU/OG). TEST the system for normal operation. 
+</td></tr><tr><td><a name="B15">&nbsp;
+</a><b>B15 CHECK THE PCM CLUTCH PEDAL AT OR NEAR BOTTOM OF TRAVEL (CPP_BOT) PID 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Enter the following diagnostic mode on the scan tool:   DataLogger — PCM.
+</li><li>While observing the CPP_BOT PID, fully disengage the clutch pedal.
+</li><li><b>Does the PID change from NO to YES?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCR36003.HTM_gen_ref.HTM#B16"                                                                                                                                                                                                                                                       >B16
+</a>. 
+
+<br><br><b>No
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCR36003.HTM_gen_ref.HTM#B30"                                                                                                                                                                                                                                                       >B30
+</a>. 
+</td></tr><tr><td><a name="B16">&nbsp;
+</a><b>B16 CHECK THE PCM STARTER MOTOR RELAY ENABLE (STRT_RLY) PID 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Enter the following diagnostic mode on the scan tool:   DataLogger — PCM.
+</li><li><b>NOTE: 
+</b> For manual transmission, fully disengage the clutch pedal.
+</li><li>Monitor the STRT_RLY PID while pressing the start/stop switch and the brake or clutch pedal.
+</li><li><b>Does the PID change from DISENGAGED to ENGAGED?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCR36003.HTM_gen_ref.HTM#B17"                                                                                                                                                                                                                                                       >B17
+</a>. 
+
+<br><br><b>No
+</b><br>REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSB50L.HTM%26rightside%3dSCRSB50R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 211-05
+</a> to diagnose the no power in start concern. 
+</td></tr><tr><td><a name="B17">&nbsp;
+</a><b>B17 CHECK THE STARTER MOTOR RELAY 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Swap the starter relay with a known good relay and attempt to crank the engine.
+</li><li><b>Does the engine crank?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new starter relay. TEST the system for normal operation. 
+
+<br><br><b>No
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCR36003.HTM_gen_ref.HTM#B18"                                                                                                                                                                                                                                                       >B18
+</a>. 
+</td></tr><tr><td><a name="B18">&nbsp;
+</a><b>B18 CHECK THE VOLTAGE TO THE STARTER MOTOR RELAY 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Ignition OFF.
+</li><li>Disconnect:   Starter Motor Relay.
+</li><li>Measure the voltage between Battery Junction Box (BJB) starter relay cavity 3, circuit SBB10 (YE/RD), harness side and ground.
+</li><br><br><IMG src="SCR_us_en_file%3dN0129598.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="446" width="325" border="0"><li><b>Is the voltage greater than 10 volts?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCR36003.HTM_gen_ref.HTM#B19"                                                                                                                                                                                                                                                       >B19
+</a>. 
+
+<br><br><b>No
+</b><br>VERIFY 
+<span title="Battery Junction Box" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BJB
+</span> fuse 10 (30A) is OK. If OK, REPAIR circuit SBB10 (YE/RD). If not OK, REFER to the Wiring Diagrams manual to identify the possible causes of the circuit short.
+ TEST the system for normal operation. 
+</td></tr><tr><td><a name="B19">&nbsp;
+</a><b>B19 CHECK THE STARTER MOTOR OPERATION AT THE STARTER MOTOR RELAY 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Ignition OFF.
+</li><li>With the transmission in PARK or Neutral, connect one end of a fused jumper wire to 
+<span title="Battery Junction Box" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BJB
+</span> starter relay cavity 3, circuit SBB10 (YE/RD) and momentarily connect the other end
+of the fused jumper wire to 
+<span title="Battery Junction Box" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BJB
+</span> starter relay cavity 5, circuit CDC26 (GY/OG).
+</li><br><br><IMG src="SCR_us_en_file%3dN0129600.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="446" width="325" border="0"><li><b>Did the starter engage and the engine crank?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCR36003.HTM_gen_ref.HTM#B25"                                                                                                                                                                                                                                                       >B25
+</a>. 
+
+<br><br><b>No
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCR36003.HTM_gen_ref.HTM#B20"                                                                                                                                                                                                                                                       >B20
+</a>. 
+</td></tr><tr><td><a name="B20">&nbsp;
+</a><b>B20 CHECK THE BATTERY GROUND CABLE 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Measure the voltage between the positive battery post and the battery ground cable connection at the engine.
+</li><br><br><IMG src="SCR_us_en_file%3dAJ0280A.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="211" width="325" border="0"><li><b>Is the voltage greater than 10 volts?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCR36003.HTM_gen_ref.HTM#B21"                                                                                                                                                                                                                                                       >B21
+</a>. 
+
+<br><br><b>No
+</b><br> CARRY OUT the Starter Motor — Ground Circuit Test. REFER to Component Test in this section. TEST the system for normal operation. 
+</td></tr><tr><td><a name="B21">&nbsp;
+</a><b>B21 CHECK THE STARTER MOTOR GROUND 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Measure the voltage between the positive battery post and the starter motor case.
+</li><br><br><IMG src="SCR_us_en_file%3dN0042835.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="211" width="325" border="0"><li><b>Is the voltage greater than 10 volts?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCR36003.HTM_gen_ref.HTM#B22"                                                                                                                                                                                                                                                       >B22
+</a>. 
+
+<br><br><b>No
+</b><br>CLEAN the starter motor mounting flange and make sure the starter motor is correctly mounted. TEST the system for normal operation. 
+</td></tr><tr><td><a name="B22">&nbsp;
+</a><b>B22 CHECK THE VOLTAGE TO THE STARTER MOTOR 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Measure the voltage between starter solenoid C197A-1, circuit SBF01 (RD) and ground.
+</li><br><br><IMG src="SCR_us_en_file%3dN0042836.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="211" width="325" border="0"><li><b>Is the voltage greater than 10 volts?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCR36003.HTM_gen_ref.HTM#B23"                                                                                                                                                                                                                                                       >B23
+</a>. 
+
+<br><br><b>No
+</b><br> INSTALL a new positive battery cable. REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSE10L.HTM%26rightside%3dSCRSE10R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 414-01
+</a>. TEST the system for normal operation. 
+</td></tr><tr><td><a name="B23">&nbsp;
+</a><b>B23 CHECK THE STARTER MOTOR FOR CORRECT OPERATION 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Connect one end of a fused jumper wire to starter solenoid C197A-1, circuit SBF01 (RD) and momentarily connect the other end of the fused jumper wire to starter solenoid C197B, circuit
+CDC26 (GY/OG).
+</li><br><br><IMG src="SCR_us_en_file%3dN0084970.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="211" width="325" border="0"><li><b>Did the starter engage and the engine crank?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCR36003.HTM_gen_ref.HTM#B24"                                                                                                                                                                                                                                                       >B24
+</a>. 
+
+<br><br><b>No
+</b><br>INSTALL a new starter motor. REFER to 
+<a href="SCR_us_en_file%3dSCR36004.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       >Starter Motor
+</a> in this section. TEST the system for normal operation. 
+</td></tr><tr><td><a name="B24">&nbsp;
+</a><b>B24 CHECK FOR START INPUT AT THE STARTER 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Connect:   Starter Motor Relay.
+</li><li>Disconnect:   Starter Solenoid C197B.
+</li><li>Measure the voltage between the starter solenoid C197B-1, circuit CDC26 (GY/OG) and ground, while pressing the start/stop switch and the brake or clutch pedal.
+</li><br><br><IMG src="SCR_us_en_file%3dN0130365.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="211" width="325" border="0"><li><b>Is the voltage greater than 10 volts?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>CLEAN the starter solenoid "S" terminal and connector. CHECK the wiring and the starter motor for a loose or intermittent connection. TEST the system for normal operation. 
+
+<br><br><b>No
+</b><br>REPAIR circuit CDC26 (GY/OG). TEST the system for normal operation. 
+</td></tr><tr><td><a name="B25">&nbsp;
+</a><b>B25 CHECK THE 
+<span title="REMOTE FUNCTION ACTUATOR" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> MODULE STARTER REQUEST CIRCUIT FOR VOLTAGE 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Measure the voltage between 
+<span title="Battery Junction Box" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BJB
+</span> starter relay cavity 1, circuit CDC54 (WH/GN), harness side and ground while pressing the start/stop switch and the brake or clutch pedal.
+</li><br><br><IMG src="SCR_us_en_file%3dN0129579.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="446" width="325" border="0"><li><b>Is the voltage greater than 10 volts?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCR36003.HTM_gen_ref.HTM#B28"                                                                                                                                                                                                                                                       >B28
+</a>. 
+
+<br><br><b>No
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCR36003.HTM_gen_ref.HTM#B26"                                                                                                                                                                                                                                                       >B26
+</a>. 
+</td></tr><tr><td><a name="B26">&nbsp;
+</a><b>B26 CHECK THE 
+<span title="REMOTE FUNCTION ACTUATOR" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> MODULE STARTER REQUEST CIRCUIT FOR A SHORT TO GROUND 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect:    
+<span title="Instrument Panel Cluster" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IPC
+</span> C220.
+</li><li>Disconnect:   
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> C3503C.
+</li><li>Disconnect:   
+<span title="Audio Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">ACM
+</span> C240A.
+</li><li>Measure the resistance between 
+<span title="Battery Junction Box" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BJB
+</span> starter relay cavity 1, circuit CDC54 (WH/GN), harness side and ground.
+</li><br><br><IMG src="SCR_us_en_file%3dN0130036.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="446" width="325" border="0"><li><b>Is the resistance greater than 10,000 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCR36003.HTM_gen_ref.HTM#B27"                                                                                                                                                                                                                                                       >B27
+</a>. 
+
+<br><br><b>No
+</b><br>REPAIR circuit CDC54 (WH/GN). TEST the system for normal operation. 
+</td></tr><tr><td><a name="B27">&nbsp;
+</a><b>B27 CHECK THE 
+<span title="REMOTE FUNCTION ACTUATOR" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> MODULE STARTER REQUEST CIRCUIT FOR AN OPEN 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Measure the resistance between 
+<span title="Battery Junction Box" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BJB
+</span> starter relay cavity 1, circuit CDC54 (WH/GN), harness
+side and
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module C3503C-6.
+</li><br><br><IMG src="SCR_us_en_file%3dN0130363.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="446" width="325" border="0"><li><b>Is the resistance less than 0.5 ohm?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCR36003.HTM_gen_ref.HTM#B36"                                                                                                                                                                                                                                                       >B36
+</a>. 
+
+<br><br><b>No
+</b><br>REPAIR circuit CDC54 (WH/GN). TEST the system for normal operation. 
+</td></tr><tr><td><a name="B28">&nbsp;
+</a><b>B28 CHECK THE PCM STARTER CONTROL CIRCUIT 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Connect a 12-volt test light between 
+<span title="Battery Junction Box" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BJB
+</span> starter relay cavity 1, circuit CDC54 (WH/GN) and
+
+<span title="Battery Junction Box" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BJB
+</span> starter relay cavity 2, circuit CDC12 (YE), then press the brake or clutch pedal and press the start/start switch.
+</li><br><br><IMG src="SCR_us_en_file%3dN0129626.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="446" width="325" border="0"><li><b>Does the test light illuminate?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new starter relay. TEST the system for normal operation. 
+
+<br><br><b>No
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCR36003.HTM_gen_ref.HTM#B29"                                                                                                                                                                                                                                                       >B29
+</a>. 
+</td></tr><tr><td><a name="B29">&nbsp;
+</a><b>B29 CHECK THE STARTER CONTROL CIRCUIT FOR AN OPEN 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect:   PCM C175B.
+</li><li>Measure the resistance between 
+<span title="Battery Junction Box" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BJB
+</span> starter relay cavity 2, circuit CDC12 (YE), harness side and PCM C175B-24, circuit CDC12 (YE),
+harness side.
+</li><br><br><IMG src="SCR_us_en_file%3dN0130038.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="446" width="325" border="0"><li><b>Is the resistance less than 5 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCR36003.HTM_gen_ref.HTM#B37"                                                                                                                                                                                                                                                       >B37
+</a>. 
+
+<br><br><b>No
+</b><br>REPAIR circuit CDC12 (YE). TEST the system for normal operation. 
+</td></tr><tr><td><a name="B30">&nbsp;
+</a><b>B30 CHECK THE P/N_SW/CLUTCH 2 CIRCUIT FOR AN OPEN OR SHORT TO GROUND 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Ignition OFF.
+</li><li>Disconnect:   
+<span title="Clutch Pedal Position" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">CPP
+</span> Switch C257.
+</li><li>Disconnect:   
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> Module C3503B.
+</li><li>Disconnect:   PCM C175B.
+</li><li>Measure the resistance between:
+</li><ul type="square"><li><span title="Clutch Pedal Position" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">CPP
+</span> switch C257-1, circuit CE903 (BU/OG), harness side and PCM C175B-7, circuit CE903 (BU/OG),
+harness side.
+</li></ul><ul type="square"><li>PCM C175B-7, circuit CE903 (BU/OG), harness side and ground.
+</li></ul><br><br><IMG src="SCR_us_en_file%3dN0129623.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="211" width="325" border="0"><li><b>Is the resistance greater than 10,000 ohms between the PCM and ground; and less than 5 ohms between the PCM and 
+<span title="Clutch Pedal Position" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">CPP
+</span> switch?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br> GO to 
+<a href="SCR_us_en_file%3dSCR36003.HTM_gen_ref.HTM#B31"                                                                                                                                                                                                                                                       >B31
+</a>. 
+
+<br><br><b>No
+</b><br>REPAIR circuit CE903 (BU-OG). TEST the system for normal operation. 
+</td></tr><tr><td><a name="B31">&nbsp;
+</a><b>B31 CHECK THE CPP GROUND CIRCUIT FOR AN OPEN 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Measure the resistance between CPP switch C257-2, circuit GD187 (BK/GN), harness side and ground.
+</li><br><br><IMG src="SCR_us_en_file%3dN0095736.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="211" width="325" border="0"><li><b>Is the resistance less than 5 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br> GO to 
+<a href="SCR_us_en_file%3dSCR36003.HTM_gen_ref.HTM#B32"                                                                                                                                                                                                                                                       >B32
+</a>. 
+
+<br><br><b>No
+</b><br>REPAIR circuit GD187 (BK/GN). TEST the system for normal operation. 
+</td></tr><tr><td><a name="B32">&nbsp;
+</a><b>B32 CHECK THE 
+<span title="CLUTCH PEDAL POSITION" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">CPP
+</span> SWITCH 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Connect:   
+<span title="Clutch Pedal Position" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">CPP
+</span> Switch C257.
+</li><li>Measure the resistance between PCM C175B-7, circuit CE903 (BU/OG), harness side and ground while pressing the clutch pedal.
+</li><br><br><IMG src="SCR_us_en_file%3dN0130042.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="211" width="325" border="0"><li><b>Is the resistance less than 5 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCR36003.HTM_gen_ref.HTM#B37"                                                                                                                                                                                                                                                       >B37
+</a>. 
+
+<br><br><b>No
+</b><br>INSTALL a new 
+<span title="Clutch Pedal Position" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">CPP
+</span> switch. REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRS3E0L.HTM%26rightside%3dSCRS3E0R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 303-14
+</a>. TEST the system for normal operation. 
+</td></tr><tr><td><a name="B33">&nbsp;
+</a><b>B33 CHECK THE P/N_SW/CLUTCH 2 CIRCUIT FOR A SHORT TO VOLTAGE 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Ignition OFF.
+</li><li>Disconnect:   
+<span title="Clutch Pedal Position" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">CPP
+</span> Switch C257.
+</li><li>Disconnect:   
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> Module C3503B.
+</li><li>Disconnect:   PCM C175B.
+</li><li>Ignition ON.
+</li><li>Measure the voltage between PCM C175B-7, circuit CE903 (BU/OG), harness side and ground.
+</li><br><br><IMG src="SCR_us_en_file%3dN0130041.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="211" width="325" border="0"><li><b>Is any voltage present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REPAIR circuit CE903 (BU-OG). TEST the system for normal operation. 
+
+<br><br><b>No
+</b><br> GO to 
+<a href="SCR_us_en_file%3dSCR36003.HTM_gen_ref.HTM#B34"                                                                                                                                                                                                                                                       >B34
+</a>. 
+</td></tr><tr><td><a name="B34">&nbsp;
+</a><b>B34 CHECK THE P/N_SW/CLUTCH 2 INPUT CIRCUIT FOR AN OPEN BETWEEN THE PCM AND 
+<span title="REMOTE FUNCTION ACTUATOR" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> MODULE 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Ignition OFF.
+</li><li>Measure the resistance between 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module C3503B-17, circuit CE903 (BU/OG), harness side and
+PCM C175B-7, circuit CE903 (BU/OG), harness side.
+</li><br><br><IMG src="SCR_us_en_file%3dN0129627.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="211" width="325" border="0"><li><b>Is the resistance less than 5 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br> GO to 
+<a href="SCR_us_en_file%3dSCR36003.HTM_gen_ref.HTM#B35"                                                                                                                                                                                                                                                       >B35
+</a>. 
+
+<br><br><b>No
+</b><br>REPAIR circuit CE903 (BU/OG). TEST the system for normal operation. 
+</td></tr><tr><td><a name="B35">&nbsp;
+</a><b>B35 CHECK THE PCM CLUTCH PEDAL AT OR NEAR BOTTOM OF TRAVEL (CPP_BOT) AND 
+<span title="REMOTE FUNCTION ACTUATOR" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> MODULE CLUTCH SWITCH (CLUTCH_SW) PIDs 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Ignition OFF.
+</li><li>Connect:   
+<span title="Clutch Pedal Position" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">CPP
+</span> Switch C257.
+</li><li>Connect:   
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> Module C3503B.
+</li><li>Connect:   PCM C175B.
+</li><li>Ignition ON.
+</li><li>Enter the following diagnostic mode on the scan tool:   DataLogger—PCM .
+</li><li>While observing the CPP_BOT PID, fully engage and disengage the clutch pedal.
+</li><li>Enter the following diagnostic mode on the scan tool:   DataLogger— 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module.
+</li><li>While observing the CLUTCH _SW PID, fully engage and disengage the clutch pedal.
+</li><li><b>Do both PIDs agree with the clutch pedal position?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector. TEST the system for normal operation. 
+
+<br><br><b>No
+</b><br> If the concern is with CPP_BOT PID, GO to 
+<a href="SCR_us_en_file%3dSCR36003.HTM_gen_ref.HTM#B37"                                                                                                                                                                                                                                                       >B37
+</a>. 
+
+<br><br> If the concern is with CLUTCH _SW PID, GO to 
+<a href="SCR_us_en_file%3dSCR36003.HTM_gen_ref.HTM#B36"                                                                                                                                                                                                                                                       >B36
+</a>. 
+</td></tr><tr><td><a name="B36">&nbsp;
+</a><b>B36 CHECK FOR CORRECT 
+<span title="REMOTE FUNCTION ACTUATOR" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> MODULE OPERATION 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Ignition OFF.
+</li><li>Disconnect all 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module connectors.
+</li><li>Check the connectors for:
+</li><ul type="square"><li>corrosion
+</li></ul><ul type="square"><li>damaged pins
+</li></ul><ul type="square"><li>pushed-out pins
+</li></ul><li>Connect all 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module connectors and make sure they seat correctly.
+</li><li>Operate the system and verify the concern is still present.
+</li><li><b>Is the concern still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module. REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSJA0L.HTM%26rightside%3dSCRSJA0R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 419-10
+</a>. TEST the system for normal operation. 
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector. 
+</td></tr><tr><td><a name="B37">&nbsp;
+</a><b>B37 CHECK FOR CORRECT PCM OPERATION 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Ignition OFF.
+</li><li>Disconnect all PCM connectors.
+</li><li>Check the connectors for:
+</li><ul type="square"><li>corrosion
+</li></ul><ul type="square"><li>damaged pins
+</li></ul><ul type="square"><li>pushed-out pins
+</li></ul><li>Connect all PCM connectors and make sure they seat correctly.
+</li><li>Operate the system and verify the concern is still present.
+</li><li><b>Is the concern still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new PCM. REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRS3E0L.HTM%26rightside%3dSCRS3E0R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 303-14
+</a>. TEST the system for normal operation. 
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector. 
+</td></tr><tr><td><a name="B38">&nbsp;
+</a><b>B38 CHECK FOR CORRECT 
+<span title="TRANSMISSION CONTROL MODULE" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TCM
+</span> OPERATION 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Ignition OFF.
+</li><li>Disconnect all 
+<span title="Transmission Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TCM
+</span> connectors.
+</li><li>Check the connectors for:
+</li><ul type="square"><li>corrosion
+</li></ul><ul type="square"><li>damaged pins
+</li></ul><ul type="square"><li>pushed-out pins
+</li></ul><li>Connect all 
+<span title="Transmission Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TCM
+</span> connectors and make sure they seat correctly.
+</li><li>Operate the system and verify the concern is still present.
+</li><li><b>Is the concern still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new 
+<span title="Transmission Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TCM
+</span>. REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRS7B0L.HTM%26rightside%3dSCRS7B0R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 307-11
+</a>. TEST the system for normal operation. 
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector. 
+</td></tr></table><a name="PS2-C">&nbsp;
+</a><p><b>Pinpoint Test C: DTC P0615:12 or P0617:12
+</b></p><p><p>Refer to Wiring Diagrams Cell 
+<a target="_parent" href="SCR_us_en_book%3dECR%26cell%3d020%26page%3d%26year%3d%26vehicle%3d2012%20Fiesta%26market%3dUS%26lang%3dEN%26RTYPE%3dDIAGRAM%26lega"                                                                                                                                                                                                                                                               >20
+</a>, Starting System for schematic and connector information.
+</p></p><p><b><i>NOTICE: 
+</i> Use the correct probe adapter(s) when making measurements. Failure to use the correct probe adapter(s) may damage the connector.
+</b></p><h5>Normal Operation — (Without Intelligent Access) 
+</h5><p>When the ignition is turned to the START position, the PCM receives a request to start the engine and supplies voltage to the starter relay coil. The PCM monitors the start request circuit for faults. If voltage is detected on the start
+request circuit and the starter relay is not in an active state, the PCM sets a DTC.
+</p><ul type="disc"><li>DTC P0617:12 (Starter Relay Circuit High: Circuit Short to Battery) — sets when the PCM detects excessive current on the starter relay circuit and the output is not activated.
+</li></ul><h5>Normal Operation — With Intelligent Access (IA) 
+</h5><p>When the start/stop switch is pressed and released along with either the brake pedal (vehicles equipped with automatic transmission) or Clutch Pedal Position (CPP) switch (vehicles equipped
+with manual transmission) input, the Remote Function Actuator (RFA) module receives a request from the Intelligent Access (IA) key to start the
+engine. The 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module then supplies voltage to the starter relay coil. The 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module
+monitors the start request circuit for faults. If voltage is detected on the start request circuit and the starter relay is not in an active state, the 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module sets a
+DTC.
+</p><ul type="disc"><li>DTC P0615:12 (Starter Relay Circuit High: Circuit Short to Battery) — sets when the RFA module detects current output above threshold on the starter relay circuit and the output is not activated.
+</li></ul><ul type="disc"><b>This pinpoint test is intended to diagnose the following: 
+</b>
+
+<li>Wiring, terminals or connectors
+</li><li><span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module
+</li><li>PCM
+</li><li>Starter relay
+</li></ul><a name="C">&nbsp;
+</a><h5>PINPOINT TEST C:  DTCs P0615:12 OR P0617:12 
+</h5><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="C1">&nbsp;
+</a><b>C1 CHECK THE STARTER REQUEST CIRCUIT FOR A SHORT TO VOLTAGE 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Ignition OFF.
+</li><li>Disconnect:   Starter Relay.
+</li><li>Disconnect:   
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module C3503C (vehicles equipped with
+ 
+<span title="Intelligent Access" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IA
+</span>) or PCM C175B (vehicles without 
+<span title="Intelligent Access" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IA
+</span>).
+</li><li>Disconnect:   
+<span title="Audio Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">ACM
+</span> C240A.
+</li><li>Ignition ON.
+</li><li>Measure the voltage between 
+<span title="Battery Junction Box" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BJB
+</span> starter relay cavity 1, circuit CDC54 (WH/GN), harness side and ground.
+</li><br><br><IMG src="SCR_us_en_file%3dN0129579.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="446" width="325" border="0"><li><b>Is any voltage present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REPAIR circuit CDC54 (WH/GN). TEST the system for normal operation. 
+
+<br><br><b>No
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCR36003.HTM_gen_ref.HTM#C2"                                                                                                                                                                                                                                                       >C2
+</a>. 
+</td></tr><tr><td><a name="C2">&nbsp;
+</a><b>C2 CHECK THE STARTER MOTOR RELAY 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Swap the starter relay with a known good relay.
+</li><li>Enter the following diagnostic mode on the scan tool:   Self Test — 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module (vehicles equipped with 
+<span title="Intelligent Access" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IA
+</span>) or PCM
+ (vehicles without 
+<span title="Intelligent Access" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IA
+</span>).
+</li><li><b>Was 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> DTC P0615:12 or PCM DTC P0617:12 retrieved on-demand during self-test?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br><b>For vehicles without 
+<span title="Intelligent Access" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IA
+</span>,
+</b> GO to 
+<a href="SCR_us_en_file%3dSCR36003.HTM_gen_ref.HTM#C3"                                                                                                                                                                                                                                                       >C3
+</a>. 
+
+<br><br><b>For vehicles with 
+<span title="Intelligent Access" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IA
+</span>,
+</b> GO to 
+<a href="SCR_us_en_file%3dSCR36003.HTM_gen_ref.HTM#C4"                                                                                                                                                                                                                                                       >C4
+</a>. 
+
+<br><br><b>No
+</b><br>INSTALL a new starter relay. TEST the system for normal operation. 
+</td></tr><tr><td><a name="C3">&nbsp;
+</a><b>C3 CHECK FOR CORRECT PCM OPERATION 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Ignition OFF.
+</li><li>Disconnect all PCM connectors.
+</li><li>Check the connectors for:
+</li><ul type="square"><li>corrosion
+</li></ul><ul type="square"><li>damaged pins
+</li></ul><ul type="square"><li>pushed-out pins
+</li></ul><li>Connect all PCM connectors and make sure they seat correctly.
+</li><li>Operate the system and verify the concern is still present.
+</li><li><b>Is the concern still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new PCM. REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRS3E0L.HTM%26rightside%3dSCRS3E0R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 303-14
+</a>. TEST the system for normal operation. 
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector. 
+</td></tr><tr><td><a name="C4">&nbsp;
+</a><b>C4 CHECK FOR CORRECT 
+<span title="REMOTE FUNCTION ACTUATOR" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> MODULE OPERATION 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Ignition OFF.
+</li><li>Disconnect all 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module connectors.
+</li><li>Check the connectors for:
+</li><ul type="square"><li>corrosion
+</li></ul><ul type="square"><li>damaged pins
+</li></ul><ul type="square"><li>pushed-out pins
+</li></ul><li>Connect all 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module connectors and make sure they seat correctly.
+</li><li>Operate the system and verify the concern is still present.
+</li><li><b>Is the concern still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module. REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSJA0L.HTM%26rightside%3dSCRSJA0R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 419-10
+</a>. TEST the system for normal operation. 
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector. 
+</td></tr></table><a name="PS2-D">&nbsp;
+</a><p><b>Pinpoint Test D: DTC P1572:62
+</b></p><p><p>Refer to Wiring Diagrams Cell 
+<a target="_parent" href="SCR_us_en_book%3dECR%26cell%3d020%26page%3d%26year%3d%26vehicle%3d2012%20Fiesta%26market%3dUS%26lang%3dEN%26RTYPE%3dDIAGRAM%26lega"                                                                                                                                                                                                                                                               >20
+</a>, Starting System for schematic and connector information.
+</p></p><h5>Normal Operation 
+</h5><p>The 
+<span title="Instrument Panel Cluster" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IPC
+</span> sends a 
+<span title="Medium Speed Controller Area Network" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">MS-CAN
+</span> message to the
+
+<span title="Powertrain Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PCM
+</span> concerning the brake switch status sensed by the 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span>. If the
+
+<span title="Medium Speed Controller Area Network" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">MS-CAN
+</span> message input does not match the 
+<span title="Powertrain Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PCM
+</span> brake input message a DTC is set.
+</p><ul type="disc"><li>DTC P1571:62 (Brake Switch: SignalCompare Failure) — sets when the brake switch input to the 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module indicates the brake pedal is pressed but the
+Medium Speed Controller Area Network (MS-CAN) message transmitted by the Instrument Panel Cluster (IPC) module indicates the brake pedal is not
+pressed.
+</li></ul><ul type="disc"><b>This pinpoint test is intended to diagnose the following: 
+</b>
+
+<li>Wiring, terminals or connectors
+</li><li>Cruise Control Deactivator Switch
+</li><li><span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module
+</li></ul><a name="D">&nbsp;
+</a><h5>PINPOINT TEST D:  DTC P1571:62
+</h5>
+
+<p><b><i>NOTICE: 
+</i> Use the correct probe adapter(s) when making measurements. Failure to use the correct probe adapter(s) may damage the connector.
+</b></p><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="D1">&nbsp;
+</a><b>D1 CHECK FOR COMMUNICATION WITH THE SCAN TOOL 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Refer to Inspection and Verification in 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSI00L.HTM%26rightside%3dSCRSI00R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 418-00
+</a>, and follow the procedure to establish a session with the vehicle.
+</li><li><b>Does the PCM pass the network test?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCR36003.HTM_gen_ref.HTM#D2"                                                                                                                                                                                                                                                       >D2
+</a>. 
+
+<br><br><b>No
+</b><br>REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSI00L.HTM%26rightside%3dSCRSI00R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 418-00
+</a> to diagnose no communication with the PCM. 
+</td></tr><tr><td><a name="D2">&nbsp;
+</a><b>D2 CHECK THE PCM MODULE BRAKE SWITCH (BOO) PID 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Enter the following diagnostic mode on the scan tool:   DataLogger —
+<span title="Powertrain Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PCM
+</span>.
+</li><li>While observing the BOO PID, apply the brake pedal.
+</li><li><b>Does the PID change from OFF to ON?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCR36003.HTM_gen_ref.HTM#D3"                                                                                                                                                                                                                                                       >D3
+</a>. 
+
+<br><br><b>No
+</b><br>REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSJ30L.HTM%26rightside%3dSCRSJ30R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 419-03
+</a> , PPT B, to diagnose brake switch concern.
+</td></tr><tr><td><a name="D3">&nbsp;
+</a><b>D3 CHECK THE CRUISE CONTROL DEACTIVATOR SWITCH FOR AN OPEN
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Ignition OFF.
+</li><li>Disconnect:   Cruise Control Deactivator Switch C278.
+</li><li>Inspect both ends of the connector for damage, pushed-out pins, corrosion, loose wires and missing or damaged seals.
+</li><li>Ignition ON.
+</li><li>Enter the following diagnostic mode on the scan tool:   DataLogger — 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module.
+</li><li>CONNECT and remove a fused jumper wire between the cruise control deactivator switch C278-2, circuit CCA29 (GN/BU), harness side and the cruise control deactivator switch C278-1,
+circuit GD187 (BK/GN), harness side, while monitoring the 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> BRAKE_SW PID.
+</li><br><br><IMG src="SCR_us_en_file%3dN0116083.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="211" width="325" border="0"><li><b>Does the PID status change?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br> INSTALL a new cruise control deactivator switch. REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSJ30L.HTM%26rightside%3dSCRSJ30R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 419-03
+</a>. TEST the system for normal operation.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCR36003.HTM_gen_ref.HTM#D4"                                                                                                                                                                                                                                                       >D4
+</a>. 
+</td></tr><tr><td><a name="D4">&nbsp;
+</a><b>D4 CHECK THE CRUISE CONTROL DEACTIVATOR SWITCH GROUND CIRCUIT FOR AN OPEN
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Ignition OFF.
+</li><li>Measure the resistance between cruise control deactivator switch C278-1, circuit GD187 (BK/GN) and ground.
+</li><br><br><IMG src="SCR_us_en_file%3dN0117050.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="211" width="325" border="0"><li><b>Is the resistance less than 5 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCR36003.HTM_gen_ref.HTM#D5"                                                                                                                                                                                                                                                       >D5
+</a>. 
+
+<br><br><b>No
+</b><br>REPAIR circuit GD187 (BK/GN). TEST the system for normal operation. 
+</td></tr><tr><td><a name="D5">&nbsp;
+</a><b>D5 CHECK THE INPUT CIRCUIT TO THE RFA FOR AN OPEN
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect:   
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> C3503B.
+</li><li>Inspect both ends of the connector for damage, pushed-out pins, corrosion, loose wires and missing or damaged seals.
+</li><li>Measure the resistance between 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module C3503B-21, circuit CCA29 (GN/BU) harness side and cruise control deactivator switch
+C278-2, circuit CCA29 (GN/BU), harness side.
+</li><br><br><IMG src="SCR_us_en_file%3dN0140659.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="211" width="325" border="0"><li><b>Is the resistance less than 0.5 ohm?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCR36003.HTM_gen_ref.HTM#D6"                                                                                                                                                                                                                                                       >D6
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR circuit CCA29 (GN/BU). TEST the system for normal operation.
+</td></tr><tr><td><a name="D6">&nbsp;
+</a><b>D6 CHECK THE 
+<span title="INSTRUMENT PANEL CLUSTER" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IPC
+</span> MODULE INPUT CIRCUIT FOR AN OPEN
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect:   
+<span title="Instrument Panel Cluster" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IPC
+</span> C220.
+</li><li>Inspect both ends of the connector for damage, pushed-out pins, corrosion, loose wires and missing or damaged seals.
+</li><li>Measure the resistance between 
+<span title="Instrument Panel Cluster" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IPC
+</span> module C220-29, circuit CCA29 (GN/BU) harness side and cruise control deactivator
+switchC278-2, circuit CCA29 (GN/BU), harness side.
+</li><br><br><IMG src="SCR_us_en_file%3dN0116085.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="211" width="325" border="0"><li><b>Is the resistance less than 0.5 ohm?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCR36003.HTM_gen_ref.HTM#D7"                                                                                                                                                                                                                                                       >D7
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR circuit CCA29 (GN/BU). TEST the system for normal operation.
+</td></tr><tr><td><a name="D7">&nbsp;
+</a><b>D7 CHECK FOR CORRECT 
+<span title="REMOTE FUNCTION ACTUATOR" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> MODULE OPERATION 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect all the 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module connectors.
+</li><li>Inspect both ends of the connectors for damage, pushed-out pins, corrosion, loose wires and missing or damaged seals.
+</li><li>Connect all the 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module connectors and make sure they seat correctly.
+</li><li>Connect the 
+<span title="Instrument Panel Cluster" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IPC
+</span> module connector and make sure the connector seat correctly.
+</li><li>Connect the cruise control deactivator switch connector and make sure the connector seat correctly.
+</li><li>Operate the system and verify the concern is still present.
+</li><li><b>Is the concern still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new RFA module. REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSJA0L.HTM%26rightside%3dSCRSJA0R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 419-10
+</a>. TEST the system for normal operation
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector.
+</td></tr></table><a name="PS2-E">&nbsp;
+</a><p><b>Pinpoint Test E: Unusual Starter Noise
+</b></p><p><p>Refer to Wiring Diagrams Cell 
+<a target="_parent" href="SCR_us_en_book%3dECR%26cell%3d020%26page%3d%26year%3d%26vehicle%3d2012%20Fiesta%26market%3dUS%26lang%3dEN%26RTYPE%3dDIAGRAM%26lega"                                                                                                                                                                                                                                                               >20
+</a>, Starting System for schematic and connector information.
+</p></p><h5>Normal Operation 
+</h5><p>Correct starter operation relies on correct mounting of the starter to the engine, alignment of the starter ring gear to the flywheel or flexplate and correct functioning of the starter assembly (internal gears, bearings).
+</p><ul type="disc"><b>This pinpoint test is intended to diagnose the following: 
+</b>
+
+<li>Starter motor
+</li><li>Starter motor mounting
+</li><li>Starter motor engagement
+</li><li>Flywheel or flexplate ring gear
+</li></ul><a name="E">&nbsp;
+</a><h5>PINPOINT TEST E: UNUSUAL STARTER NOISE 
+</h5><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="E1">&nbsp;
+</a><b>E1 CHECK THE STARTER MOTOR MOUNTING 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Inspect the starter motor mounting bolts for looseness.
+</li><li><b>Is the starter motor mounted correctly?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCR36003.HTM_gen_ref.HTM#E2"                                                                                                                                                                                                                                                       >E2
+</a>. 
+
+<br><br><b>No
+</b><br>INSTALL the starter motor correctly. REFER to 
+<a href="SCR_us_en_file%3dSCR36004.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       >Starter Motor
+</a> in this section. 
+</td></tr><tr><td><a name="E2">&nbsp;
+</a><b>E2 CHECK FOR ENGINE NOISE 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Ignition OFF.
+</li><li>Connect a remote starter switch between the starter solenoid "B" and "S" terminals.
+</li><br><br><IMG src="SCR_us_en_file%3dAJ0286A.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="211" width="325" border="0"><li>Engage the starter motor and verify the noise is due to the starter operation.
+</li><li><b>Is the noise due to the starter motor engagement?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCR36003.HTM_gen_ref.HTM#E3"                                                                                                                                                                                                                                                       >E3
+</a>. 
+
+<br><br><b>No
+</b><br>REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRS300L.HTM%26rightside%3dSCRS300R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 303-00
+</a> to continue the diagnosis. 
+</td></tr><tr><td><a name="E3">&nbsp;
+</a><b>E3 CHECK FOR UNUSUAL WEAR 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Remove the starter motor. Refer to 
+<a href="SCR_us_en_file%3dSCR36004.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       >Starter Motor
+</a> in this section.
+</li><li>Inspect the ring gear for damaged or worn teeth.
+</li><li><b>Is the noise due to ring gear tooth damage?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new flexplate/flywheel ring gear. EXAMINE the starter pinion teeth. If damaged, INSTALL a new starter motor. REFER to 
+<a href="SCR_us_en_file%3dSCR36004.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       >Starter Motor
+</a> in this section. TEST the system for normal operation. 
+
+<br><br><b>No
+</b><br>INSTALL a new starter motor. REFER to 
+<a href="SCR_us_en_file%3dSCR36004.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       >Starter Motor
+</a> in this section. 
+</td></tr></table><div><a name="extract_239">&nbsp;
+</a></div>
+
+<p><b>Component Tests
+</b></p><p><b><IMG src="SCR_us_en_file%3dani_caut.gif_gen_ref.gif"                                                                                                                                                                                                                                                        border="0">&nbsp;WARNING:  Always disconnect the battery ground cable at the battery before disconnecting the starter motor battery terminal lead. If a tool is shorted at the starter motor battery terminal, the tool can quickly heat enough to cause a skin burn. Failure to follow this instruction may result in serious personal injury.
+</b></p><p>Always make the Fluke 77-IV Digital Multimeter connections at the component terminal rather than at the wiring end connector. Making a connection at the wiring end connector could result in false readings because the meter will not pick up a
+high resistance between the wiring connector and the component.
+</p><div><a name="extract_240">&nbsp;
+</a></div>
+
+<p><b>Starter Motor — Feed Circuit Test
+</b></p><ol start="1"><li>Make sure the battery is fully charged. Carry out the battery condition test. Refer to Diagnosis and Testing in 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSE10L.HTM%26rightside%3dSCRSE10R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 414-01
+</a>.
+</li></ol><ol start="2"><li>Connect a remote starter switch between the starter solenoid "S" terminal and the battery positive (+) terminal.
+</li></ol><ol start="3"><li>Connect the Fluke 77-IV Digital Multimeter positive lead to the battery positive (+) post. Connect the negative lead to the "M" terminal.
+</li></ol><IMG src="SCR_us_en_file%3dN0043041.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="211" width="325" border="1"><ol start="4"><li>Engage the remote starter switch. Read and record the voltage. The voltage reading should be 0.5 volt or less.
+</li></ol><ol start="5"><li>If the voltage reading is 0.5 volt or less, go to the Starter Motor — Ground Circuit Component Test.
+</li></ol><ol start="6"><li>If the voltage reading is greater than 0.5 volt, this is an indication of excessive resistance in the connections, the positive battery cable or in the starter solenoid. Move the Fluke 77-IV Digital Multimeter negative lead to the
+starter solenoid "B" terminal and repeat the test. If the voltage reading at the "B" terminal is lower than 0.5 volt, the concern is either in the connections at the starter solenoid or in the solenoid contacts.
+</li></ol><ol start="7"><li>Remove the cables from solenoid "B", "S" and "M" terminals. Clean the cables and connections and reinstall the cables to the correct terminals. Repeat Steps 3 through 6. If the voltage drop reading is still greater than 0.5 volt when checked
+at the "M" terminal and less than 0.5 volt when checked at the "B" terminal, the concern is in the solenoid contacts. Install a new starter motor.
+</li></ol><ol start="8"><li>If the voltage reading taken at the solenoid "B" terminal is still greater than 0.5 volt after cleaning the cables and the connections at the solenoid, the concern is either in the positive (+) battery cable connection or in the positive
+battery cable itself. Clean the positive (+) battery cable connection. If this does not solve the problem, install a new positive battery cable. Refer to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSE10L.HTM%26rightside%3dSCRSE10R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 414-01
+</a>.
+</li></ol><div><a name="extract_241">&nbsp;
+</a></div>
+
+<p><b>Starter Motor — Ground Circuit Test
+</b></p><p>A no or slow crank condition can be caused by excessive resistance in the ground or return portion of the cranking circuit. Check the voltage drop in the ground circuit as follows:
+</p><ol start="1"><li>Connect the Fluke 77-IV Digital Multimeter positive lead to the starter motor housing (make sure the connection is clean and free of rust or grease). Connect the negative lead to the negative (-) battery terminal.
+</li></ol><IMG src="SCR_us_en_file%3dN0043042.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="211" width="325" border="1"><ol start="2"><li>Engage the remote starter switch and crank the engine. Read and record the voltage reading. The reading should be 0.5 volt or less.
+</li></ol><ol start="3"><li>If the voltage is greater than 0.5 volt, clean the negative cable connections at the battery, the body ground connections and the starter ground connections. Retest.
+</li></ol><ol start="4"><li>If the voltage is greater than 0.5 volt, install a new negative battery cable. If the voltage reading is less than 0.5 volt and the engine still does not crank or cranks slowly, install a new starter motor.
+</li></ol><br><hr><P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+
+</body>
+<!-- Mirrored from file:///C:/Documents and Settings/Administrator/Desktop/FORD/Ford Fiesta 2012/SCR~us~en~file=SCR36003.HTM~gen~ref.HTM by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 04 Mar 2025 14:53:59 GMT -->
+</html>

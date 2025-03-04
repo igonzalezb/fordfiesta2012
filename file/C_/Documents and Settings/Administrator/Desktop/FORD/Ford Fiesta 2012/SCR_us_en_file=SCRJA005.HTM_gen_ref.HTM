@@ -1,0 +1,1771 @@
+<html>
+<!-- Mirrored from file:///C:/Documents and Settings/Administrator/Desktop/FORD/Ford Fiesta 2012/SCR~us~en~file=SCRJA005.HTM~gen~ref.HTM by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 04 Mar 2025 14:53:48 GMT -->
+<head><META http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>2012 Fiesta Workshop Manual
+
+</title><LINK rel="stylesheet" type="text/css" href="SCR_us_en_file%3dSCRSTYLE.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       ><meta name="tps_translationdatetime" content="06/09/2012 16:28:18"><meta name="tps_type" content="workshop"><meta name="tps_bookcode" content="SCR"><meta name="tps_market" content="US"><meta name="tps_language" content="EN"><meta name="tps_year" content="2012"><meta name="tps_modelname" content="Fiesta"><meta name="tps_system" content="4"><meta name="tps_group" content="19"><meta name="tps_section" content="10"><meta name="tps_section_title" content="Multifunction Electronic Modules"><meta name="tps_ss_title" content="DIAGNOSIS AND TESTING"><meta name="tps_procid" content="s4p705404q0"><meta name="tps_procsgmlid" content="n1235341"><meta name="tps_packetinfo" content="690963"><meta name="tps_effectivity" content="2011,FIESTA,19-100"><meta name="tps_effectivity" content="2012,FIESTA,19-100"><meta name="tps_effectivity" content="2013,FIESTA,19-100"></head><body><TABLE width="95%"><TR><TD><div class="bookinfo">SECTION 419-10:  Multifunction Electronic Modules
+</DIV></TD><TD align="RIGHT"><div class="bookinfo">2012 Fiesta Workshop Manual
+</DIV></TD></TR><TR><TD><div class="bookinfo">DIAGNOSIS AND TESTING
+</div></TD><TD align="RIGHT"><div class="bookinfosmall">Procedure revision date:  07/15/2011
+</div></TD></TR></TABLE><hr><h4>Remote Function Actuator (RFA) Module
+</h4><meta name="tps_proctitle" content="Remote Function Actuator (RFA) Module">
+
+<br><table border="1" cellpadding="3" cellspacing="0" width="50%"><caption>Special Tool(s)
+</caption><tr valign="top"><td><IMG src="SCR_us_en_file%3dST3093A.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="99" width="99" border="0"></td><td>Fluke 77-IV Digital Multimeter
+<br>FLU77-4 or equivalent
+</td></tr><tr valign="top"><td><IMG src="SCR_us_en_file%3dST2834A.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="99" width="99" border="0"></td><td>Vehicle Communication Module (VCM) and Integrated Diagnostic System (IDS) software with appropriate hardware, or equivalent scan tool
+<br></td></tr><tr valign="top"><td><IMG src="SCR_us_en_file%3dST2574A.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="99" width="99" border="0"></td><td>Flex Probe Kit
+<br>NUD105-R025D or equivalent
+</td></tr></table><div><a name="extract_587">&nbsp;
+</a></div>
+
+<p><b>Principles of Operation
+</b></p><p>The Remote Function Actuator (RFA) module is only on vehicles equipped with the Intelligent Access (IA) feature. On vehicles equipped
+with this option, the 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> controls the 
+<span title="Intelligent Access" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IA
+</span> and related entry/anti-theft systems (such as the power
+door locks and luggage compartment/liftgate release). The 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module communicates on
+the High Speed Controller Area Network (HS-CAN) and the Medium Speed Controller Area Network (MS-CAN).
+The 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module controls the following functions:
+</p><ul type="disc"><li><span title="Intelligent Access" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IA
+</span> feature
+</li><li>Ignition states
+</li><li>Passive Anti-Theft System (PATS)
+</li><li>Remote Keyless Entry (RKE) system
+</li></ul><div><a name="extract_588">&nbsp;
+</a></div>
+
+<p><b>Inspection and Verification
+</b></p><ol start="1"><li>Verify the customer concern.
+</li></ol><ol start="2"><li>Visually inspect for obvious signs of electrical damage.
+</li></ol><br><br><P class="SINGLESPACE"><B>&nbsp; 
+
+Visual Inspection Chart 
+</B></P><TABLE cellspacing="0" cellpadding="3" border="1"><TR><TH valign="bottom" align="center">Electrical
+</TH></TR><TR><TD valign="top" align="left"><ul type="disc"><li>Wiring, terminals or connectors
+</li></ul></TD></TR></TABLE><br><ol start="3"><li>If an obvious cause for an observed or reported concern is found, correct the cause (if possible) before proceeding to the next step.
+</li></ol><ol start="4"><li><p><b>NOTE: 
+</b> Make sure to use the latest scan tool software release.
+</p>If the cause is not visually evident, connect the scan tool to the Data Link Connector (DLC).
+</li></ol><ol start="5"><li><p><b>NOTE: 
+</b> The Vehicle Communication Module (VCM) prove-out confirms power and ground from the 
+<span title="Data Link Connector" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">DLC
+</span> are provided to the
+
+<span title="Vehicle Communication Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">VCM
+</span>.
+</p>If the scan tool does not communicate with the 
+<span title="Vehicle Communication Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">VCM
+</span>:
+
+<ul type="disc"><li>check the 
+<span title="Vehicle Communication Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">VCM
+</span> connection to the vehicle.
+</li></ul><ul type="disc"><li>check the scan tool connection to the 
+<span title="Vehicle Communication Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">VCM
+</span>.
+</li></ul><ul type="disc"><li>refer to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSI00L.HTM%26rightside%3dSCRSI00R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 418-00
+</a>, No Power To The Scan Tool, to diagnose no power to the scan tool.
+</li></ul></li></ol><ol start="6"><li>If the scan tool does not communicate with the vehicle:
+
+<ul type="disc"><li>verify the ignition is in the ON state.
+
+<ul type="square"> 
+<li>The air bag warning indicator prove-out confirms ignition ON (other indicators may NOT prove ignition is in the ON state). If ignition does not change to the ON state, refer
+to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSB50L.HTM%26rightside%3dSCRSB50R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 211-05
+</a> to diagnose no power in RUN.
+</li></ul></li></ul><ul type="disc"><li>verify the scan tool operation with a known good vehicle.
+</li></ul><ul type="disc"><li>refer to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSI00L.HTM%26rightside%3dSCRSI00R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 418-00
+</a>, Inspection and Verification to establish a scan tool session.
+</li></ul></li></ol><ol start="7"><li>Carry out the network test.
+
+<ul type="disc"><li>If the scan tool responds with no communication for one or more modules, refer to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSI00L.HTM%26rightside%3dSCRSI00R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 418-00
+</a>.
+</li></ul><ul type="disc"><li>If the network test passes, retrieve and record the continuous memory DTCs.
+</li></ul></li></ol><ol start="8"><li>Clear the continuous DTCs and carry out the self-test diagnostics for the Remote Function Actuator (RFA) module.
+</li></ol><ol start="9"><li>If the DTCs retrieved are related to the concern, go to the Remote Function Actuator (RFA) Module DTC Chart.
+</li></ol><ol start="10"><li>If no DTCs related to the concern are retrieved, GO to 
+<a href="SCR_us_en_file%3dSCRJA005.HTM_gen_ref.HTM#RFA"                                                                                                                                                                                                                                                       >Symptom Chart
+</a>.
+</li></ol><div><a name="extract_589">&nbsp;
+</a></div>
+
+<p><b>DTC Charts
+</b></p><P class="SINGLESPACE"><B>&nbsp;Remote Function Actuator (RFA) Module DTC Chart 
+</B></P>
+
+<p><b>NOTE: 
+</b> Refer to Description and Operation, Intelligent Access (IA) with Push Button Start in 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSJ1BL.HTM%26rightside%3dSCRSJ1BR.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 419-01B
+</a> to review the
+procedures for achieving the various ignition states (ignition off, ignition on, ignition start) on vehicles with this feature.
+</p><TABLE cellspacing="0" cellpadding="3" border="1"><TR><TH valign="bottom" align="center">DTC
+</TH><TH valign="bottom" align="center">Description
+</TH><TH valign="bottom" align="center">Action
+</TH></TR><TR><TD valign="top" align="center">B102B:05
+</TD><TD valign="top" align="left">Passive Key: System Programming Failure
+</TD><TD valign="top" align="left">REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSJ1BL.HTM%26rightside%3dSCRSJ1BR.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 419-01B
+</a>.
+</TD></TR><TR><TD valign="top" align="center">B108B:23
+</TD><TD valign="top" align="left">Start Button Circuit "A": Signal Stuck Low
+</TD><TD valign="top" align="left">REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSB50L.HTM%26rightside%3dSCRSB50R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 211-05
+</a>.
+</TD></TR><TR><TD valign="top" align="center">B108B:29
+</TD><TD valign="top" align="left">Start Button Circuit "A": Signal Invalid
+</TD><TD valign="top" align="left">REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSB50L.HTM%26rightside%3dSCRSB50R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 211-05
+</a>.
+</TD></TR><TR><TD valign="top" align="center">B108C:23
+</TD><TD valign="top" align="left">Start Button Circuit "B": Signal Stuck Low
+</TD><TD valign="top" align="left">REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSB50L.HTM%26rightside%3dSCRSB50R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 211-05
+</a>.
+</TD></TR><TR><TD valign="top" align="center">B10C6:1F
+</TD><TD valign="top" align="left">Exterior Trunk Antenna: Circuit Intermittent
+</TD><TD valign="top" align="left">REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRS1E0L.HTM%26rightside%3dSCRS1E0R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 501-14
+</a>.
+</TD></TR><TR><TD valign="top" align="center">B10C7:1F
+</TD><TD valign="top" align="left">Interior Trunk Antenna: Circuit Intermittent
+</TD><TD valign="top" align="left">REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSJ1BL.HTM%26rightside%3dSCRSJ1BR.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 419-01B
+</a>.
+</TD></TR><TR><TD valign="top" align="center">B10C8:1F
+</TD><TD valign="top" align="left">Interior Centre Antenna: Circuit Intermittent
+</TD><TD valign="top" align="left">REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSJ1BL.HTM%26rightside%3dSCRSJ1BR.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 419-01B
+</a>.
+</TD></TR><TR><TD valign="top" align="center">B10C9:1F
+</TD><TD valign="top" align="left">Interior Front Antenna: Circuit Intermittent
+</TD><TD valign="top" align="left">REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSJ1BL.HTM%26rightside%3dSCRSJ1BR.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 419-01B
+</a>.
+</TD></TR><TR><TD valign="top" align="center">B10D1:24
+</TD><TD valign="top" align="left">Left Front Lock Button: Signal Stuck High
+</TD><TD valign="top" align="left">REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRS1E0L.HTM%26rightside%3dSCRS1E0R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 501-14
+</a>.
+</TD></TR><TR><TD valign="top" align="center">B10D3:24
+</TD><TD valign="top" align="left">Right Front Lock Button: Signal Stuck High
+</TD><TD valign="top" align="left">REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRS1E0L.HTM%26rightside%3dSCRS1E0R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 501-14
+</a>.
+</TD></TR><TR><TD valign="top" align="center">B10D5:13
+</TD><TD valign="top" align="left">PATS Antenna: Circuit Open
+</TD><TD valign="top" align="left">REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSJ1BL.HTM%26rightside%3dSCRSJ1BR.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 419-01B
+</a>.
+</TD></TR><TR><TD valign="top" align="center">B10D6:62
+</TD><TD valign="top" align="left">PATS Enable Status: Signal Compare Failure
+</TD><TD valign="top" align="left">REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSJ1BL.HTM%26rightside%3dSCRSJ1BR.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 419-01B
+</a>.
+</TD></TR><TR><TD valign="top" align="center">B10D7:05
+</TD><TD valign="top" align="left">PATS Key: System Programming Failure
+</TD><TD valign="top" align="left">REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSJ1BL.HTM%26rightside%3dSCRSJ1BR.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 419-01B
+</a>.
+</TD></TR><TR><TD valign="top" align="center">B10D7:51
+</TD><TD valign="top" align="left">PATS Key: Not Programmed
+</TD><TD valign="top" align="left">REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSJ1BL.HTM%26rightside%3dSCRSJ1BR.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 419-01B
+</a>.
+</TD></TR><TR><TD valign="top" align="center">B10D7:81
+</TD><TD valign="top" align="left">PATS Key: Invalid Serial Data Received
+</TD><TD valign="top" align="left">REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSJ1BL.HTM%26rightside%3dSCRSJ1BR.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 419-01B
+</a>.
+</TD></TR><TR><TD valign="top" align="center">B10D8:00
+</TD><TD valign="top" align="left">PATS Key Less Than Minimum Programmed: No Sub Type Information
+</TD><TD valign="top" align="left">REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSJ1BL.HTM%26rightside%3dSCRSJ1BR.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 419-01B
+</a>.
+</TD></TR><TR><TD valign="top" align="center">B10D9:87
+</TD><TD valign="top" align="left">PATS Transponder: Missing Message
+</TD><TD valign="top" align="left">REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSJ1BL.HTM%26rightside%3dSCRSJ1BR.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 419-01B
+</a>.
+</TD></TR><TR><TD valign="top" align="center">B10DA:51
+</TD><TD valign="top" align="left">PATS Target Identifier: Not Programmed
+</TD><TD valign="top" align="left">REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSJ1BL.HTM%26rightside%3dSCRSJ1BR.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 419-01B
+</a>.
+</TD></TR><TR><TD valign="top" align="center">B10DA:62
+</TD><TD valign="top" align="left">PATS Target Identifier: Signal Compare Failure
+</TD><TD valign="top" align="left">REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSJ1BL.HTM%26rightside%3dSCRSJ1BR.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 419-01B
+</a>.
+</TD></TR><TR><TD valign="top" align="center">B10E6:11
+</TD><TD valign="top" align="left">PATS Power Supply: Circuit Short To Ground
+</TD><TD valign="top" align="left">REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSJ1BL.HTM%26rightside%3dSCRSJ1BR.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 419-01B
+</a>.
+</TD></TR><TR><TD valign="top" align="center">B10E6:12
+</TD><TD valign="top" align="left">PATS Power Supply: Circuit Short To Battery
+</TD><TD valign="top" align="left">REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSJ1BL.HTM%26rightside%3dSCRSJ1BR.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 419-01B
+</a>.
+</TD></TR><TR><TD valign="top" align="center">B10E7:11
+</TD><TD valign="top" align="left">Ignition On Relay: Circuit Short To Ground
+</TD><TD valign="top" align="left">REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSB50L.HTM%26rightside%3dSCRSB50R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 211-05
+</a>.
+</TD></TR><TR><TD valign="top" align="center">B10E7:12
+</TD><TD valign="top" align="left">Ignition On Relay: Circuit Short To Battery
+</TD><TD valign="top" align="left">REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSB50L.HTM%26rightside%3dSCRSB50R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 211-05
+</a>.
+</TD></TR><TR><TD valign="top" align="center">B10E7:16
+</TD><TD valign="top" align="left">Ignition On Relay: Circuit Voltage Below Threshold
+</TD><TD valign="top" align="left">REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSB50L.HTM%26rightside%3dSCRSB50R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 211-05
+</a>.
+</TD></TR><TR><TD valign="top" align="center">B10E7:17
+</TD><TD valign="top" align="left">Ignition On Relay: Circuit Voltage Above Threshold
+</TD><TD valign="top" align="left">REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSB50L.HTM%26rightside%3dSCRSB50R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 211-05
+</a>.
+</TD></TR><TR><TD valign="top" align="center">B113E:24
+</TD><TD valign="top" align="left">External Boot/Trunk Release Switch: Signal Stuck High
+</TD><TD valign="top" align="left">REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRS1E0L.HTM%26rightside%3dSCRS1E0R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 501-14
+</a>.
+</TD></TR><TR><TD valign="top" align="center">B11FD:1F
+</TD><TD valign="top" align="left">Left Front Exterior Antenna: Circuit Intermittent
+</TD><TD valign="top" align="left">REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRS1E0L.HTM%26rightside%3dSCRS1E0R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 501-14
+</a>.
+</TD></TR><TR><TD valign="top" align="center">B1210:1F
+</TD><TD valign="top" align="left">Right Front Exterior Antenna: Circuit Intermittent
+</TD><TD valign="top" align="left">REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRS1E0L.HTM%26rightside%3dSCRS1E0R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 501-14
+</a>.
+</TD></TR><TR><TD valign="top" align="center">P0560:16
+</TD><TD valign="top" align="left">System Voltage: Circuit Voltage Below Threshold
+</TD><TD valign="top" align="left">REFER to 
+<a href="SCR_us_en_file%3dSCRJA005.HTM_gen_ref.HTM#PS2-H"                                                                                                                                                                                                                                                       >GO to Pinpoint Test H
+</a>.
+</TD></TR><TR><TD valign="top" align="center">P0560:17
+</TD><TD valign="top" align="left">System Voltage: Circuit Voltage Above Threshold
+</TD><TD valign="top" align="left">REFER to 
+<a href="SCR_us_en_file%3dSCRJA005.HTM_gen_ref.HTM#PS2-I"                                                                                                                                                                                                                                                       >GO to Pinpoint Test I
+</a>.
+</TD></TR><TR><TD valign="top" align="center">P0615:12
+</TD><TD valign="top" align="left">Starter Relay Circuit: Circuit Short To Battery
+</TD><TD valign="top" align="left">REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRS360L.HTM%26rightside%3dSCRS360R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 303-06
+</a>.
+</TD></TR><TR><TD valign="top" align="center">P081C:62
+</TD><TD valign="top" align="left">Park Input Circuit: Signal Compare Failure
+</TD><TD valign="top" align="left">REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSD10L.HTM%26rightside%3dSCRSD10R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 413-01
+</a>.
+</TD></TR><TR><TD valign="top" align="center">P1571:62
+</TD><TD valign="top" align="left">Brake Switch: Signal Compare Failure
+</TD><TD valign="top" align="left">REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRS360L.HTM%26rightside%3dSCRS360R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 303-06
+</a>.
+</TD></TR><TR><TD valign="top" align="center">P1708:62
+</TD><TD valign="top" align="left">Clutch Switch Circuit: Signal Compare Failure
+</TD><TD valign="top" align="left">REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRS360L.HTM%26rightside%3dSCRS360R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 303-06
+</a>.
+</TD></TR><TR><TD valign="top" align="center">U0001:00
+</TD><TD valign="top" align="left">High Speed CAN Communication Bus: No Sub Type Information
+</TD><TD valign="top" align="left">REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSI00L.HTM%26rightside%3dSCRSI00R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 418-00
+</a>.
+</TD></TR><TR><TD valign="top" align="center">U0010:00
+</TD><TD valign="top" align="left">Medium Speed CAN communication Bus: No Sub Type Information
+</TD><TD valign="top" align="left">REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSI00L.HTM%26rightside%3dSCRSI00R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 418-00
+</a>.
+</TD></TR><TR><TD valign="top" align="center">U0100:00
+</TD><TD valign="top" align="left">Lost Communication With ECM/PCM "A": No Sub Type Information
+</TD><TD valign="top" align="left">REFER to 
+<a href="SCR_us_en_file%3dSCRJA005.HTM_gen_ref.HTM#PS2-J"                                                                                                                                                                                                                                                       >GO to Pinpoint Test J
+</a>.
+</TD></TR><TR><TD valign="top" align="center">U0100:87
+</TD><TD valign="top" align="left">Lost Communication With ECM/PCM "A": Missing Message
+</TD><TD valign="top" align="left">REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSJ1BL.HTM%26rightside%3dSCRSJ1BR.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 419-01B
+</a>.
+</TD></TR><TR><TD valign="top" align="center">U0101:00
+</TD><TD valign="top" align="left">Lost Communication with TCM: No Sub Type Information
+</TD><TD valign="top" align="left">REFER to 
+<a href="SCR_us_en_file%3dSCRJA005.HTM_gen_ref.HTM#PS2-K"                                                                                                                                                                                                                                                       >GO to Pinpoint Test K
+</a>.
+</TD></TR><TR><TD valign="top" align="center">U0121:00
+</TD><TD valign="top" align="left">Lost Communication With Anti-Lock Brake System (ABS) Control Module: No Sub Type Information
+</TD><TD valign="top" align="left">REFER to 
+<a href="SCR_us_en_file%3dSCRJA005.HTM_gen_ref.HTM#PS2-L"                                                                                                                                                                                                                                                       >GO to Pinpoint Test L
+</a>.
+</TD></TR><TR><TD valign="top" align="center">U0140:00
+</TD><TD valign="top" align="left">Lost Communication With Body Control Module: No Sub Type Information
+</TD><TD valign="top" align="left">REFER to 
+<a href="SCR_us_en_file%3dSCRJA005.HTM_gen_ref.HTM#PS2-M"                                                                                                                                                                                                                                                       >GO to Pinpoint Test M
+</a>.
+</TD></TR><TR><TD valign="top" align="center">U0155:00
+</TD><TD valign="top" align="left">Lost Communication With Instrument Panel Cluster (IPC) Control Module: No Sub Type Information
+</TD><TD valign="top" align="left">REFER to 
+<a href="SCR_us_en_file%3dSCRJA005.HTM_gen_ref.HTM#PS2-N"                                                                                                                                                                                                                                                       >GO to Pinpoint Test N
+</a>.
+</TD></TR><TR><TD valign="top" align="center">U0300:05
+</TD><TD valign="top" align="left">Internal Control Module Software Incompatibility: System Programming Failure
+</TD><TD valign="top" align="left">CARRY OUT Programmable Module Installation (PMI) on the 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module. REFER to
+
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSI10L.HTM%26rightside%3dSCRSI10R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 418-01
+</a>.
+</TD></TR><TR><TD valign="top" align="center">U201B:54
+</TD><TD valign="top" align="left">Control Module Calibration Data #2: Missing Calibration
+</TD><TD valign="top" align="left">CARRY OUT Programmable Module Installation (PMI) on the 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module. REFER to
+
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSI10L.HTM%26rightside%3dSCRSI10R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 418-01
+</a>.
+</TD></TR><TR><TD valign="top" align="center">U201F:00
+</TD><TD valign="top" align="left">External Receiver: No Sub Type Information
+</TD><TD valign="top" align="left">REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSJ1BL.HTM%26rightside%3dSCRSJ1BR.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 419-01B
+</a>.
+</TD></TR><TR><TD valign="top" align="center">U201F:13
+</TD><TD valign="top" align="left">External Receiver: Circuit Open
+</TD><TD valign="top" align="left">REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSJ1BL.HTM%26rightside%3dSCRSJ1BR.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 419-01B
+</a>.
+</TD></TR><TR><TD valign="top" align="center">U2100:00
+</TD><TD valign="top" align="left">Initial Configuration Not Complete: No Sub Type Information
+</TD><TD valign="top" align="left">CARRY OUT Programmable Module Installation (PMI) on the 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module. REFER to
+
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSI10L.HTM%26rightside%3dSCRSI10R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 418-01
+</a>.
+</TD></TR><TR><TD valign="top" align="center">U2101:00
+</TD><TD valign="top" align="left">Control Module Configuration Incompatible: No Sub Type Information
+</TD><TD valign="top" align="left">CARRY OUT Programmable Module Installation (PMI) on the 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module. REFER to
+
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSI10L.HTM%26rightside%3dSCRSI10R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 418-01
+</a>.
+</TD></TR><TR><TD valign="top" align="center">U3000:01
+</TD><TD valign="top" align="left">Control Module: General Electrical Failure
+</TD><TD valign="top" align="left">ADDRESS all other DTCs first. CLEAR the DTCs. REPEAT the self-test. If DTC U3000:01 is retrieved again, INSTALL a new 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span>. REFER
+to 
+<a href="SCR_us_en_file%3dSCRJA007.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       >Remote Function Actuator (RFA) Module
+</a> in this section.
+</TD></TR><TR><TD valign="top" align="center">U3000:42
+</TD><TD valign="top" align="left">Control Module: General Memory Failure
+</TD><TD valign="top" align="left">ADDRESS all other DTCs first. CLEAR the DTCs. REPEAT the self-test. If DTC U3000:42 is retrieved again, INSTALL a new 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span>. REFER
+to 
+<a href="SCR_us_en_file%3dSCRJA007.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       >Remote Function Actuator (RFA) Module
+</a> in this section.
+</TD></TR><TR><TD valign="top" align="center">U3003:16
+</TD><TD valign="top" align="left">Battery Voltage: Circuit Voltage Below Threshold
+</TD><TD valign="top" align="left">REFER to 
+<a href="SCR_us_en_file%3dSCRJA005.HTM_gen_ref.HTM#PS2-O"                                                                                                                                                                                                                                                       >GO to Pinpoint Test O
+</a>.
+</TD></TR><TR><TD valign="top" align="center">U3003:17
+</TD><TD valign="top" align="left">Battery Voltage: Circuit Voltage Above Threshold
+</TD><TD valign="top" align="left">REFER to 
+<a href="SCR_us_en_file%3dSCRJA005.HTM_gen_ref.HTM#PS2-P"                                                                                                                                                                                                                                                       >GO to Pinpoint Test P
+</a>.
+</TD></TR><TR><TD valign="top" align="center">U3003:62
+</TD><TD valign="top" align="left">Battery Voltage: Signal Compare Failure
+</TD><TD valign="top" align="left">REFER to 
+<a href="SCR_us_en_file%3dSCRJA005.HTM_gen_ref.HTM#PS2-Q"                                                                                                                                                                                                                                                       >GO to Pinpoint Test Q
+</a>.
+</TD></TR><TR><TD valign="top" align="center">U3004:11
+</TD><TD valign="top" align="left">Accessory Power Relay: Circuit Short To Ground
+</TD><TD valign="top" align="left">REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSB50L.HTM%26rightside%3dSCRSB50R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 211-05
+</a>.
+</TD></TR><TR><TD valign="top" align="center">U3004:12
+</TD><TD valign="top" align="left">Accessory Power Relay: Circuit Short To Battery
+</TD><TD valign="top" align="left">REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSB50L.HTM%26rightside%3dSCRSB50R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 211-05
+</a>.
+</TD></TR><TR><TD valign="top" align="center">U300E:62
+</TD><TD valign="top" align="left">Ignition Input On: Signal Compare Failure
+</TD><TD valign="top" align="left">REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSB50L.HTM%26rightside%3dSCRSB50R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 211-05
+</a>.
+</TD></TR><TR><TD valign="top" align="center">U300F:62
+</TD><TD valign="top" align="left">Ignition Input Accessory: Signal Compare Failure
+</TD><TD valign="top" align="left">REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSB50L.HTM%26rightside%3dSCRSB50R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 211-05
+</a>.
+</TD></TR><TR><TD valign="top" align="center">U3010:62
+</TD><TD valign="top" align="left">Ignition Input Start: Signal Compare Failure
+</TD><TD valign="top" align="left">REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSB50L.HTM%26rightside%3dSCRSB50R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 211-05
+</a>.
+</TD></TR><TR><TD valign="top" align="center">U3011:62
+</TD><TD valign="top" align="left">Ignition Input Off: Signal Compare Failure
+</TD><TD valign="top" align="left">REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSB50L.HTM%26rightside%3dSCRSB50R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 211-05
+</a>.
+</TD></TR></TABLE><br><div><a name="extract_590">&nbsp;
+</a></div>
+
+<p><b>Symptom Chart
+</b></p><a name="RFA">&nbsp;
+</a><table width="90%" cellpadding="3" cellspacing="0" rules="groups" border="1">
+
+<caption>Symptom Chart 
+
+<p><b>NOTE: 
+</b> Refer to Description and Operation, Intelligent Access (IA) with Push Button Start in 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSJ1BL.HTM%26rightside%3dSCRSJ1BR.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 419-01B
+</a> to review the
+procedures for achieving the various ignition states (ignition off, ignition in accessory, ignition on, ignition start) on vehicles with this feature.
+</p></caption><colgroup><colgroup><colgroup><tr><th>Condition
+</th><th>Possible Sources
+</th><th>Action
+</th></tr><tbody></tbody>
+
+<tr valign="top"><td><ul type="disc"><li>No communication with the Remote Function Actuator (RFA) Module
+</li></ul></td><td><ul type="disc"><li>Fuse
+</li><li>Wiring, terminals or connectors
+</li><li><span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module
+</li></ul></td><td><ul type="disc"><li>REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSI00L.HTM%26rightside%3dSCRSI00R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 418-00
+</a>, The Remote Function Actuator (RFA) Module Does Not Respond To The Scan Tool.
+</li></ul></td></tr></table><div><a name="extract_591">&nbsp;
+</a></div>
+
+<p><b>Pinpoint Tests
+</b></p><a name="PS2-H">&nbsp;
+</a><p><b>Pinpoint Test H: DTC P0560:16
+</b></p><ul type="disc"><b>Normal Operation 
+</b>
+
+<li>DTC P0560:16 (System Voltage: Circuit Voltage Below Threshold) — sets in the Remote Function Actuator (RFA) module when
+the 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module detects that battery voltage has dropped below 9 volts (for more than 10 seconds) from the voltage supply circuit.
+</li></ul><p><b>This pinpoint test is intended to diagnose the following:
+</b></p><ul type="disc"><li>Wiring, terminals or connectors
+</li><li>High circuit resistance
+</li><li><span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module
+</li></ul><a name="H">&nbsp;
+</a><h5>PINPOINT TEST H: DTC P0560:16 
+</h5>
+
+<p><b><i>NOTICE: 
+</i> Use the correct probe adapter(s) when making measurements. Failure to use the correct probe adapter(s) may damage the connector.
+</b></p><p><b>NOTE: 
+</b> Failure to disconnect the battery when instructed results in false resistance readings. Refer to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSE10L.HTM%26rightside%3dSCRSE10R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 414-01
+</a>.
+</p><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="H1">&nbsp;
+</a><b>H1 RECHECK THE 
+<span title="REMOTE FUNCTION ACTUATOR" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> MODULE DTCs 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Ignition ON.
+</li><li>Enter the following diagnostic mode on the scan tool:   
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> Module Self-Test.
+</li><li>Clear the DTCs. Repeat the 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module self-test.
+</li><li><b>Is DTC P0560:16 still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRJA005.HTM_gen_ref.HTM#H2"                                                                                                                                                                                                                                                       >H2
+</a>. 
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. The DTC may have been set due to a previous low battery voltage condition. 
+</td></tr><tr><td><a name="H2">&nbsp;
+</a><b>H2 CHECK FOR CHARGING SYSTEM DTCs IN THE PCM 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Enter the following diagnostic mode on the scan tool:   PCM Self-Test.
+</li><li>Carry out the PCM 
+<span title="Key ON Engine OFF" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">KOEO
+</span> self-test.
+</li><li>Retrieve the continuous memory DTCs from the PCM.
+</li><li><b>Is DTC P0562, P0620, P0622, P0625, P0626 or P065B set in the PCM?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSE00L.HTM%26rightside%3dSCRSE00R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 414-00
+</a>. 
+
+<br><br><b>No
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRJA005.HTM_gen_ref.HTM#H3"                                                                                                                                                                                                                                                       >H3
+</a>. 
+</td></tr><tr><td><a name="H3">&nbsp;
+</a><b>H3 CHECK THE BATTERY CONDITION AND STATE OF CHARGE 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Ignition OFF.
+</li><li>Check the battery condition and verify the battery is fully charged. Refer to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSE10L.HTM%26rightside%3dSCRSE10R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 414-01
+</a>.
+</li><li><b>Is the battery OK and fully charged?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRJA005.HTM_gen_ref.HTM#H4"                                                                                                                                                                                                                                                       >H4
+</a>. 
+
+<br><br><b>No
+</b><br>REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSE00L.HTM%26rightside%3dSCRSE00R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 414-00
+</a>. 
+</td></tr><tr><td><a name="H4">&nbsp;
+</a><b>H4 CHECK THE 
+<span title="REMOTE FUNCTION ACTUATOR" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> MODULE VOLTAGE PID 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Ignition ON.
+</li><li>Measure and record the voltage at the battery.
+</li><li>Enter the following diagnostic mode on the scan tool:   
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> Module DataLogger.
+</li><li>Monitor the 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module voltage PID (ECU_Pwr_Sup).
+</li><li><b>Is the voltage within 0.2 volt of the recorded battery voltage?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRJA005.HTM_gen_ref.HTM#H7"                                                                                                                                                                                                                                                       >H7
+</a>. 
+
+<br><br><b>No
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRJA005.HTM_gen_ref.HTM#H5"                                                                                                                                                                                                                                                       >H5
+</a>. 
+</td></tr><tr><td><a name="H5">&nbsp;
+</a><b>H5 CHECK THE 
+<span title="REMOTE FUNCTION ACTUATOR" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> MODULE VOLTAGE SUPPLY 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Ignition OFF.
+</li><li>Disconnect:   
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> Module C3503a.
+</li><li>Ignition ON.
+</li><li>Measure the voltage between the 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module C3503a-2, circuit SBP14 (BN/RD), harness side and ground.
+</li><br><br><IMG src="SCR_us_en_file%3dN0114630.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="205" width="325" border="0"><li><b>Is the voltage within 0.2 volt of the recorded battery voltage?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRJA005.HTM_gen_ref.HTM#H6"                                                                                                                                                                                                                                                       >H6
+</a>. 
+
+<br><br><b>No
+</b><br>REPAIR circuit SBP14 (BN/RD) for high resistance. CLEAR the DTC. REPEAT the self-test. 
+</td></tr><tr><td><a name="H6">&nbsp;
+</a><b>H6 CHECK THE 
+<span title="REMOTE FUNCTION ACTUATOR" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> MODULE GROUND CIRCUIT FOR HIGH RESISTANCE 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Ignition OFF.
+</li><li>Disconnect:   Negative Battery Cable.
+</li><li>Disconnect:   
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> Module C3503d.
+</li><li>Measure the resistance between the 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module and ground as follows:
+</li><br><br><TABLE cellspacing="0" cellpadding="3" border="1"><TR><TH valign="bottom" align="center">Connector-Pin
+</TH><TH valign="bottom" align="center">Circuit
+</TH></TR><TR><TD valign="top" align="center">C3503a-3
+</TD><TD valign="top" align="center">GD145 (BK/BU)
+</TD></TR><TR><TD valign="top" align="center">C3503d-3
+</TD><TD valign="top" align="center">GD145 (BK/BU)
+</TD></TR><TR><TD valign="top" align="center">C3503d-4
+</TD><TD valign="top" align="center">GD145 (BK/BU)
+</TD></TR></TABLE><br>
+
+<br><br><IMG src="SCR_us_en_file%3dN0114629.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="211" width="325" border="0"><li><b>Are the resistances less than 5 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRJA005.HTM_gen_ref.HTM#H7"                                                                                                                                                                                                                                                       >H7
+</a>. 
+
+<br><br><b>No
+</b><br>REPAIR circuit GD145 (BK/BU) for high resistance. CLEAR the DTC. REPEAT the self-test. 
+</td></tr><tr><td><a name="H7">&nbsp;
+</a><b>H7 CHECK FOR CORRECT 
+<span title="REMOTE FUNCTION ACTUATOR" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> MODULE OPERATION 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect the 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module connectors.
+</li><li>Check for:
+</li><ul type="square"><li>corrosion
+</li></ul><ul type="square"><li>damaged pins
+</li></ul><ul type="square"><li>pushed-out pins
+</li></ul><li>Connect the 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module connectors and make sure they seat correctly.
+</li><li>Operate the system and verify the concern is still present.
+</li><li><b>Is the concern still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module. REFER to 
+<a href="SCR_us_en_file%3dSCRJA007.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       >Remote Function Actuator (RFA) Module
+</a> in this section. TEST the system for
+ normal operation. If the 
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector. 
+</td></tr></table><a name="PS2-I">&nbsp;
+</a><p><b>Pinpoint Test I: DTC P0560:17
+</b></p><ul type="disc"><b>Normal Operation 
+</b>
+
+<li>DTC P0560:17 (System Voltage: Circuit Voltage Above Threshold) — sets in the Remote Function Actuator (RFA) module when
+the 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module detects that battery voltage exceeds 16 volts from the voltage supply circuit.
+</li></ul><p><b>This pinpoint test is intended to diagnose the following:
+</b></p><ul type="disc"><li>Charging system concern
+</li><li><span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module
+</li></ul><a name="I">&nbsp;
+</a><h5>PINPOINT TEST I: DTC P0560:17 
+</h5>
+
+<p><b>NOTE: 
+</b> DTC P0560:17 may be stored in the module memory due to previous battery charging or vehicle jump starting events.
+</p><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="I1">&nbsp;
+</a><b>I1 CHECK FOR DTC B1317, B1676, P0563 (PCM) OR U3003:17 SET IN OTHER MODULES 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Ignition ON.
+</li><li>Enter the following diagnostic mode on the scan tool:   Self-Test.
+</li><li>Retrieve the continuous memory DTCs from all modules.
+</li><li><b>Is DTC B1317, B1676, P0563 (PCM) or U3003:17 set in more than one module?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSE00L.HTM%26rightside%3dSCRSE00R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 414-00
+</a> to diagnose an overcharging condition. 
+
+<br><br><b>No
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRJA005.HTM_gen_ref.HTM#I2"                                                                                                                                                                                                                                                       >I2
+</a>. 
+</td></tr><tr><td><a name="I2">&nbsp;
+</a><b>I2 CHECK THE BATTERY VOLTAGE 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Turn off all interior/exterior lights and accessories.
+</li><li>Start and run the engine at approximately 2,000 rpm for 3 minutes while monitoring the battery voltage.
+</li><li><b>Does the battery voltage rise to 16 volts or higher?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSE00L.HTM%26rightside%3dSCRSE00R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 414-00
+</a> to diagnose an overcharging condition. 
+
+<br><br><b>No
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRJA005.HTM_gen_ref.HTM#I3"                                                                                                                                                                                                                                                       >I3
+</a>. 
+</td></tr><tr><td><a name="I3">&nbsp;
+</a><b>I3 RECHECK FOR DTC P0560:17 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Turn the engine off.
+</li><li>Ignition ON.
+</li><li>Enter the following diagnostic mode on the scan tool:   
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> Module Self-Test.
+</li><li>Clear the continuous memory DTCs.
+</li><li>Carry out the 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module self-test.
+</li><li><b>Is DTC P0560:17 present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module. REFER to 
+<a href="SCR_us_en_file%3dSCRJA007.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       >Remote Function Actuator (RFA) Module
+</a> in this section. TEST the system for
+ normal operation. 
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. The DTC may have been set previously during battery charging or while jump starting the vehicle. 
+</td></tr></table><a name="PS2-J">&nbsp;
+</a><p><b>Pinpoint Test J: DTC U0100:00
+</b></p><ul type="disc"><b>Normal Operation 
+</b>
+
+<li>DTC U0100:00 (Lost Communication With ECM/PCM "A": No Sub Type Information) — sets in the Remote Function Actuator (RFA) module if data messages (engine speed) received from the PCM
+are missing. For a complete list of all network messages, refer to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSI00L.HTM%26rightside%3dSCRSI00R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 418-00
+</a>.
+</li></ul><p><b>This pinpoint test is intended to diagnose the following:
+</b></p><ul type="disc"><li>Communication network concern
+</li><li>PCM
+</li><li><span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module
+</li></ul><a name="J">&nbsp;
+</a><h5>PINPOINT TEST J: DTC U0100:00 
+</h5><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="J1">&nbsp;
+</a><b>J1 VERIFY THE SCAN TOOL CAN COMMUNICATE WITH THE PCM 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Connect the scan tool.
+</li><li>Check that a vehicle session can be established using the scan tool.
+</li><li><b>Can a vehicle session be established?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRJA005.HTM_gen_ref.HTM#J2"                                                                                                                                                                                                                                                       >J2
+</a>. 
+
+<br><br><b>No
+</b><br>REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSI00L.HTM%26rightside%3dSCRSI00R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 418-00
+</a>, The PCM Does Not Respond To The Scan Tool. 
+</td></tr><tr><td><a name="J2">&nbsp;
+</a><b>J2 CHECK THE 
+<span title="REMOTE FUNCTION ACTUATOR" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> MODULE CONTINUOUS MEMORY DTCs 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Ignition ON.
+</li><li>Enter the following diagnostic mode on the scan tool:   
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> Module Self-Test.
+</li><li>Clear the DTCs. Repeat the 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module self-test.
+</li><li><b>Is DTC U0100:00 retrieved again?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRJA005.HTM_gen_ref.HTM#J3"                                                                                                                                                                                                                                                       >J3
+</a>. 
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. The DTC may have been set due to high network traffic or an intermittent fault condition. 
+</td></tr><tr><td><a name="J3">&nbsp;
+</a><b>J3 RETRIEVE THE RECORDED DTCs FROM THE 
+<span title="REMOTE FUNCTION ACTUATOR" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> MODULE SELF-TEST 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Check for recorded 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module DTCs from the self-test.
+</li><li><b>Is DTC U3003:16 or DTC U3003:17 recorded?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>For DTC U3003:16, 
+<a href="SCR_us_en_file%3dSCRJA005.HTM_gen_ref.HTM#PS2-O"                                                                                                                                                                                                                                                       >GO to Pinpoint Test O
+</a>. 
+For DTC U3003:17, 
+<a href="SCR_us_en_file%3dSCRJA005.HTM_gen_ref.HTM#PS2-P"                                                                                                                                                                                                                                                       >GO to Pinpoint Test P
+</a>. 
+
+<br><br><b>No
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRJA005.HTM_gen_ref.HTM#J4"                                                                                                                                                                                                                                                       >J4
+</a>. 
+</td></tr><tr><td><a name="J4">&nbsp;
+</a><b>J4 CHECK FOR DTC U0100:00 OR DTC U0100 SET IN OTHER MODULES 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Ignition ON.
+</li><li>Enter the following diagnostic mode on the scan tool:   Self-Test.
+</li><li>Retrieve the continuous memory DTCs from all modules.
+</li><li><b>Is DTC U0100:00 or DTC U0100 set in any other module?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new PCM. REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRS3E0L.HTM%26rightside%3dSCRS3E0R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 303-14
+</a>. TEST the system for normal operation. 
+
+<br><br><b>No
+</b><br>INSTALL a new 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module. REFER to 
+<a href="SCR_us_en_file%3dSCRJA007.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       >Remote Function Actuator (RFA) Module
+</a> in this section. TEST the system for
+ normal operation 
+</td></tr></table><a name="PS2-K">&nbsp;
+</a><p><b>Pinpoint Test K: DTC U0101:00
+</b></p><ul type="disc"><b>Normal Operation 
+</b>
+
+<li>DTC U0101:00 (Lost Communication with TCM: No Sub Type Information) — sets in the Remote Function Actuator (RFA) module if data messages received from the
+Transmission Control Module (TCM) over the High Speed Controller Area Network (HS-CAN) are missing.
+</li></ul><p><b>This pinpoint test is intended to diagnose the following:
+</b></p><ul type="disc"><li><span title="Transmission Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TCM
+</span></li><li><span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module
+</li></ul><a name="K">&nbsp;
+</a><h5>PINPOINT TEST K: DTC U0101:00 
+</h5><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="K1">&nbsp;
+</a><b>K1 VERIFY THE CUSTOMER CONCERN 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Ignition ON.
+</li><li>Verify that there is an observable symptom present.
+</li><li><b>Is an observable symptom present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRJA005.HTM_gen_ref.HTM#K2"                                                                                                                                                                                                                                                       >K2
+</a>. 
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. The DTC may have been set due to high network traffic or an intermittent fault condition. 
+</td></tr><tr><td><a name="K2">&nbsp;
+</a><b>K2 CHECK THE COMMUNICATION NETWORK 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Enter the following diagnostic mode on the scan tool:   Network Test.
+</li><li>Carry out the network test.
+</li><li><b>Does the 
+<span title="Transmission Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TCM
+</span> pass the network test?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRJA005.HTM_gen_ref.HTM#K3"                                                                                                                                                                                                                                                       >K3
+</a>. 
+
+<br><br><b>No
+</b><br>REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSI00L.HTM%26rightside%3dSCRSI00R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 418-00
+</a>. 
+</td></tr><tr><td><a name="K3">&nbsp;
+</a><b>K3 RETRIEVE THE RECORDED DTCs FROM THE 
+<span title="REMOTE FUNCTION ACTUATOR" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> MODULE SELF-TEST 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Check for recorded 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module DTCs from the self-test.
+</li><li><b>Is DTC U3003:16 or DTC U3003:17 recorded?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>For DTC U3003:16, 
+<a href="SCR_us_en_file%3dSCRJA005.HTM_gen_ref.HTM#PS2-O"                                                                                                                                                                                                                                                       >GO to Pinpoint Test O
+</a>. 
+For DTC U3003:17, 
+<a href="SCR_us_en_file%3dSCRJA005.HTM_gen_ref.HTM#PS2-P"                                                                                                                                                                                                                                                       >GO to Pinpoint Test P
+</a>. 
+
+<br><br><b>No
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRJA005.HTM_gen_ref.HTM#K4"                                                                                                                                                                                                                                                       >K4
+</a>. 
+</td></tr><tr><td><a name="K4">&nbsp;
+</a><b>K4 RECHECK THE 
+<span title="REMOTE FUNCTION ACTUATOR" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> MODULE DTCs 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><p class="singlespace"><b>NOTE: 
+</b> If new modules were installed prior to the DTC being set, the module configuration may be incorrectly set during the Programmable Module Installation (PMI) or the
+
+<span title="Programmable Module Installation" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PMI
+</span> may not have been carried out.
+</p><li>Clear the DTCs. Repeat the 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module self-test.
+</li><li><b>Is DTC U0101:00 still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRJA005.HTM_gen_ref.HTM#K5"                                                                                                                                                                                                                                                       >K5
+</a>. 
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. The DTC may have been set due to high network traffic. 
+</td></tr><tr><td><a name="K5">&nbsp;
+</a><b>K5 CHECK FOR DTC U0101:00 OR DTC U0101 SET IN OTHER MODULES 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Clear all DTCs.
+</li><li>Ignition OFF.
+</li><li>Ignition ON.
+</li><li>Wait 10 seconds.
+</li><li>Enter the following diagnostic mode on the scan tool:   Self-Test .
+</li><li>Retrieve the continuous memory DTCs from all modules.
+</li><li><b>Is DTC U0101:00 or DTC U0101 set in any other module?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new 
+<span title="Transmission Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">TCM
+</span>. REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRS7B0L.HTM%26rightside%3dSCRS7B0R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 307-11
+</a>. CLEAR the DTCs. REPEAT the self-test. 
+
+<br><br><b>No
+</b><br>INSTALL a new 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module. REFER to 
+<a href="SCR_us_en_file%3dSCRJA007.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       >Remote Function Actuator (RFA) Module
+</a> in this section. TEST the system for
+ normal operation. 
+</td></tr></table><a name="PS2-L">&nbsp;
+</a><p><b>Pinpoint Test L: DTC U0121:00
+</b></p><ul type="disc"><b>Normal Operation 
+</b>
+
+<li>DTC U0121:00 (Lost Communication With Anti-Lock Brake System (ABS) Control Module: No Sub Type Information) — sets in the Remote Function Actuator (RFA) module if data messages
+received from the ABS module are missing. For a complete list of all network messages, refer to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSI00L.HTM%26rightside%3dSCRSI00R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 418-00
+</a>.
+</li></ul><p><b>This pinpoint test is intended to diagnose the following:
+</b></p><ul type="disc"><li>Communication network concern
+</li><li>ABS module
+</li><li><span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module
+</li></ul><a name="L">&nbsp;
+</a><h5>PINPOINT TEST L: DTC U0121:00 
+</h5><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="L1">&nbsp;
+</a><b>L1 VERIFY THE CUSTOMER CONCERN 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Ignition ON.
+</li><li>Verify that there is an observable symptom present.
+</li><li><b>Is an observable symptom present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRJA005.HTM_gen_ref.HTM#L2"                                                                                                                                                                                                                                                       >L2
+</a>. 
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. The DTC may have been set due to high network traffic or an intermittent fault condition. 
+</td></tr><tr><td><a name="L2">&nbsp;
+</a><b>L2 CHECK THE COMMUNICATION NETWORK 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Ignition ON.
+</li><li>Enter the following diagnostic mode on the scan tool:   Network Test.
+</li><li>Carry out the network test.
+</li><li><b>Does the ABS module pass the network test?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRJA005.HTM_gen_ref.HTM#L3"                                                                                                                                                                                                                                                       >L3
+</a>. 
+
+<br><br><b>No
+</b><br>REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSI00L.HTM%26rightside%3dSCRSI00R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 418-00
+</a>, The ABS Module Does Not Respond To The Scan Tool. 
+</td></tr><tr><td><a name="L3">&nbsp;
+</a><b>L3 RETRIEVE THE RECORDED DTCs FROM THE 
+<span title="REMOTE FUNCTION ACTUATOR" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> MODULE SELF-TEST 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Check for recorded 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module DTCs from the self-test.
+</li><li><b>Is DTC U3003:16 or DTC U3003:17 recorded?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>For DTC U3003:16, 
+<a href="SCR_us_en_file%3dSCRJA005.HTM_gen_ref.HTM#PS2-O"                                                                                                                                                                                                                                                       >GO to Pinpoint Test O
+</a>. 
+For DTC U3003:17, 
+<a href="SCR_us_en_file%3dSCRJA005.HTM_gen_ref.HTM#PS2-P"                                                                                                                                                                                                                                                       >GO to Pinpoint Test P
+</a>. 
+
+<br><br><b>No
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRJA005.HTM_gen_ref.HTM#L4"                                                                                                                                                                                                                                                       >L4
+</a> 
+</td></tr><tr><td><a name="L4">&nbsp;
+</a><b>L4 CHECK FOR DTCs U3003:16 AND U3003:17 FROM THE ABS MODULE SELF-TEST 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Retrieve the continuous memory DTCs from the ABS module.
+</li><li><b>Is DTC U3003:16 or DTC U3003:17 recorded?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRS690L.HTM%26rightside%3dSCRS690R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 206-09
+</a>. 
+
+<br><br><b>No
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRJA005.HTM_gen_ref.HTM#L5"                                                                                                                                                                                                                                                       >L5
+</a>. 
+</td></tr><tr><td><a name="L5">&nbsp;
+</a><b>L5 RECHECK THE 
+<span title="REMOTE FUNCTION ACTUATOR" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> MODULE DTCs 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><p class="singlespace"><b>NOTE: 
+</b> If new modules were installed prior to the DTC being set, the module configuration may be incorrectly set during Programmable Module Installation (PMI) or the
+
+<span title="Programmable Module Installation" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PMI
+</span> may not have been carried out.
+</p><li>Clear the DTCs. Repeat the 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module self-test.
+</li><li><b>Is DTC U0121:00 still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRJA005.HTM_gen_ref.HTM#L6"                                                                                                                                                                                                                                                       >L6
+</a>. 
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. The DTC may have been set due to high network traffic or an intermittent fault condition. 
+</td></tr><tr><td><a name="L6">&nbsp;
+</a><b>L6 CHECK FOR DTC U0121:00 OR DTC U0121 SET IN OTHER MODULES 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Clear the DTCs.
+</li><li>Ignition OFF.
+</li><li>Ignition ON.
+</li><li>Wait 10 seconds.
+</li><li>Enter the following diagnostic mode on the scan tool:   Self-Test.
+</li><li>Retrieve the continuous memory DTCs from all modules.
+</li><li><b>Is DTC U0121:00 OR DTC U0121 set in any other module?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new ABS module. REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRS690L.HTM%26rightside%3dSCRS690R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 206-09
+</a>. CLEAR the DTCs. REPEAT the self-test. 
+
+<br><br><b>No
+</b><br>INSTALL a new 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module. REFER to 
+<a href="SCR_us_en_file%3dSCRJA007.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       >Remote Function Actuator (RFA) Module
+</a> in this section. TEST the system for
+ normal operation. 
+</td></tr></table><a name="PS2-M">&nbsp;
+</a><p><b>Pinpoint Test M: DTC U0140:00
+</b></p><ul type="disc"><b>Normal Operation 
+</b>
+
+<li>DTC U0140:00 (Lost Communication With Body Control Module: No Sub Type Information) — sets in the Remote Function Actuator (RFA) module if data messages received from
+the Body Control Module (BCM) are missing. For a complete list of all network messages, refer to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSI00L.HTM%26rightside%3dSCRSI00R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 418-00
+</a>.
+</li></ul><p><b>This pinpoint test is intended to diagnose the following:
+</b></p><ul type="disc"><li>Communication network concern
+</li><li><span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module
+</li><li><span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span></li></ul><a name="M">&nbsp;
+</a><h5>PINPOINT TEST M: DTC U0140:00 
+</h5><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="M1">&nbsp;
+</a><b>M1 VERIFY CUSTOMER CONCERN 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Ignition ON.
+</li><li>Verify that there is an observable symptom present.
+</li><li><b>Is an observable symptom present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRJA005.HTM_gen_ref.HTM#M2"                                                                                                                                                                                                                                                       >M2
+</a>. 
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. The DTC may have been set due to high network traffic or an intermittent fault condition. 
+</td></tr><tr><td><a name="M2">&nbsp;
+</a><b>M2 CHECK THE COMMUNICATION NETWORK 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Ignition ON.
+</li><li>Enter the following diagnostic mode on the scan tool:   Network Test.
+</li><li>Carry out the network test.
+</li><li><b>Does the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> pass the network test?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRJA005.HTM_gen_ref.HTM#M3"                                                                                                                                                                                                                                                       >M3
+</a>. 
+
+<br><br><b>No
+</b><br>REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSI00L.HTM%26rightside%3dSCRSI00R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 418-00
+</a>. 
+</td></tr><tr><td><a name="M3">&nbsp;
+</a><b>M3 RETRIEVE THE RECORDED DTCs FROM THE 
+<span title="REMOTE FUNCTION ACTUATOR" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> MODULE SELF-TEST 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Check for recorded 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module DTCs from the self-test.
+</li><li><b>Is DTC U3003:16 or DTC U3003:17 recorded?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>For DTC U3003:16, 
+<a href="SCR_us_en_file%3dSCRJA005.HTM_gen_ref.HTM#PS2-O"                                                                                                                                                                                                                                                       >GO to Pinpoint Test O
+</a>. 
+For DTC U3003:17, 
+<a href="SCR_us_en_file%3dSCRJA005.HTM_gen_ref.HTM#PS2-P"                                                                                                                                                                                                                                                       >GO to Pinpoint Test P
+</a>. 
+
+<br><br><b>No
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRJA005.HTM_gen_ref.HTM#M4"                                                                                                                                                                                                                                                       >M4
+</a>. 
+</td></tr><tr><td><a name="M4">&nbsp;
+</a><b>M4 CHECK FOR DTCs U3003:16 AND U3003:17 FROM THE 
+<span title="BODY CONTROL MODULE" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> SELF-TEST 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Retrieve the continuous memory DTCs from the 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span> self-test.
+</li><li><b>Is DTC U3003:16 or DTC U3003:17 recorded?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>For DTC U3003:16, 
+<a href="SCR_us_en_file%3dSCRJA004.HTM_gen_ref.HTM#PS2-F"                                                                                                                                                                                                                                                       >GO to Pinpoint Test F
+</a>. 
+For DTC U3003:17, 
+<a href="SCR_us_en_file%3dSCRJA004.HTM_gen_ref.HTM#PS2-G"                                                                                                                                                                                                                                                       >GO to Pinpoint Test G
+</a>. 
+
+<br><br><b>No
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRJA005.HTM_gen_ref.HTM#M5"                                                                                                                                                                                                                                                       >M5
+</a>. 
+</td></tr><tr><td><a name="M5">&nbsp;
+</a><b>M5 RECHECK THE 
+<span title="REMOTE FUNCTION ACTUATOR" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> MODULE DTCs 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><p class="singlespace"><b>NOTE: 
+</b> If new modules were installed prior to the DTC being set, the module configuration may be incorrectly set during Programmable Module Installation (PMI) or the
+
+<span title="Programmable Module Installation" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PMI
+</span> may not have been carried out.
+</p><li>Clear the DTCs. Repeat the 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module self-test.
+</li><li><b>Is DTC U0140:00 still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRJA005.HTM_gen_ref.HTM#M6"                                                                                                                                                                                                                                                       >M6
+</a>. 
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. The DTC may have been set due to high network traffic or an intermittent fault condition. 
+</td></tr><tr><td><a name="M6">&nbsp;
+</a><b>M6 CHECK FOR DTC U0140:00 OR DTC U0140 OTHER MODULES 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Clear all DTCs.
+</li><li>Ignition OFF.
+</li><li>Ignition ON.
+</li><li>Wait 10 seconds.
+</li><li>Enter the following diagnostic mode on the scan tool:   Self-Test.
+</li><li>Retrieve the continuous memory DTCs from all modules.
+</li><li><b>Is DTC U0140:00 or DTC U0140 set in any other module?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new 
+<span title="Body Control Module" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">BCM
+</span>. REFER to 
+<a href="SCR_us_en_file%3dSCRJA006.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       >Body Control Module (BCM)
+</a> in this section. TEST the system for normal operation. 
+
+<br><br><b>No
+</b><br>INSTALL a new 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module. REFER to 
+<a href="SCR_us_en_file%3dSCRJA007.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       >Remote Function Actuator (RFA) Module
+</a> in this section. TEST the system for
+ normal operation. 
+</td></tr></table><a name="PS2-N">&nbsp;
+</a><p><b>Pinpoint Test N: DTC U0155:00
+</b></p><ul type="disc"><b>Normal Operation 
+</b>
+
+<li>DTC U0155:00 (Lost Communication With Instrument Panel Cluster (IPC) Control Module: No Sub Type Information) — sets in the Remote Function Actuator (RFA) module if data messages
+received from the Instrument Panel Cluster (IPC) are missing. For a complete list of all network messages, refer to
+
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSI00L.HTM%26rightside%3dSCRSI00R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 418-00
+</a>.
+</li></ul><p><b>This pinpoint test is intended to diagnose the following:
+</b></p><ul type="disc"><li>Communication network concern
+</li><li><span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module
+</li><li><span title="Instrument Panel Cluster" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IPC
+</span></li></ul><a name="N">&nbsp;
+</a><h5>PINPOINT TEST N: DTC U0155:00 
+</h5><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="N1">&nbsp;
+</a><b>N1 VERIFY CUSTOMER CONCERN 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Ignition ON.
+</li><li>Verify that there is an observable symptom present.
+</li><li><b>Is an observable symptom present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRJA005.HTM_gen_ref.HTM#N2"                                                                                                                                                                                                                                                       >N2
+</a>. 
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. The DTC may have been set due to high network traffic or an intermittent fault condition. 
+</td></tr><tr><td><a name="N2">&nbsp;
+</a><b>N2 CHECK THE COMMUNICATION NETWORK 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Ignition ON.
+</li><li>Enter the following diagnostic mode on the scan tool:   Network Test.
+</li><li>Carry out the network test.
+</li><li><b>Does the 
+<span title="Instrument Panel Cluster" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IPC
+</span> pass the network test?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRJA005.HTM_gen_ref.HTM#N3"                                                                                                                                                                                                                                                       >N3
+</a>. 
+
+<br><br><b>No
+</b><br>REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSI00L.HTM%26rightside%3dSCRSI00R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 418-00
+</a>, The 
+<span title="Instrument Panel Cluster" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IPC
+</span> Does Not Respond To The Scan Tool. 
+</td></tr><tr><td><a name="N3">&nbsp;
+</a><b>N3 RETRIEVE THE RECORDED DTCs FROM THE 
+<span title="REMOTE FUNCTION ACTUATOR" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> MODULE SELF-TEST 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Check for recorded 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module DTCs from the self-test.
+</li><li><b>Is DTC U3003:16 or DTC U3003:17 recorded?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>For DTC U3003:16, 
+<a href="SCR_us_en_file%3dSCRJA005.HTM_gen_ref.HTM#PS2-O"                                                                                                                                                                                                                                                       >GO to Pinpoint Test O
+</a>. 
+For DTC U3003:17, 
+<a href="SCR_us_en_file%3dSCRJA005.HTM_gen_ref.HTM#PS2-P"                                                                                                                                                                                                                                                       >GO to Pinpoint Test P
+</a>. 
+
+<br><br><b>No
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRJA005.HTM_gen_ref.HTM#N4"                                                                                                                                                                                                                                                       >N4
+</a>. 
+</td></tr><tr><td><a name="N4">&nbsp;
+</a><b>N4 RECHECK THE 
+<span title="REMOTE FUNCTION ACTUATOR" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> MODULE DTCs 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><p class="singlespace"><b>NOTE: 
+</b> If new modules were installed prior to the DTC being set, the module configuration may be incorrectly set during Programmable Module Installation (PMI) or
+the 
+<span title="Programmable Module Installation" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">PMI
+</span> may not have been carried out.
+</p><li>Clear the DTCs. Repeat the 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module self-test.
+</li><li><b>Is DTC U0155:00 still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRJA005.HTM_gen_ref.HTM#N5"                                                                                                                                                                                                                                                       >N5
+</a>. 
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. The DTC may have been set due to high network traffic or an intermittent fault condition. 
+</td></tr><tr><td><a name="N5">&nbsp;
+</a><b>N5 CHECK FOR DTC U0155:00 OR DTC U0155 SET IN OTHER MODULES 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Clear the DTCs.
+</li><li>Ignition OFF.
+</li><li>Ignition ON.
+</li><li>Wait 10 seconds.
+</li><li>Enter the following diagnostic mode on the scan tool:   Self-Test .
+</li><li>Retrieve the continuous memory DTCs from all modules.
+</li><li><b>Is DTC U0155:00 or DTC U0155 set in any other module?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new 
+<span title="Instrument Panel Cluster" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">IPC
+</span>. REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSD10L.HTM%26rightside%3dSCRSD10R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 413-01
+</a>. 
+
+<br><br><b>No
+</b><br>INSTALL a new 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module. REFER to 
+<a href="SCR_us_en_file%3dSCRJA007.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       >Remote Function Actuator (RFA) Module
+</a> in this section. TEST the system for
+ normal operation. 
+</td></tr></table><a name="PS2-O">&nbsp;
+</a><p><b>Pinpoint Test O: DTC U3003:16
+</b></p><ul type="disc"><b>Normal Operation 
+</b>
+
+<li>DTC U3003:16 (Battery Voltage: Circuit Voltage Below Threshold) — sets in the Remote Function Actuator (RFA) module when
+the 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module detects that battery voltage has dropped below 9 volts (for more than 10 seconds) from the voltage supply circuit.
+</li></ul><p><b>This pinpoint test is intended to diagnose the following:
+</b></p><ul type="disc"><li>Wiring, terminals or connectors
+</li><li>High circuit resistance
+</li><li><span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module
+</li></ul><a name="O">&nbsp;
+</a><h5>PINPOINT TEST O: DTC U3003:16 
+</h5>
+
+<p><b><i>NOTICE: 
+</i> Use the correct probe adapter(s) when making measurements. Failure to use the correct probe adapter(s) may damage the connector.
+</b></p><p><b>NOTE: 
+</b> Failure to disconnect the battery when instructed results in false resistance readings. Refer to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSE10L.HTM%26rightside%3dSCRSE10R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 414-01
+</a>.
+</p><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="O1">&nbsp;
+</a><b>O1 RECHECK THE 
+<span title="REMOTE FUNCTION ACTUATOR" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> MODULE DTCs 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Ignition ON.
+</li><li>Enter the following diagnostic mode on the scan tool:   
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> Module Self-Test.
+</li><li>Clear the DTCs. Repeat the 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module self-test.
+</li><li><b>Is DTC U3003:16 still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRJA005.HTM_gen_ref.HTM#O2"                                                                                                                                                                                                                                                       >O2
+</a>. 
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. The DTC may have been set due to a previous low battery voltage condition. 
+</td></tr><tr><td><a name="O2">&nbsp;
+</a><b>O2 CHECK FOR CHARGING SYSTEM DTCs IN THE PCM 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Enter the following diagnostic mode on the scan tool:   PCM Self-Test.
+</li><li>Carry out the PCM 
+<span title="Key ON Engine OFF" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">KOEO
+</span> self-test.
+</li><li>Retrieve the continuous memory DTCs from the PCM.
+</li><li><b>Are any low or high voltage DTCs set in the PCM?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSE00L.HTM%26rightside%3dSCRSE00R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 414-00
+</a>. 
+
+<br><br><b>No
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRJA005.HTM_gen_ref.HTM#O3"                                                                                                                                                                                                                                                       >O3
+</a>. 
+</td></tr><tr><td><a name="O3">&nbsp;
+</a><b>O3 CHECK THE BATTERY CONDITION AND STATE OF CHARGE 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Ignition OFF.
+</li><li>Check the battery condition and verify the battery is fully charged. Refer to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSE10L.HTM%26rightside%3dSCRSE10R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 414-01
+</a>.
+</li><li><b>Is the battery OK and fully charged?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRJA005.HTM_gen_ref.HTM#O4"                                                                                                                                                                                                                                                       >O4
+</a>. 
+
+<br><br><b>No
+</b><br>REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSE00L.HTM%26rightside%3dSCRSE00R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 414-00
+</a>. 
+</td></tr><tr><td><a name="O4">&nbsp;
+</a><b>O4 CHECK THE 
+<span title="REMOTE FUNCTION ACTUATOR" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> MODULE VOLTAGE PID 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Ignition ON.
+</li><li>Measure and record the voltage at the battery.
+</li><li>Enter the following diagnostic mode on the scan tool:   
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> Module DataLogger.
+</li><li>Monitor the 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module voltage PID (ECU_VPWR).
+</li><li><b>Is the voltage within 0.2 volt of the recorded battery voltage?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRJA005.HTM_gen_ref.HTM#O7"                                                                                                                                                                                                                                                       >O7
+</a>. 
+
+<br><br><b>No
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRJA005.HTM_gen_ref.HTM#O5"                                                                                                                                                                                                                                                       >O5
+</a>. 
+</td></tr><tr><td><a name="O5">&nbsp;
+</a><b>O5 CHECK THE 
+<span title="REMOTE FUNCTION ACTUATOR" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> MODULE VOLTAGE SUPPLY 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Ignition OFF.
+</li><li>Disconnect:   
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> Module C3503a.
+</li><li>Ignition ON.
+</li><li>Measure the voltage between the 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module C3503a-1, circuit SBP09 (RD), harness side and ground.
+</li><br><br><IMG src="SCR_us_en_file%3dA0083085.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="205" width="325" border="0"><li><b>Is the voltage within 0.2 volt of the recorded battery voltage?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRJA005.HTM_gen_ref.HTM#O6"                                                                                                                                                                                                                                                       >O6
+</a>. 
+
+<br><br><b>No
+</b><br>REPAIR circuit SBP09 (RD) for high resistance. CLEAR the DTC. REPEAT the self-test. 
+</td></tr><tr><td><a name="O6">&nbsp;
+</a><b>O6 CHECK THE 
+<span title="REMOTE FUNCTION ACTUATOR" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> MODULE GROUND CIRCUIT FOR HIGH RESISTANCE 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Ignition OFF.
+</li><li>Disconnect:   Negative Battery Cable.
+</li><li>Disconnect:   
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> Module C3503d.
+</li><li>Measure the resistance between the 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module and ground as follows:
+</li><br><br><TABLE cellspacing="0" cellpadding="3" border="1"><TR><TH valign="bottom" align="center">Connector-Pin
+</TH><TH valign="bottom" align="center">Circuit
+</TH></TR><TR><TD valign="top" align="center">C3503a-3
+</TD><TD valign="top" align="center">GD145 (BK/BU)
+</TD></TR><TR><TD valign="top" align="center">C3503d-3
+</TD><TD valign="top" align="center">GD145 (BK/BU)
+</TD></TR><TR><TD valign="top" align="center">C3503d-4
+</TD><TD valign="top" align="center">GD145 (BK/BU)
+</TD></TR></TABLE><br>
+
+<br><br><IMG src="SCR_us_en_file%3dN0114629.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="211" width="325" border="0"><li><b>Are the resistances less than 5 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRJA005.HTM_gen_ref.HTM#O7"                                                                                                                                                                                                                                                       >O7
+</a>. 
+
+<br><br><b>No
+</b><br>REPAIR circuit GD145 (BK/BU) for high resistance. CLEAR the DTC. REPEAT the self-test. 
+</td></tr><tr><td><a name="O7">&nbsp;
+</a><b>O7 CHECK FOR CORRECT 
+<span title="REMOTE FUNCTION ACTUATOR" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> MODULE OPERATION 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect the 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module connectors.
+</li><li>Check for:
+</li><ul type="square"><li>corrosion
+</li></ul><ul type="square"><li>damaged pins
+</li></ul><ul type="square"><li>pushed-out pins
+</li></ul><li>Connect the 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module connectors and make sure they seat correctly.
+</li><li>Operate the system and verify the concern is still present.
+</li><li><b>Is the concern still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module. REFER to 
+<a href="SCR_us_en_file%3dSCRJA007.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       >Remote Function Actuator (RFA) Module
+</a> in this section. TEST the system for
+ normal operation. 
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector. 
+</td></tr></table><a name="PS2-P">&nbsp;
+</a><p><b>Pinpoint Test P: DTC U3003:17
+</b></p><ul type="disc"><b>Normal Operation 
+</b>
+
+<li>DTC U3003:17 (Battery Voltage: Circuit Voltage Above Threshold) — sets in the Remote Function Actuator (RFA) module when
+the 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module detects that battery voltage exceeds 16 volts from the voltage supply circuit.
+</li></ul><p><b>This pinpoint test is intended to diagnose the following:
+</b></p><ul type="disc"><li>Charging system concern
+</li><li><span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module
+</li></ul><a name="P">&nbsp;
+</a><h5>PINPOINT TEST P: DTC U3003:17 
+</h5>
+
+<p><b>NOTE: 
+</b> DTC U3003:17 may be stored in the module memory due to previous battery charging or vehicle jump starting events.
+</p><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="P1">&nbsp;
+</a><b>P1 CHECK FOR DTC B1317, B1676, P0563 (PCM) OR U3003:17 SET IN OTHER MODULES 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Ignition ON.
+</li><li>Enter the following diagnostic mode on the scan tool:   Self-Test.
+</li><li>Retrieve the continuous memory DTCs from all modules.
+</li><li><b>Is DTC B1317, B1676, P0563 (PCM) or U3003:17 set in more than one module?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSE00L.HTM%26rightside%3dSCRSE00R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 414-00
+</a> to diagnose an overcharging condition. 
+
+<br><br><b>No
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRJA005.HTM_gen_ref.HTM#P2"                                                                                                                                                                                                                                                       >P2
+</a>. 
+</td></tr><tr><td><a name="P2">&nbsp;
+</a><b>P2 CHECK THE BATTERY VOLTAGE 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Turn off all interior/exterior lights and accessories.
+</li><li>Start and run the engine at approximately 2,000 rpm for 3 minutes while monitoring the battery voltage.
+</li><li><b>Does the battery voltage rise to 16 volts or higher?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSE00L.HTM%26rightside%3dSCRSE00R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 414-00
+</a> to diagnose an overcharging condition. 
+
+<br><br><b>No
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRJA005.HTM_gen_ref.HTM#P3"                                                                                                                                                                                                                                                       >P3
+</a>. 
+</td></tr><tr><td><a name="P3">&nbsp;
+</a><b>P3 RECHECK FOR DTC U3003:17 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Turn the engine off.
+</li><li>Ignition ON.
+</li><li>Enter the following diagnostic mode on the scan tool:   
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> Module Self-Test.
+</li><li>Clear the continuous memory DTCs.
+</li><li>Carry out the 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module self-test.
+</li><li><b>Is DTC U3003:17 present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module. REFER to 
+<a href="SCR_us_en_file%3dSCRJA007.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       >Remote Function Actuator (RFA) Module
+</a> in this section. TEST the system for
+ normal operation. 
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. The DTC may have been set previously during battery charging or while jump starting the vehicle. 
+</td></tr></table><a name="PS2-Q">&nbsp;
+</a><p><b>Pinpoint Test Q: DTC U3003:62
+</b></p><ul type="disc"><b>Normal Operation 
+</b>
+
+<li>DTC U3003:62 (Battery Voltage: Signal Compare Failure) — a continuous and on-demand DTC that sets when the 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module detects a difference of 2 volts
+between the voltage supply circuit and a message (voltage value) received from the PCM over the High Speed Controller Area Network (HS-CAN).
+</li></ul><p><b>This pinpoint test is intended to diagnose the following:
+</b></p><ul type="disc"><li>Wiring, terminals or connectors
+</li><li>High circuit resistance
+</li><li>Charging system concern
+</li><li><span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module
+</li></ul><a name="Q">&nbsp;
+</a><h5>PINPOINT TEST Q: DTC U3003:62 
+</h5>
+
+<p><b><i>NOTICE: 
+</i> Use the correct probe adapter(s) when making measurements. Failure to use the correct probe adapter(s) may damage the connector.
+</b></p><p><b>NOTE: 
+</b> Failure to disconnect the battery when instructed results in false resistance readings. Refer to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSE10L.HTM%26rightside%3dSCRSE10R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 414-01
+</a>.
+</p><p><b>NOTE: 
+</b> DTC U3003:62 may be stored in the module memory due to previous battery charging or vehicle jump starting events.
+</p><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="Q1">&nbsp;
+</a><b>Q1 CHECK FOR DTCs U3003:16 AND U3003:17 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Check for recorded 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module DTCs from the self-test.
+</li><li><b>Is DTC U3003:16 or DTC U3003:17 present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><br><br><b>No
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRJA005.HTM_gen_ref.HTM#Q2"                                                                                                                                                                                                                                                       >Q2
+</a>. 
+
+<br><br><b>No
+</b><br>For DTC U3003:16, 
+<a href="SCR_us_en_file%3dSCRJA005.HTM_gen_ref.HTM#PS2-O"                                                                                                                                                                                                                                                       >GO to Pinpoint Test O
+</a>. 
+For DTC U3003:17, 
+<a href="SCR_us_en_file%3dSCRJA005.HTM_gen_ref.HTM#PS2-P"                                                                                                                                                                                                                                                       >GO to Pinpoint Test P
+</a>. 
+</td></tr><tr><td><a name="Q2">&nbsp;
+</a><b>Q2 RECHECK THE 
+<span title="REMOTE FUNCTION ACTUATOR" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> MODULE DTCs 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Ignition OFF.
+</li><li>Ignition ON.
+</li><li>Enter the following diagnostic mode on the scan tool:   
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> Module Self-Test.
+</li><li>Clear the DTCs. Repeat the 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> Module self-test.
+</li><li><b>Is DTC U3003:62 still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRJA005.HTM_gen_ref.HTM#Q3"                                                                                                                                                                                                                                                       >Q3
+</a>. 
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. The DTC may have been set due to a previous low battery voltage condition, during battery charging or while jump starting the vehicle. 
+</td></tr><tr><td><a name="Q3">&nbsp;
+</a><b>Q3 CHECK FOR CHARGING SYSTEM DTCs IN THE PCM 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Enter the following diagnostic mode on the scan tool:   PCM Self-Test.
+</li><li>Carry out the PCM 
+<span title="Key ON Engine OFF" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">KOEO
+</span> self-test.
+</li><li>Retrieve the continuous memory DTCs from the PCM.
+</li><li><b>Is DTC P0562, P0620, P0622, P0625, P0626 or P065B set in the PCM?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSE00L.HTM%26rightside%3dSCRSE00R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 414-00
+</a>. 
+
+<br><br><b>No
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRJA005.HTM_gen_ref.HTM#Q4"                                                                                                                                                                                                                                                       >Q4
+</a>. 
+</td></tr><tr><td><a name="Q4">&nbsp;
+</a><b>Q4 CHECK FOR DTCs B1317, B1318 B1676, P0563 OR U3003:62 SET IN OTHER MODULES 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Enter the following diagnostic mode on the scan tool:   Self-Test.
+</li><li>Retrieve the continuous memory DTCs from all modules.
+</li><li><b>Is DTC B1317, B1676, P0563 (PCM) or U3003:17 set in more than one module?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSE00L.HTM%26rightside%3dSCRSE00R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 414-00
+</a> to diagnose the charging system condition. 
+
+<br><br><b>No
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRJA005.HTM_gen_ref.HTM#Q5"                                                                                                                                                                                                                                                       >Q5
+</a>. 
+</td></tr><tr><td><a name="Q5">&nbsp;
+</a><b>Q5 CHECK THE 
+<span title="REMOTE FUNCTION ACTUATOR" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> MODULE VOLTAGE PID 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Ignition ON.
+</li><li>Measure and record the voltage at the battery.
+</li><li>Enter the following diagnostic mode on the scan tool:   
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> Module DataLogger.
+</li><li>Monitor the 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module voltage PID (ECU_VPWR).
+</li><li><b>Is the voltage within .2 volts of the recorded battery voltage?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REFER to 
+<a target="_parent" href="SCR_us_en_leftside%3dSCRSE00L.HTM%26rightside%3dSCRSE00R.HTM%26market%3dus%26lang%3den_gen_2col.htm"                                                                                                                                                                                                                                                               >Section 414-00
+</a> to diagnose the charging system condition. 
+
+<br><br><b>No
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRJA005.HTM_gen_ref.HTM#Q6"                                                                                                                                                                                                                                                       >Q6
+</a>. 
+</td></tr><tr><td><a name="Q6">&nbsp;
+</a><b>Q6 CHECK THE 
+<span title="REMOTE FUNCTION ACTUATOR" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> MODULE VOLTAGE SUPPLY 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Ignition OFF.
+</li><li>Disconnect:   
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> Module C3503a .
+</li><li>Ignition ON.
+</li><li>Measure the voltage between the 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module C3503a-1, circuit SBP09 (RD), harness side and ground.
+</li><br><br><IMG src="SCR_us_en_file%3dA0083085.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="205" width="325" border="0"><li><b>Is the voltage within 0.2 volt of the recorded battery voltage?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRJA005.HTM_gen_ref.HTM#Q7"                                                                                                                                                                                                                                                       >Q7
+</a>. 
+
+<br><br><b>No
+</b><br>REPAIR circuit SBP09 (RD) for high resistance. CLEAR the DTC. REPEAT the self-test. 
+</td></tr><tr><td><a name="Q7">&nbsp;
+</a><b>Q7 CHECK THE 
+<span title="REMOTE FUNCTION ACTUATOR" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> MODULE GROUND CIRCUIT FOR HIGH RESISTANCE 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Ignition OFF.
+</li><li>Disconnect:   Negative Battery Cable.
+</li><li>Measure the resistance between the 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module and ground as follows:
+</li><br><br><TABLE cellspacing="0" cellpadding="3" border="1"><TR><TH valign="bottom" align="center">Connector-Pin
+</TH><TH valign="bottom" align="center">Circuit
+</TH></TR><TR><TD valign="top" align="center">C3503a-3
+</TD><TD valign="top" align="center">GD145 (BK/BU)
+</TD></TR><TR><TD valign="top" align="center">C3503d-3
+</TD><TD valign="top" align="center">GD145 (BK/BU)
+</TD></TR><TR><TD valign="top" align="center">C3503d-4
+</TD><TD valign="top" align="center">GD145 (BK/BU)
+</TD></TR></TABLE><br>
+
+<br><br><IMG src="SCR_us_en_file%3dN0114629.jpg_gen_ref.jpg"                                                                                                                                                                                                                                                        height="211" width="325" border="0"><li><b>Are the resistances less than 5 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="SCR_us_en_file%3dSCRJA005.HTM_gen_ref.HTM#Q8"                                                                                                                                                                                                                                                       >Q8
+</a>. 
+
+<br><br><b>No
+</b><br>REPAIR circuit GD145 (BK/BU) for high resistance. CLEAR the DTC. REPEAT the self-test. 
+</td></tr><tr><td><a name="Q8">&nbsp;
+</a><b>Q8 CHECK FOR CORRECT 
+<span title="REMOTE FUNCTION ACTUATOR" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> MODULE OPERATION 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect the 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module connectors.
+</li><li>Check for:
+</li><ul type="square"><li>corrosion
+</li></ul><ul type="square"><li>damaged pins
+</li></ul><ul type="square"><li>pushed-out pins
+</li></ul><li>Connect the 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module connectors and make sure they seat correctly.
+</li><li>Operate the system and verify the concern is still present.
+</li><li><b>Is the concern still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new 
+<span title="Remote Function Actuator" class="popup" onmouseover="this.className='popupnounderline';" onmouseout="this.className='popup';">RFA
+</span> module. REFER to 
+<a href="SCR_us_en_file%3dSCRJA007.HTM_gen_ref.HTM"                                                                                                                                                                                                                                                       >Remote Function Actuator (RFA) Module
+</a> in this section. TEST the system for
+ normal operation. 
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector. 
+</td></tr></table><br><hr><P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+
+</body>
+<!-- Mirrored from file:///C:/Documents and Settings/Administrator/Desktop/FORD/Ford Fiesta 2012/SCR~us~en~file=SCRJA005.HTM~gen~ref.HTM by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 04 Mar 2025 14:53:48 GMT -->
+</html>
